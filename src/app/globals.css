@@ -3,19 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
+    --primary: #ba0202;
+    --secondary: #286196;
+    --accent: #093254;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
+.dark{
     --background: #0a0a0a;
     --foreground: #ededed;
-  }
+    --primary: #006f02;
+    --secondary: #002e58;
+    --accent: #161515;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    padding-top: 0; /* By default, no padding top */
+    padding-bottom: calc(60px + 1rem); /* Assume a default mobile navbar height */
+
+    @media (min-width: 1024px) { /* For large screens */
+        padding-top: calc(60px + 1rem); /* Set padding at top equal to navbar height */
+        padding-bottom: 0; /* No padding at bottom for large screens */
+    }
+
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
 }
