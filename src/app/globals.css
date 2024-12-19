@@ -5,17 +5,18 @@
 :root {
     --background: #ffffff;
     --foreground: #171717;
+    --navbar: rgba(255, 255, 255, 0.5);
     --primary: #ba0202;
     --secondary: #286196;
-    --accent: #ffffff;
 }
 
 .dark{
     --background: #0a0a0a;
     --foreground: #ededed;
+    --navbar: rgba(22, 21, 21, 0.5);
     --primary: #006f02;
     --secondary: #002e58;
-    --accent: #161515;
+    /* --accent: #161515; */
 }
 
 body {

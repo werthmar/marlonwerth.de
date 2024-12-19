@@ -48,7 +48,7 @@ const LanguageSwitcher = () => {
       </button>
 
       {isOpen && (
-        <div className="origin-bottom-right lg:origin-top-right absolute lg:bottom-auto lg:mt-1 bottom-full mb-1 w-40 rounded-md shadow-lg bg-background ring-1 ring-black ring-opacity-5">
+        <div className="origin-bottom-right lg:origin-top-right absolute lg:bottom-auto lg:mt-1 bottom-full mb-1 w-40 rounded-md shadow-lg bg-navbar ring-1 ring-black ring-opacity-5">
           <div className="py-1">
             {languages
               .filter((lang) => lang.code !== currentLangCode)
@@ -56,7 +56,7 @@ const LanguageSwitcher = () => {
                 <button
                   key={lang.code}
                   onClick={() => selectLanguage(lang)}
-                  className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                  className="block w-full text-left px-4 py-2 hover:bg-foreground hover:text-background"
                 >
                   <ReactCountryFlag
                     countryCode={lang.flag}
