@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { FaSun, FaMoon } from 'react-icons/fa'; // Import sun and moon icons
+import { IoSunny } from "react-icons/io5";
 
 // Styled components
 const ToggleContainer = styled.div`
@@ -79,7 +80,7 @@ const ThemeToggle = () => {
 
   return (
     <ToggleContainer>
-      {isDarkMode ? <FaMoon color="white" size={20} /> : <FaSun color="white" size={20} />}
+      {isDarkMode ? <FaMoon color="white" size={20} /> : <IoSunny color="black" size={25} />}
       <ToggleSwitch>
         <Checkbox type="checkbox" checked={isDarkMode} onChange={handleToggle} />
         <Slider />
