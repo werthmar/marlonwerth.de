@@ -1,6 +1,7 @@
 {
-    "HomePage": {
-        "title": "Hallo Welt!",
-        "home": "Startseite"
+    "Navbar": {
+        "home": "Startseite",
+        "about": "Über mich",
+        "contact": "Kontakt"
     }
 }

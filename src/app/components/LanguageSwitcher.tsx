@@ -1,8 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactCountryFlag from 'react-country-flag';
 import { FaCaretDown } from 'react-icons/fa';
+
+import {Locale} from '@/i18n/config';
+import {setUserLocale, getUserLocale} from '@/services/locale';
 
 // Define languages with country codes for flags
 const languages = [
@@ -11,19 +14,37 @@ const languages = [
   { code: 'de', label: 'German', flag: 'DE' },
 ];
 
-const LanguageSwitcher = () => {
-  //const { i18n } = useTranslation();
-  const currentLangCode = 'en';
-  const [isOpen, setIsOpen] = useState(false);
+interface LanguageSwitcherProps {
+    initialLocale?: string;
+}
 
-  const currentLanguage = languages.find(lang => lang.code === currentLangCode) || languages[0];
+export default function LanguageSwitcher({initialLocale}: LanguageSwitcherProps) {
+    
+    //const [currentLangCode, setLangCode] = useState<string | null>(null);
+    const [currentLangCode, setLangCode] = useState<string>(initialLocale || languages[0].code);
+    const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropdown = () => setIsOpen(!isOpen);
+    /*
+    useEffect(() => {
+        const fetchLocale = async () => {
+            const locale = await getUserLocale();
+            setLangCode(locale);
+        };
+        fetchLocale();
+    }, []);
+    */
+    
+    const currentLanguage = languages.find(lang => lang.code === currentLangCode) || languages[0];
 
-  const selectLanguage = (lang: { code: any; label?: string; flag?: string; }) => {
-    //i18n.changeLanguage(lang.code);
-    setIsOpen(false);
-  };
+    const toggleDropdown = () => setIsOpen(!isOpen);
+    
+    const selectLanguage = (lang: { code: any; label?: string; flag?: string; }) => {
+        setIsOpen(false);
+        setUserLocale(lang.code);
+        setLangCode(lang.code);
+    };
+
+
 
   return (
     <div className="relative inline-block text-left">
@@ -76,4 +97,4 @@ const LanguageSwitcher = () => {
   );
 };
 
-export default LanguageSwitcher;
+//export default LanguageSwitcher;
