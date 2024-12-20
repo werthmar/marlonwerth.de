@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import ReactCountryFlag from 'react-country-flag';
 import { FaCaretDown } from 'react-icons/fa';
-import { useTranslation } from 'react-i18next';
 
 // Define languages with country codes for flags
 const languages = [
@@ -13,8 +12,8 @@ const languages = [
 ];
 
 const LanguageSwitcher = () => {
-  const { i18n } = useTranslation();
-  const currentLangCode = i18n.language || 'en';
+  //const { i18n } = useTranslation();
+  const currentLangCode = 'en';
   const [isOpen, setIsOpen] = useState(false);
 
   const currentLanguage = languages.find(lang => lang.code === currentLangCode) || languages[0];
@@ -22,7 +21,7 @@ const LanguageSwitcher = () => {
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   const selectLanguage = (lang: { code: any; label?: string; flag?: string; }) => {
-    i18n.changeLanguage(lang.code);
+    //i18n.changeLanguage(lang.code);
     setIsOpen(false);
   };
 
