@@ -2,6 +2,9 @@ import React from 'react';
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
+// Localization
+import {NextIntlClientProvider} from 'next-intl';
+import {getLocale, getMessages} from 'next-intl/server';
 
 // Components
 import Navbar from "./components/Navbar";
@@ -26,16 +29,26 @@ export const metadata: Metadata = {
 };
 
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const locale = await getLocale();
+ 
+    // Providing all messages to the client
+    // side is the easiest way to get started
+    const messages = await getMessages();
+
     return (
-        <html lang="en">
+        <html lang={locale}>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-                <Navbar />
-                {children}
+
+                <NextIntlClientProvider messages={messages}>
+                    <Navbar />
+                    {children}
+                </NextIntlClientProvider>
+                
             </body>
         </html>
     );

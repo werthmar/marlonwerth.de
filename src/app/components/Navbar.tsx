@@ -1,10 +1,15 @@
 import React from "react";
 import Link from "next/link";
 
+// Localization
+import {useTranslations} from 'next-intl';
+
+// Components
 import ThemeToggle from "./ThemeToggle";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar: React.FC = () => {
+    const t = useTranslations('HomePage');
 
     return (
         <nav className="bg-navbar p-4 pl-12 pr-12 lg:pl-16 lg:pr-16 backdrop-filter backdrop-blur-lg backdrop-opacity-100 rounded-tl-full rounded-tr-full lg:rounded-tl-none lg:rounded-tr-none z-10 shadow fixed bottom-0 inset-x-0 lg:top-0 lg:bottom-auto">
@@ -13,7 +18,7 @@ const Navbar: React.FC = () => {
                 <ul className="flex lg:justify-start space-x-8">
                     <li>
                         <Link href="/" className="hover:text-gray-300">
-                            home
+                            {t('home')}
                         </Link>
                     </li>
                     <li>
