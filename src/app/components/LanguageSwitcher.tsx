@@ -10,8 +10,8 @@ import {setUserLocale, getUserLocale} from '@/services/locale';
 // Define languages with country codes for flags
 const languages = [
   { code: 'en', label: 'English', flag: 'GB' },
-  { code: 'es', label: 'Spanish', flag: 'ES' },
-  { code: 'de', label: 'German', flag: 'DE' },
+  { code: 'es', label: 'Español', flag: 'ES' },
+  { code: 'de', label: 'Deutsch', flag: 'DE' },
 ];
 
 interface LanguageSwitcherProps {
