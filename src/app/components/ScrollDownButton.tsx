@@ -6,7 +6,7 @@ export default function ScrollDownButton() {
     const handleScroll = () => {
         const scrollPosition = window.scrollY + window.innerHeight;
         const pageHeight = document.documentElement.scrollHeight;
-        if (scrollPosition >= pageHeight) {
+        if (scrollPosition >= pageHeight - 30) {
             setShowButton(false);
         } else {
             setShowButton(true);
@@ -14,7 +14,7 @@ export default function ScrollDownButton() {
     };
 
     const scrollDown = () => {
-        window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+        window.scrollBy({ top: window.innerHeight / 1.15, behavior: 'smooth' });
     };
 
     useEffect(() => {

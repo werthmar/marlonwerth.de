@@ -1,6 +1,7 @@
 "use client"
 
 import ScrollDownButton from './components/ScrollDownButton';
+import NextPageButton from './components/NextPageButton';
 
 // Localization
 import {useTranslations} from 'next-intl';
@@ -32,6 +33,8 @@ export default function Home() {
                     <p className="text-center lg:text-left text-lg max-w-prose">{t('text4')}</p>
                 </div>
             </div>
+
+            <NextPageButton />
 
             <ScrollDownButton />
         </>

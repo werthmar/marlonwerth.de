@@ -1,4 +1,8 @@
 {
+    "Global": {
+        "nextPageButtonText": "Weiter"
+    },
+
     "Navbar": {
         "home": "Startseite",
         "about": "Über mich",

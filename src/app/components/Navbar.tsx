@@ -18,7 +18,7 @@ const Navbar: React.FC<LanguageSwitcherProps> = ({ initialLocale }) => {
 
     return (
         <nav className="bg-navbar p-3 pl-12 pr-12 lg:pl-16 lg:pr-16 backdrop-filter backdrop-blur-lg backdrop-opacity-100 rounded-tl-full rounded-tr-full lg:rounded-tl-none lg:rounded-tr-none z-10 shadow fixed bottom-0 inset-x-0 lg:top-0 lg:bottom-auto">
-            <div className="flex justify-between items-center">
+            <div className="max-w-screen-xl mx-auto flex justify-between items-center">
 
                 <ul className="flex lg:justify-start space-x-8">
                     <li>
