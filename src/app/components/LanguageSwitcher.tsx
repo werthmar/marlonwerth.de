@@ -53,15 +53,17 @@ export default function LanguageSwitcher({initialLocale}: LanguageSwitcherProps)
         onClick={toggleDropdown}
       >
         <span className="flex items-center">
-          <ReactCountryFlag
-            countryCode={currentLanguage.flag}
-            svg
-            style={{
-              width: '1.5em',
-              height: '1.5em',
-            }}
-            title={currentLanguage.label}
-          />
+          <div style={{ width: '2em', height: '2em' }}>
+            <ReactCountryFlag
+              countryCode={currentLanguage.flag}
+              svg
+              style={{
+                width: '100%',
+                height: '100%',
+              }}
+              title={currentLanguage.label}
+            />
+          </div>
           {/*&nbsp; {currentLanguage.label}*/}
         </span>
         <FaCaretDown className="ml-2" />

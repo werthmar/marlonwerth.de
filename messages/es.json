@@ -3,5 +3,13 @@
         "home": "Inicio",
         "about": "Sobre mí",
         "contact": "Contacto"
+    },
+
+    "HomePage": {
+        "welcome": "Bienvenido!",
+        "text1": "Soy Marlon, tengo 25 años y acabo de escribir mi tesis de maestría en Informática Empresarial. Me interesa mucho la tecnología informática, especialmente el desarrollo web y de apps y la inteligencia artificial.", 
+        "text2": "Soy una persona abierta y amable, siempre dispuesta a probar nuevas tecnologías para ampliar continuamente mis conocimientos. Además de alemán, tengo muy buenos conocimientos de inglés y español.",
+        "text3": "Durante mi programa de estudios dual, pude adquirir mucha experiencia en el desarrollo de tecnología informática, la gestión de proyectos, la redacción de artículos científicos y el trabajo en equipo. Pude poner en práctica mi experiencia teórica desarrollando herramientas web, apps, medidas de automatización y otros programas en varios proyectos en mi universidad y en mis prácticas.",
+        "text4": "También tuve la oportunidad de familiarizarme con la tecnología 3D a través de proyectos de RV y RA. Llevo más de dos años trabajando como desarrollador web full-stack en DFKI, donde no solo he podido profundizar en mis conocimientos de programación, sino también trabajar activamente en el desarrollo de aplicaciones web innovadoras. Durante mi tiempo como estudiante asistente en DFKI, también me familiaricé con el tema de la inteligencia artificial y trabajé en varios proyectos de IA."
     }
 }

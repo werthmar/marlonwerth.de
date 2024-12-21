@@ -3,5 +3,13 @@
         "home": "Startseite",
         "about": "Über mich",
         "contact": "Kontakt"
+    },
+
+    "HomePage": {
+        "welcome": "Willkommen!",
+        "text1": "Ich bin Marlon, 25 Jahre alt und habe gerade meine Masterarbeit im Fachbereich Wirtschaftsinformatik geschrieben. Ich habe ein großes Interesse an IT-Technologie, vor allem der Web- und App-Entwicklung sowie künstlicher Intelligenz.",
+        "text2": "Ich bin ein offener, freundlicher Mensch, der stets begierig ist, neue Technologien auszuprobieren, um kontinuierlich seine Fähigkeiten zu erweitern. Neben der deutschen Sprache besitze ich sehr gute Englisch und Spanisch-Kenntnisse",
+        "text3": "Bereits während meines dualen Studiums konnte ich viel Erfahrung in der Entwicklung von IT-Technologie, dem Management von Projekten, verfassen von wissenschaftlichen Arbeiten und zusammenarbeiten in Teams sammeln. In mehreren Projekten an meiner Universität, sowie an meiner Praxisstelle konnte ich meine theoretische Erfahrung in die Praxis umsetzen, um Webtools, Apps, Automatisierungsmaßnahmen und weitere Programme zu entwickeln.",
+        "text4": "Darüber hinaus hatte ich die Möglichkeit, mich über VR- und AR-Projekte in die 3D-Technologie einzuarbeiten. Als Full-Stack-Web-Entwickler bin ich seit über zwei Jahren am DFKI tätig, wo ich nicht nur meine Programmierkenntnisse vertiefen konnte, sondern auch aktiv an der Entwicklung innovativer Webanwendungen arbeite. Außerdem habe ich mich während meiner Zeit als studentische Hilfskraft am DFKI in das Thema künstliche Intelligenz eingearbeitet und an verschiedenen KI-Projekten mitgewirkt."
     }
 }

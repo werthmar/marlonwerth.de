@@ -8,6 +8,10 @@
     --navbar: rgba(255, 255, 255, 0.5);
     --primary: #ba0202;
     --secondary: #286196;
+
+    --marlonImage: url('/images/Marlon.png');
+    
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .dark{
@@ -17,9 +21,13 @@
     --primary: #006f02;
     --secondary: #002e58;
     /* --accent: #161515; */
+
+    --marlonImage: url('/images/MarlonB&W.png');
 }
 
 body {
+    font-family: var(--font-sans);
+
     padding-top: 0; /* By default, no padding top */
     padding-bottom: calc(60px + 1rem); /* Assume a default mobile navbar height */
 
@@ -30,5 +38,9 @@ body {
 
     color: var(--foreground);
     background: var(--background);
-    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Used to change the image in darkMode */
+.marlonImage {
+    background-image: var(--marlonImage)
 }
