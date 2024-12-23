@@ -5,6 +5,7 @@ import { SiUnity, SiFlutter, SiMysql, SiMongodb, SiNeo4J } from 'react-icons/si'
 
 // Components
 import Tag from '../components/Tag';
+import LinkButton from '../components/LinkButton';
 
 export default function Portfolio() {
     const t = useTranslations('PortfolioPage');
@@ -15,10 +16,22 @@ export default function Portfolio() {
 
                 <p className="text-center text-lg max-w-prose mt-20 mb-20">{t('text1')}</p>
                 
+                {/* Universities */}
                 <h1 className="text-3xl font-bold mb-4">{t('universities')}</h1>
-                <h1 className="text-3xl font-bold mb-4">{t('work')}</h1>
-                <h1 className="text-3xl font-bold mb-4">{t('technologies')}</h1>
+                <div className='flex flex-col lg:flex-row gap-4 mb-16'>
+                    <LinkButton text='DHBW-Stuttgart' color='gray' icon='/images/dhbw.png' link='https://www.dhbw-stuttgart.de'/>
+                    <LinkButton text='Universität Osnabrück' color="white" icon='/images/uni-osna.png' textColor='darkRed' link='https://www.uni-osnabrueck.de/startseite/' />
+                    <LinkButton text='Universidad Valladolid' color='rgb(181, 39, 84)' icon='/images/uva.png' link='https://www.uva.es/export/sites/uva/'/>
+                </div>
 
+                {/* Work */}
+                <h1 className="text-3xl font-bold mb-4">{t('work')}</h1>
+                <div className='flex flex-col lg:flex-row gap-4 mb-16'>
+                    <LinkButton text='Nolte Küchen' color='white' textColor='black' icon='/images/nolte.png' link='https://www.nolte-kuechen.com/de-de/'/>
+                    <LinkButton text='DFKI Osnabrück' color='white' textColor='darkBlue' icon='/images/dfki.jpeg' link='https://www.dfki.de/web'/>
+                </div>
+
+                <h1 className="text-3xl font-bold mb-4">{t('technologies')}</h1>
                 {/* Development */}
                 <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-lg mb-6">
                     <h2 className='text-xl font-bold text-gray-400 mb-4'>{t('development')}</h2>
@@ -55,7 +68,7 @@ export default function Portfolio() {
                 </div>
                 
                 {/* Other */}
-                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-lg mb-10">
+                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-lg mb-16">
                     <h2 className='text-xl font-bold text-gray-400 mb-4'>{t('other')}</h2>
                     <ul className="list-disc list-inside">
                         <li className="mb-2">{t('nginx')}</li>
@@ -69,9 +82,6 @@ export default function Portfolio() {
 
             </div>
 
-
-
-            
         </>
     );
 }

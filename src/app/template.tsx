@@ -5,6 +5,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ScrollDownButton from "./components/ScrollDownButton";
 
 export default function Template({ children }: { children: React.ReactNode }) {
   return (
@@ -13,7 +14,9 @@ export default function Template({ children }: { children: React.ReactNode }) {
       animate={{ y: 0, opacity: 1 }}
       transition={{ ease: "easeInOut", duration: 0.75 }}
     >
-      {children}
+        {children}
+        <ScrollDownButton />
+
     </motion.div>
   );
 }

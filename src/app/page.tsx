@@ -1,6 +1,3 @@
-"use client"
-
-import ScrollDownButton from './components/ScrollDownButton';
 import NextPageButton from './components/NextPageButton';
 
 // Localization
@@ -35,8 +32,6 @@ export default function Home() {
             </div>
 
             <NextPageButton link='/portfolio' />
-
-            <ScrollDownButton />
         </>
     );
 }
