@@ -1,7 +1,12 @@
+"use client";
+
 import NextPageButton from './components/NextPageButton';
 
 // Localization
 import {useTranslations} from 'next-intl';
+
+// Components
+import ScrollDownButton from "./components/ScrollDownButton";
 
 export default function Home() {
     const t = useTranslations('HomePage');
@@ -19,11 +24,6 @@ export default function Home() {
                 <div className="flex justify-center lg:justify-end p-4 marlonImage" style={{ backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', width: '100%', height: '100%' }}>
                     </div>
                 
-                {/**
-                <div className="lg:w-auto flex justify-center lg:justify-end p-4">
-                    <img src="/images/Marlon.png" alt="Your description" className="max-w-full h-auto max-h-[700px] object-contain" />
-                </div>
-                    */}
                 <div className="lg:w-auto flex flex-col justify-center items-center lg:items-start p-4">
                     <p className="text-center lg:text-left text-lg max-w-prose">{t('text3')}</p>
                     <br/>
@@ -32,6 +32,7 @@ export default function Home() {
             </div>
 
             <NextPageButton link='/portfolio' />
+            <ScrollDownButton />
         </>
     );
 }

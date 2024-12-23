@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { FaReact, FaNodeJs, FaPython, FaJava, FaWindows, FaApple, FaLinux } from 'react-icons/fa';
@@ -6,9 +8,64 @@ import { SiUnity, SiFlutter, SiMysql, SiMongodb, SiNeo4J } from 'react-icons/si'
 // Components
 import Tag from '../components/Tag';
 import LinkButton from '../components/LinkButton';
+import Timeline from '../components/Timeline';
+import NextPageButton from '../components/NextPageButton';
+import ScrollDownButton from "../components/ScrollDownButton";
 
 export default function Portfolio() {
     const t = useTranslations('PortfolioPage');
+
+    const timelineItems = [
+        {
+            title: t('project1-title'),
+            date: '2024',
+            description: t('project1-description'),
+            tag: 'VR',
+            tagColor: 'bg-red-100',
+            tag2: 'AI',
+            tag2Color: 'bg-blue-100',
+            iconColor: 'bg-red-100'
+        },
+        {
+            title: t('project2-title'),
+            date: '2024',
+            description: t('project2-description'),
+            tag: 'Python',
+            tagColor: 'bg-yellow-100',
+            tag2: 'AI',
+            tag2Color: 'bg-blue-100',
+            iconColor: 'bg-yellow-100'
+        },
+        {
+            title: t('project3-title'),
+            date: '2024',
+            description: t('project3-description'),
+            tag: 'React',
+            tagColor: 'bg-green-100',
+            tag2: 'AI',
+            tag2Color: 'bg-blue-100',
+            iconColor: 'bg-green-100'
+        },
+        {
+            title: t('project4-title'),
+            date: '2023-2024',
+            description: t('project4-description'),
+            tag: 'React',
+            tagColor: 'bg-green-100',
+            iconColor: 'bg-green-100'
+        },
+        {
+            title: t('project5-title'),
+            date: '2022-2023',
+            description: t('project5-description'),
+            tag: 'Node.js',
+            tagColor: 'bg-orange-100',
+            tag2: "Flutter",
+            tag2Color: "bg-purple-100",
+            iconColor: 'bg-orange-100'
+        },
+        // Add more timeline items as needed
+    ];
 
     return (
         <>
@@ -72,15 +129,25 @@ export default function Portfolio() {
                     <h2 className='text-xl font-bold text-gray-400 mb-4'>{t('other')}</h2>
                     <ul className="list-disc list-inside">
                         <li className="mb-2">{t('nginx')}</li>
+                        <li className="mb-2">{t('ai')}</li>
+                        <li className="mb-2">{t('vr')}</li>
                         <li className="mb-2">{t('blender')}</li>
                         <li className="mb-2">{t('rpa')}</li>
                         <li className="mb-2">{t('bpmn')}</li>
                     </ul>
                 </div>
                 
-                <h1 className="text-3xl font-bold mb-4">{t('projects')}</h1>
+                <h1 className="text-3xl font-bold mb-8">{t('projects')}</h1>
+                {/* Timeline */}
+                <div className='pl-6 pr-6 max-w-prose'>
+                    <Timeline items={timelineItems} />
+                    <p className='text-gray-400'>... {t('more')}</p>
+                </div>
 
             </div>
+
+            <NextPageButton link='/cv' />
+            <ScrollDownButton />
 
         </>
     );

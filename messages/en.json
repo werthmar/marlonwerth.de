@@ -30,6 +30,19 @@
         "blender": "3D modeling with Blender",
         "rpa": "Robotic Process Automation",
         "bpmn": "BPMN and eEPK skills",
-        "projects": "Projects"
+        "vr": "VR and AR projects with unity and unreal engine",
+        "ai": "AI projects with Python and scikit-learn",
+        "projects": "Projects",
+        "project1-title": "VR reading tandem",
+        "project1-description": "A reading trainer for children in VR. The children are placed into an immersive Environment in the from of the forrest from the farytale 'little red riding hood'. The children have to read the text to continue the story. Correct pronunciation is checked using AI.",
+        "project2-title": "Video Generator",
+        "project2-description": "A tool to generate videos automatically using python and Google Gemini. The tool automatically generates a story, text to speech from that story as well as captions with timing from the text to speech. It than merges everything together to a video which it chooses randomly from a number of templates and uploads it without needing any user input.",
+        "project3-title": "AI-Web-Dashboard",
+        "project3-description": "A web dashboard to visualize the results of an AI model in regards to a smart cowshed. The dashboard uses a websocket to display the results of the AI model in real time. In addition it provides live imaging aswell as real time data like temperature and humidity.",
+        "project4-title": "Circularity Navigator",
+        "project4-description": "A Web-App to help companies to become more sustainable. The website allows companies to educate themselfes about the topic of circular economy and design and allows them to select core design principles for their products and export them.",
+        "project5-title": "BPMN Website and App",
+        "project5-description": "Web-App which allows users to create a bpmn diagram. The bpmn diagram than gets converted and saved to a Neo4j database. The individual steps can than be executed using a Flutter-App, which guides users through the process.",
+        "more": "and many more"
     }
 }
