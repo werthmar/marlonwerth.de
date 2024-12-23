@@ -1,9 +1,77 @@
+import React from 'react';
+import { useTranslations } from 'next-intl';
+import { FaReact, FaNodeJs, FaPython, FaJava, FaWindows, FaApple, FaLinux } from 'react-icons/fa';
+import { SiUnity, SiFlutter, SiMysql, SiMongodb, SiNeo4J } from 'react-icons/si';
+
+// Components
+import Tag from '../components/Tag';
 
 export default function Portfolio() {
+    const t = useTranslations('PortfolioPage');
+
     return (
-        <div>
-            <h1>About Page</h1>
-            <p>This is the about page.</p>
-        </div>
+        <>
+            <div className="flex flex-col justify-center items-center p-6">
+
+                <p className="text-center text-lg max-w-prose mt-20 mb-20">{t('text1')}</p>
+                
+                <h1 className="text-3xl font-bold mb-4">{t('universities')}</h1>
+                <h1 className="text-3xl font-bold mb-4">{t('work')}</h1>
+                <h1 className="text-3xl font-bold mb-4">{t('technologies')}</h1>
+
+                {/* Development */}
+                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-lg mb-6">
+                    <h2 className='text-xl font-bold text-gray-400 mb-4'>{t('development')}</h2>
+                    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+                        <Tag text='Node.js' color='#339933' icon={<FaNodeJs />} />
+                        <Tag text='React' color='#61DAFB' icon={<FaReact />} />
+                        <Tag text='Next.js' color='white' borderColor='black' icon={"/images/nextjs-icon.png"} />
+                        <Tag text='Python' color='#3776AB' icon={<FaPython />} />
+                        <Tag text='C#' color='purple' icon={"/images/c-sharp-icon.png"} />
+                        <Tag text='Unity' color='#000000' icon={<SiUnity />} />
+                        <Tag text='Flutter' color='#02569B' icon={<SiFlutter />} />
+                        <Tag text='Java' color='#007396' icon={<FaJava />} />
+                    </div>
+                </div>
+                
+                {/* Databases */}
+                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-lg mb-6">
+                    <h2 className='text-xl font-bold text-gray-400 mb-4'>{t('databases')}</h2>
+                    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+                        <Tag text='SQL' color='#4479A1' icon={<SiMysql />} />
+                        <Tag text='MongoDB' color='#47A248' icon={<SiMongodb />} />
+                        <Tag text='Neo4j' color='#008CC1' icon={<SiNeo4J />} />
+                    </div>
+                </div>
+                
+                {/* Operating Systems */}
+                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-lg mb-6">
+                    <h2 className='text-xl font-bold text-gray-400 mb-4'>{t('os')}</h2>
+                    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+                        <Tag text='Windows' color='#0078D6' icon={<FaWindows />} />
+                        <Tag text='macOS' color='#000000' icon={<FaApple />} />
+                        <Tag text='Linux' color='#FCC624' icon={<FaLinux />} />
+                    </div>
+                </div>
+                
+                {/* Other */}
+                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-lg mb-10">
+                    <h2 className='text-xl font-bold text-gray-400 mb-4'>{t('other')}</h2>
+                    <ul className="list-disc list-inside">
+                        <li className="mb-2">{t('nginx')}</li>
+                        <li className="mb-2">{t('blender')}</li>
+                        <li className="mb-2">{t('rpa')}</li>
+                        <li className="mb-2">{t('bpmn')}</li>
+                    </ul>
+                </div>
+                
+                <h1 className="text-3xl font-bold mb-4">{t('projects')}</h1>
+
+            </div>
+
+
+
+            
+        </>
     );
 }
