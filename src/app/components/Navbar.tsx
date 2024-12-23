@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FaHome } from 'react-icons/fa';
+import { FaHome, FaBriefcase, FaFileAlt } from 'react-icons/fa';
 
 // Localization
 import {useTranslations} from 'next-intl';
@@ -24,22 +24,24 @@ const Navbar: React.FC<LanguageSwitcherProps> = ({ initialLocale }) => {
                     <li>
                         <Link href="/" className="hover:text-gray-300 flex items-center">
                             <FaHome className="mr-2 text-foreground" size={25}/>
-                            {t('home')}
+                            <span className="hidden lg:inline">{t('home')}</span>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/about" className="hover:text-gray-300">
-                            {t('about')}
+                        <Link href="/portfolio" className="hover:text-gray-300 flex items-center">
+                            <FaBriefcase className="mr-2 text-foreground" size={25}/>
+                            <span className="hidden lg:inline">{t('portfolio')}</span>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/contact" className="hover:text-gray-300">
-                            {t('contact')}
+                        <Link href="/cv" className="hover:text-gray-300 flex items-center">
+                            <FaFileAlt className="mr-2 text-foreground" size={25}/>
+                            <span className="hidden lg:inline">{t('cv')}</span>
                         </Link>
                     </li>
                 </ul>
 
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center lg:space-x-4">
                     <LanguageSwitcher initialLocale={initialLocale} />
                     <ThemeToggle />
                 </div>

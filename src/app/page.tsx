@@ -34,7 +34,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <NextPageButton />
+            <NextPageButton link='/portfolio' />
 
             <ScrollDownButton />
         </>

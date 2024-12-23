@@ -7,6 +7,7 @@ import {getLocale, getMessages} from 'next-intl/server';
 
 // Components
 import Navbar from "./components/Navbar";
+import Template from './template';
 
 // Style
 import "./globals.css";
@@ -34,7 +35,7 @@ export default async function RootLayout({
 
                 <NextIntlClientProvider messages={messages}>
                     <Navbar initialLocale={locale}/>
-                    {children}
+                    <Template>{children}</Template>
                 </NextIntlClientProvider>
                 
             </body>

@@ -5,8 +5,8 @@
 
     "Navbar": {
         "home": "Startseite",
-        "about": "Über mich",
-        "contact": "Kontakt"
+        "portfolio": "Portfolio",
+        "cv": "Lebenslauf"
     },
 
     "HomePage": {
