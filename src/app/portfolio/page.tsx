@@ -134,6 +134,7 @@ export default function Portfolio() {
                         <li className="mb-2">{t('blender')}</li>
                         <li className="mb-2">{t('rpa')}</li>
                         <li className="mb-2">{t('bpmn')}</li>
+                        <li className="mb-2">{t('git')}</li>
                     </ul>
                 </div>
                 

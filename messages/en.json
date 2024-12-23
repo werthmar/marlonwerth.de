@@ -32,6 +32,7 @@
         "bpmn": "BPMN and eEPK skills",
         "vr": "VR and AR projects with unity and unreal engine",
         "ai": "AI projects with Python and scikit-learn",
+        "git": "Version control with Git (GitHub, GitLab)",
         "projects": "Projects",
         "project1-title": "VR reading tandem",
         "project1-description": "A reading trainer for children in VR. The children are placed into an immersive Environment in the from of the forrest from the farytale 'little red riding hood'. The children have to read the text to continue the story. Correct pronunciation is checked using AI.",
