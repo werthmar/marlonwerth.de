@@ -11,9 +11,40 @@
 
     "HomePage": {
         "welcome": "Willkommen!",
-        "text1": "Ich bin Marlon, 25 Jahre alt und habe gerade meine Masterarbeit im Fachbereich Wirtschaftsinformatik geschrieben. Ich habe ein großes Interesse an IT-Technologie, vor allem der Web- und App-Entwicklung sowie künstlicher Intelligenz.",
+        "text1": "Mein Name ist Marlon, ich bin 25 Jahre alt und habe gerade meine Masterarbeit in Wirtschaftsinformatik abgeschlossen. Ich interessiere mich sehr für IT-Technologien, mit besonderem Schwerpunkt auf Web- und App-Entwicklung sowie künstlicher Intelligenz. Ich habe über 6 Jahre Programmiererfahrung und fast 3 Jahre Berufserfahrung als Full-Stack-Webentwickler.",
         "text2": "Ich bin ein offener, freundlicher Mensch, der stets begierig ist, neue Technologien auszuprobieren, um kontinuierlich seine Fähigkeiten zu erweitern. Neben der deutschen Sprache besitze ich sehr gute Englisch und Spanisch-Kenntnisse",
         "text3": "Bereits während meines dualen Studiums konnte ich viel Erfahrung in der Entwicklung von IT-Technologie, dem Management von Projekten, verfassen von wissenschaftlichen Arbeiten und zusammenarbeiten in Teams sammeln. In mehreren Projekten an meiner Universität, sowie an meiner Praxisstelle konnte ich meine theoretische Erfahrung in die Praxis umsetzen, um Webtools, Apps, Automatisierungsmaßnahmen und weitere Programme zu entwickeln.",
-        "text4": "Darüber hinaus hatte ich die Möglichkeit, mich über VR- und AR-Projekte in die 3D-Technologie einzuarbeiten. Als Full-Stack-Web-Entwickler bin ich seit über zwei Jahren am DFKI tätig, wo ich nicht nur meine Programmierkenntnisse vertiefen konnte, sondern auch aktiv an der Entwicklung innovativer Webanwendungen arbeite. Außerdem habe ich mich während meiner Zeit als studentische Hilfskraft am DFKI in das Thema künstliche Intelligenz eingearbeitet und an verschiedenen KI-Projekten mitgewirkt."
+        "text4": "Während meiner Zeit am Deutschen Forschungszentrum für Künstliche Intelligenz konnte ich nicht nur meine Programmierkenntnisse vertiefen, sondern mich auch in die Thematik der Künstlichen Intelligenz einarbeiten. Ich konnte an verschiedenen KI-Projekten mitarbeiten, um KI in innovative Webanwendungen zu implementieren."
+    },
+
+    "PortfolioPage": {
+        "text1": "Während meines Studiums und meiner Berufserfahrung hatte ich die Möglichkeit, mit verschiedenen Technologien, Datenbanken und Tools zu arbeiten. Außerdem habe ich an einer Vielzahl von Projekten teilgenommen, sowohl in meiner Freizeit als auch im beruflichen Umfeld, was mir ermöglichte, meine technischen Fähigkeiten zu vertiefen und vielfältige praktische Erfahrungen zu sammeln.",
+        "universities": "Universitäten",
+        "work": "Arbeit",
+        "technologies": "Technologien",
+        "development": "Entwicklung",
+        "databases": "Datenbanken",
+        "os": "Betriebssysteme",
+        "other": "Andere",
+        "nginx": "Webhosting mit Nginx auf Linux-Servern",
+        "blender": "3D Modellierung mit Blender",
+        "rpa": "Robotic Process Automation",
+        "bpmn": "BPMN und eEPK Fähigkeiten",
+        "vr": "VR und AR Projekte mit Unity und Unreal Engine",
+        "ai": "KI Projekte mit Python und scikit-learn",
+        "git": "Version control mit Git (GitHub, GitLab)",
+        "projects": "Projekte",
+        "project1-title": "VR Lesetandem",
+        "project1-description": "Ein VR-Lesetrainer für Kinder. Die Kinder befinden sich in einer immersiven Umgebung im Wald des Märchens „Rotkäppchen“. Die Kinder müssen den Text lesen, um die Geschichte fortzusetzen. Die KI überprüft die korrekte Aussprache.",
+        "project2-title": "Video Generator",
+        "project2-description": "Ein Tool zur automatischen Erstellung von Videos mit Python und Google Gemini. Das Tool generiert automatisch eine Geschichte, Text in Sprache aus dieser Geschichte sowie Untertitel mit Timing aus dem Text in Sprache. Anschließend fügt es alles zu einem Video zusammen, das es nach dem Zufallsprinzip aus einer Reihe von Vorlagen auswählt, und lädt es hoch, ohne dass eine Benutzereingabe erforderlich ist.",
+        "project3-title": "KI-Web-Dashboard",
+        "project3-description": "Ein Web-Dashboard zur Visualisierung der Ergebnisse eines KI-Modells in Bezug auf einen intelligenten Kuhstall. Das Dashboard nutzt einen Websocket, um die Ergebnisse des KI-Modells in Echtzeit anzuzeigen. Darüber hinaus bietet es Live-Bilder sowie Echtzeitdaten wie Temperatur und Luftfeuchtigkeit.",
+        "project4-title": "Circularity Navigator",
+        "project4-description": "Eine Web-App, die Unternehmen dabei hilft, nachhaltiger zu werden. Die Website ermöglicht es Unternehmen, sich über das Thema Kreislaufwirtschaft und Design zu informieren und ermöglicht es ihnen, zentrale Designprinzipien für ihre Produkte auszuwählen und zu exportieren.",
+        "project5-title": "BPMN Website und App",
+        "project5-description": "Web-App, mit der Benutzer ein bpmn-Diagramm erstellen können. Das bpmn-Diagramm wird dann konvertiert und in einer Neo4j-Datenbank gespeichert. Die einzelnen Schritte können dann mit einer Flutter-App ausgeführt werden, die den Nutzer durch den Prozess führt.",
+        "more": "und viele mehr"
     }
+
 }

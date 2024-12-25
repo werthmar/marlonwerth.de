@@ -11,9 +11,39 @@
 
     "HomePage": {
         "welcome": "Bienvenido!",
-        "text1": "Soy Marlon, tengo 25 años y acabo de escribir mi tesis de maestría en Informática Empresarial. Me interesa mucho la tecnología informática, especialmente el desarrollo web y de apps y la inteligencia artificial.", 
-        "text2": "Soy una persona abierta y amable, siempre dispuesta a probar nuevas tecnologías para ampliar continuamente mis conocimientos. Además de alemán, tengo muy buenos conocimientos de inglés y español.",
-        "text3": "Durante mi programa de estudios dual, pude adquirir mucha experiencia en el desarrollo de tecnología informática, la gestión de proyectos, la redacción de artículos científicos y el trabajo en equipo. Pude poner en práctica mi experiencia teórica desarrollando herramientas web, apps, medidas de automatización y otros programas en varios proyectos en mi universidad y en mis prácticas.",
-        "text4": "También tuve la oportunidad de familiarizarme con la tecnología 3D a través de proyectos de RV y RA. Llevo más de dos años trabajando como desarrollador web full-stack en DFKI, donde no solo he podido profundizar en mis conocimientos de programación, sino también trabajar activamente en el desarrollo de aplicaciones web innovadoras. Durante mi tiempo como estudiante asistente en DFKI, también me familiaricé con el tema de la inteligencia artificial y trabajé en varios proyectos de IA."
+        "text1": "Mi nombre es Marlon, tengo 25 años y acabo de terminar de escribir mi tesis de maestría en Informática Empresarial. Tengo un gran interés en la tecnología de TI, con un enfoque particular en el desarrollo web y de aplicaciones, así como la inteligencia artificial. Tengo más de 6 años de experiencia en programación y casi 3 años de experiencia profesional como desarrollador web full-stack.", 
+        "text2": "Soy una persona abierta y amable, siempre dispuesta a probar nuevas tecnologías para ampliar continuamente mis conocimientos. Además de alemán, tengo excelentes conocimientos de inglés y español.",
+        "text3": "Durante mi programa de estudios dual, pude adquirir mucha experiencia en el desarrollo de tecnología informática, la gestión de proyectos, la redacción de artículos científicos y el trabajo en equipo. Pude poner en práctica mi experiencia teórica desarrollando herramientas web, apps, medidas de automatización y otros programas en varios proyectos en mi universidad o en mi lugar de trabajo. También tuve la oportunidad de familiarizarme con la tecnología 3D a través de proyectos de RV y RA.",
+        "text4": "Durante mi estancia en el Centro Alemán de Investigación en Inteligencia Artificial no sólo he podido profundizar en mis conocimientos de programación, sino también familiarizarme con el tema de la inteligencia artificial. Trabajé en varios proyectos de IA con el fin de implementarla en aplicaciones web innovadoras."
+    },
+
+    "PortfolioPage": {
+        "text1": "Durante mis estudios y mi experiencia profesional, tuve la oportunidad de trabajar con diversas tecnologías, bases de datos y herramientas. También participé en una amplia gama de proyectos, tanto en mi tiempo libre como en entornos profesionales, que me permitieron profundizar en mis conocimientos técnicos y adquirir experiencia práctica diversa.",
+        "universities": "Universidaded",
+        "work": "Trabajo",
+        "technologies": "Tecnologías",
+        "development": "Desarollo",
+        "databases": "Base de datos",
+        "os": "Sistema de operación",
+        "other": "Otros",
+        "nginx": "Webhosting con Nginx en un Linux servidor",
+        "blender": "Modelado 3D con Blender",
+        "rpa": "Robotic Process Automation",
+        "bpmn": "Habilidades de BPMN y eEPK",
+        "vr": "proyectos vr y ar con unity y unreal engine",
+        "ai": "Proyectos IA con python y scikit-learn",
+        "git": "Version control con Git (GitHub, GitLab)",
+        "projects": "Proyectos",
+        "project1-title": "Tándem de lectura VR",
+        "project1-description": "Un entrenador de lectura para niños en RV. Los niños se sitúan en un entorno inmersivo en el bosque del cuento «Caperucita Roja». Los niños tienen que leer el texto para continuar la historia. La IA comprueba la pronunciación correcta.",
+        "project2-title": "Generador de video",
+        "project2-description": "Una herramienta para generar vídeos automáticamente usando python y Google Gemini. La herramienta genera automáticamente una historia, texto a voz a partir de esa historia, así como subtítulos con la sincronización del texto a voz. A continuación, lo fusiona todo en un vídeo que elige al azar entre una serie de plantillas y lo sube a la red sin necesidad de que lo introduzca el usuario.",
+        "project3-title": "IA-Web-Dashboard",
+        "project3-description": "Un panel web para visualizar los resultados de un modelo de IA en relación con un establo inteligente. El panel utiliza un websocket para mostrar los resultados del modelo de IA en tiempo real. Además, proporciona imágenes en directo y datos en tiempo real como la temperatura y la humedad.",
+        "project4-title": "Circularity Navigator",
+        "project4-description": "Una Web-App para ayudar a las empresas a ser más sostenibles. La web permite a las empresas informarse sobre el tema de la economía circular y el diseño, así como seleccionar los principios básicos de diseño para sus productos y exportarlos.",
+        "project5-title": "BPMN Website y App",
+        "project5-description": "Web-App que permite a los usuarios crear un diagrama bpmn. El diagrama bpmn se convierte y se guarda en una base de datos Neo4j. A continuación, los pasos individuales pueden ejecutarse mediante una aplicación Flutter, que guía a los usuarios a lo largo del proceso.",
+        "more": "y mucho más"
     }
 }

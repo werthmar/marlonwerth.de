@@ -11,10 +11,10 @@
 
     "HomePage": {
         "welcome": "Welcome!",
-        "text1": "I am Marlon, 25 years old and I have just completed writting my Master's thesis in Business Informatics. I have a keen interest in IT technology, especially web and app development aswell as artificial intelligence.", 
-        "text2": "I am an open, friendly person who is always eager to try out new technologies in order to continuously expand my skills. In addition to German, I have a very good knowledge of English and Spanish",
-        "text3": "During my dual study programme, I was able to gain a lot of experience in developing IT technology, managing projects, writing scientific papers and working in teams. I was able to put my theoretical experience into practice by developing web tools, apps, automation measures and other programmes in several projects at my university and at my work placement.",
-        "text4": "I also had the opportunity to familiarise myself with 3D technology through VR and AR projects. I have been working as a full-stack web developer at DFKI for over two years, where I have not only been able to deepen my programming skills, but also actively work on the development of innovative web applications. During my time as a student assistant at DFKI, I also familiarised myself with the topic of artificial intelligence and worked on various AI projects."
+        "text1": "My name is Marlon, I am 25 years old and I have just completed writing my Master's thesis in Business Informatics. I have a keen interest in IT technology, with a particular focus on web and app development as well as artificial intelligence. I have over 6 years of programming experience and nearly 3 years of professional experience as a full-stack web developer.", 
+        "text2": "I am an open, friendly person who is always eager to try out new technologies in order to continuously expand my skills. In addition to German, I have excellent English and Spanish skills.",
+        "text3": "During my dual study programme, I was able to gain a lot of experience in developing IT technology, managing projects, writing scientific papers and working in teams. I was able to put my theoretical experience into practice by developing web tools, apps, automation measures and other programmes in several projects at my university or at my workplace. I also had the opportunity to familiarise myself with 3D technology through VR and AR projects.",
+        "text4": "During my time at the German Research Center for Artificial Intelligence I have not only been able to deepen my programming skills, but also familiarise myself with the topic of artificial intelligence. I worked on various AI projects in order to implement AI into innovative web applications."
     },
 
     "PortfolioPage": {
@@ -30,7 +30,7 @@
         "blender": "3D modeling with Blender",
         "rpa": "Robotic Process Automation",
         "bpmn": "BPMN and eEPK skills",
-        "vr": "VR and AR projects with unity and unreal engine",
+        "vr": "VR and AR projects with Unity and Unreal Engine",
         "ai": "AI projects with Python and scikit-learn",
         "git": "Version control with Git (GitHub, GitLab)",
         "projects": "Projects",
@@ -45,5 +45,21 @@
         "project5-title": "BPMN Website and App",
         "project5-description": "Web-App which allows users to create a bpmn diagram. The bpmn diagram than gets converted and saved to a Neo4j database. The individual steps can than be executed using a Flutter-App, which guides users through the process.",
         "more": "and many more"
+    },
+
+    "cv": {
+        "cv": "Curriculum Vitae",
+        "name": "Name:",
+        "birthdate": "Birthdate",
+        "work": "Work",
+        "dfki": "since 2022: German Research Center for Artificial Intelligence",
+        "uva": "Semester abroad at Universidad de Valladolid (Spain)",
+        "uos": "Universität Osnabrück (Master)",
+        "dhbw": "Duale Hochschule Baden-Württemberg (Bachelor)",
+        "studies": "Studies",
+        "internships": "Internships",
+        "schools": "Schools",
+        "retirement-home": "Retirement home"
+
     }
 }
