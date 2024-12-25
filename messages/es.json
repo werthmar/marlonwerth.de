@@ -6,7 +6,7 @@
     "Navbar": {
         "home": "Inicio",
         "portfolio": "Portafolio",
-        "cv": "Currículum Vitae"
+        "cv": "Currículum Vítae"
     },
 
     "HomePage": {
@@ -45,5 +45,22 @@
         "project5-title": "BPMN Website y App",
         "project5-description": "Web-App que permite a los usuarios crear un diagrama bpmn. El diagrama bpmn se convierte y se guarda en una base de datos Neo4j. A continuación, los pasos individuales pueden ejecutarse mediante una aplicación Flutter, que guía a los usuarios a lo largo del proceso.",
         "more": "y mucho más"
+    },
+
+    "cv": {
+        "cv": "Currículum Vítae",
+        "name": "Nombre:",
+        "birthdate": "fecha de nacimiento",
+        "work": "Trabajo",
+        "dfki": "desde 2022: Centro Alemán de Investigación en Inteligencia Artificial",
+        "uva": "Semestre en el extranjero a Universidad de Valladolid (España)",
+        "uos": "Universität Osnabrück (Master)",
+        "dhbw": "Duale Hochschule Baden-Württemberg (Grado)",
+        "studies": "Estudios",
+        "internships": "Prácticas",
+        "schools": "Escuela",
+        "retirement-home": "Residencia de ancianos"
+
     }
+
 }

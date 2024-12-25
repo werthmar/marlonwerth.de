@@ -45,6 +45,22 @@
         "project5-title": "BPMN Website und App",
         "project5-description": "Web-App, mit der Benutzer ein bpmn-Diagramm erstellen können. Das bpmn-Diagramm wird dann konvertiert und in einer Neo4j-Datenbank gespeichert. Die einzelnen Schritte können dann mit einer Flutter-App ausgeführt werden, die den Nutzer durch den Prozess führt.",
         "more": "und viele mehr"
+    },
+
+    "cv": {
+        "cv": "Lebenslauf",
+        "name": "Name:",
+        "birthdate": "Geburtsdatum",
+        "work": "Arbeit",
+        "dfki": "seit 2022: Deutsches Forschungszentrum für künstliche Intelligenz",
+        "uva": "Auslandssemester an der Universidad de Valladolid (Spanien)",
+        "uos": "Universität Osnabrück (Master)",
+        "dhbw": "Duale Hochschule Baden-Württemberg (Bachelor)",
+        "studies": "Studium",
+        "internships": "Praktika",
+        "schools": "Schule",
+        "retirement-home": "Altersheim"
+
     }
 
 }
