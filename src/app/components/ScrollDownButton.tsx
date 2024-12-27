@@ -41,7 +41,7 @@ export default function ScrollDownButton() {
                 }
             `}</style>
             {showButton && (
-                <div className="fixed bottom-28 lg:bottom-4 left-0 right-0 flex justify-center" style={{ zIndex: 1000 }}>
+                <div className="fixed bottom-28 lg:bottom-4 left-0 right-0 flex justify-center z-1">
                     <button
                         onClick={scrollDown}
                         className="bg-foreground text-background rounded-full p-4 animate-bounce"

@@ -20,19 +20,8 @@ interface LanguageSwitcherProps {
 
 export default function LanguageSwitcher({initialLocale}: LanguageSwitcherProps) {
     
-    //const [currentLangCode, setLangCode] = useState<string | null>(null);
     const [currentLangCode, setLangCode] = useState<string>(initialLocale || languages[0].code);
     const [isOpen, setIsOpen] = useState(false);
-
-    /*
-    useEffect(() => {
-        const fetchLocale = async () => {
-            const locale = await getUserLocale();
-            setLangCode(locale);
-        };
-        fetchLocale();
-    }, []);
-    */
     
     const currentLanguage = languages.find(lang => lang.code === currentLangCode) || languages[0];
 
@@ -43,8 +32,6 @@ export default function LanguageSwitcher({initialLocale}: LanguageSwitcherProps)
         setUserLocale(lang.code);
         setLangCode(lang.code);
     };
-
-
 
   return (
     <div className="relative inline-block text-left">
@@ -70,7 +57,7 @@ export default function LanguageSwitcher({initialLocale}: LanguageSwitcherProps)
       </button>
 
       {isOpen && (
-        <div className="origin-bottom-right lg:origin-top-right absolute lg:bottom-auto lg:mt-1 bottom-full mb-1 w-40 rounded-md shadow-lg bg-navbar ring-1 ring-black ring-opacity-5">
+        <div className="origin-bottom-right lg:origin-top-right absolute lg:bottom-auto lg:mt-1 bottom-full mb-1 w-40 rounded-md shadow-lg bg-background ring-1 ring-black ring-opacity-5 z-50">
           <div className="py-1">
             {languages
               .filter((lang) => lang.code !== currentLangCode)
