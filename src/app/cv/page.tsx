@@ -1,9 +1,4 @@
-"use client";
-
 import { NextIntlClientProvider, useTranslations } from "next-intl";
-
-// Components
-import ScrollDownButton from "../components/ScrollDownButton";
 
 export default function() {
     const t = useTranslations('cv');
@@ -36,8 +31,6 @@ export default function() {
                     <li>2006-2010: Grundschule Ennigloh</li>
                 </ul>
             </div>
-
-            <ScrollDownButton />
 
         </>
     );

@@ -21,48 +21,48 @@ export default function Portfolio() {
             date: '2024',
             description: t('project1-description'),
             tag: 'VR',
-            tagColor: 'bg-red-100',
+            tagColor: 'bg-red-200',
             tag2: 'AI',
-            tag2Color: 'bg-blue-100',
-            iconColor: 'bg-red-100'
+            tag2Color: 'bg-blue-200',
+            iconColor: 'bg-red-200'
         },
         {
             title: t('project2-title'),
             date: '2024',
             description: t('project2-description'),
             tag: 'Python',
-            tagColor: 'bg-yellow-100',
+            tagColor: 'bg-yellow-200',
             tag2: 'AI',
-            tag2Color: 'bg-blue-100',
-            iconColor: 'bg-yellow-100'
+            tag2Color: 'bg-blue-200',
+            iconColor: 'bg-yellow-200'
         },
         {
             title: t('project3-title'),
             date: '2024',
             description: t('project3-description'),
             tag: 'React',
-            tagColor: 'bg-green-100',
+            tagColor: 'bg-green-200',
             tag2: 'AI',
-            tag2Color: 'bg-blue-100',
-            iconColor: 'bg-green-100'
+            tag2Color: 'bg-blue-200',
+            iconColor: 'bg-green-200'
         },
         {
             title: t('project4-title'),
             date: '2023-2024',
             description: t('project4-description'),
             tag: 'React',
-            tagColor: 'bg-green-100',
-            iconColor: 'bg-green-100'
+            tagColor: 'bg-green-200',
+            iconColor: 'bg-green-200'
         },
         {
             title: t('project5-title'),
             date: '2022-2023',
             description: t('project5-description'),
             tag: 'Node.js',
-            tagColor: 'bg-orange-100',
+            tagColor: 'bg-orange-200',
             tag2: "Flutter",
-            tag2Color: "bg-purple-100",
-            iconColor: 'bg-orange-100'
+            tag2Color: "bg-purple-200",
+            iconColor: 'bg-orange-200'
         },
         // Add more timeline items as needed
     ];

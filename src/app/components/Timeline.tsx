@@ -17,7 +17,7 @@ interface TimelineProps {
 
 const Timeline: React.FC<TimelineProps> = ({ items }) => {
     return (
-        <div className="relative border-l border-gray-200">
+        <div className="relative border-l border-gray-400">
             {items.map((item, index) => (
                 <div key={index} className="mb-10 ml-6">
                 
