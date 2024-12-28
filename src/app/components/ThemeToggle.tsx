@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
-import { FaSun, FaMoon } from 'react-icons/fa'; // Import sun and moon icons
+import { FaMoon } from 'react-icons/fa'; // Import sun and moon icons
 import { IoSunny } from "react-icons/io5";
 
 // Styled components

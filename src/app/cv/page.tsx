@@ -1,6 +1,6 @@
-import { NextIntlClientProvider, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
-export default function() {
+export default function CV() {
     const t = useTranslations('cv');
     return (
         <>

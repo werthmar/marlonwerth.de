@@ -1,14 +1,14 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ReactCountryFlag from 'react-country-flag';
 import { FaCaretDown } from 'react-icons/fa';
 
-import {Locale} from '@/i18n/config';
-import {setUserLocale, getUserLocale} from '@/services/locale';
+import {setUserLocale} from '@/services/locale';
+import { Locale } from '@/i18n/config';
 
 // Define languages with country codes for flags
-const languages = [
+const languages: { code: Locale, label: string, flag: string }[] = [
   { code: 'en', label: 'English', flag: 'GB' },
   { code: 'es', label: 'Español', flag: 'ES' },
   { code: 'de', label: 'Deutsch', flag: 'DE' },
@@ -27,7 +27,7 @@ export default function LanguageSwitcher({initialLocale}: LanguageSwitcherProps)
 
     const toggleDropdown = () => setIsOpen(!isOpen);
     
-    const selectLanguage = (lang: { code: any; label?: string; flag?: string; }) => {
+    const selectLanguage = (lang: {code: Locale, label: string, flag: string }) => {
         setIsOpen(false);
         setUserLocale(lang.code);
         setLangCode(lang.code);

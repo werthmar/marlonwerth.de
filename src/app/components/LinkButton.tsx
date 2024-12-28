@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image";
 
 interface LinkButtonProps {
     link?: string;
@@ -18,7 +19,7 @@ export default function LinkButton({ link, text, icon, color, textColor }: LinkB
 
                  }}
             >
-                {<img src={icon} alt="" className="mr-2 w-6 h-6" />}
+                {icon && <Image src={icon} alt="" className="mr-2 w-6 h-6" />}
                 {text}
         </Link>
     );
