@@ -11,6 +11,7 @@ import LinkButton from '../components/LinkButton';
 import Timeline from '../components/Timeline';
 import NextPageButton from '../components/NextPageButton';
 import ScrollDownButton from "../components/ScrollDownButton";
+import Link from 'next/link';
 
 export default function Portfolio() {
     const t = useTranslations('PortfolioPage');
@@ -148,6 +149,9 @@ export default function Portfolio() {
             </div>
 
             <NextPageButton link='/cv' />
+
+            <Link className='flex justify-center align-items-center text-center underline text-lg mb-12' href="/impressum">Impressum</Link>
+
             <ScrollDownButton />
 
         </>

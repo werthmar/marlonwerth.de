@@ -1,11 +1,12 @@
 "use client";
 
-import NextPageButton from './components/NextPageButton';
+import Link from 'next/link';
 
 // Localization
 import {useTranslations} from 'next-intl';
 
 // Components
+import NextPageButton from './components/NextPageButton';
 import ScrollDownButton from "./components/ScrollDownButton";
 
 export default function Home() {
@@ -32,6 +33,8 @@ export default function Home() {
             </div>
 
             <NextPageButton link='/portfolio' />
+
+            <Link className='flex justify-center align-items-center text-center underline text-lg mb-12' href="/impressum">Impressum</Link>
             <ScrollDownButton />
         </>
     );
