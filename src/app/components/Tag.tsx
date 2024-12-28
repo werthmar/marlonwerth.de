@@ -21,7 +21,7 @@ export default function Tag({ text, color, borderColor, icon }: TagProps) {
             style={styles}
         >
             {icon && typeof icon === 'string' ? (
-                <Image src={icon} alt="" className="mr-2 w-6 h-6" /> // Render image if icon is a string (URL)
+                <Image src={icon} alt="" className="mr-2" width={25} height={25} /> // Render image if icon is a string (URL)
             ) : (
                 icon && <span className="mr-2">{icon}</span> // Render ReactNode if icon is not a string
             )}

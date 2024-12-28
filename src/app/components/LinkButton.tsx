@@ -19,7 +19,7 @@ export default function LinkButton({ link, text, icon, color, textColor }: LinkB
 
                  }}
             >
-                {icon && <Image src={icon} alt="" className="mr-2 w-6 h-6" />}
+                {icon && <Image src={icon} alt="" className="mr-2" width={25} height={25} />}
                 {text}
         </Link>
     );

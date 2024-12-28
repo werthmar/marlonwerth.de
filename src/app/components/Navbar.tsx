@@ -30,19 +30,19 @@ const Navbar: React.FC<LanguageSwitcherProps> = ({ initialLocale }) => {
             <div className="max-w-screen-xl mx-auto flex justify-between items-center">
                 <ul className="flex justify-between w-full md:w-auto md:justify-start space-x-8">
                     <li>
-                        <Link href="/" className="hover:text-gray-300 flex items-center">
+                        <Link href="/" className="hover:text-gray-400 flex items-center">
                             <FaHome className="mr-2 text-foreground" size={25} />
                             <span className="hidden lg:inline">{t('home')}</span>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/portfolio" className="hover:text-gray-300 flex items-center">
+                        <Link href="/portfolio" className="hover:text-gray-400 flex items-center">
                             <FaBriefcase className="mr-2 text-foreground" size={25} />
                             <span className="hidden lg:inline">{t('portfolio')}</span>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/cv" className="hover:text-gray-300 flex items-center">
+                        <Link href="/cv" className="hover:text-gray-400 flex items-center">
                             <FaFileAlt className="mr-2 text-foreground" size={25} />
                             <span className="hidden lg:inline">{t('cv')}</span>
                         </Link>
