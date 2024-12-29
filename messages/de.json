@@ -11,10 +11,10 @@
 
     "HomePage": {
         "welcome": "Willkommen!",
-        "text1": "Mein Name ist Marlon, ich bin 25 Jahre alt und habe gerade meine Masterarbeit in Wirtschaftsinformatik abgeschlossen. Ich interessiere mich sehr für IT-Technologien, mit besonderem Schwerpunkt auf Web- und App-Entwicklung sowie künstlicher Intelligenz. Ich habe über 6 Jahre Programmiererfahrung und fast 3 Jahre Berufserfahrung als Full-Stack-Webentwickler.",
+        "text1": "Mein Name ist Marlon, ich bin 25 Jahre alt und habe gerade meine Masterarbeit im Fachbereich Wirtschaftsinformatik abgeschlossen. Ich interessiere mich sehr für IT-Technologien, mit besonderem Schwerpunkt auf Web- und App-Entwicklung sowie künstlicher Intelligenz. Ich habe über 6 Jahre Programmiererfahrung und fast 3 Jahre Berufserfahrung als Full-Stack-Webentwickler.",
         "text2": "Ich bin ein offener, freundlicher Mensch, der stets begierig ist, neue Technologien auszuprobieren, um kontinuierlich seine Fähigkeiten zu erweitern. Neben der deutschen Sprache besitze ich sehr gute Englisch und Spanisch-Kenntnisse",
         "text3": "Bereits während meines dualen Studiums konnte ich viel Erfahrung in der Entwicklung von IT-Technologie, dem Management von Projekten, verfassen von wissenschaftlichen Arbeiten und zusammenarbeiten in Teams sammeln. In mehreren Projekten an meiner Universität, sowie an meiner Praxisstelle konnte ich meine theoretische Erfahrung in die Praxis umsetzen, um Webtools, Apps, Automatisierungsmaßnahmen und weitere Programme zu entwickeln.",
-        "text4": "Während meiner Zeit am Deutschen Forschungszentrum für Künstliche Intelligenz konnte ich nicht nur meine Programmierkenntnisse vertiefen, sondern mich auch in die Thematik der Künstlichen Intelligenz einarbeiten. Ich konnte an verschiedenen KI-Projekten mitarbeiten, um KI in innovative Webanwendungen zu implementieren."
+        "text4": "Während meiner Zeit am Deutschen Forschungszentrum für Künstliche Intelligenz konnte ich nicht nur meine Programmierkenntnisse vertiefen, sondern mich auch in die Thematik der künstlichen Intelligenz einarbeiten. Ich konnte an verschiedenen KI-Projekten mitarbeiten, um KI in innovative Webanwendungen zu implementieren."
     },
 
     "PortfolioPage": {
