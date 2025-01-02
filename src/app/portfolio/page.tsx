@@ -93,7 +93,7 @@ export default function Portfolio() {
                 {/* Development */}
                 <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-lg mb-6">
                     <h2 className='text-xl font-bold text-gray-400 mb-4'>{t('development')}</h2>
-                    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+                    <div className='grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
                         <Tag text='Node.js' color='#339933' icon={<FaNodeJs />} />
                         <Tag text='React' color='#61DAFB' icon={<FaReact />} />
                         <Tag text='Next.js' color='white' borderColor='black' icon={"/images/nextjs-icon.png"} />
@@ -108,7 +108,7 @@ export default function Portfolio() {
                 {/* Databases */}
                 <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-lg mb-6">
                     <h2 className='text-xl font-bold text-gray-400 mb-4'>{t('databases')}</h2>
-                    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
                         <Tag text='SQL' color='#4479A1' icon={<SiMysql />} />
                         <Tag text='MongoDB' color='#47A248' icon={<SiMongodb />} />
                         <Tag text='Neo4j' color='#008CC1' icon={<SiNeo4J />} />
@@ -118,7 +118,7 @@ export default function Portfolio() {
                 {/* Operating Systems */}
                 <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-lg mb-6">
                     <h2 className='text-xl font-bold text-gray-400 mb-4'>{t('os')}</h2>
-                    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
                         <Tag text='Windows' color='#0078D6' icon={<FaWindows />} />
                         <Tag text='macOS' color='#000000' icon={<FaApple />} />
                         <Tag text='Linux' color='#FCC624' icon={<FaLinux />} />

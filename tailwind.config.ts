@@ -14,6 +14,9 @@ export default {
             navbar: "var(--navbar)",
             accent: "var(--accent)",
         },
+        screens: {
+            xs: '375px', // Define the xs breakpoint
+        },
         },
     },
     plugins: [

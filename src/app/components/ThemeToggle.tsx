@@ -58,7 +58,8 @@ const Slider = styled.span`
 `;
 
 const ThemeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState( localStorage?.getItem('theme') == 'dark' ? true : false || false );
+  //const [isDarkMode, setIsDarkMode] = useState( false );
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');

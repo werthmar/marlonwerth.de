@@ -6,7 +6,8 @@
     "Navbar": {
         "home": "Inicio",
         "portfolio": "Portafolio",
-        "cv": "Currículum Vítae"
+        "cv": "Currículum Vítae",
+        "settings": "Ajustes"
     },
 
     "HomePage": {
