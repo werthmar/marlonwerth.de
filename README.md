@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Marlon Werth's application website
 
-## Getting Started
+## Overview
+This project is a personal portfolio website showcasing my projects, experiences, and resume. It provides a comprehensive view of my professional journey and technical skills.
 
-First, run the development server:
+## Tech Stack
+- TypeScript
+- CSS
+- JavaScript
+- next.js
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Setup Instructions
+To run the project locally, follow these steps:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/werthmar/marlonwerth.de.git
+   
+2. **Navigate to the project directory:**
+    ```bash
+    cd marlonwerth.de
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Install dependencies:**
+    ```bash
+    npm install
+   
+5. **Run the development server:**
+    ```bash
+    npm start
+    
+Open your browser and go to http://localhost:3000 to view the website.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Key Features
 
-## Learn More
+- Localization in 3 different languages and dark / light mode toggle
+- Single Page Application Desing
+- Portfolio Page: A detailed view of my work history, studies, technologies i have worked with and former projects with descriptions.
+- CV Page: My complete CV can be viewed on the page.
+- Responsive Design: Fully responsive design for optimal viewing on different devices.
 
-To learn more about Next.js, take a look at the following resources:
+## Live Link
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Check out the live version of the project [here](https://www.hire-marlon.de).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
