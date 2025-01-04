@@ -1,11 +1,21 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import LinkButton from "../components/LinkButton";
 
 export default function CV() {
     const t = useTranslations('cv');
     return (
         <>
             <div className="max-w-prose mx-auto p-4 mt-12">
+                <div className="flex justify-center mb-8">
+                    <LinkButton 
+                        link="https://www.linkedin.com/in/marlon-werth" 
+                        text="LinkedIn" 
+                        icon="/images/LinkedIn.png"
+                        color="white" 
+                        textColor="#0077B5" 
+                    />
+                </div>
                 <h1 className="text-3xl text-center font-bold mb-10">{t('cv')}</h1>
                 <p className="text-lg"><span className="font-semibold">{t('name')}</span> Marlon Werth</p>
                 <p className="text-lg mb-8"><span className="font-semibold">{t('birthdate')}:</span> 03.08.1999</p>
