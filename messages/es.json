@@ -12,7 +12,7 @@
 
     "HomePage": {
         "welcome": "Bienvenido!",
-        "text1": "Mi nombre es Marlon, tengo 25 años y acabo de terminar de escribir mi tesis de maestría en Informática Empresarial. Tengo un gran interés en la tecnología de TI, con un enfoque particular en el desarrollo web y de aplicaciones, así como la inteligencia artificial. Tengo más de 6 años de experiencia en programación y casi 3 años de experiencia profesional como desarrollador web full-stack.", 
+        "text1": "Mi nombre es Marlon, tengo 25 años y acabo de terminar de escribir mi tesis de maestría en Informática Empresarial. Tengo un gran interés en la tecnología de TI, con un enfoque particular en el desarrollo web y de aplicaciones, así como la inteligencia artificial. Tengo más de 6 años de experiencia en programación y casi 3 años de experiencia profesional como desarrollador web full-stack.",
         "text2": "Soy una persona abierta y amable, siempre dispuesta a probar nuevas tecnologías para ampliar continuamente mis conocimientos. Además de alemán, tengo excelentes conocimientos de inglés y español.",
         "text3": "Durante mi programa de estudios dual, pude adquirir mucha experiencia en el desarrollo de tecnología informática, la gestión de proyectos, la redacción de artículos científicos y el trabajo en equipo. Pude poner en práctica mi experiencia teórica desarrollando herramientas web, apps, medidas de automatización y otros programas en varios proyectos en mi universidad o en mi lugar de trabajo. También tuve la oportunidad de familiarizarme con la tecnología 3D a través de proyectos de RV y RA.",
         "text4": "Durante mi estancia en el Centro Alemán de Investigación en Inteligencia Artificial no sólo he podido profundizar en mis conocimientos de programación, sino también familiarizarme con el tema de la inteligencia artificial. Trabajé en varios proyectos de IA con el fin de implementarla en aplicaciones web innovadoras."
@@ -61,7 +61,5 @@
         "internships": "Prácticas",
         "schools": "Escuela",
         "retirement-home": "Residencia de ancianos"
-
     }
-
 }

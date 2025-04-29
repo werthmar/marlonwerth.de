@@ -1,33 +1,43 @@
 # Marlon Werth's application website
 
 ## Overview
+
 This project is a personal portfolio website showcasing my projects, experiences, and resume. It provides a comprehensive view of my professional journey and technical skills.
 
 ## Tech Stack
+
 - TypeScript
 - CSS
 - JavaScript
 - next.js
 
 ## Setup Instructions
+
 To run the project locally, follow these steps:
 
 1. **Clone the repository:**
     ```bash
     git clone https://github.com/werthmar/marlonwerth.de.git
-   
+
+    ```
 2. **Navigate to the project directory:**
+
     ```bash
     cd marlonwerth.de
+
+    ```
 
 3. **Install dependencies:**
     ```bash
     npm install
-   
-5. **Run the development server:**
+
+    ```
+4. **Run the development server:**
     ```bash
     npm start
-    
+
+    ```
+
 Open your browser and go to http://localhost:3000 to view the website.
 
 ## Key Features
@@ -41,4 +51,3 @@ Open your browser and go to http://localhost:3000 to view the website.
 ## Live Link
 
 Check out the live version of the project [here](https://www.hire-marlon.de).
-

@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
-import Image from "next/image";
+import { ReactNode } from 'react';
+import Image from 'next/image';
 
 interface TagProps {
     text?: string;
@@ -12,7 +12,7 @@ export default function Tag({ text, color, borderColor, icon }: TagProps) {
     const styles = {
         backgroundColor: color,
         borderColor: borderColor || 'white',
-        color: borderColor || 'white'
+        color: borderColor || 'white',
     };
 
     return (
@@ -21,7 +21,13 @@ export default function Tag({ text, color, borderColor, icon }: TagProps) {
             style={styles}
         >
             {icon && typeof icon === 'string' ? (
-                <Image src={icon} alt="" className="mr-2" width={25} height={25} /> // Render image if icon is a string (URL)
+                <Image
+                    src={icon}
+                    alt=""
+                    className="mr-2"
+                    width={25}
+                    height={25}
+                /> // Render image if icon is a string (URL)
             ) : (
                 icon && <span className="mr-2">{icon}</span> // Render ReactNode if icon is not a string
             )}
