@@ -227,7 +227,7 @@ export default function Portfolio() {
                 </div>
             </div>
 
-            <NextPageButton link="/cv" />
+            <NextPageButton link="/cv" text="nextPageButtonText-CV" />
 
             <Link
                 className="flex justify-center align-items-center text-center underline text-lg mb-12"

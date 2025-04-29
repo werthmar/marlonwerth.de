@@ -1,6 +1,8 @@
 {
     "Global": {
-        "nextPageButtonText": "Weiter"
+        "nextPageButtonText": "Weiter",
+        "nextPageButtonText-Portfolio": "Besuche mein Portfolio",
+        "nextPageButtonText-CV": "Lese meinen Lebenslauf"
     },
 
     "Navbar": {
