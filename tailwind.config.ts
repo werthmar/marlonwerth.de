@@ -13,6 +13,8 @@ export default {
                 foreground: 'var(--foreground)',
                 navbar: 'var(--navbar)',
                 accent: 'var(--accent)',
+                emphasis: 'var(--emphasis)',
+                accentColor: 'var(--accentColor)',
             },
             screens: {
                 xs: '375px', // Define the xs breakpoint

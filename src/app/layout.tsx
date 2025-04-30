@@ -13,8 +13,8 @@ import Template from './template';
 import './globals.css';
 
 export const metadata: Metadata = {
-    title: 'Hire Marlon',
-    description: "Overview of Marlon's services, projects and qualificaitons.",
+    title: 'Marlon Werth',
+    description: "Overview of Marlon's projects and qualificaitons.",
 };
 
 export default async function RootLayout({
