@@ -12,6 +12,11 @@
         "settings": "Ajustes"
     },
 
+    "Footer": {
+        "tagline": "Construyendo soluciones amigables para el usuario con investigación, creatividad y código.",
+        "imprint": "Impronta"
+    },
+
     "HomePage": {
         "hi-text": "Hola, soy Marlon",
         "personal-description": "Soy un desarrollador web full-stack que ama crear soluciones centradas en el usuario con tecnología moderna, combinando conocimientos de investigación con creatividad en XR y arte 3D.",
@@ -31,7 +36,6 @@
         "Featured_Project2_desc5": "Realicé múltiples pruebas con expertos y la audiencia objetivo para perfeccionar la aplicación.",
         "Featured_Project2_desc6": "Publiqué los hallazgos en un artículo de investigación.",
         
-        "tagline": "Construyendo soluciones amigables para el usuario con investigación, creatividad y código.",
         "curious": "¿He despertado tu curiosidad?"
     },
 
@@ -78,5 +82,28 @@
         "internships": "Prácticas",
         "schools": "Escuela",
         "retirement-home": "Residencia de ancianos"
+    },
+
+    "Imprint": {
+        "title": "Impronta",
+        "section1": "Información según § 5 DDG",
+        "name": "Marlon Werth",
+        "addressLine1": "Wesereschstraße 39",
+        "addressLine2": "49084 Osnabrück",
+        "representedByTitle": "Representado por:",
+        "representedBy": "Marlon Werth",
+        "contactTitle": "Contacto:",
+        "phone": "Teléfono",
+        "email": "Correo electrónico",
+        "disclaimerTitle": "Descargo de responsabilidad:",
+        "contentLiabilityTitle": "Responsabilidad por el contenido",
+        "contentLiability": "Los contenidos de nuestras páginas fueron creados con el mayor cuidado. Sin embargo, no podemos garantizar la exactitud, integridad o actualidad de los contenidos. Como proveedor de servicios, somos responsables de nuestro propio contenido en estas páginas de acuerdo con el § 7 Abs.1 DDG bajo las leyes generales. Según §§ 8 a 10 DDG, no estamos obligados como proveedor de servicios a supervisar la información transmitida o almacenada de terceros ni a investigar circunstancias que indiquen actividad ilegal. Las obligaciones de eliminar o bloquear el uso de información bajo las leyes generales permanecen sin cambios. Sin embargo, la responsabilidad en este sentido solo es posible a partir del momento en que se tenga conocimiento de una infracción específica. Al tener conocimiento de tales violaciones, eliminaremos este contenido de inmediato.",
+        "linkLiabilityTitle": "Responsabilidad por enlaces",
+        "linkLiability": "Nuestra oferta contiene enlaces a sitios web externos de terceros, cuyo contenido no tenemos influencia. Por lo tanto, no podemos asumir ninguna responsabilidad por este contenido externo. El proveedor u operador respectivo de las páginas siempre es responsable del contenido de las páginas enlazadas. Las páginas enlazadas fueron verificadas en busca de posibles violaciones legales en el momento de la vinculación. Los contenidos ilegales no eran reconocibles en el momento de la vinculación. Sin embargo, un control permanente del contenido de las páginas enlazadas no es razonable sin evidencia concreta de una violación de la ley. Al tener conocimiento de violaciones legales, eliminaremos dichos enlaces de inmediato.",
+        "copyrightTitle": "Derechos de autor",
+        "copyright": "El contenido y las obras creadas por los operadores del sitio en estas páginas están sujetos a la ley de derechos de autor alemana. La duplicación, procesamiento, distribución y cualquier tipo de explotación fuera de los límites de la ley de derechos de autor requieren el consentimiento por escrito del respectivo autor o creador. Las descargas y copias de este sitio solo están permitidas para uso privado y no comercial. En la medida en que el contenido de este sitio no fue creado por el operador, se respetan los derechos de autor de terceros. En particular, el contenido de terceros está marcado como tal. Si, no obstante, se da cuenta de una infracción de derechos de autor, le pedimos un aviso correspondiente. Al tener conocimiento de violaciones legales, eliminaremos dicho contenido de inmediato.",
+        "privacyTitle": "Privacidad",
+        "privacy": "El uso de nuestro sitio web generalmente es posible sin proporcionar datos personales. En la medida en que se recopilen datos personales (por ejemplo, nombre, dirección o direcciones de correo electrónico) en nuestras páginas, esto siempre se hace de forma voluntaria, en la medida de lo posible. Estos datos no se transmitirán a terceros sin su consentimiento expreso. Señalamos que la transmisión de datos en Internet (por ejemplo, al comunicarse por correo electrónico) puede tener brechas de seguridad. No es posible una protección completa de los datos contra el acceso de terceros. El uso de los datos de contacto publicados en el marco de la obligación de impronta por parte de terceros para enviar publicidad no solicitada y materiales de información está expresamente prohibido. Los operadores de las páginas se reservan expresamente el derecho de emprender acciones legales en caso de envío no solicitado de información publicitaria, como correos electrónicos no deseados.",
+        "impressumGenerator": "Impronta del sitio web por"
     }
 }

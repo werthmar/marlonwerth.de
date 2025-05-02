@@ -1,14 +1,11 @@
 'use client';
 
-import Link from 'next/link';
-
 // Localization
 import { useTranslations } from 'next-intl';
 
 // Components
 import NextPageButton from './components/NextPageButton';
 import ScrollDownButton from './components/ScrollDownButton';
-import LinkButton from './components/LinkButton';
 import FeaturedProject from './components/FeaturedProject';
 import Tag from './components/Tag';
 
@@ -153,37 +150,6 @@ export default function Home() {
                 />
             </div>
 
-            {/** About Me / Picture and Links */}
-            <div className="flex flex-col justify-center items-center p-4">
-                <p className="mt-3 text-lg font-medium text-emphasis border-x-4 border-indigo-700 px-4 mt-8 mb-8 mx-4">
-                    {t('tagline')}
-                </p>
-
-                <div className="flex flex-row justify-center items-center gap-8 mb-8">
-                    <LinkButton
-                        size={60}
-                        icon="/images/LinkedInFilled.png"
-                        textColor="white"
-                        color="#2b71b1"
-                        link="https://www.linkedin.com/in/marlon-werth"
-                    />
-                    <LinkButton
-                        size={60}
-                        icon="/images/githubBlack.png"
-                        textColor="white"
-                        color="black"
-                        link="https://github.com/werthmar"
-                    />
-                    <LinkButton
-                        size={60}
-                        icon="/images/orcid.png"
-                        textColor="white"
-                        color="#abcf4a"
-                        link="https://orcid.org/0009-0000-9027-6059"
-                    />
-                </div>
-            </div>
-
             <h2 className="text-lg font-bold text-center text-emphasis mt-12">
                 {t('curious')}
             </h2>
@@ -193,12 +159,6 @@ export default function Home() {
                 text="nextPageButtonText-Portfolio"
             />
 
-            <Link
-                className="flex justify-center align-items-center text-center underline text-lg mt-24 mb-4"
-                href="/impressum"
-            >
-                Impressum
-            </Link>
             <ScrollDownButton />
         </>
     );

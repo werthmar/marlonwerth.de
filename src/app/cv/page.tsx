@@ -58,13 +58,6 @@ export default function CV() {
                     <li>2006-2010: Grundschule Ennigloh</li>
                 </ul>
             </div>
-
-            <Link
-                className="flex justify-center align-items-center text-center underline text-lg mb-12"
-                href="/impressum"
-            >
-                Impressum
-            </Link>
         </>
     );
 }

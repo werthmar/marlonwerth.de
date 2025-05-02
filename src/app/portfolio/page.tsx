@@ -229,13 +229,6 @@ export default function Portfolio() {
 
             <NextPageButton link="/cv" text="nextPageButtonText-CV" />
 
-            <Link
-                className="flex justify-center align-items-center text-center underline text-lg mb-12"
-                href="/impressum"
-            >
-                Impressum
-            </Link>
-
             <ScrollDownButton />
         </>
     );

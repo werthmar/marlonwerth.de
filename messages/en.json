@@ -12,6 +12,11 @@
         "settings": "Settings"
     },
 
+    "Footer": {
+        "tagline": "Building user-friendly solutions with research, creativity and code.",
+        "imprint": "Imprint"
+    },
+
     "HomePage": {
         "hi-text": "Hi, I'm Marlon",
         "personal-description": "I’m a full-stack web developer who loves building user-focused solutions with modern tech, blending research insights with creativity in XR and 3D art.",
@@ -31,7 +36,6 @@
         "Featured_Project2_desc5": "Conducted multiple tests with experts and the target audience to refine the application.",
         "Featured_Project2_desc6": "Published findings in a research paper.",
         
-        "tagline": "Building user-friendly solutions with research, creativity and code.",
         "curious": "Have I sparked your curiosity?"
     },
 
@@ -78,5 +82,28 @@
         "internships": "Internships",
         "schools": "Schools",
         "retirement-home": "Retirement home"
+    },
+
+    "Imprint": {
+        "title": "Imprint",
+        "section1": "Information according to § 5 DDG",
+        "name": "Marlon Werth",
+        "addressLine1": "Wesereschstraße 39",
+        "addressLine2": "49084 Osnabrück",
+        "representedByTitle": "Represented by:",
+        "representedBy": "Marlon Werth",
+        "contactTitle": "Contact:",
+        "phone": "Phone",
+        "email": "Email",
+        "disclaimerTitle": "Disclaimer:",
+        "contentLiabilityTitle": "Liability for Content",
+        "contentLiability": "The contents of our pages were created with the utmost care. However, we cannot guarantee the accuracy, completeness, or timeliness of the content. As a service provider, we are responsible for our own content on these pages in accordance with § 7 Abs.1 DDG under general laws. According to §§ 8 to 10 DDG, we are not obligated as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information under general laws remain unaffected. However, liability in this regard is only possible from the time of knowledge of a specific infringement. Upon becoming aware of such violations, we will remove this content immediately.",
+        "linkLiabilityTitle": "Liability for Links",
+        "linkLiability": "Our offer contains links to external third-party websites, the content of which we have no influence over. Therefore, we cannot assume any liability for this external content. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking. Permanent content control of the linked pages is, however, not reasonable without concrete evidence of a violation of the law. Upon becoming aware of legal violations, we will remove such links immediately.",
+        "copyrightTitle": "Copyright",
+        "copyright": "The content and works created by the site operators on these pages are subject to German copyright law. The duplication, processing, distribution, and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use. Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is marked as such. Should you nevertheless become aware of a copyright infringement, we ask for a corresponding notice. Upon becoming aware of legal violations, we will remove such content immediately.",
+        "privacyTitle": "Privacy",
+        "privacy": "The use of our website is generally possible without providing personal data. Insofar as personal data (e.g., name, address, or email addresses) is collected on our pages, this is always done on a voluntary basis, as far as possible. This data will not be passed on to third parties without your express consent. We point out that data transmission on the Internet (e.g., when communicating by email) can have security gaps. A complete protection of the data against access by third parties is not possible. The use of contact data published within the framework of the imprint obligation by third parties for sending unsolicited advertising and information materials is hereby expressly prohibited. The operators of the pages expressly reserve the right to take legal action in the event of unsolicited sending of advertising information, such as spam emails.",
+        "impressumGenerator": "Website Imprint by"
     }
 }
