@@ -13,11 +13,26 @@
     },
 
     "HomePage": {
-        "welcome": "Bienvenido!",
-        "text1": "Mi nombre es Marlon, tengo 25 años y acabo de terminar de escribir mi tesis de maestría en Informática Empresarial. Tengo un gran interés en la tecnología de TI, con un enfoque particular en el desarrollo web y de aplicaciones, así como la inteligencia artificial. Tengo más de 6 años de experiencia en programación y casi 3 años de experiencia profesional como desarrollador web full-stack.",
-        "text2": "Soy una persona abierta y amable, siempre dispuesta a probar nuevas tecnologías para ampliar continuamente mis conocimientos. Además de alemán, tengo excelentes conocimientos de inglés y español.",
-        "text3": "Durante mi programa de estudios dual, pude adquirir mucha experiencia en el desarrollo de tecnología informática, la gestión de proyectos, la redacción de artículos científicos y el trabajo en equipo. Pude poner en práctica mi experiencia teórica desarrollando herramientas web, apps, medidas de automatización y otros programas en varios proyectos en mi universidad o en mi lugar de trabajo. También tuve la oportunidad de familiarizarme con la tecnología 3D a través de proyectos de RV y RA.",
-        "text4": "Durante mi estancia en el Centro Alemán de Investigación en Inteligencia Artificial no sólo he podido profundizar en mis conocimientos de programación, sino también familiarizarme con el tema de la inteligencia artificial. Trabajé en varios proyectos de IA con el fin de implementarla en aplicaciones web innovadoras."
+        "hi-text": "Hola, soy Marlon",
+        "personal-description": "Soy un desarrollador web full-stack que ama crear soluciones centradas en el usuario con tecnología moderna, combinando conocimientos de investigación con creatividad en XR y arte 3D.",
+        "Featured_Projects": "Proyectos Destacados",
+        
+        "Featured_Project1_title": "Backend de Aplicación de Calefacción AI",
+        "Featured_Project1_desc1": "Desarrollé un backend en Nest.js para gestionar la comunicación con múltiples bases de datos, una aplicación cliente, y manejar la autenticación y la gestión de cuentas.",
+        "Featured_Project1_desc2": "Configuré Kubernetes en un servidor privado virtual, contenedorizando todas las aplicaciones y bases de datos con Docker para un despliegue y escalado eficiente.",
+        "Featured_Project1_desc3": "Establecí una pipeline CI/CD con GitLab para automatizar el despliegue y la gestión de la aplicación desde el repositorio hasta el VPS y la entrega al cliente.",
+        "Featured_Project1_desc4": "Integré dispositivos de socios externos, permitiendo el control y la comunicación a través del servidor backend utilizando Azure IoT Hub.",
+        
+        "Featured_Project2_title": "Tándem de Lectura en VR",
+        "Featured_Project2_desc1": "Desarrollé una aplicación de VR para ayudar a los niños a aprender alemán, funcionando de forma nativa en MetaQuest con funcionalidad de seguimiento de manos, creada con Unity y Blender.",
+        "Featured_Project2_desc2": "Creé y validé el diseño mediante un enfoque de investigación en ciencia del diseño.",
+        "Featured_Project2_desc3": "Integré servicios de IA para reconocimiento de voz y validación de habilidades de lectura.",
+        "Featured_Project2_desc4": "Integré APIs de Google Cloud para servicios de traducción y texto a voz.",
+        "Featured_Project2_desc5": "Realicé múltiples pruebas con expertos y la audiencia objetivo para perfeccionar la aplicación.",
+        "Featured_Project2_desc6": "Publiqué los hallazgos en un artículo de investigación.",
+        
+        "tagline": "Construyendo soluciones amigables para el usuario con investigación, creatividad y código.",
+        "curious": "¿He despertado tu curiosidad?"
     },
 
     "PortfolioPage": {

@@ -17,7 +17,7 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({
     tags,
 }) => {
     return (
-        <div className="flex flex-col bg-accent sm:flex-row justify-center gap-6 shadow-lg p-4 rounded-2xl w-full max-w-3xl text-black">
+        <div className="flex flex-col bg-accent sm:flex-row justify-center gap-6 shadow-custom p-4 rounded-2xl w-full max-w-3xl text-black">
             <div className="flex flex-row items-center justify-center sm:flex-col sm:w-2/5 gap-4">
                 {/* Left Side */}
                 <Image
@@ -25,7 +25,7 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({
                     height={200}
                     src={imageSrc}
                     alt={title}
-                    className="w-1/3 sm:w-full h-full object-contain self-center rounded-lg"
+                    className="w-auto h-200 sm:w-full sm:h-auto object-contain self-center rounded-3xl shadow-lg"
                 />
                 {imageSrc2 && (
                     <Image
@@ -33,7 +33,7 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({
                         height={200}
                         src={imageSrc2}
                         alt={title}
-                        className="w-1/3 sm:w-full h-full object-contain self-center rounded-lg"
+                        className="hidden sm:block w-1/3 sm:w-full h-auto object-contain self-center rounded-3xl shadow-lg"
                     />
                 )}
             </div>

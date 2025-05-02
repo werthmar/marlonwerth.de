@@ -19,6 +19,9 @@ export default {
             screens: {
                 xs: '375px', // Define the xs breakpoint
             },
+            boxShadow: {
+                custom: '2px 2px 10px rgba(0, 0, 0, 0.25)', // horizontal, vertical, blur, color
+            },
         },
     },
     plugins: [require('@tailwindcss/forms')],

@@ -13,11 +13,26 @@
     },
 
     "HomePage": {
-        "welcome": "Willkommen!",
-        "text1": "Mein Name ist Marlon, ich bin 25 Jahre alt und habe gerade meine Masterarbeit im Fachbereich Wirtschaftsinformatik abgeschlossen. Ich interessiere mich sehr für IT-Technologien, mit besonderem Schwerpunkt auf Web- und App-Entwicklung sowie künstlicher Intelligenz. Ich habe über 6 Jahre Programmiererfahrung und fast 3 Jahre Berufserfahrung als Full-Stack-Webentwickler.",
-        "text2": "Ich bin ein offener, freundlicher Mensch, der stets begierig ist, neue Technologien auszuprobieren, um kontinuierlich seine Fähigkeiten zu erweitern. Neben der deutschen Sprache besitze ich sehr gute Englisch und Spanisch-Kenntnisse",
-        "text3": "Bereits während meines dualen Studiums konnte ich viel Erfahrung in der Entwicklung von IT-Technologie, dem Management von Projekten, verfassen von wissenschaftlichen Arbeiten und zusammenarbeiten in Teams sammeln. In mehreren Projekten an meiner Universität, sowie an meiner Praxisstelle konnte ich meine theoretische Erfahrung in die Praxis umsetzen, um Webtools, Apps, Automatisierungsmaßnahmen und weitere Programme zu entwickeln.",
-        "text4": "Während meiner Zeit am Deutschen Forschungszentrum für Künstliche Intelligenz konnte ich nicht nur meine Programmierkenntnisse vertiefen, sondern mich auch in die Thematik der künstlichen Intelligenz einarbeiten. Ich konnte an verschiedenen KI-Projekten mitarbeiten, um KI in innovative Webanwendungen zu implementieren."
+        "hi-text": "Hallo, ich bin Marlon",
+        "personal-description": "Ich bin ein Full-Stack-Webentwickler, der es liebt, nutzerorientierte Lösungen mit moderner Technologie zu entwickeln und dabei Forschungserkenntnisse mit Kreativität in XR und 3D-Kunst zu verbinden.",
+        "Featured_Projects": "Ausgewählte Projekte",
+        
+        "Featured_Project1_title": "Backend für AI-Heizungs-App",
+        "Featured_Project1_desc1": "Entwicklung eines Nest.js-Backends zur Verwaltung der Kommunikation mit mehreren Datenbanken, einer Client-Anwendung sowie zur Handhabung von Authentifizierung und Kontoverwaltung.",
+        "Featured_Project1_desc2": "Konfiguration von Kubernetes auf einem virtuellen privaten Server, Containerisierung aller Anwendungen und Datenbanken mit Docker für effiziente Bereitstellung und Skalierung.",
+        "Featured_Project1_desc3": "Einrichtung einer CI/CD-Pipeline mit GitLab zur Automatisierung der Bereitstellung und Verwaltung der Anwendung vom Repository bis zum VPS und zur Client-Auslieferung.",
+        "Featured_Project1_desc4": "Integration mit Gerä connue von externen Partnern, die Steuerung und Kommunikation über den Backend-Server mit Azure IoT Hub ermöglicht.",
+        
+        "Featured_Project2_title": "VR-Lesetandem",
+        "Featured_Project2_desc1": "Entwicklung einer VR-Anwendung, um Kindern beim Erlernen der deutschen Sprache zu helfen, nativ auf MetaQuest mit Hand-Tracking-Funktion, erstellt mit Unity und Blender.",
+        "Featured_Project2_desc2": "Erstellung und Validierung des Designs durch einen Design-Science-Research-Ansatz.",
+        "Featured_Project2_desc3": "Integration von KI-Diensten für Spracherkennung und Validierung von Lesefertigkeiten.",
+        "Featured_Project2_desc4": "Integration von Google Cloud APIs für Übersetzungs- und Text-to-Speech-Dienste.",
+        "Featured_Project2_desc5": "Durchführung mehrerer Tests mit Experten und der Zielgruppe, um die Anwendung zu verfeinern.",
+        "Featured_Project2_desc6": "Veröffentlichung der Ergebnisse in einem Forschungspapier.",
+        
+        "tagline": "Entwicklung nutzerfreundlicher Lösungen mit Forschung, Kreativität und Code.",
+        "curious": "Habe ich Ihre Neugier geweckt?"
     },
 
     "PortfolioPage": {

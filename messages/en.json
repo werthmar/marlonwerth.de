@@ -13,11 +13,26 @@
     },
 
     "HomePage": {
-        "welcome": "Welcome!",
-        "text1": "My name is Marlon, I am 25 years old and I have just completed writing my Master's thesis in Business Information Systems. I have a keen interest in IT technology, with a particular focus on web and app development as well as artificial intelligence. I have over 6 years of programming experience and nearly 3 years of professional experience as a full-stack-web developer.",
-        "text2": "I am an open, friendly person who is always eager to try out new technologies in order to continuously expand my skills. In addition to German, I have excellent English and Spanish skills.",
-        "text3": "During my dual study programme, I was able to gain a lot of experience in developing IT technology, managing projects, writing scientific papers and working in teams. I was able to put my theoretical experience into practice by developing web tools, apps, automation measures and other programmes in several projects at my university or at my workplace. I also had the opportunity to familiarise myself with 3D technology through VR and AR projects.",
-        "text4": "During my time at the German Research Center for Artificial Intelligence I have not only been able to deepen my programming skills, but also familiarise myself with the topic of artificial intelligence. I worked on various AI projects in order to implement AI into innovative web applications."
+        "hi-text": "Hi, I'm Marlon",
+        "personal-description": "I’m a full-stack web developer who loves building user-focused solutions with modern tech, blending research insights with creativity in XR and 3D art.",
+        "Featured_Projects": "Featured Projects",
+
+        "Featured_Project1_title": "AI Heating App Backend",
+        "Featured_Project1_desc1": "Developed a Nest.js backend to manage communication with multiple databases, a client application, and handle authentication and account management.",
+        "Featured_Project1_desc2": "Configured Kubernetes on a virtual private server, containerizing all applications and databases using Docker for efficient deployment and scaling.",
+        "Featured_Project1_desc3": "Established a CI/CD pipeline with GitLab to automate deployment and management of the application from repository to VPS and client delivery.",
+        "Featured_Project1_desc4": "Integrated with external partner devices, enabling control and communication through the backend server using Azure IoT Hub.",
+        
+        "Featured_Project2_title": "VR Reading Tandem",
+        "Featured_Project2_desc1": "Developed a VR application to assist children in learning German, running natively on MetaQuest with hand-tracking functionality, built using Unity and Blender.",                
+        "Featured_Project2_desc2": "Created and validated the design through a Design-Science-Research approach.",
+        "Featured_Project2_desc3": "Integrated AI services for speech recognition and validation of reading abilities.",
+        "Featured_Project2_desc4": "Integrated Google Cloud APIs for translation and text-to-speech services.",
+        "Featured_Project2_desc5": "Conducted multiple tests with experts and the target audience to refine the application.",
+        "Featured_Project2_desc6": "Published findings in a research paper.",
+        
+        "tagline": "Building user-friendly solutions with research, creativity and code.",
+        "curious": "Have I sparked your curiosity?"
     },
 
     "PortfolioPage": {
