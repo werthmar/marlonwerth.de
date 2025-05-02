@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import {
@@ -24,8 +22,6 @@ import Tag from '../components/Tag';
 import LinkButton from '../components/LinkButton';
 import Timeline from '../components/Timeline';
 import NextPageButton from '../components/NextPageButton';
-import ScrollDownButton from '../components/ScrollDownButton';
-import Link from 'next/link';
 
 export default function Portfolio() {
     const t = useTranslations('PortfolioPage');
@@ -134,7 +130,7 @@ export default function Portfolio() {
 
                 <h1 className="text-3xl font-bold mb-4">{t('technologies')}</h1>
                 {/* Development */}
-                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-lg mb-6">
+                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-custom mb-6">
                     <h2 className="text-xl font-bold text-gray-400 mb-4">
                         {t('development')}
                     </h2>
@@ -172,7 +168,7 @@ export default function Portfolio() {
                 </div>
 
                 {/* Databases */}
-                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-lg mb-6">
+                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-custom mb-6">
                     <h2 className="text-xl font-bold text-gray-400 mb-4">
                         {t('databases')}
                     </h2>
@@ -188,7 +184,7 @@ export default function Portfolio() {
                 </div>
 
                 {/* Operating Systems */}
-                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-lg mb-6">
+                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-custom mb-6">
                     <h2 className="text-xl font-bold text-gray-400 mb-4">
                         {t('os')}
                     </h2>
@@ -204,7 +200,7 @@ export default function Portfolio() {
                 </div>
 
                 {/* Other */}
-                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-lg mb-16">
+                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-custom mb-16">
                     <h2 className="text-xl font-bold text-gray-400 mb-4">
                         {t('other')}
                     </h2>
@@ -228,8 +224,6 @@ export default function Portfolio() {
             </div>
 
             <NextPageButton link="/cv" text="nextPageButtonText-CV" />
-
-            <ScrollDownButton />
         </>
     );
 }

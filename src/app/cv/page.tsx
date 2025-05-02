@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 import LinkButton from '../components/LinkButton';
 
 export default function CV() {

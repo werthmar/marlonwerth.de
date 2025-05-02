@@ -9,6 +9,8 @@ import { getLocale, getMessages } from 'next-intl/server';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Template from './template';
+import ScrollDownButton from './components/ScrollDownButton';
+import ClientOnly from './components/ClientOnly';
 
 // Style
 import './globals.css';
@@ -35,6 +37,10 @@ export default async function RootLayout({
                 <NextIntlClientProvider messages={messages}>
                     <Navbar initialLocale={locale} />
                     <Template>{children}</Template>
+                    {/* Custom Wrapper to prevent use client on root layout*/}
+                    <ClientOnly>
+                        <ScrollDownButton />
+                    </ClientOnly>
                     <Footer />
                 </NextIntlClientProvider>
             </body>

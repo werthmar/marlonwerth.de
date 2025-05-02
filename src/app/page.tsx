@@ -1,11 +1,8 @@
-'use client';
-
 // Localization
 import { useTranslations } from 'next-intl';
 
 // Components
 import NextPageButton from './components/NextPageButton';
-import ScrollDownButton from './components/ScrollDownButton';
 import FeaturedProject from './components/FeaturedProject';
 import Tag from './components/Tag';
 
@@ -158,8 +155,6 @@ export default function Home() {
                 link="/portfolio"
                 text="nextPageButtonText-Portfolio"
             />
-
-            <ScrollDownButton />
         </>
     );
 }
