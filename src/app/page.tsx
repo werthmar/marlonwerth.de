@@ -1,41 +1,160 @@
-"use client";
-
-import Link from 'next/link';
-
 // Localization
-import {useTranslations} from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 // Components
 import NextPageButton from './components/NextPageButton';
-import ScrollDownButton from "./components/ScrollDownButton";
+import FeaturedProject from './components/FeaturedProject';
+import Tag from './components/Tag';
+
+//Icons
+import {
+    SiNestjs,
+    SiDocker,
+    SiKubernetes,
+    SiPostgresql,
+    SiInfluxdb,
+    SiUnity,
+    SiBlender,
+    SiGooglecloud,
+} from 'react-icons/si';
+import { VscAzure } from 'react-icons/vsc';
+import { FaPython } from 'react-icons/fa';
+import { BsHeadsetVr } from 'react-icons/bs';
 
 export default function Home() {
     const t = useTranslations('HomePage');
     return (
         <>
-           <div className="flex flex-col justify-center items-center min-h-[calc(100vh-5rem)] p-4">
-                <h1 className="text-4xl font-bold mb-4">{t('welcome')}</h1>
-                <p className="text-center text-lg max-w-prose">{t('text1')}</p>
-                <br/>
-                <p className="text-center text-lg max-w-prose">{t('text2')}</p>
+            <div className="flex flex-col justify-center items-center min-h-[calc(100vh-5rem)] p-4">
+                {/* Profile Picture */}
+                <div
+                    className="w-48 h-48 md:w-60 md:h-60 mb-6 rounded-full bg-accent border-foreground flex justify-center lg:justify-end marlonImage"
+                    style={{
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'center',
+                        transform: 'rotate(2deg)', // Rotate the picture by 15 degrees
+                    }}
+                />
+
+                <h1 className="text-5xl text-center font-bold mb-8">
+                    {t('hi-text')}
+                </h1>
+
+                <p className="text-center text-xl max-w-xl mb-8 font-bold">
+                    {t('personal-description')}
+                </p>
             </div>
 
-            <div className="flex flex-col lg:flex-row justify-center items-center p-4 h-[1400px] lg:h-[700px] lg:mx-auto lg:max-w-4xl">
-                
-                <div className="flex justify-center lg:justify-end p-4 marlonImage" style={{ backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', width: '100%', height: '100%' }}>
-                    </div>
-                
-                <div className="lg:w-auto flex flex-col justify-center items-center lg:items-start p-4">
-                    <p className="text-center lg:text-left text-lg max-w-prose">{t('text3')}</p>
-                    <br/>
-                    <p className="text-center lg:text-left text-lg max-w-prose">{t('text4')}</p>
-                </div>
+            {/** Featured Projects */}
+            <div className="flex flex-col justify-center items-center p-4 gap-8">
+                <h1 className="text-3xl font-bold text-accentColor">
+                    {t('Featured_Projects')}
+                </h1>
+                <FeaturedProject
+                    title={t('Featured_Project1_title')}
+                    imageSrc="/images/heatingApp.png"
+                    description={[
+                        t('Featured_Project1_desc1'),
+                        t('Featured_Project1_desc2'),
+                        t('Featured_Project1_desc3'),
+                        t('Featured_Project1_desc4'),
+                    ]}
+                    tags={[
+                        <Tag
+                            key="nestjs"
+                            text="Nest.js"
+                            icon={<SiNestjs />}
+                            color="#dd3f58"
+                        />,
+                        <Tag
+                            text="Docker"
+                            key="docker"
+                            icon={<SiDocker />}
+                            color="#4888eb"
+                        />,
+                        <Tag
+                            text="K8s"
+                            key="kubernetes"
+                            icon={<SiKubernetes />}
+                            color="#538de3"
+                        />,
+                        <Tag
+                            text="PostgreSQL"
+                            key="postgresql"
+                            icon={<SiPostgresql />}
+                            color="#3d648f"
+                        />,
+                        <Tag
+                            text="InfluxDB"
+                            key="influxdb"
+                            icon={<SiInfluxdb />}
+                            color="#5e00a9"
+                        />,
+                        <Tag
+                            text="IoT-Hub"
+                            key="iothub"
+                            icon={<VscAzure />}
+                            color="#759d22"
+                        />,
+                    ]}
+                />
+
+                <FeaturedProject
+                    title={t('Featured_Project2_title')}
+                    imageSrc="/images/readingTandemMain.png"
+                    imageSrc2="/images/readingTandemCropped.png"
+                    description={[
+                        t('Featured_Project2_desc1'),
+                        t('Featured_Project2_desc2'),
+                        t('Featured_Project2_desc3'),
+                        t('Featured_Project2_desc4'),
+                        t('Featured_Project2_desc5'),
+                        t('Featured_Project2_desc6'),
+                    ]}
+                    tags={[
+                        <Tag
+                            text="Unity"
+                            key="unity"
+                            color="#000000"
+                            icon={<SiUnity />}
+                        />,
+                        <Tag
+                            text="Blender"
+                            key="blender"
+                            color="#f4792b"
+                            icon={<SiBlender />}
+                        />,
+                        <Tag
+                            text="Python"
+                            key="python"
+                            color="#3776AB"
+                            icon={<FaPython />}
+                        />,
+                        <Tag
+                            text="GCloud"
+                            key="googlecloud"
+                            color="#4285F4"
+                            icon={<SiGooglecloud />}
+                        />,
+                        <Tag
+                            text="MetaQuest"
+                            key="metaquest"
+                            color="#4267B2"
+                            icon={<BsHeadsetVr />}
+                        />,
+                    ]}
+                />
             </div>
 
-            <NextPageButton link='/portfolio' />
+            <h2 className="text-lg font-bold text-center text-emphasis mt-12">
+                {t('curious')}
+            </h2>
 
-            <Link className='flex justify-center align-items-center text-center underline text-lg mb-12' href="/impressum">Impressum</Link>
-            <ScrollDownButton />
+            <NextPageButton
+                link="/portfolio"
+                text="nextPageButtonText-Portfolio"
+            />
         </>
     );
 }

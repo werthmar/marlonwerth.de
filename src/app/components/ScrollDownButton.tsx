@@ -1,3 +1,4 @@
+'use client';
 import { useEffect, useState } from 'react';
 
 export default function ScrollDownButton() {
@@ -28,7 +29,8 @@ export default function ScrollDownButton() {
         <>
             <style jsx>{`
                 @keyframes bounce {
-                    0%, 100% {
+                    0%,
+                    100% {
                         transform: translateY(0);
                     }
                     50% {
@@ -53,7 +55,12 @@ export default function ScrollDownButton() {
                             stroke="currentColor"
                             className="w-6 h-6"
                         >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
+                            />
                         </svg>
                     </button>
                 </div>

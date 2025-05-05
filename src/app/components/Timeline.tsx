@@ -20,24 +20,41 @@ const Timeline: React.FC<TimelineProps> = ({ items }) => {
         <div className="relative border-l border-gray-400">
             {items.map((item, index) => (
                 <div key={index} className="mb-10 ml-6">
-                
                     {/* Ring */}
-                    <span className={`absolute flex items-center justify-center w-6 h-6 ${item.iconColor || 'bg-blue-100'} rounded-full -left-3 ring-8 ring-accent`} />
-                        
+                    <span
+                        className={`absolute flex items-center justify-center w-6 h-6 ${item.iconColor || 'bg-blue-100'} rounded-full -left-3 ring-8 ring-accent`}
+                    />
+
                     <h3 className="flex items-center mb-1 text-lg font-semibold text-foreground">
                         {/* Title */}
                         {item.title}
-                        
+
                         {/* Tags */}
-                        {item.tag && <span className={`${item.tagColor || 'bg-blue-100'} text-black text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3`}>{item.tag}</span>}
-                        {item.tag2 && <span className={`${item.tag2Color || 'bg-blue-100'} text-black text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3`}>{item.tag2}</span>}
+                        {item.tag && (
+                            <span
+                                className={`${item.tagColor || 'bg-blue-100'} text-black text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3`}
+                            >
+                                {item.tag}
+                            </span>
+                        )}
+                        {item.tag2 && (
+                            <span
+                                className={`${item.tag2Color || 'bg-blue-100'} text-black text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3`}
+                            >
+                                {item.tag2}
+                            </span>
+                        )}
                     </h3>
-                    
+
                     {/* Date */}
-                    <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{item.date}</time>
-                    
+                    <time className="block mb-2 text-sm font-normal leading-none text-gray-400">
+                        {item.date}
+                    </time>
+
                     {/* Description */}
-                    <p className="text-base font-normal text-gray-500">{item.description}</p>
+                    <p className="text-base font-normal text-gray-500">
+                        {item.description}
+                    </p>
                 </div>
             ))}
         </div>
