@@ -18,7 +18,7 @@ export default function Tag({
 }: TagProps) {
     // Base styles that apply to all variants
     const baseStyles = {
-        backgroundColor: variant === 'default' ? color : `${color}CC`, // = 80% opacity
+        backgroundColor: variant === 'default' ? color : `${color}BF`, // CC = 80% opacity
         borderColor: borderColor || 'white',
         color: borderColor || 'white',
     };
@@ -28,7 +28,7 @@ export default function Tag({
         default:
             'border-2 border-background shadow text-background border-solid rounded-full pt-2 pb-2 inline-flex items-center justify-center group text-lg font-bold',
         minimal:
-            'py-0.5 rounded inline-flex items-center justify-center group text-lg font-bold',
+            'py-0.5 rounded-lg shadow inline-flex items-center justify-center group text-lg font-bold',
     };
 
     return (
