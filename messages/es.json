@@ -22,11 +22,12 @@
         "personal-description": "Soy un desarrollador web full-stack que ama crear soluciones centradas en el usuario con tecnología moderna, combinando conocimientos de investigación con creatividad en XR y arte 3D.",
         "Featured_Projects": "Proyectos Destacados",
         
-        "Featured_Project1_title": "Backend de Aplicación de Calefacción AI",
-        "Featured_Project1_desc1": "Desarrollé un backend en Nest.js para gestionar la comunicación con múltiples bases de datos, una aplicación cliente, y manejar la autenticación y la gestión de cuentas.",
-        "Featured_Project1_desc2": "Configuré Kubernetes en un servidor privado virtual, contenedorizando todas las aplicaciones y bases de datos con Docker para un despliegue y escalado eficiente.",
-        "Featured_Project1_desc3": "Establecí una pipeline CI/CD con GitLab para automatizar el despliegue y la gestión de la aplicación desde el repositorio hasta el VPS y la entrega al cliente.",
-        "Featured_Project1_desc4": "Integré dispositivos de socios externos, permitiendo el control y la comunicación a través del servidor backend utilizando Azure IoT Hub.",
+        "Featured_Project1_title": "SECAI Aplicación de Calefacción AI",
+        "Featured_Project1_desc1": "Colaboré con un equipo en un proyecto financiado por BMWE para desarrollar una aplicación de servicio de calefacción inteligente, aprovechando servicios de IA para mejorar la eficiencia energética y reducir costos de calefacción.",
+        "Featured_Project1_desc2": "Desarrollé un backend en Nest.js para gestionar la comunicación con múltiples bases de datos, una aplicación cliente, y manejar la autenticación y la gestión de cuentas.",
+        "Featured_Project1_desc3": "Configuré Kubernetes en un servidor privado virtual, contenedorizando todas las aplicaciones y bases de datos con Docker para un despliegue y escalado eficiente.",
+        "Featured_Project1_desc4": "Establecí una pipeline CI/CD con GitLab para automatizar el despliegue y la gestión de la aplicación desde el repositorio hasta el VPS y la entrega al cliente.",
+        "Featured_Project1_desc5": "Integré dispositivos de socios externos, permitiendo el control y la comunicación a través del servidor backend utilizando Azure IoT Hub.",
         
         "Featured_Project2_title": "Tándem de Lectura en VR",
         "Featured_Project2_desc1": "Desarrollé una aplicación de VR para ayudar a los niños a aprender alemán, funcionando de forma nativa en MetaQuest con funcionalidad de seguimiento de manos, creada con Unity y Blender.",

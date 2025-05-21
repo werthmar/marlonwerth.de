@@ -21,6 +21,8 @@ export default function LinkButton({
     return (
         <Link
             href={link || '/'}
+            target="_blank"
+            rel="noopener noreferrer"
             className={`border-2 shadow-lg text-white border-solid rounded-lg ${
                 text ? 'p-4' : 'p-0.5'
             } inline-flex items-center justify-center group text-lg font-bold`}
@@ -32,6 +34,20 @@ export default function LinkButton({
         >
             {icon && <Image src={icon} alt="" width={size} height={size} />}
             {text && <p className="ml-2">{text}</p>}
+            <svg
+                className="ml-1 w-3.5 h-3.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+            </svg>
         </Link>
     );
 }

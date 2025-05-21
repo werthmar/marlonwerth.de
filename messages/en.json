@@ -22,11 +22,12 @@
         "personal-description": "I’m a full-stack web developer who loves building user-focused solutions with modern tech, blending research insights with creativity in XR and 3D art.",
         "Featured_Projects": "Featured Projects",
 
-        "Featured_Project1_title": "AI Heating App Backend",
-        "Featured_Project1_desc1": "Developed a Nest.js backend to manage communication with multiple databases, a client application, and handle authentication and account management.",
-        "Featured_Project1_desc2": "Configured Kubernetes on a virtual private server, containerizing all applications and databases using Docker for efficient deployment and scaling.",
-        "Featured_Project1_desc3": "Established a CI/CD pipeline with GitLab to automate deployment and management of the application from repository to VPS and client delivery.",
-        "Featured_Project1_desc4": "Integrated with external partner devices, enabling control and communication through the backend server using Azure IoT Hub.",
+        "Featured_Project1_title": "SECAI Smart Heating App",
+        "Featured_Project1_desc1": "Collaborated with a team on a BMWE-funded project to develop a smart heating service application, leveraging AI services to enhance energy efficiency and reduce heating costs.",
+        "Featured_Project1_desc2": "Developed a Nest.js backend to manage communication with multiple databases, a client application, and handle authentication and account management.",
+        "Featured_Project1_desc3": "Configured Kubernetes on a virtual private server, containerizing all applications and databases using Docker for efficient deployment and scaling.",
+        "Featured_Project1_desc4": "Established a CI/CD pipeline with GitLab to automate deployment and management of the application from repository to VPS and client delivery.",
+        "Featured_Project1_desc5": "Integrated with external partner devices, enabling control and communication through the backend server using Azure IoT Hub.",
         
         "Featured_Project2_title": "VR Reading Tandem",
         "Featured_Project2_desc1": "Developed a VR application to assist children in learning German, running natively on MetaQuest with hand-tracking functionality, built using Unity and Blender.",                

@@ -59,6 +59,19 @@ export default function Home() {
                         t('Featured_Project1_desc2'),
                         t('Featured_Project1_desc3'),
                         t('Featured_Project1_desc4'),
+                        t('Featured_Project1_desc5'),
+                    ]}
+                    links={[
+                        {
+                            url: 'https://www.secai-energy.de/',
+                            label: 'SECAI',
+                            icon: '/images/secai_icon.webp',
+                        },
+                        {
+                            url: 'https://www.bmwk.de/Redaktion/DE/Schlaglichter-der-Wirtschaftspolitik/2023/06/09-neues-technologieprogramm-edge-datenwirtschaft.html',
+                            label: 'BMWE',
+                            icon: '/images/bmwe.png',
+                        },
                     ]}
                     tags={[
                         <Tag
@@ -66,36 +79,42 @@ export default function Home() {
                             text="Nest.js"
                             icon={<SiNestjs />}
                             color="#dd3f58"
+                            variant="minimal"
                         />,
                         <Tag
                             text="Docker"
                             key="docker"
                             icon={<SiDocker />}
                             color="#4888eb"
+                            variant="minimal"
                         />,
                         <Tag
                             text="K8s"
                             key="kubernetes"
                             icon={<SiKubernetes />}
                             color="#538de3"
+                            variant="minimal"
                         />,
                         <Tag
                             text="PostgreSQL"
                             key="postgresql"
                             icon={<SiPostgresql />}
                             color="#3d648f"
+                            variant="minimal"
                         />,
                         <Tag
                             text="InfluxDB"
                             key="influxdb"
                             icon={<SiInfluxdb />}
                             color="#5e00a9"
+                            variant="minimal"
                         />,
                         <Tag
                             text="IoT-Hub"
                             key="iothub"
                             icon={<VscAzure />}
                             color="#759d22"
+                            variant="minimal"
                         />,
                     ]}
                 />
@@ -118,30 +137,35 @@ export default function Home() {
                             key="unity"
                             color="#000000"
                             icon={<SiUnity />}
+                            variant="minimal"
                         />,
                         <Tag
                             text="Blender"
                             key="blender"
                             color="#f4792b"
                             icon={<SiBlender />}
+                            variant="minimal"
                         />,
                         <Tag
                             text="Python"
                             key="python"
                             color="#3776AB"
                             icon={<FaPython />}
+                            variant="minimal"
                         />,
                         <Tag
                             text="GCloud"
                             key="googlecloud"
                             color="#4285F4"
                             icon={<SiGooglecloud />}
+                            variant="minimal"
                         />,
                         <Tag
                             text="MetaQuest"
                             key="metaquest"
                             color="#4267B2"
                             icon={<BsHeadsetVr />}
+                            variant="minimal"
                         />,
                     ]}
                 />
