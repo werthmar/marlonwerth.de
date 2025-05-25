@@ -18,11 +18,7 @@ export default function Tag({
 }: TagProps) {
     const baseStyles = {
         backgroundColor:
-            variant === 'professional'
-                ? `${borderColor}E6`
-                : variant === 'default'
-                  ? color
-                  : `${color}BF`,
+            variant === 'professional' ? `${borderColor}E6` : color,
         borderColor:
             variant === 'professional'
                 ? borderColor || color

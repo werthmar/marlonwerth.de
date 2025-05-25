@@ -20,6 +20,7 @@ export default function Footer() {
                         icon="/images/LinkedInFilled.png"
                         textColor="white"
                         color="#2b71b1"
+                        showLinkSymbol={false}
                         link="https://www.linkedin.com/in/marlon-werth"
                     />
                     <LinkButton
@@ -27,6 +28,7 @@ export default function Footer() {
                         icon="/images/githubBlack.png"
                         textColor="white"
                         color="black"
+                        showLinkSymbol={false}
                         link="https://github.com/werthmar"
                     />
                     <LinkButton
@@ -34,6 +36,7 @@ export default function Footer() {
                         icon="/images/orcid.png"
                         textColor="white"
                         color="#abcf4a"
+                        showLinkSymbol={false}
                         link="https://orcid.org/0009-0000-9027-6059"
                     />
                 </div>
