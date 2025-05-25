@@ -15,6 +15,9 @@ import {
     FaDesktop,
     FaTools,
     FaDocker,
+    FaCube,
+    FaBrain,
+    FaVrCardboard,
 } from 'react-icons/fa';
 import {
     SiUnity,
@@ -253,7 +256,7 @@ export default function Portfolio() {
             ],
         },
         {
-            title: 'Operating Systems',
+            title: t('os'),
             icon: <FaDesktop />,
             borderColor: 'border-gray-500',
             titleColor: 'text-gray-500',
@@ -280,56 +283,144 @@ export default function Portfolio() {
                 },
             ],
         },
+        {
+            title: t('other'),
+            icon: <FaTools />,
+            borderColor: 'border-cyan-500',
+            titleColor: 'text-cyan-500',
+            iconGradientFrom: 'from-cyan-500',
+            iconGradientTo: 'to-cyan-600',
+            technologies: [
+                {
+                    text: t('blender'),
+                    color: '#F5792A',
+                    icon: <FaCube />,
+                    borderColor: '#06B6D4',
+                },
+                {
+                    text: t('ProcessModeling'),
+                    color: '#4285F4',
+                    icon: <FaCogs />,
+                    borderColor: '#06B6D4',
+                },
+                {
+                    text: t('nginx'),
+                    color: '#009639',
+                    icon: <FaServer />,
+                    borderColor: '#06B6D4',
+                },
+                {
+                    text: t('rpa'),
+                    color: '#FF6B35',
+                    icon: <FaCogs />,
+                    borderColor: '#06B6D4',
+                },
+                {
+                    text: t('vr'),
+                    color: '#FF4081',
+                    icon: <FaVrCardboard />,
+                    borderColor: '#06B6D4',
+                },
+                {
+                    text: t('ai'),
+                    color: '#9C27B0',
+                    icon: <FaBrain />,
+                    borderColor: '#06B6D4',
+                },
+            ],
+        },
     ];
 
     return (
         <>
-            <div className="flex flex-col justify-center items-center p-6">
-                <p className="text-center text-lg max-w-prose mt-20 mb-20">
-                    {t('text1')}
-                </p>
-
+            <div className="flex flex-col justify-center items-center p-6 pt-20">
                 {/* Universities */}
                 <h1 className="text-3xl font-bold mb-4">{t('universities')}</h1>
-                <div className="flex flex-col lg:flex-row gap-4 mb-16">
-                    <LinkButton
-                        text="DHBW-Stuttgart"
-                        color="gray"
-                        icon="/images/dhbw.png"
-                        link="https://www.dhbw-stuttgart.de"
-                    />
-                    <LinkButton
-                        text="Universität Osnabrück"
-                        color="white"
-                        icon="/images/uni-osna.png"
-                        textColor="darkRed"
-                        link="https://www.uni-osnabrueck.de/startseite/"
-                    />
-                    <LinkButton
-                        text="Universidad Valladolid"
-                        color="rgb(181, 39, 84)"
-                        icon="/images/uva.png"
-                        link="https://www.uva.es/export/sites/uva/"
-                    />
+                <div className="flex flex-col gap-6 mb-16 w-full max-w-4xl">
+                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-white rounded-lg shadow-sm border">
+                        <div className="lg:w-1/3">
+                            <LinkButton
+                                text="DHBW-Stuttgart"
+                                color="gray"
+                                icon="/images/dhbw.png"
+                                link="https://www.dhbw-stuttgart.de"
+                            />
+                        </div>
+                        <div className="lg:w-2/3 lg:pl-6">
+                            <p className="text-gray-700 font-medium">
+                                2018-2021: Bachelor Business Information Systems
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-white rounded-lg shadow-sm border">
+                        <div className="lg:w-1/3">
+                            <LinkButton
+                                text="Universität Osnabrück"
+                                color="white"
+                                icon="/images/uni-osna.png"
+                                textColor="darkRed"
+                                link="https://www.uni-osnabrueck.de/startseite/"
+                            />
+                        </div>
+                        <div className="lg:w-2/3 lg:pl-6">
+                            <p className="text-gray-700 font-medium">
+                                2021-2024: Master Business Information Systems
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-white rounded-lg shadow-sm border">
+                        <div className="lg:w-1/3">
+                            <LinkButton
+                                text="Universidad Valladolid"
+                                color="rgb(181, 39, 84)"
+                                icon="/images/uva.png"
+                                link="https://www.uva.es/export/sites/uva/"
+                            />
+                        </div>
+                        <div className="lg:w-2/3 lg:pl-6">
+                            <p className="text-gray-700 font-medium">
+                                2023: Semester abroad international commerce
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Work */}
                 <h1 className="text-3xl font-bold mb-4">{t('work')}</h1>
-                <div className="flex flex-col lg:flex-row gap-4 mb-16">
-                    <LinkButton
-                        text="Nolte Küchen"
-                        color="white"
-                        textColor="black"
-                        icon="/images/nolte.png"
-                        link="https://www.nolte-kuechen.com/de-de/"
-                    />
-                    <LinkButton
-                        text="DFKI Osnabrück"
-                        color="white"
-                        textColor="darkBlue"
-                        icon="/images/dfki.jpeg"
-                        link="https://www.dfki.de/web"
-                    />
+                <div className="flex flex-col gap-6 mb-16 w-full max-w-4xl">
+                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-white rounded-lg shadow-sm border">
+                        <div className="lg:w-1/3">
+                            <LinkButton
+                                text="Nolte Küchen"
+                                color="white"
+                                textColor="black"
+                                icon="/images/nolte.png"
+                                link="https://www.nolte-kuechen.com/de-de/"
+                            />
+                        </div>
+                        <div className="lg:w-2/3 lg:pl-6">
+                            <p className="text-gray-700 font-medium">
+                                2018-2021: Dual Studies
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-white rounded-lg shadow-sm border">
+                        <div className="lg:w-1/3">
+                            <LinkButton
+                                text="DFKI Osnabrück"
+                                color="white"
+                                textColor="darkBlue"
+                                icon="/images/dfki.jpeg"
+                                link="https://www.dfki.de/web"
+                            />
+                        </div>
+                        <div className="lg:w-2/3 lg:pl-6">
+                            <p className="text-gray-700 font-medium">
+                                2022-2024: Research assistant, since 2025:
+                                Researcher
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <h1 className="text-3xl font-bold mb-8">{t('technologies')}</h1>
@@ -348,38 +439,6 @@ export default function Portfolio() {
                             technologies={section.technologies}
                         />
                     ))}
-
-                    {/* Other Tools - kept separate as it has different structure */}
-                    <div className="bg-white rounded-xl p-8 shadow-custom hover:shadow-xl transition-all duration-300 border-2 border-cyan-500 hover:border-cyan-600">
-                        <div className="flex items-center mb-6">
-                            <div className="bg-gradient-to-br from-cyan-500 to-cyan-600 p-3 rounded-xl mr-4 shadow-lg">
-                                <FaTools className="text-white text-2xl" />
-                            </div>
-                            <h2 className="text-2xl font-bold text-cyan-500">
-                                Other Tools
-                            </h2>
-                        </div>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm text-gray-600">
-                            <span className="bg-gray-100 px-3 py-2 rounded-lg">
-                                {t('nginx')}
-                            </span>
-                            <span className="bg-gray-100 px-3 py-2 rounded-lg">
-                                {t('websockets')}
-                            </span>
-                            <span className="bg-gray-100 px-3 py-2 rounded-lg">
-                                {t('ai')}
-                            </span>
-                            <span className="bg-gray-100 px-3 py-2 rounded-lg">
-                                {t('vr')}
-                            </span>
-                            <span className="bg-gray-100 px-3 py-2 rounded-lg">
-                                {t('blender')}
-                            </span>
-                            <span className="bg-gray-100 px-3 py-2 rounded-lg">
-                                {t('rpa')}
-                            </span>
-                        </div>
-                    </div>
                 </div>
 
                 <h1 className="text-3xl font-bold mb-8">{t('projects')}</h1>

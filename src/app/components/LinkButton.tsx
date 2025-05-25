@@ -25,7 +25,7 @@ export default function LinkButton({
             href={link || '/'}
             target="_blank"
             rel="noopener noreferrer"
-            className={`border-2 shadow-lg text-white border-solid rounded-lg ${
+            className={`border-2 shadow-lg text-white border-solid w-full rounded-lg ${
                 text ? 'p-4' : 'p-0.5'
             } inline-flex items-center justify-center group text-lg font-bold`}
             style={{
