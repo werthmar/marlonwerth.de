@@ -8,6 +8,13 @@ import {
     FaWindows,
     FaApple,
     FaLinux,
+    FaServer,
+    FaDatabase,
+    FaCode,
+    FaCogs,
+    FaDesktop,
+    FaTools,
+    FaDocker,
 } from 'react-icons/fa';
 import {
     SiUnity,
@@ -15,13 +22,20 @@ import {
     SiMysql,
     SiMongodb,
     SiNeo4J,
+    SiKubernetes,
+    SiGitlab,
+    SiJest,
+    SiNestjs,
+    SiPostgresql,
+    SiInfluxdb,
 } from 'react-icons/si';
+import { FaGitAlt } from 'react-icons/fa6';
 
 // Components
-import Tag from '../components/Tag';
 import LinkButton from '../components/LinkButton';
 import Timeline from '../components/Timeline';
 import NextPageButton from '../components/NextPageButton';
+import TechnologyDisplay from '../components/TechnologyDisplay';
 
 export default function Portfolio() {
     const t = useTranslations('PortfolioPage');
@@ -75,7 +89,197 @@ export default function Portfolio() {
             tag2Color: 'bg-purple-200',
             iconColor: 'bg-orange-200',
         },
-        // Add more timeline items as needed
+    ];
+
+    const technologySections = [
+        {
+            title: 'Frontend',
+            icon: <FaCode />,
+            borderColor: 'border-blue-500',
+            titleColor: 'text-blue-500',
+            iconGradientFrom: 'from-blue-500',
+            iconGradientTo: 'to-blue-600',
+            technologies: [
+                {
+                    text: 'React',
+                    color: '#61DAFB',
+                    icon: <FaReact />,
+                    borderColor: '#3B82F6',
+                },
+                {
+                    text: 'Next.js',
+                    color: '#fff',
+                    icon: '/images/nextjs-icon.png',
+                    borderColor: '#3B82F6',
+                },
+                {
+                    text: 'Flutter',
+                    color: '#02569B',
+                    icon: <SiFlutter />,
+                    borderColor: '#3B82F6',
+                },
+                {
+                    text: 'Unity',
+                    color: '#000000',
+                    icon: <SiUnity />,
+                    borderColor: '#3B82F6',
+                },
+            ],
+        },
+        {
+            title: 'Backend',
+            icon: <FaServer />,
+            borderColor: 'border-green-500',
+            titleColor: 'text-green-500',
+            iconGradientFrom: 'from-green-500',
+            iconGradientTo: 'to-green-600',
+            technologies: [
+                {
+                    text: 'Node.js',
+                    color: '#339933',
+                    icon: <FaNodeJs />,
+                    borderColor: '#10B981',
+                },
+                {
+                    text: 'Nest.js',
+                    color: '#E0234E',
+                    icon: <SiNestjs />,
+                    borderColor: '#10B981',
+                },
+                {
+                    text: 'Python',
+                    color: '#3776AB',
+                    icon: <FaPython />,
+                    borderColor: '#10B981',
+                },
+                {
+                    text: 'Java',
+                    color: '#007396',
+                    icon: <FaJava />,
+                    borderColor: '#10B981',
+                },
+                {
+                    text: 'C#',
+                    color: '#239120',
+                    icon: '/images/c-sharp-icon.png',
+                    borderColor: '#10B981',
+                },
+            ],
+        },
+        {
+            title: t('databases'),
+            icon: <FaDatabase />,
+            borderColor: 'border-orange-500',
+            titleColor: 'text-orange-500',
+            iconGradientFrom: 'from-orange-500',
+            iconGradientTo: 'to-orange-600',
+            technologies: [
+                {
+                    text: 'MySQL',
+                    color: '#4479A1',
+                    icon: <SiMysql />,
+                    borderColor: '#F97316',
+                },
+                {
+                    text: 'PostgreSQL',
+                    color: '#336791',
+                    icon: <SiPostgresql />,
+                    borderColor: '#F97316',
+                },
+                {
+                    text: 'MongoDB',
+                    color: '#47A248',
+                    icon: <SiMongodb />,
+                    borderColor: '#F97316',
+                },
+                {
+                    text: 'InfluxDB',
+                    color: '#22ADF6',
+                    icon: <SiInfluxdb />,
+                    borderColor: '#F97316',
+                },
+                {
+                    text: 'Neo4j',
+                    color: '#008CC1',
+                    icon: <SiNeo4J />,
+                    borderColor: '#F97316',
+                },
+            ],
+        },
+        {
+            title: 'DevOps',
+            icon: <FaCogs />,
+            borderColor: 'border-purple-500',
+            titleColor: 'text-purple-500',
+            iconGradientFrom: 'from-purple-500',
+            iconGradientTo: 'to-purple-600',
+            technologies: [
+                {
+                    text: 'Git',
+                    color: '#F05032',
+                    icon: <FaGitAlt />,
+                    borderColor: '#8B5CF6',
+                },
+                {
+                    text: 'Docker',
+                    color: '#2496ED',
+                    icon: <FaDocker />,
+                    borderColor: '#8B5CF6',
+                },
+                {
+                    text: 'Docker Compose',
+                    color: '#2496ED',
+                    icon: <FaDocker />,
+                    borderColor: '#8B5CF6',
+                },
+                {
+                    text: 'Kubernetes',
+                    color: '#326CE5',
+                    icon: <SiKubernetes />,
+                    borderColor: '#8B5CF6',
+                },
+                {
+                    text: 'GitLab CI/CD',
+                    color: '#FCA326',
+                    icon: <SiGitlab />,
+                    borderColor: '#8B5CF6',
+                },
+                {
+                    text: 'Jest',
+                    color: '#C21325',
+                    icon: <SiJest />,
+                    borderColor: '#8B5CF6',
+                },
+            ],
+        },
+        {
+            title: 'Operating Systems',
+            icon: <FaDesktop />,
+            borderColor: 'border-gray-500',
+            titleColor: 'text-gray-500',
+            iconGradientFrom: 'from-gray-500',
+            iconGradientTo: 'to-gray-600',
+            technologies: [
+                {
+                    text: 'Windows',
+                    color: '#0078D6',
+                    icon: <FaWindows />,
+                    borderColor: '#6B7280',
+                },
+                {
+                    text: 'macOS',
+                    color: '#000000',
+                    icon: <FaApple />,
+                    borderColor: '#6B7280',
+                },
+                {
+                    text: 'Linux',
+                    color: '#FCC624',
+                    icon: <FaLinux />,
+                    borderColor: '#6B7280',
+                },
+            ],
+        },
     ];
 
     return (
@@ -128,91 +332,54 @@ export default function Portfolio() {
                     />
                 </div>
 
-                <h1 className="text-3xl font-bold mb-4">{t('technologies')}</h1>
-                {/* Development */}
-                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-custom mb-6">
-                    <h2 className="text-xl font-bold text-gray-400 mb-4">
-                        {t('development')}
-                    </h2>
-                    <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        <Tag
-                            text="Node.js"
-                            color="#339933"
-                            icon={<FaNodeJs />}
-                        />
-                        <Tag text="React" color="#61DAFB" icon={<FaReact />} />
-                        <Tag
-                            text="Next.js"
-                            color="white"
-                            borderColor="black"
-                            icon={'/images/nextjs-icon.png'}
-                        />
-                        <Tag
-                            text="Python"
-                            color="#3776AB"
-                            icon={<FaPython />}
-                        />
-                        <Tag
-                            text="C#"
-                            color="purple"
-                            icon={'/images/c-sharp-icon.png'}
-                        />
-                        <Tag text="Unity" color="#000000" icon={<SiUnity />} />
-                        <Tag
-                            text="Flutter"
-                            color="#02569B"
-                            icon={<SiFlutter />}
-                        />
-                        <Tag text="Java" color="#007396" icon={<FaJava />} />
-                    </div>
-                </div>
+                <h1 className="text-3xl font-bold mb-8">{t('technologies')}</h1>
 
-                {/* Databases */}
-                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-custom mb-6">
-                    <h2 className="text-xl font-bold text-gray-400 mb-4">
-                        {t('databases')}
-                    </h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                        <Tag text="SQL" color="#4479A1" icon={<SiMysql />} />
-                        <Tag
-                            text="MongoDB"
-                            color="#47A248"
-                            icon={<SiMongodb />}
+                {/* Technologies Grid */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 w-full max-w-7xl mb-16">
+                    {technologySections.map((section, index) => (
+                        <TechnologyDisplay
+                            key={index}
+                            title={section.title}
+                            icon={section.icon}
+                            borderColor={section.borderColor}
+                            titleColor={section.titleColor}
+                            iconGradientFrom={section.iconGradientFrom}
+                            iconGradientTo={section.iconGradientTo}
+                            technologies={section.technologies}
                         />
-                        <Tag text="Neo4j" color="#008CC1" icon={<SiNeo4J />} />
-                    </div>
-                </div>
+                    ))}
 
-                {/* Operating Systems */}
-                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-custom mb-6">
-                    <h2 className="text-xl font-bold text-gray-400 mb-4">
-                        {t('os')}
-                    </h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                        <Tag
-                            text="Windows"
-                            color="#0078D6"
-                            icon={<FaWindows />}
-                        />
-                        <Tag text="macOS" color="#000000" icon={<FaApple />} />
-                        <Tag text="Linux" color="#FCC624" icon={<FaLinux />} />
+                    {/* Other Tools - kept separate as it has different structure */}
+                    <div className="bg-white rounded-xl p-8 shadow-custom hover:shadow-xl transition-all duration-300 border-2 border-cyan-500 hover:border-cyan-600">
+                        <div className="flex items-center mb-6">
+                            <div className="bg-gradient-to-br from-cyan-500 to-cyan-600 p-3 rounded-xl mr-4 shadow-lg">
+                                <FaTools className="text-white text-2xl" />
+                            </div>
+                            <h2 className="text-2xl font-bold text-cyan-500">
+                                Other Tools
+                            </h2>
+                        </div>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm text-gray-600">
+                            <span className="bg-gray-100 px-3 py-2 rounded-lg">
+                                {t('nginx')}
+                            </span>
+                            <span className="bg-gray-100 px-3 py-2 rounded-lg">
+                                {t('websockets')}
+                            </span>
+                            <span className="bg-gray-100 px-3 py-2 rounded-lg">
+                                {t('ai')}
+                            </span>
+                            <span className="bg-gray-100 px-3 py-2 rounded-lg">
+                                {t('vr')}
+                            </span>
+                            <span className="bg-gray-100 px-3 py-2 rounded-lg">
+                                {t('blender')}
+                            </span>
+                            <span className="bg-gray-100 px-3 py-2 rounded-lg">
+                                {t('rpa')}
+                            </span>
+                        </div>
                     </div>
-                </div>
-
-                {/* Other */}
-                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-custom mb-16">
-                    <h2 className="text-xl font-bold text-gray-400 mb-4">
-                        {t('other')}
-                    </h2>
-                    <ul className="list-disc list-inside">
-                        <li className="mb-2">{t('nginx')}</li>
-                        <li className="mb-2">{t('ai')}</li>
-                        <li className="mb-2">{t('vr')}</li>
-                        <li className="mb-2">{t('blender')}</li>
-                        <li className="mb-2">{t('rpa')}</li>
-                        <li className="mb-2">{t('bpmn')}</li>
-                        <li className="mb-2">{t('git')}</li>
-                    </ul>
                 </div>
 
                 <h1 className="text-3xl font-bold mb-8">{t('projects')}</h1>

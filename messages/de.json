@@ -21,14 +21,14 @@
         "hi-text": "Hallo, ich bin Marlon",
         "personal-description": "Ich bin ein Full-Stack-Webentwickler, der es liebt, nutzerorientierte Lösungen mit moderner Technologie zu entwickeln und dabei Forschungserkenntnisse mit Kreativität in XR und 3D-Kunst zu verbinden.",
         "Featured_Projects": "Ausgewählte Projekte",
-        
+
         "Featured_Project1_title": "SECAI KI-Heizungs-App",
         "Featured_Project1_desc1": "Zusammenarbeit mit einem Team an einem vom BMWE geförderten Projekt zur Entwicklung einer intelligenten Heizungsdienstanwendung, die KI-Dienste nutzt, um die Energieeffizienz zu verbessern und Heizkosten zu senken.",
         "Featured_Project1_desc2": "Entwicklung eines Nest.js-Backends zur Verwaltung der Kommunikation mit mehreren Datenbanken, einer Client-Anwendung sowie zur Handhabung von Authentifizierung und Kontoverwaltung.",
         "Featured_Project1_desc3": "Konfiguration von Kubernetes auf einem virtuellen privaten Server, Containerisierung aller Anwendungen und Datenbanken mit Docker für effiziente Bereitstellung und Skalierung.",
         "Featured_Project1_desc4": "Einrichtung einer CI/CD-Pipeline mit GitLab zur Automatisierung der Bereitstellung und Verwaltung der Anwendung vom Repository bis zum VPS und zur Client-Auslieferung.",
         "Featured_Project1_desc5": "Integration mit Gerä connue von externen Partnern, die Steuerung und Kommunikation über den Backend-Server mit Azure IoT Hub ermöglicht.",
-        
+
         "Featured_Project2_title": "VR-Lesetandem",
         "Featured_Project2_desc1": "Entwicklung einer VR-Anwendung, um Kindern beim Erlernen der deutschen Sprache zu helfen, nativ auf MetaQuest mit Hand-Tracking-Funktion, erstellt mit Unity und Blender.",
         "Featured_Project2_desc2": "Erstellung und Validierung des Designs durch einen Design-Science-Research-Ansatz.",
@@ -36,7 +36,7 @@
         "Featured_Project2_desc4": "Integration von Google Cloud APIs für Übersetzungs- und Text-to-Speech-Dienste.",
         "Featured_Project2_desc5": "Durchführung mehrerer Tests mit Experten und der Zielgruppe, um die Anwendung zu verfeinern.",
         "Featured_Project2_desc6": "Veröffentlichung der Ergebnisse in einem Forschungspapier.",
-        
+
         "curious": "Habe ich Ihre Neugier geweckt?"
     },
 
@@ -50,12 +50,12 @@
         "os": "Betriebssysteme",
         "other": "Andere",
         "nginx": "Webhosting mit Nginx auf Linux-Servern",
-        "blender": "3D Modellierung mit Blender",
+        "blender": "3D-Modellierung, Texturierung, Rigging und Animation in Blender",
         "rpa": "Robotic Process Automation",
         "bpmn": "BPMN und eEPK Fähigkeiten",
         "vr": "VR und AR Projekte mit Unity und Unreal Engine",
         "ai": "KI Projekte mit Python und scikit-learn",
-        "git": "Version control mit Git (GitHub, GitLab)",
+        "websockets": "Einsatz von Websockets für Echtzeitkommunikation in Webanwendungen",
         "projects": "Projekte",
         "project1-title": "VR Lesetandem",
         "project1-description": "Ein VR-Lesetrainer für Kinder. Die Kinder befinden sich in einer immersiven Umgebung im Wald des Märchens „Rotkäppchen“. Die Kinder müssen den Text lesen, um die Geschichte fortzusetzen. Die KI überprüft die korrekte Aussprache.",
