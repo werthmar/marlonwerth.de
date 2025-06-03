@@ -8,7 +8,7 @@ export default function CV() {
 
     const handlePrint = () => {
         // Open the PDF in a new window and trigger print
-        const printWindow = window.open('/cv.pdf', '_blank');
+        const printWindow = window.open('/marlon-werth-cv.pdf', '_blank');
         if (printWindow) {
             printWindow.onload = () => {
                 printWindow.print();
@@ -35,7 +35,7 @@ export default function CV() {
                             {t('document')}
                         </h2>
                         <a
-                            href="/cv.pdf"
+                            href="/marlon-werth-cv.pdf"
                             download="Marlon_Werth_CV.pdf"
                             className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 font-medium text-white transition-colors duration-200 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                         >
@@ -59,7 +59,7 @@ export default function CV() {
                     {/* PDF Viewer */}
                     <div className="relative">
                         <iframe
-                            src="/cv.pdf"
+                            src="/marlon-werth-cv.pdf"
                             className="h-[800px] w-full border-0"
                             title="Marlon Werth CV"
                         />
@@ -84,7 +84,7 @@ export default function CV() {
                                     {t('viewerNotSupported')}
                                 </p>
                                 <a
-                                    href="/cv.pdf"
+                                    href="/marlon-werth-cv.pdf"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 font-medium text-white transition-colors duration-200 hover:bg-blue-700"
@@ -100,7 +100,7 @@ export default function CV() {
                 <div className="mt-8 text-center">
                     <div className="inline-flex space-x-4">
                         <a
-                            href="/cv.pdf"
+                            href="/marlon-werth-cv.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="font-medium text-blue-600 transition-colors duration-200 hover:text-blue-800"
