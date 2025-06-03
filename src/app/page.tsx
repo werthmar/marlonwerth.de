@@ -70,7 +70,6 @@ export default function Home() {
                         {
                             url: 'https://www.bmwk.de/Redaktion/DE/Schlaglichter-der-Wirtschaftspolitik/2023/06/09-neues-technologieprogramm-edge-datenwirtschaft.html',
                             label: 'BMWE',
-                            icon: '/images/bmwe.png',
                         },
                     ]}
                     tags={[
