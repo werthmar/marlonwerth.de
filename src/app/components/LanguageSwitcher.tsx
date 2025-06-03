@@ -44,7 +44,7 @@ export default function LanguageSwitcher({
     return (
         <div className="relative inline-block text-left">
             <button
-                className="flex items-center justify-between w-full p-2 rounded-md"
+                className="flex w-full items-center justify-between rounded-md p-2"
                 onClick={toggleDropdown}
             >
                 <span className="flex items-center">
@@ -65,7 +65,7 @@ export default function LanguageSwitcher({
             </button>
 
             {isOpen && (
-                <div className="origin-bottom-right lg:origin-top-right absolute lg:bottom-auto lg:mt-1 bottom-full mb-1 w-40 rounded-md shadow-lg bg-background ring-1 ring-black ring-opacity-5 z-50">
+                <div className="absolute bottom-full z-50 mb-1 w-40 origin-bottom-right rounded-md bg-background shadow-lg ring-1 ring-black ring-opacity-5 lg:bottom-auto lg:mt-1 lg:origin-top-right">
                     <div className="py-1">
                         {languages
                             .filter((lang) => lang.code !== currentLangCode)
@@ -73,7 +73,7 @@ export default function LanguageSwitcher({
                                 <button
                                     key={lang.code}
                                     onClick={() => selectLanguage(lang)}
-                                    className="block w-full text-left px-4 py-2 hover:bg-foreground hover:text-background"
+                                    className="block w-full px-4 py-2 text-left hover:bg-foreground hover:text-background"
                                 >
                                     <ReactCountryFlag
                                         countryCode={lang.flag}

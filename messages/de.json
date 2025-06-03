@@ -2,14 +2,16 @@
     "Global": {
         "nextPageButtonText": "Weiter",
         "nextPageButtonText-Portfolio": "Besuche mein Portfolio",
-        "nextPageButtonText-CV": "Lese meinen Lebenslauf"
+        "nextPageButtonText-CV": "Lese meinen Lebenslauf",
+        "nextPageButtonText-Contact": "Kontaktiere mich"
     },
 
     "Navbar": {
         "home": "Startseite",
         "portfolio": "Portfolio",
         "cv": "Lebenslauf",
-        "settings": "Einstellungen"
+        "settings": "Einstellungen",
+        "contact": "Kontakt"
     },
 
     "Footer": {
@@ -21,13 +23,14 @@
         "hi-text": "Hallo, ich bin Marlon",
         "personal-description": "Ich bin ein Full-Stack-Webentwickler, der es liebt, nutzerorientierte Lösungen mit moderner Technologie zu entwickeln und dabei Forschungserkenntnisse mit Kreativität in XR und 3D-Kunst zu verbinden.",
         "Featured_Projects": "Ausgewählte Projekte",
-        
-        "Featured_Project1_title": "Backend für AI-Heizungs-App",
-        "Featured_Project1_desc1": "Entwicklung eines Nest.js-Backends zur Verwaltung der Kommunikation mit mehreren Datenbanken, einer Client-Anwendung sowie zur Handhabung von Authentifizierung und Kontoverwaltung.",
-        "Featured_Project1_desc2": "Konfiguration von Kubernetes auf einem virtuellen privaten Server, Containerisierung aller Anwendungen und Datenbanken mit Docker für effiziente Bereitstellung und Skalierung.",
-        "Featured_Project1_desc3": "Einrichtung einer CI/CD-Pipeline mit GitLab zur Automatisierung der Bereitstellung und Verwaltung der Anwendung vom Repository bis zum VPS und zur Client-Auslieferung.",
-        "Featured_Project1_desc4": "Integration mit Gerä connue von externen Partnern, die Steuerung und Kommunikation über den Backend-Server mit Azure IoT Hub ermöglicht.",
-        
+
+        "Featured_Project1_title": "SECAI KI-Heizungs-App",
+        "Featured_Project1_desc1": "Zusammenarbeit mit einem Team an einem vom BMWE geförderten Projekt zur Entwicklung einer intelligenten Heizungsdienstanwendung, die KI-Dienste nutzt, um die Energieeffizienz zu verbessern und Heizkosten zu senken.",
+        "Featured_Project1_desc2": "Entwicklung eines Nest.js-Backends zur Verwaltung der Kommunikation mit mehreren Datenbanken, einer Client-Anwendung sowie zur Handhabung von Authentifizierung und Kontoverwaltung.",
+        "Featured_Project1_desc3": "Konfiguration von Kubernetes auf einem virtuellen privaten Server, Containerisierung aller Anwendungen und Datenbanken mit Docker für effiziente Bereitstellung und Skalierung.",
+        "Featured_Project1_desc4": "Einrichtung einer CI/CD-Pipeline mit GitLab zur Automatisierung der Bereitstellung und Verwaltung der Anwendung vom Repository bis zum VPS und zur Client-Auslieferung.",
+        "Featured_Project1_desc5": "Integration mit Gerä connue von externen Partnern, die Steuerung und Kommunikation über den Backend-Server mit Azure IoT Hub ermöglicht.",
+
         "Featured_Project2_title": "VR-Lesetandem",
         "Featured_Project2_desc1": "Entwicklung einer VR-Anwendung, um Kindern beim Erlernen der deutschen Sprache zu helfen, nativ auf MetaQuest mit Hand-Tracking-Funktion, erstellt mit Unity und Blender.",
         "Featured_Project2_desc2": "Erstellung und Validierung des Designs durch einen Design-Science-Research-Ansatz.",
@@ -35,7 +38,7 @@
         "Featured_Project2_desc4": "Integration von Google Cloud APIs für Übersetzungs- und Text-to-Speech-Dienste.",
         "Featured_Project2_desc5": "Durchführung mehrerer Tests mit Experten und der Zielgruppe, um die Anwendung zu verfeinern.",
         "Featured_Project2_desc6": "Veröffentlichung der Ergebnisse in einem Forschungspapier.",
-        
+
         "curious": "Habe ich Ihre Neugier geweckt?"
     },
 
@@ -47,14 +50,15 @@
         "development": "Entwicklung",
         "databases": "Datenbanken",
         "os": "Betriebssysteme",
-        "other": "Andere",
+        "ProcessModeling": "Prozessmodellierung mit BPMN und eEPK, Durchführung von Workshops am Arbeitsplatz und an Universitäten zu diesen Themen",
+        "other": "Andere Tools",
         "nginx": "Webhosting mit Nginx auf Linux-Servern",
-        "blender": "3D Modellierung mit Blender",
+        "blender": "3D-Modellierung, Texturierung, Rigging und Animation in Blender",
         "rpa": "Robotic Process Automation",
         "bpmn": "BPMN und eEPK Fähigkeiten",
         "vr": "VR und AR Projekte mit Unity und Unreal Engine",
         "ai": "KI Projekte mit Python und scikit-learn",
-        "git": "Version control mit Git (GitHub, GitLab)",
+        "websockets": "Einsatz von Websockets für Echtzeitkommunikation in Webanwendungen",
         "projects": "Projekte",
         "project1-title": "VR Lesetandem",
         "project1-description": "Ein VR-Lesetrainer für Kinder. Die Kinder befinden sich in einer immersiven Umgebung im Wald des Märchens „Rotkäppchen“. Die Kinder müssen den Text lesen, um die Geschichte fortzusetzen. Die KI überprüft die korrekte Aussprache.",
@@ -70,18 +74,14 @@
     },
 
     "cv": {
-        "cv": "Lebenslauf",
-        "name": "Name:",
-        "birthdate": "Geburtsdatum",
-        "work": "Arbeit",
-        "dfki": "seit 2022: Deutsches Forschungszentrum für künstliche Intelligenz",
-        "uva": "Auslandssemester an der Universidad de Valladolid (Spanien)",
-        "uos": "Universität Osnabrück (Master)",
-        "dhbw": "Duale Hochschule Baden-Württemberg (Bachelor)",
-        "studies": "Studium",
-        "internships": "Praktika",
-        "schools": "Schule",
-        "retirement-home": "Altersheim"
+        "title": "Lebenslauf",
+        "subtitle": "Berufserfahrung & Qualifikationen",
+        "document": "CV - Portfolio",
+        "download": "PDF herunterladen",
+        "viewerNotSupported": "PDF-Viewer wird in diesem Browser nicht unterstützt",
+        "openInNewTab": "In neuem Tab öffnen",
+        "openFullscreen": "Vollbild anzeigen",
+        "print": "Drucken"
     },
 
     "Imprint": {
@@ -105,5 +105,21 @@
         "privacyTitle": "Datenschutz",
         "privacy": "Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.",
         "impressumGenerator": "Website Impressum von"
+    },
+
+    "contact": {
+        "title": "Kontaktiere mich",
+        "fullName": "Vollständiger Name *",
+        "fullNamePlaceholder": "Ihr vollständiger Name",
+        "emailAddress": "E-Mail-Adresse *",
+        "emailPlaceholder": "ihre.email@beispiel.com",
+        "subject": "Betreff *",
+        "subjectPlaceholder": "Worum geht es?",
+        "message": "Nachricht *",
+        "messagePlaceholder": "Ihre Nachricht hier...",
+        "sendMessage": "Nachricht senden",
+        "sending": "Wird gesendet...",
+        "successMessage": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.",
+        "errorMessage": "Entschuldigung, beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
     }
 }

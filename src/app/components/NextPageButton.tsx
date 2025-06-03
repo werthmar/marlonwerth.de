@@ -15,10 +15,10 @@ export default function NextPageButton({
 }: NextPageButtonProps) {
     const t = useTranslations('Global');
     return (
-        <div className="flex justify-center items-center m-4">
+        <div className="m-4 flex items-center justify-center">
             <Link
                 href={link || '/'}
-                className="bg-background text-foreground border-foreground border-2 md:border-[0.2rem] shadow border-solid rounded-full pl-8 pr-8 pt-2 pb-2 flex items-center group text-lg md:text-2xl font-bold transition duration-300 hover:bg-foreground hover:text-background"
+                className="group flex items-center rounded-full border-2 border-solid border-foreground bg-background pb-2 pl-8 pr-8 pt-2 text-lg font-bold text-foreground shadow transition duration-300 hover:bg-foreground hover:text-background md:border-[0.2rem] md:text-2xl"
             >
                 {t(text)}
                 <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />

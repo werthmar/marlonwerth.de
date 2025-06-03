@@ -2,14 +2,16 @@
     "Global": {
         "nextPageButtonText": "Continue",
         "nextPageButtonText-Portfolio": "Explore My Portfolio",
-        "nextPageButtonText-CV": "Read My CV"
+        "nextPageButtonText-CV": "Read My CV",
+        "nextPageButtonText-Contact": "Get in Touch"
     },
 
     "Navbar": {
         "home": "Home",
         "portfolio": "Portfolio",
         "cv": "Curriculum Vitae",
-        "settings": "Settings"
+        "settings": "Settings",
+        "contact": "Contact"
     },
 
     "Footer": {
@@ -22,20 +24,21 @@
         "personal-description": "I’m a full-stack web developer who loves building user-focused solutions with modern tech, blending research insights with creativity in XR and 3D art.",
         "Featured_Projects": "Featured Projects",
 
-        "Featured_Project1_title": "AI Heating App Backend",
-        "Featured_Project1_desc1": "Developed a Nest.js backend to manage communication with multiple databases, a client application, and handle authentication and account management.",
-        "Featured_Project1_desc2": "Configured Kubernetes on a virtual private server, containerizing all applications and databases using Docker for efficient deployment and scaling.",
-        "Featured_Project1_desc3": "Established a CI/CD pipeline with GitLab to automate deployment and management of the application from repository to VPS and client delivery.",
-        "Featured_Project1_desc4": "Integrated with external partner devices, enabling control and communication through the backend server using Azure IoT Hub.",
-        
+        "Featured_Project1_title": "SECAI Smart Heating App",
+        "Featured_Project1_desc1": "Collaborated with a team on a BMWE-funded project to develop a smart heating service application, leveraging AI services to enhance energy efficiency and reduce heating costs.",
+        "Featured_Project1_desc2": "Developed a Nest.js backend to manage communication with multiple databases, a client application, and handle authentication and account management.",
+        "Featured_Project1_desc3": "Configured Kubernetes on a virtual private server, containerizing all applications and databases using Docker for efficient deployment and scaling.",
+        "Featured_Project1_desc4": "Established a CI/CD pipeline with GitLab to automate deployment and management of the application from repository to VPS and client delivery.",
+        "Featured_Project1_desc5": "Integrated with external partner devices, enabling control and communication through the backend server using Azure IoT Hub.",
+
         "Featured_Project2_title": "VR Reading Tandem",
-        "Featured_Project2_desc1": "Developed a VR application to assist children in learning German, running natively on MetaQuest with hand-tracking functionality, built using Unity and Blender.",                
+        "Featured_Project2_desc1": "Developed a VR application to assist children in learning German, running natively on MetaQuest with hand-tracking functionality, built using Unity and Blender.",
         "Featured_Project2_desc2": "Created and validated the design through a Design-Science-Research approach.",
         "Featured_Project2_desc3": "Integrated AI services for speech recognition and validation of reading abilities.",
         "Featured_Project2_desc4": "Integrated Google Cloud APIs for translation and text-to-speech services.",
         "Featured_Project2_desc5": "Conducted multiple tests with experts and the target audience to refine the application.",
         "Featured_Project2_desc6": "Published findings in a research paper.",
-        
+
         "curious": "Have I sparked your curiosity?"
     },
 
@@ -47,14 +50,15 @@
         "development": "Development",
         "databases": "Databases",
         "os": "Operating Systems",
-        "other": "Other",
+        "ProcessModeling": "Process modeling with BPMN and eEPK, Conducted workshops at the workplace and in universities on these topics",
+        "other": "Other Tools",
         "nginx": "Webhosting with Nginx on Linux-Servers",
-        "blender": "3D modeling with Blender",
+        "blender": "3D modeling, texturing, rigging and animating in Blender",
         "rpa": "Robotic Process Automation",
         "bpmn": "BPMN and eEPK skills",
         "vr": "VR and AR projects with Unity and Unreal Engine",
         "ai": "AI projects with Python and scikit-learn",
-        "git": "Version control with Git (GitHub, GitLab)",
+        "websockets": "Utilizing websockets for real-time communication in web applications",
         "projects": "Projects",
         "project1-title": "VR reading tandem",
         "project1-description": "A reading trainer for children in VR. The children are placed into an immersive Environment in the from of the forrest from the farytale 'little red riding hood'. The children have to read the text to continue the story. Correct pronunciation is checked using AI.",
@@ -70,18 +74,14 @@
     },
 
     "cv": {
-        "cv": "Curriculum Vitae",
-        "name": "Name:",
-        "birthdate": "Birthdate",
-        "work": "Work",
-        "dfki": "since 2022: German Research Center for Artificial Intelligence",
-        "uva": "Semester abroad at Universidad de Valladolid (Spain)",
-        "uos": "Universität Osnabrück (Master)",
-        "dhbw": "Duale Hochschule Baden-Württemberg (Bachelor)",
-        "studies": "Studies",
-        "internships": "Internships",
-        "schools": "Schools",
-        "retirement-home": "Retirement home"
+        "title": "Curriculum Vitae",
+        "subtitle": "Professional Experience & Qualifications",
+        "document": "CV - Protfolio",
+        "download": "Download PDF",
+        "viewerNotSupported": "PDF viewer not supported in this browser",
+        "openInNewTab": "Open in New Tab",
+        "openFullscreen": "View Fullscreen",
+        "print": "Print"
     },
 
     "Imprint": {
@@ -105,5 +105,21 @@
         "privacyTitle": "Privacy",
         "privacy": "The use of our website is generally possible without providing personal data. Insofar as personal data (e.g., name, address, or email addresses) is collected on our pages, this is always done on a voluntary basis, as far as possible. This data will not be passed on to third parties without your express consent. We point out that data transmission on the Internet (e.g., when communicating by email) can have security gaps. A complete protection of the data against access by third parties is not possible. The use of contact data published within the framework of the imprint obligation by third parties for sending unsolicited advertising and information materials is hereby expressly prohibited. The operators of the pages expressly reserve the right to take legal action in the event of unsolicited sending of advertising information, such as spam emails.",
         "impressumGenerator": "Website Imprint by"
+    },
+
+    "contact": {
+        "title": "Contact Me",
+        "fullName": "Full Name *",
+        "fullNamePlaceholder": "Your full name",
+        "emailAddress": "Email Address *",
+        "emailPlaceholder": "your.email@example.com",
+        "subject": "Subject *",
+        "subjectPlaceholder": "What is this about?",
+        "message": "Message *",
+        "messagePlaceholder": "Your message here...",
+        "sendMessage": "Send Message",
+        "sending": "Sending...",
+        "successMessage": "Thank you! Your message has been sent successfully.",
+        "errorMessage": "Sorry, there was an error sending your message. Please try again."
     }
 }

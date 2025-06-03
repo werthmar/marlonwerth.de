@@ -9,17 +9,18 @@ export default function Footer() {
     return (
         <>
             {/** About Me / Picture and Links */}
-            <div className="flex flex-col justify-center items-center p-4 mt-12">
-                <p className="mt-3 text-lg font-medium text-emphasis border-x-4 border-indigo-700 px-4 mb-8 mx-4">
+            <div className="mt-12 flex flex-col items-center justify-center p-4">
+                <p className="mx-4 mb-8 mt-3 border-x-4 border-indigo-700 px-4 text-lg font-medium text-emphasis">
                     {t('tagline')}
                 </p>
 
-                <div className="flex flex-row justify-center items-center gap-8 mb-4">
+                <div className="mb-4 flex flex-row items-center justify-center gap-8">
                     <LinkButton
                         size={60}
                         icon="/images/LinkedInFilled.png"
                         textColor="white"
                         color="#2b71b1"
+                        showLinkSymbol={false}
                         link="https://www.linkedin.com/in/marlon-werth"
                     />
                     <LinkButton
@@ -27,6 +28,7 @@ export default function Footer() {
                         icon="/images/githubBlack.png"
                         textColor="white"
                         color="black"
+                        showLinkSymbol={false}
                         link="https://github.com/werthmar"
                     />
                     <LinkButton
@@ -34,13 +36,14 @@ export default function Footer() {
                         icon="/images/orcid.png"
                         textColor="white"
                         color="#abcf4a"
+                        showLinkSymbol={false}
                         link="https://orcid.org/0009-0000-9027-6059"
                     />
                 </div>
             </div>
 
             <Link
-                className="flex justify-center align-items-center text-center underline text-lg mb-4"
+                className="align-items-center mb-4 flex justify-center text-center text-lg underline"
                 href="/impressum"
             >
                 {t('imprint')}

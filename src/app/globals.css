@@ -6,7 +6,7 @@
     --background: #ffffff;
     --foreground: rgb(17, 24, 39); /* gray-900 */
     --navbar: rgba(255, 255, 255, 0.5);
-    --accent: #FDFCFA;
+    --accent:  #ffffff; /* #FDFCFA; */
     --emphasis: rgb(55, 65, 81); /* gray-700*/
     --accentColor: rgb(67, 56, 202); /* indigo-700 */
     

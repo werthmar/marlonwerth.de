@@ -2,14 +2,16 @@
     "Global": {
         "nextPageButtonText": "Continuar",
         "nextPageButtonText-Portfolio": "Explora mi portafolio",
-        "nextPageButtonText-CV": "Lee mi currículum"
+        "nextPageButtonText-CV": "Lee mi currículum",
+        "nextPageButtonText-Contact": "Ponte en contacto"
     },
 
     "Navbar": {
         "home": "Inicio",
         "portfolio": "Portafolio",
         "cv": "Currículum Vítae",
-        "settings": "Ajustes"
+        "settings": "Ajustes",
+        "contact": "Contacto"
     },
 
     "Footer": {
@@ -21,13 +23,14 @@
         "hi-text": "Hola, soy Marlon",
         "personal-description": "Soy un desarrollador web full-stack que ama crear soluciones centradas en el usuario con tecnología moderna, combinando conocimientos de investigación con creatividad en XR y arte 3D.",
         "Featured_Projects": "Proyectos Destacados",
-        
-        "Featured_Project1_title": "Backend de Aplicación de Calefacción AI",
-        "Featured_Project1_desc1": "Desarrollé un backend en Nest.js para gestionar la comunicación con múltiples bases de datos, una aplicación cliente, y manejar la autenticación y la gestión de cuentas.",
-        "Featured_Project1_desc2": "Configuré Kubernetes en un servidor privado virtual, contenedorizando todas las aplicaciones y bases de datos con Docker para un despliegue y escalado eficiente.",
-        "Featured_Project1_desc3": "Establecí una pipeline CI/CD con GitLab para automatizar el despliegue y la gestión de la aplicación desde el repositorio hasta el VPS y la entrega al cliente.",
-        "Featured_Project1_desc4": "Integré dispositivos de socios externos, permitiendo el control y la comunicación a través del servidor backend utilizando Azure IoT Hub.",
-        
+
+        "Featured_Project1_title": "SECAI Aplicación de Calefacción AI",
+        "Featured_Project1_desc1": "Colaboré con un equipo en un proyecto financiado por BMWE para desarrollar una aplicación de servicio de calefacción inteligente, aprovechando servicios de IA para mejorar la eficiencia energética y reducir costos de calefacción.",
+        "Featured_Project1_desc2": "Desarrollé un backend en Nest.js para gestionar la comunicación con múltiples bases de datos, una aplicación cliente, y manejar la autenticación y la gestión de cuentas.",
+        "Featured_Project1_desc3": "Configuré Kubernetes en un servidor privado virtual, contenedorizando todas las aplicaciones y bases de datos con Docker para un despliegue y escalado eficiente.",
+        "Featured_Project1_desc4": "Establecí una pipeline CI/CD con GitLab para automatizar el despliegue y la gestión de la aplicación desde el repositorio hasta el VPS y la entrega al cliente.",
+        "Featured_Project1_desc5": "Integré dispositivos de socios externos, permitiendo el control y la comunicación a través del servidor backend utilizando Azure IoT Hub.",
+
         "Featured_Project2_title": "Tándem de Lectura en VR",
         "Featured_Project2_desc1": "Desarrollé una aplicación de VR para ayudar a los niños a aprender alemán, funcionando de forma nativa en MetaQuest con funcionalidad de seguimiento de manos, creada con Unity y Blender.",
         "Featured_Project2_desc2": "Creé y validé el diseño mediante un enfoque de investigación en ciencia del diseño.",
@@ -35,7 +38,7 @@
         "Featured_Project2_desc4": "Integré APIs de Google Cloud para servicios de traducción y texto a voz.",
         "Featured_Project2_desc5": "Realicé múltiples pruebas con expertos y la audiencia objetivo para perfeccionar la aplicación.",
         "Featured_Project2_desc6": "Publiqué los hallazgos en un artículo de investigación.",
-        
+
         "curious": "¿He despertado tu curiosidad?"
     },
 
@@ -47,14 +50,15 @@
         "development": "Desarollo",
         "databases": "Base de datos",
         "os": "Sistema de operación",
-        "other": "Otros",
+        "ProcessModeling": "Modelado de procesos con BPMN y eEPK, Realicé talleres en el lugar de trabajo y en universidades sobre estos temas",
+        "other": "Otros Herramientas",
         "nginx": "Webhosting con Nginx en un Linux servidor",
-        "blender": "Modelado 3D con Blender",
+        "blender": "Modelado 3D, texturización, rigging y animación en Blender",
         "rpa": "Robotic Process Automation",
         "bpmn": "Habilidades de BPMN y eEPK",
         "vr": "proyectos vr y ar con unity y unreal engine",
         "ai": "Proyectos IA con python y scikit-learn",
-        "git": "Version control con Git (GitHub, GitLab)",
+        "websockets": "Utilizando websockets para comunicación en tiempo real en aplicaciones web",
         "projects": "Proyectos",
         "project1-title": "Tándem de lectura VR",
         "project1-description": "Un entrenador de lectura para niños en RV. Los niños se sitúan en un entorno inmersivo en el bosque del cuento «Caperucita Roja». Los niños tienen que leer el texto para continuar la historia. La IA comprueba la pronunciación correcta.",
@@ -70,18 +74,14 @@
     },
 
     "cv": {
-        "cv": "Currículum Vítae",
-        "name": "Nombre:",
-        "birthdate": "fecha de nacimiento",
-        "work": "Trabajo",
-        "dfki": "desde 2022: Centro Alemán de Investigación en Inteligencia Artificial",
-        "uva": "Semestre en el extranjero a Universidad de Valladolid (España)",
-        "uos": "Universität Osnabrück (Master)",
-        "dhbw": "Duale Hochschule Baden-Württemberg (Grado)",
-        "studies": "Estudios",
-        "internships": "Prácticas",
-        "schools": "Escuela",
-        "retirement-home": "Residencia de ancianos"
+        "title": "Currículum Vítae",
+        "subtitle": "Experiencia Profesional y Calificaciones",
+        "document": "CV - Portafolio",
+        "download": "Descargar PDF",
+        "viewerNotSupported": "Visor de PDF no compatible en este navegador",
+        "openInNewTab": "Abrir en Nueva Pestaña",
+        "openFullscreen": "Ver en Pantalla Completa",
+        "print": "Imprimir"
     },
 
     "Imprint": {
@@ -105,5 +105,21 @@
         "privacyTitle": "Privacidad",
         "privacy": "El uso de nuestro sitio web generalmente es posible sin proporcionar datos personales. En la medida en que se recopilen datos personales (por ejemplo, nombre, dirección o direcciones de correo electrónico) en nuestras páginas, esto siempre se hace de forma voluntaria, en la medida de lo posible. Estos datos no se transmitirán a terceros sin su consentimiento expreso. Señalamos que la transmisión de datos en Internet (por ejemplo, al comunicarse por correo electrónico) puede tener brechas de seguridad. No es posible una protección completa de los datos contra el acceso de terceros. El uso de los datos de contacto publicados en el marco de la obligación de impronta por parte de terceros para enviar publicidad no solicitada y materiales de información está expresamente prohibido. Los operadores de las páginas se reservan expresamente el derecho de emprender acciones legales en caso de envío no solicitado de información publicitaria, como correos electrónicos no deseados.",
         "impressumGenerator": "Impronta del sitio web por"
+    },
+
+    "contact": {
+        "title": "Contáctame",
+        "fullName": "Nombre completo *",
+        "fullNamePlaceholder": "Su nombre completo",
+        "emailAddress": "Dirección de correo electrónico *",
+        "emailPlaceholder": "su.email@ejemplo.com",
+        "subject": "Asunto *",
+        "subjectPlaceholder": "¿De qué se trata?",
+        "message": "Mensaje *",
+        "messagePlaceholder": "Su mensaje aquí...",
+        "sendMessage": "Enviar mensaje",
+        "sending": "Enviando...",
+        "successMessage": "¡Gracias! Su mensaje ha sido enviado exitosamente.",
+        "errorMessage": "Lo siento, hubo un error al enviar su mensaje. Por favor, inténtelo de nuevo."
     }
 }

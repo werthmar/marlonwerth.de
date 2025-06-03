@@ -8,6 +8,16 @@ import {
     FaWindows,
     FaApple,
     FaLinux,
+    FaServer,
+    FaDatabase,
+    FaCode,
+    FaCogs,
+    FaDesktop,
+    FaTools,
+    FaDocker,
+    FaCube,
+    FaBrain,
+    FaVrCardboard,
 } from 'react-icons/fa';
 import {
     SiUnity,
@@ -15,13 +25,20 @@ import {
     SiMysql,
     SiMongodb,
     SiNeo4J,
+    SiKubernetes,
+    SiGitlab,
+    SiJest,
+    SiNestjs,
+    SiPostgresql,
+    SiInfluxdb,
 } from 'react-icons/si';
+import { FaGitAlt } from 'react-icons/fa6';
 
 // Components
-import Tag from '../components/Tag';
 import LinkButton from '../components/LinkButton';
 import Timeline from '../components/Timeline';
 import NextPageButton from '../components/NextPageButton';
+import TechnologyDisplay from '../components/TechnologyDisplay';
 
 export default function Portfolio() {
     const t = useTranslations('PortfolioPage');
@@ -75,149 +92,358 @@ export default function Portfolio() {
             tag2Color: 'bg-purple-200',
             iconColor: 'bg-orange-200',
         },
-        // Add more timeline items as needed
+    ];
+
+    const technologySections = [
+        {
+            title: 'Frontend',
+            icon: <FaCode />,
+            borderColor: 'border-blue-500',
+            titleColor: 'text-blue-500',
+            iconGradientFrom: 'from-blue-500',
+            iconGradientTo: 'to-blue-600',
+            technologies: [
+                {
+                    text: 'React',
+                    color: '#61DAFB',
+                    icon: <FaReact />,
+                    borderColor: '#3B82F6',
+                },
+                {
+                    text: 'Next.js',
+                    color: '#fff',
+                    icon: '/images/nextjs-icon.png',
+                    borderColor: '#3B82F6',
+                },
+                {
+                    text: 'Flutter',
+                    color: '#02569B',
+                    icon: <SiFlutter />,
+                    borderColor: '#3B82F6',
+                },
+                {
+                    text: 'Unity',
+                    color: '#000000',
+                    icon: <SiUnity />,
+                    borderColor: '#3B82F6',
+                },
+            ],
+        },
+        {
+            title: 'Backend',
+            icon: <FaServer />,
+            borderColor: 'border-green-500',
+            titleColor: 'text-green-500',
+            iconGradientFrom: 'from-green-500',
+            iconGradientTo: 'to-green-600',
+            technologies: [
+                {
+                    text: 'Node.js',
+                    color: '#339933',
+                    icon: <FaNodeJs />,
+                    borderColor: '#10B981',
+                },
+                {
+                    text: 'Nest.js',
+                    color: '#E0234E',
+                    icon: <SiNestjs />,
+                    borderColor: '#10B981',
+                },
+                {
+                    text: 'Python',
+                    color: '#3776AB',
+                    icon: <FaPython />,
+                    borderColor: '#10B981',
+                },
+                {
+                    text: 'Java',
+                    color: '#007396',
+                    icon: <FaJava />,
+                    borderColor: '#10B981',
+                },
+                {
+                    text: 'C#',
+                    color: '#239120',
+                    icon: '/images/c-sharp-icon.png',
+                    borderColor: '#10B981',
+                },
+            ],
+        },
+        {
+            title: t('databases'),
+            icon: <FaDatabase />,
+            borderColor: 'border-orange-500',
+            titleColor: 'text-orange-500',
+            iconGradientFrom: 'from-orange-500',
+            iconGradientTo: 'to-orange-600',
+            technologies: [
+                {
+                    text: 'MySQL',
+                    color: '#4479A1',
+                    icon: <SiMysql />,
+                    borderColor: '#F97316',
+                },
+                {
+                    text: 'PostgreSQL',
+                    color: '#336791',
+                    icon: <SiPostgresql />,
+                    borderColor: '#F97316',
+                },
+                {
+                    text: 'MongoDB',
+                    color: '#47A248',
+                    icon: <SiMongodb />,
+                    borderColor: '#F97316',
+                },
+                {
+                    text: 'InfluxDB',
+                    color: '#22ADF6',
+                    icon: <SiInfluxdb />,
+                    borderColor: '#F97316',
+                },
+                {
+                    text: 'Neo4j',
+                    color: '#008CC1',
+                    icon: <SiNeo4J />,
+                    borderColor: '#F97316',
+                },
+            ],
+        },
+        {
+            title: 'DevOps',
+            icon: <FaCogs />,
+            borderColor: 'border-purple-500',
+            titleColor: 'text-purple-500',
+            iconGradientFrom: 'from-purple-500',
+            iconGradientTo: 'to-purple-600',
+            technologies: [
+                {
+                    text: 'Git',
+                    color: '#F05032',
+                    icon: <FaGitAlt />,
+                    borderColor: '#8B5CF6',
+                },
+                {
+                    text: 'Docker',
+                    color: '#2496ED',
+                    icon: <FaDocker />,
+                    borderColor: '#8B5CF6',
+                },
+                {
+                    text: 'Docker Compose',
+                    color: '#2496ED',
+                    icon: <FaDocker />,
+                    borderColor: '#8B5CF6',
+                },
+                {
+                    text: 'Kubernetes',
+                    color: '#326CE5',
+                    icon: <SiKubernetes />,
+                    borderColor: '#8B5CF6',
+                },
+                {
+                    text: 'GitLab CI/CD',
+                    color: '#FCA326',
+                    icon: <SiGitlab />,
+                    borderColor: '#8B5CF6',
+                },
+                {
+                    text: 'Jest',
+                    color: '#C21325',
+                    icon: <SiJest />,
+                    borderColor: '#8B5CF6',
+                },
+            ],
+        },
+        {
+            title: t('os'),
+            icon: <FaDesktop />,
+            borderColor: 'border-gray-500',
+            titleColor: 'text-gray-500',
+            iconGradientFrom: 'from-gray-500',
+            iconGradientTo: 'to-gray-600',
+            technologies: [
+                {
+                    text: 'Windows',
+                    color: '#0078D6',
+                    icon: <FaWindows />,
+                    borderColor: '#6B7280',
+                },
+                {
+                    text: 'macOS',
+                    color: '#000000',
+                    icon: <FaApple />,
+                    borderColor: '#6B7280',
+                },
+                {
+                    text: 'Linux',
+                    color: '#FCC624',
+                    icon: <FaLinux />,
+                    borderColor: '#6B7280',
+                },
+            ],
+        },
+        {
+            title: t('other'),
+            icon: <FaTools />,
+            borderColor: 'border-cyan-500',
+            titleColor: 'text-cyan-500',
+            iconGradientFrom: 'from-cyan-500',
+            iconGradientTo: 'to-cyan-600',
+            technologies: [
+                {
+                    text: t('blender'),
+                    color: '#F5792A',
+                    icon: <FaCube />,
+                    borderColor: '#06B6D4',
+                },
+                {
+                    text: t('ProcessModeling'),
+                    color: '#4285F4',
+                    icon: <FaCogs />,
+                    borderColor: '#06B6D4',
+                },
+                {
+                    text: t('nginx'),
+                    color: '#009639',
+                    icon: <FaServer />,
+                    borderColor: '#06B6D4',
+                },
+                {
+                    text: t('rpa'),
+                    color: '#FF6B35',
+                    icon: <FaCogs />,
+                    borderColor: '#06B6D4',
+                },
+                {
+                    text: t('vr'),
+                    color: '#FF4081',
+                    icon: <FaVrCardboard />,
+                    borderColor: '#06B6D4',
+                },
+                {
+                    text: t('ai'),
+                    color: '#9C27B0',
+                    icon: <FaBrain />,
+                    borderColor: '#06B6D4',
+                },
+            ],
+        },
     ];
 
     return (
         <>
-            <div className="flex flex-col justify-center items-center p-6">
-                <p className="text-center text-lg max-w-prose mt-20 mb-20">
-                    {t('text1')}
-                </p>
-
+            <div className="flex flex-col items-center justify-center p-6 pt-20">
                 {/* Universities */}
-                <h1 className="text-3xl font-bold mb-4">{t('universities')}</h1>
-                <div className="flex flex-col lg:flex-row gap-4 mb-16">
-                    <LinkButton
-                        text="DHBW-Stuttgart"
-                        color="gray"
-                        icon="/images/dhbw.png"
-                        link="https://www.dhbw-stuttgart.de"
-                    />
-                    <LinkButton
-                        text="Universität Osnabrück"
-                        color="white"
-                        icon="/images/uni-osna.png"
-                        textColor="darkRed"
-                        link="https://www.uni-osnabrueck.de/startseite/"
-                    />
-                    <LinkButton
-                        text="Universidad Valladolid"
-                        color="rgb(181, 39, 84)"
-                        icon="/images/uva.png"
-                        link="https://www.uva.es/export/sites/uva/"
-                    />
+                <h1 className="mb-4 text-3xl font-bold">{t('universities')}</h1>
+                <div className="mb-16 flex w-full max-w-4xl flex-col gap-6">
+                    <div className="flex flex-col gap-4 rounded-lg border bg-accent p-4 shadow-sm lg:flex-row lg:items-center">
+                        <div className="lg:w-1/3">
+                            <LinkButton
+                                text="DHBW-Stuttgart"
+                                color="gray"
+                                icon="/images/dhbw.png"
+                                link="https://www.dhbw-stuttgart.de"
+                            />
+                        </div>
+                        <div className="lg:w-2/3 lg:pl-6">
+                            <p className="font-medium text-foreground">
+                                2018-2021: Bachelor Business Information Systems
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex flex-col gap-4 rounded-lg border bg-accent p-4 shadow-sm lg:flex-row lg:items-center">
+                        <div className="lg:w-1/3">
+                            <LinkButton
+                                text="Universität Osnabrück"
+                                color="white"
+                                icon="/images/uni-osna.png"
+                                textColor="darkRed"
+                                link="https://www.uni-osnabrueck.de/startseite/"
+                            />
+                        </div>
+                        <div className="lg:w-2/3 lg:pl-6">
+                            <p className="font-medium text-foreground">
+                                2021-2024: Master Business Information Systems
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex flex-col gap-4 rounded-lg border bg-accent p-4 shadow-sm lg:flex-row lg:items-center">
+                        <div className="lg:w-1/3">
+                            <LinkButton
+                                text="Universidad Valladolid"
+                                color="rgb(181, 39, 84)"
+                                icon="/images/uva.png"
+                                link="https://www.uva.es/export/sites/uva/"
+                            />
+                        </div>
+                        <div className="lg:w-2/3 lg:pl-6">
+                            <p className="font-medium text-foreground">
+                                2023: Semester abroad international commerce
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Work */}
-                <h1 className="text-3xl font-bold mb-4">{t('work')}</h1>
-                <div className="flex flex-col lg:flex-row gap-4 mb-16">
-                    <LinkButton
-                        text="Nolte Küchen"
-                        color="white"
-                        textColor="black"
-                        icon="/images/nolte.png"
-                        link="https://www.nolte-kuechen.com/de-de/"
-                    />
-                    <LinkButton
-                        text="DFKI Osnabrück"
-                        color="white"
-                        textColor="darkBlue"
-                        icon="/images/dfki.jpeg"
-                        link="https://www.dfki.de/web"
-                    />
-                </div>
-
-                <h1 className="text-3xl font-bold mb-4">{t('technologies')}</h1>
-                {/* Development */}
-                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-custom mb-6">
-                    <h2 className="text-xl font-bold text-gray-400 mb-4">
-                        {t('development')}
-                    </h2>
-                    <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        <Tag
-                            text="Node.js"
-                            color="#339933"
-                            icon={<FaNodeJs />}
-                        />
-                        <Tag text="React" color="#61DAFB" icon={<FaReact />} />
-                        <Tag
-                            text="Next.js"
-                            color="white"
-                            borderColor="black"
-                            icon={'/images/nextjs-icon.png'}
-                        />
-                        <Tag
-                            text="Python"
-                            color="#3776AB"
-                            icon={<FaPython />}
-                        />
-                        <Tag
-                            text="C#"
-                            color="purple"
-                            icon={'/images/c-sharp-icon.png'}
-                        />
-                        <Tag text="Unity" color="#000000" icon={<SiUnity />} />
-                        <Tag
-                            text="Flutter"
-                            color="#02569B"
-                            icon={<SiFlutter />}
-                        />
-                        <Tag text="Java" color="#007396" icon={<FaJava />} />
+                <h1 className="mb-4 text-3xl font-bold">{t('work')}</h1>
+                <div className="mb-16 flex w-full max-w-4xl flex-col gap-6">
+                    <div className="flex flex-col gap-4 rounded-lg border bg-accent p-4 shadow-sm lg:flex-row lg:items-center">
+                        <div className="lg:w-1/3">
+                            <LinkButton
+                                text="Nolte Küchen"
+                                color="white"
+                                textColor="black"
+                                icon="/images/nolte.png"
+                                link="https://www.nolte-kuechen.com/de-de/"
+                            />
+                        </div>
+                        <div className="lg:w-2/3 lg:pl-6">
+                            <p className="font-medium text-foreground">
+                                2018-2021: Dual Studies
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex flex-col gap-4 rounded-lg border bg-accent p-4 shadow-sm lg:flex-row lg:items-center">
+                        <div className="lg:w-1/3">
+                            <LinkButton
+                                text="DFKI Osnabrück"
+                                color="white"
+                                textColor="darkBlue"
+                                icon="/images/dfki.jpeg"
+                                link="https://www.dfki.de/web"
+                            />
+                        </div>
+                        <div className="lg:w-2/3 lg:pl-6">
+                            <p className="font-medium text-foreground">
+                                2022-2024: Research assistant, since 2025:
+                                Researcher
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                {/* Databases */}
-                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-custom mb-6">
-                    <h2 className="text-xl font-bold text-gray-400 mb-4">
-                        {t('databases')}
-                    </h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                        <Tag text="SQL" color="#4479A1" icon={<SiMysql />} />
-                        <Tag
-                            text="MongoDB"
-                            color="#47A248"
-                            icon={<SiMongodb />}
+                <h1 className="mb-8 text-3xl font-bold">{t('technologies')}</h1>
+
+                {/* Technologies Grid */}
+                <div className="mb-16 grid w-full max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
+                    {technologySections.map((section, index) => (
+                        <TechnologyDisplay
+                            key={index}
+                            title={section.title}
+                            icon={section.icon}
+                            borderColor={section.borderColor}
+                            titleColor={section.titleColor}
+                            iconGradientFrom={section.iconGradientFrom}
+                            iconGradientTo={section.iconGradientTo}
+                            technologies={section.technologies}
                         />
-                        <Tag text="Neo4j" color="#008CC1" icon={<SiNeo4J />} />
-                    </div>
+                    ))}
                 </div>
 
-                {/* Operating Systems */}
-                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-custom mb-6">
-                    <h2 className="text-xl font-bold text-gray-400 mb-4">
-                        {t('os')}
-                    </h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                        <Tag
-                            text="Windows"
-                            color="#0078D6"
-                            icon={<FaWindows />}
-                        />
-                        <Tag text="macOS" color="#000000" icon={<FaApple />} />
-                        <Tag text="Linux" color="#FCC624" icon={<FaLinux />} />
-                    </div>
-                </div>
-
-                {/* Other */}
-                <div className="bg-accent rounded-lg p-6 w-full max-w-prose shadow-custom mb-16">
-                    <h2 className="text-xl font-bold text-gray-400 mb-4">
-                        {t('other')}
-                    </h2>
-                    <ul className="list-disc list-inside">
-                        <li className="mb-2">{t('nginx')}</li>
-                        <li className="mb-2">{t('ai')}</li>
-                        <li className="mb-2">{t('vr')}</li>
-                        <li className="mb-2">{t('blender')}</li>
-                        <li className="mb-2">{t('rpa')}</li>
-                        <li className="mb-2">{t('bpmn')}</li>
-                        <li className="mb-2">{t('git')}</li>
-                    </ul>
-                </div>
-
-                <h1 className="text-3xl font-bold mb-8">{t('projects')}</h1>
+                <h1 className="mb-8 text-3xl font-bold">{t('projects')}</h1>
                 {/* Timeline */}
-                <div className="pl-6 pr-6 max-w-prose">
+                <div className="max-w-prose pl-6 pr-6">
                     <Timeline items={timelineItems} />
                     <p className="text-gray-400">... {t('more')}</p>
                 </div>
