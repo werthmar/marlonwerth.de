@@ -72,18 +72,14 @@
     },
 
     "cv": {
-        "cv": "Curriculum Vitae",
-        "name": "Name:",
-        "birthdate": "Birthdate",
-        "work": "Work",
-        "dfki": "since 2022: German Research Center for Artificial Intelligence",
-        "uva": "Semester abroad at Universidad de Valladolid (Spain)",
-        "uos": "Universität Osnabrück (Master)",
-        "dhbw": "Duale Hochschule Baden-Württemberg (Bachelor)",
-        "studies": "Studies",
-        "internships": "Internships",
-        "schools": "Schools",
-        "retirement-home": "Retirement home"
+        "title": "Curriculum Vitae",
+        "subtitle": "Professional Experience & Qualifications",
+        "document": "CV - Protfolio",
+        "download": "Download PDF",
+        "viewerNotSupported": "PDF viewer not supported in this browser",
+        "openInNewTab": "Open in New Tab",
+        "openFullscreen": "View Fullscreen",
+        "print": "Print"
     },
 
     "Imprint": {

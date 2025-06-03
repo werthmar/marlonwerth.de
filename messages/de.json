@@ -72,18 +72,14 @@
     },
 
     "cv": {
-        "cv": "Lebenslauf",
-        "name": "Name:",
-        "birthdate": "Geburtsdatum",
-        "work": "Arbeit",
-        "dfki": "seit 2022: Deutsches Forschungszentrum für künstliche Intelligenz",
-        "uva": "Auslandssemester an der Universidad de Valladolid (Spanien)",
-        "uos": "Universität Osnabrück (Master)",
-        "dhbw": "Duale Hochschule Baden-Württemberg (Bachelor)",
-        "studies": "Studium",
-        "internships": "Praktika",
-        "schools": "Schule",
-        "retirement-home": "Altersheim"
+        "title": "Lebenslauf",
+        "subtitle": "Berufserfahrung & Qualifikationen",
+        "document": "CV - Portfolio",
+        "download": "PDF herunterladen",
+        "viewerNotSupported": "PDF-Viewer wird in diesem Browser nicht unterstützt",
+        "openInNewTab": "In neuem Tab öffnen",
+        "openFullscreen": "Vollbild anzeigen",
+        "print": "Drucken"
     },
 
     "Imprint": {
