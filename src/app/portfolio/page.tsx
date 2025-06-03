@@ -337,7 +337,7 @@ export default function Portfolio() {
                 {/* Universities */}
                 <h1 className="text-3xl font-bold mb-4">{t('universities')}</h1>
                 <div className="flex flex-col gap-6 mb-16 w-full max-w-4xl">
-                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-white rounded-lg shadow-sm border">
+                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-accent rounded-lg shadow-sm border">
                         <div className="lg:w-1/3">
                             <LinkButton
                                 text="DHBW-Stuttgart"
@@ -347,12 +347,12 @@ export default function Portfolio() {
                             />
                         </div>
                         <div className="lg:w-2/3 lg:pl-6">
-                            <p className="text-gray-700 font-medium">
+                            <p className="text-foreground font-medium">
                                 2018-2021: Bachelor Business Information Systems
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-white rounded-lg shadow-sm border">
+                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-accent rounded-lg shadow-sm border">
                         <div className="lg:w-1/3">
                             <LinkButton
                                 text="Universität Osnabrück"
@@ -363,12 +363,12 @@ export default function Portfolio() {
                             />
                         </div>
                         <div className="lg:w-2/3 lg:pl-6">
-                            <p className="text-gray-700 font-medium">
+                            <p className="text-foreground font-medium">
                                 2021-2024: Master Business Information Systems
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-white rounded-lg shadow-sm border">
+                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-accent rounded-lg shadow-sm border">
                         <div className="lg:w-1/3">
                             <LinkButton
                                 text="Universidad Valladolid"
@@ -378,7 +378,7 @@ export default function Portfolio() {
                             />
                         </div>
                         <div className="lg:w-2/3 lg:pl-6">
-                            <p className="text-gray-700 font-medium">
+                            <p className="text-foreground font-medium">
                                 2023: Semester abroad international commerce
                             </p>
                         </div>
@@ -388,7 +388,7 @@ export default function Portfolio() {
                 {/* Work */}
                 <h1 className="text-3xl font-bold mb-4">{t('work')}</h1>
                 <div className="flex flex-col gap-6 mb-16 w-full max-w-4xl">
-                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-white rounded-lg shadow-sm border">
+                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-accent rounded-lg shadow-sm border">
                         <div className="lg:w-1/3">
                             <LinkButton
                                 text="Nolte Küchen"
@@ -399,12 +399,12 @@ export default function Portfolio() {
                             />
                         </div>
                         <div className="lg:w-2/3 lg:pl-6">
-                            <p className="text-gray-700 font-medium">
+                            <p className="text-foreground font-medium">
                                 2018-2021: Dual Studies
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-white rounded-lg shadow-sm border">
+                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-accent rounded-lg shadow-sm border">
                         <div className="lg:w-1/3">
                             <LinkButton
                                 text="DFKI Osnabrück"
@@ -415,7 +415,7 @@ export default function Portfolio() {
                             />
                         </div>
                         <div className="lg:w-2/3 lg:pl-6">
-                            <p className="text-gray-700 font-medium">
+                            <p className="text-foreground font-medium">
                                 2022-2024: Research assistant, since 2025:
                                 Researcher
                             </p>
