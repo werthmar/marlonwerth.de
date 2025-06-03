@@ -25,9 +25,9 @@ export default function LinkButton({
             href={link || '/'}
             target="_blank"
             rel="noopener noreferrer"
-            className={`border-2 shadow-lg text-white border-solid w-full rounded-lg ${
+            className={`w-full rounded-lg border-2 border-solid text-white shadow-lg ${
                 text ? 'p-4' : 'p-0.5'
-            } inline-flex items-center justify-center group text-lg font-bold`}
+            } group inline-flex items-center justify-center text-lg font-bold`}
             style={{
                 backgroundColor: color,
                 color: textColor || 'white',
@@ -38,7 +38,7 @@ export default function LinkButton({
             {text && <p className="ml-2">{text}</p>}
             {showLinkSymbol && (
                 <svg
-                    className="ml-1 w-3.5 h-3.5"
+                    className="ml-1 h-3.5 w-3.5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

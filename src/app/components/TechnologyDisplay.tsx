@@ -29,17 +29,17 @@ export default function TechnologyDisplay({
 }: TechnologyDisplayProps) {
     return (
         <div
-            className={`bg-accent rounded-xl p-8 shadow-custom hover:shadow-xl transition-all duration-300 border-2 ${borderColor} hover:${borderColor.replace('border-', 'border-').replace('-500', '-600')}`}
+            className={`rounded-xl border-2 bg-accent p-8 shadow-custom transition-all duration-300 hover:shadow-xl ${borderColor} hover:${borderColor.replace('border-', 'border-').replace('-500', '-600')}`}
         >
-            <div className="flex items-center mb-6">
+            <div className="mb-6 flex items-center">
                 <div
-                    className={`bg-gradient-to-br ${iconGradientFrom} ${iconGradientTo} p-3 rounded-xl mr-4 shadow-lg`}
+                    className={`bg-gradient-to-br ${iconGradientFrom} ${iconGradientTo} mr-4 rounded-xl p-3 shadow-lg`}
                 >
-                    <span className="text-white text-2xl">{icon}</span>
+                    <span className="text-2xl text-white">{icon}</span>
                 </div>
                 <h2 className={`text-2xl font-bold ${titleColor}`}>{title}</h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {technologies.map((tech, index) => (
                     <Tag
                         key={index}

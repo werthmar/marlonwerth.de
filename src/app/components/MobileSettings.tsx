@@ -17,7 +17,7 @@ interface MobileSettingsProps {
     initialLocale?: string;
 }
 
-const MobileSettings: React.FC<MobileSettingsProps> = ({ initialLocale }) => {
+const MobileSettings: React.FC<MobileSettingsProps> = ({}) => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [animateButtons, setAnimateButtons] = useState(false);

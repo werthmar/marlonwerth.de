@@ -23,15 +23,15 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({
     links = [],
 }) => {
     return (
-        <div className="flex flex-col bg-accent sm:flex-row justify-center gap-6 shadow-custom p-4 rounded-2xl w-full max-w-3xl text-black">
-            <div className="flex flex-row items-center justify-center sm:flex-col sm:w-2/5 gap-4">
+        <div className="flex w-full max-w-3xl flex-col justify-center gap-6 rounded-2xl bg-accent p-4 text-black shadow-custom sm:flex-row">
+            <div className="flex flex-row items-center justify-center gap-4 sm:w-2/5 sm:flex-col">
                 {/* Left Side */}
                 <Image
                     width={200}
                     height={200}
                     src={imageSrc}
                     alt={title}
-                    className="w-auto h-200 sm:w-full sm:h-auto object-contain self-center rounded-3xl shadow-lg"
+                    className="h-200 w-auto self-center rounded-3xl object-contain shadow-lg sm:h-auto sm:w-full"
                 />
                 {imageSrc2 && (
                     <Image
@@ -39,23 +39,23 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({
                         height={200}
                         src={imageSrc2}
                         alt={title}
-                        className="hidden sm:block w-1/3 sm:w-full h-auto object-contain self-center rounded-3xl shadow-lg"
+                        className="hidden h-auto w-1/3 self-center rounded-3xl object-contain shadow-lg sm:block sm:w-full"
                     />
                 )}
             </div>
 
             {/* Right Side */}
-            <div className="flex flex-col items-start w-full">
-                <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl mb-4 sm:self-start self-center">
+            <div className="flex w-full flex-col items-start">
+                <h2 className="mb-4 self-center text-2xl font-semibold tracking-tight text-foreground sm:self-start sm:text-3xl">
                     {title}
                 </h2>
-                <ul className="space-y-4 pl-0 list-none">
+                <ul className="list-none space-y-4 pl-0">
                     {description.map((point, index) => (
                         <li
                             key={index}
-                            className="flex items-start text-emphasis text-base font-normal leading-relaxed transition-colors duration-200 hover:text-gray-900"
+                            className="flex items-start text-base font-normal leading-relaxed text-emphasis transition-colors duration-200 hover:text-gray-900"
                         >
-                            <span className="flex-shrink-0 w-5 h-5 mt-1 mr-3 text-indigo-600">
+                            <span className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-indigo-600">
                                 <svg
                                     fill="none"
                                     stroke="currentColor"
@@ -78,14 +78,14 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({
 
                 {/* Project Links */}
                 {links.length > 0 && (
-                    <div className="mt-4 mb-2 flex flex-wrap gap-3">
+                    <div className="mb-2 mt-4 flex flex-wrap gap-3">
                         {links.map((link, index) => (
                             <a
                                 key={index}
                                 href={link.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center px-3 py-1.5 bg-transparent text-accentColor rounded-md hover:bg-gray-200 transition-colors duration-200"
+                                className="inline-flex items-center rounded-md bg-transparent px-3 py-1.5 text-accentColor transition-colors duration-200 hover:bg-gray-200"
                             >
                                 {link.icon && (
                                     <span className="mr-1.5">
@@ -94,13 +94,13 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({
                                             alt=""
                                             width={20}
                                             height={20}
-                                            className="w-5 h-5 object-contain"
+                                            className="h-5 w-5 object-contain"
                                         />
                                     </span>
                                 )}
                                 {link.label}
                                 <svg
-                                    className="ml-1 w-3.5 h-3.5"
+                                    className="ml-1 h-3.5 w-3.5"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
@@ -119,7 +119,7 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({
                 )}
 
                 {/* Tags */}
-                <div className="mt-4 w-full grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-2">
+                <div className="mt-4 grid w-full grid-cols-1 gap-2 xs:grid-cols-2 md:grid-cols-3">
                     {tags.map((tag) => tag)}
                 </div>
             </div>

@@ -43,17 +43,17 @@ export default function ScrollDownButton() {
                 }
             `}</style>
             {showButton && (
-                <div className="fixed bottom-28 lg:bottom-4 left-0 right-0 flex justify-center z-1">
+                <div className="z-1 fixed bottom-28 left-0 right-0 flex justify-center lg:bottom-4">
                     <button
                         onClick={scrollDown}
-                        className="bg-foreground text-background rounded-full p-4 animate-bounce"
+                        className="animate-bounce rounded-full bg-foreground p-4 text-background"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
-                            className="w-6 h-6"
+                            className="h-6 w-6"
                         >
                             <path
                                 strokeLinecap="round"

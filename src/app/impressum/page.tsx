@@ -4,8 +4,8 @@ import { useTranslations } from 'next-intl';
 export default function Impressum() {
     const t = useTranslations('Imprint');
     return (
-        <div className="impressum p-4 max-w-prose mx-auto">
-            <h1 className="text-2xl font-bold mb-4">{t('title')}</h1>
+        <div className="impressum mx-auto max-w-prose p-4">
+            <h1 className="mb-4 text-2xl font-bold">{t('title')}</h1>
             <p>{t('section1')}</p>
             <p>
                 {t('name')} <br />

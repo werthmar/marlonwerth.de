@@ -333,11 +333,11 @@ export default function Portfolio() {
 
     return (
         <>
-            <div className="flex flex-col justify-center items-center p-6 pt-20">
+            <div className="flex flex-col items-center justify-center p-6 pt-20">
                 {/* Universities */}
-                <h1 className="text-3xl font-bold mb-4">{t('universities')}</h1>
-                <div className="flex flex-col gap-6 mb-16 w-full max-w-4xl">
-                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-accent rounded-lg shadow-sm border">
+                <h1 className="mb-4 text-3xl font-bold">{t('universities')}</h1>
+                <div className="mb-16 flex w-full max-w-4xl flex-col gap-6">
+                    <div className="flex flex-col gap-4 rounded-lg border bg-accent p-4 shadow-sm lg:flex-row lg:items-center">
                         <div className="lg:w-1/3">
                             <LinkButton
                                 text="DHBW-Stuttgart"
@@ -347,12 +347,12 @@ export default function Portfolio() {
                             />
                         </div>
                         <div className="lg:w-2/3 lg:pl-6">
-                            <p className="text-foreground font-medium">
+                            <p className="font-medium text-foreground">
                                 2018-2021: Bachelor Business Information Systems
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-accent rounded-lg shadow-sm border">
+                    <div className="flex flex-col gap-4 rounded-lg border bg-accent p-4 shadow-sm lg:flex-row lg:items-center">
                         <div className="lg:w-1/3">
                             <LinkButton
                                 text="Universität Osnabrück"
@@ -363,12 +363,12 @@ export default function Portfolio() {
                             />
                         </div>
                         <div className="lg:w-2/3 lg:pl-6">
-                            <p className="text-foreground font-medium">
+                            <p className="font-medium text-foreground">
                                 2021-2024: Master Business Information Systems
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-accent rounded-lg shadow-sm border">
+                    <div className="flex flex-col gap-4 rounded-lg border bg-accent p-4 shadow-sm lg:flex-row lg:items-center">
                         <div className="lg:w-1/3">
                             <LinkButton
                                 text="Universidad Valladolid"
@@ -378,7 +378,7 @@ export default function Portfolio() {
                             />
                         </div>
                         <div className="lg:w-2/3 lg:pl-6">
-                            <p className="text-foreground font-medium">
+                            <p className="font-medium text-foreground">
                                 2023: Semester abroad international commerce
                             </p>
                         </div>
@@ -386,9 +386,9 @@ export default function Portfolio() {
                 </div>
 
                 {/* Work */}
-                <h1 className="text-3xl font-bold mb-4">{t('work')}</h1>
-                <div className="flex flex-col gap-6 mb-16 w-full max-w-4xl">
-                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-accent rounded-lg shadow-sm border">
+                <h1 className="mb-4 text-3xl font-bold">{t('work')}</h1>
+                <div className="mb-16 flex w-full max-w-4xl flex-col gap-6">
+                    <div className="flex flex-col gap-4 rounded-lg border bg-accent p-4 shadow-sm lg:flex-row lg:items-center">
                         <div className="lg:w-1/3">
                             <LinkButton
                                 text="Nolte Küchen"
@@ -399,12 +399,12 @@ export default function Portfolio() {
                             />
                         </div>
                         <div className="lg:w-2/3 lg:pl-6">
-                            <p className="text-foreground font-medium">
+                            <p className="font-medium text-foreground">
                                 2018-2021: Dual Studies
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 p-4 bg-accent rounded-lg shadow-sm border">
+                    <div className="flex flex-col gap-4 rounded-lg border bg-accent p-4 shadow-sm lg:flex-row lg:items-center">
                         <div className="lg:w-1/3">
                             <LinkButton
                                 text="DFKI Osnabrück"
@@ -415,7 +415,7 @@ export default function Portfolio() {
                             />
                         </div>
                         <div className="lg:w-2/3 lg:pl-6">
-                            <p className="text-foreground font-medium">
+                            <p className="font-medium text-foreground">
                                 2022-2024: Research assistant, since 2025:
                                 Researcher
                             </p>
@@ -423,10 +423,10 @@ export default function Portfolio() {
                     </div>
                 </div>
 
-                <h1 className="text-3xl font-bold mb-8">{t('technologies')}</h1>
+                <h1 className="mb-8 text-3xl font-bold">{t('technologies')}</h1>
 
                 {/* Technologies Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 w-full max-w-7xl mb-16">
+                <div className="mb-16 grid w-full max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
                     {technologySections.map((section, index) => (
                         <TechnologyDisplay
                             key={index}
@@ -441,9 +441,9 @@ export default function Portfolio() {
                     ))}
                 </div>
 
-                <h1 className="text-3xl font-bold mb-8">{t('projects')}</h1>
+                <h1 className="mb-8 text-3xl font-bold">{t('projects')}</h1>
                 {/* Timeline */}
-                <div className="pl-6 pr-6 max-w-prose">
+                <div className="max-w-prose pl-6 pr-6">
                     <Timeline items={timelineItems} />
                     <p className="text-gray-400">... {t('more')}</p>
                 </div>

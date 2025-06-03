@@ -25,10 +25,10 @@ export default function Home() {
     const t = useTranslations('HomePage');
     return (
         <>
-            <div className="flex flex-col justify-center items-center min-h-[calc(100vh-5rem)] p-4">
+            <div className="flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center p-4">
                 {/* Profile Picture */}
                 <div
-                    className="w-48 h-48 md:w-60 md:h-60 mb-6 rounded-full bg-accent border-foreground flex justify-center lg:justify-end marlonImage"
+                    className="marlonImage mb-6 flex h-48 w-48 justify-center rounded-full border-foreground bg-accent md:h-60 md:w-60 lg:justify-end"
                     style={{
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat',
@@ -37,17 +37,17 @@ export default function Home() {
                     }}
                 />
 
-                <h1 className="text-5xl text-center font-bold mb-8">
+                <h1 className="mb-8 text-center text-5xl font-bold">
                     {t('hi-text')}
                 </h1>
 
-                <p className="text-center text-xl max-w-xl mb-8 font-bold">
+                <p className="mb-8 max-w-xl text-center text-xl font-bold">
                     {t('personal-description')}
                 </p>
             </div>
 
             {/** Featured Projects */}
-            <div className="flex flex-col justify-center items-center p-4 gap-8">
+            <div className="flex flex-col items-center justify-center gap-8 p-4">
                 <h1 className="text-3xl font-bold text-accentColor">
                     {t('Featured_Projects')}
                 </h1>
@@ -171,7 +171,7 @@ export default function Home() {
                 />
             </div>
 
-            <h2 className="text-lg font-bold text-center text-emphasis mt-12">
+            <h2 className="mt-12 text-center text-lg font-bold text-emphasis">
                 {t('curious')}
             </h2>
 
