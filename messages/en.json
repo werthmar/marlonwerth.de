@@ -9,7 +9,8 @@
         "home": "Home",
         "portfolio": "Portfolio",
         "cv": "Curriculum Vitae",
-        "settings": "Settings"
+        "settings": "Settings",
+        "contact": "Contact"
     },
 
     "Footer": {
