@@ -71,15 +71,15 @@ const MobileSettings: React.FC<MobileSettingsProps> = ({ initialLocale }) => {
     };
 
     return (
-        <div className="md:hidden fixed bottom-[calc(60px+1rem+0.5rem)] right-4 z-50">
+        <div className="fixed bottom-[calc(60px+1rem+0.5rem)] right-4 z-50 md:hidden">
             {isExpanded && (
-                <div className="flex flex-col items-center space-y-3 mb-3">
+                <div className="mb-3 flex flex-col items-center space-y-3">
                     {/* Language buttons */}
                     {languages.map((lang, index) => (
                         <button
                             key={lang.code}
                             onClick={() => switchLanguage(lang)}
-                            className="w-12 h-12 bg-accent rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 ease-out"
+                            className="flex h-12 w-12 items-center justify-center rounded-full bg-accent shadow-lg transition-all duration-300 ease-out hover:bg-gray-100 dark:hover:bg-gray-800"
                             style={{
                                 opacity: animateButtons ? 1 : 0,
                                 transform: animateButtons
@@ -104,7 +104,7 @@ const MobileSettings: React.FC<MobileSettingsProps> = ({ initialLocale }) => {
                     {/* Theme toggle button */}
                     <button
                         onClick={toggleTheme}
-                        className="w-12 h-12 bg-accent rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 ease-out"
+                        className="flex h-12 w-12 items-center justify-center rounded-full bg-accent shadow-lg transition-all duration-300 ease-out hover:bg-gray-100 dark:hover:bg-gray-800"
                         style={{
                             opacity: animateButtons ? 1 : 0,
                             transform: animateButtons
@@ -130,7 +130,7 @@ const MobileSettings: React.FC<MobileSettingsProps> = ({ initialLocale }) => {
             {/* Main settings button */}
             <button
                 onClick={toggleExpanded}
-                className="w-14 h-14 bg-accent rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 ease-out hover:scale-105"
+                className="flex h-14 w-14 items-center justify-center rounded-full bg-accent shadow-lg transition-all duration-300 ease-out hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-800"
                 style={{
                     transform: isExpanded ? 'rotate(90deg)' : 'rotate(0deg)',
                 }}

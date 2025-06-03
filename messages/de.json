@@ -2,7 +2,8 @@
     "Global": {
         "nextPageButtonText": "Weiter",
         "nextPageButtonText-Portfolio": "Besuche mein Portfolio",
-        "nextPageButtonText-CV": "Lese meinen Lebenslauf"
+        "nextPageButtonText-CV": "Lese meinen Lebenslauf",
+        "nextPageButtonText-Contact": "Kontaktiere mich"
     },
 
     "Navbar": {
@@ -104,5 +105,21 @@
         "privacyTitle": "Datenschutz",
         "privacy": "Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.",
         "impressumGenerator": "Website Impressum von"
+    },
+
+    "contact": {
+        "title": "Kontaktiere mich",
+        "fullName": "Vollständiger Name *",
+        "fullNamePlaceholder": "Ihr vollständiger Name",
+        "emailAddress": "E-Mail-Adresse *",
+        "emailPlaceholder": "ihre.email@beispiel.com",
+        "subject": "Betreff *",
+        "subjectPlaceholder": "Worum geht es?",
+        "message": "Nachricht *",
+        "messagePlaceholder": "Ihre Nachricht hier...",
+        "sendMessage": "Nachricht senden",
+        "sending": "Wird gesendet...",
+        "successMessage": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.",
+        "errorMessage": "Entschuldigung, beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
     }
 }

@@ -1,6 +1,5 @@
 'use client';
 
-import React, { useState } from 'react';
 import Link from 'next/link';
 import { FaHome, FaBriefcase, FaFileAlt, FaEnvelope } from 'react-icons/fa';
 
@@ -21,16 +20,16 @@ const Navbar: React.FC<LanguageSwitcherProps> = ({ initialLocale }) => {
 
     return (
         <>
-            <nav className="bg-navbar p-3 pl-12 pr-12 lg:pl-16 lg:pr-16 backdrop-filter backdrop-blur-lg backdrop-opacity-100 rounded-tl-full rounded-tr-full lg:rounded-tl-none lg:rounded-tr-none z-10 shadow fixed bottom-0 inset-x-0 lg:top-0 lg:bottom-auto">
-                <div className="max-w-screen-xl mx-auto flex justify-between items-center">
-                    <ul className="flex justify-between w-full md:w-auto md:justify-start space-x-4 sm:space-x-8">
+            <nav className="fixed inset-x-0 bottom-0 z-10 rounded-tl-full rounded-tr-full bg-navbar p-3 pl-12 pr-12 shadow backdrop-blur-lg backdrop-opacity-100 backdrop-filter lg:bottom-auto lg:top-0 lg:rounded-tl-none lg:rounded-tr-none lg:pl-16 lg:pr-16">
+                <div className="mx-auto flex max-w-screen-xl items-center justify-between">
+                    <ul className="flex w-full justify-between space-x-4 sm:space-x-8 md:w-auto md:justify-start">
                         <li>
                             <Link
                                 href="/"
-                                className="hover:text-gray-400 flex flex-col lg:flex-row items-center"
+                                className="flex flex-col items-center hover:text-gray-400 lg:flex-row"
                             >
                                 <FaHome
-                                    className="lg:mr-2 text-foreground"
+                                    className="text-foreground lg:mr-2"
                                     size={25}
                                 />
                                 <span className="lg:inline">{t('home')}</span>
@@ -39,10 +38,10 @@ const Navbar: React.FC<LanguageSwitcherProps> = ({ initialLocale }) => {
                         <li>
                             <Link
                                 href="/portfolio"
-                                className="hover:text-gray-400 flex flex-col lg:flex-row items-center"
+                                className="flex flex-col items-center hover:text-gray-400 lg:flex-row"
                             >
                                 <FaBriefcase
-                                    className="lg:mr-2 text-foreground"
+                                    className="text-foreground lg:mr-2"
                                     size={25}
                                 />
                                 <span className="lg:inline">
@@ -53,10 +52,10 @@ const Navbar: React.FC<LanguageSwitcherProps> = ({ initialLocale }) => {
                         <li>
                             <Link
                                 href="/cv"
-                                className="hover:text-gray-400 flex flex-col lg:flex-row items-center"
+                                className="flex flex-col items-center hover:text-gray-400 lg:flex-row"
                             >
                                 <FaFileAlt
-                                    className="lg:mr-2 text-foreground"
+                                    className="text-foreground lg:mr-2"
                                     size={25}
                                 />
                                 <span className="hidden lg:inline">
@@ -68,10 +67,10 @@ const Navbar: React.FC<LanguageSwitcherProps> = ({ initialLocale }) => {
                         <li>
                             <Link
                                 href="/contact"
-                                className="hover:text-gray-400 flex flex-col lg:flex-row items-center"
+                                className="flex flex-col items-center hover:text-gray-400 lg:flex-row"
                             >
                                 <FaEnvelope
-                                    className="lg:mr-2 text-foreground"
+                                    className="text-foreground lg:mr-2"
                                     size={25}
                                 />
                                 <span className="lg:inline">
@@ -80,7 +79,7 @@ const Navbar: React.FC<LanguageSwitcherProps> = ({ initialLocale }) => {
                             </Link>
                         </li>
                     </ul>
-                    <div className="hidden md:flex items-center space-x-4">
+                    <div className="hidden items-center space-x-4 md:flex">
                         <LanguageSwitcher initialLocale={initialLocale} />
                         <ThemeToggle />
                     </div>

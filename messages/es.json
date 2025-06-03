@@ -2,7 +2,8 @@
     "Global": {
         "nextPageButtonText": "Continuar",
         "nextPageButtonText-Portfolio": "Explora mi portafolio",
-        "nextPageButtonText-CV": "Lee mi currículum"
+        "nextPageButtonText-CV": "Lee mi currículum",
+        "nextPageButtonText-Contact": "Ponte en contacto"
     },
 
     "Navbar": {
@@ -104,5 +105,21 @@
         "privacyTitle": "Privacidad",
         "privacy": "El uso de nuestro sitio web generalmente es posible sin proporcionar datos personales. En la medida en que se recopilen datos personales (por ejemplo, nombre, dirección o direcciones de correo electrónico) en nuestras páginas, esto siempre se hace de forma voluntaria, en la medida de lo posible. Estos datos no se transmitirán a terceros sin su consentimiento expreso. Señalamos que la transmisión de datos en Internet (por ejemplo, al comunicarse por correo electrónico) puede tener brechas de seguridad. No es posible una protección completa de los datos contra el acceso de terceros. El uso de los datos de contacto publicados en el marco de la obligación de impronta por parte de terceros para enviar publicidad no solicitada y materiales de información está expresamente prohibido. Los operadores de las páginas se reservan expresamente el derecho de emprender acciones legales en caso de envío no solicitado de información publicitaria, como correos electrónicos no deseados.",
         "impressumGenerator": "Impronta del sitio web por"
+    },
+
+    "contact": {
+        "title": "Contáctame",
+        "fullName": "Nombre completo *",
+        "fullNamePlaceholder": "Su nombre completo",
+        "emailAddress": "Dirección de correo electrónico *",
+        "emailPlaceholder": "su.email@ejemplo.com",
+        "subject": "Asunto *",
+        "subjectPlaceholder": "¿De qué se trata?",
+        "message": "Mensaje *",
+        "messagePlaceholder": "Su mensaje aquí...",
+        "sendMessage": "Enviar mensaje",
+        "sending": "Enviando...",
+        "successMessage": "¡Gracias! Su mensaje ha sido enviado exitosamente.",
+        "errorMessage": "Lo siento, hubo un error al enviar su mensaje. Por favor, inténtelo de nuevo."
     }
 }
