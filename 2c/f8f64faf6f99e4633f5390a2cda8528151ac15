@@ -1,0 +1,16 @@
+src/app/components/ui/carousel.tsx
+  h_3747119e8eb777 178,208
+src/app/page.tsx
+  h_3747119e8eb777 376-551,553-555,558-601,603-632,635-642,645-650,652-654,656-659
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "2cf8f64faf6f99e4633f5390a2cda8528151ac15",
+  "prompts": {},
+  "humans": {
+    "h_3747119e8eb777": {
+      "author": "Marlon Werth <marlon.werth@dfki.de>"
+    }
+  }
+}
