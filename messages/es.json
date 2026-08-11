@@ -39,6 +39,13 @@
         "Featured_Project2_desc5": "Realicé múltiples pruebas con expertos y la audiencia objetivo para perfeccionar la aplicación.",
         "Featured_Project2_desc6": "Publiqué los hallazgos en un artículo de investigación.",
 
+        "Featured_Project3_title": "Plataforma Crai",
+        "Featured_Project3_desc1": "Desarrollo de una plataforma que ayuda a las organizaciones a evaluar sus casos de uso de IA conforme a los requisitos y obligaciones de la Ley de IA de la UE.",
+        "Featured_Project3_desc2": "Propuesta de la arquitectura del sistema y diseño de la estructura de la plataforma en estrecha colaboración con el cliente para adaptarse a sus flujos de trabajo específicos.",
+        "Featured_Project3_desc3": "Construida sobre un modelo de contenido totalmente gestionado por CMS (Strapi) para una expansión y mantenimiento a largo plazo sin cambios de código.",
+        "Featured_Project3_desc4": "Conexión del frontend con servicios de IA a través de un backend personalizado para automatizar la lógica de evaluación.",
+        "Featured_Project3_desc5": "Implementación de gestión de usuarios y control de acceso basado en roles para el directorio de casos de uso, garantizando un acceso multiinquilino seguro.",
+
         "curious": "¿He despertado tu curiosidad?",
         "text1": "Durante mis estudios y mi experiencia profesional, tuve la oportunidad de trabajar con diversas tecnologías, bases de datos y herramientas. También participé en una amplia gama de proyectos, tanto en mi tiempo libre como en entornos profesionales, que me permitieron profundizar en mis conocimientos técnicos y adquirir experiencia práctica diversa.",
         "universities": "Universidades",

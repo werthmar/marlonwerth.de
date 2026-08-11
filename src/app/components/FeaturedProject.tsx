@@ -23,15 +23,15 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({
     links = [],
 }) => {
     return (
-        <div className="flex w-full max-w-3xl flex-col justify-center gap-6 rounded-2xl bg-accent p-4 text-black shadow-custom sm:flex-row">
-            <div className="flex flex-row items-center justify-center gap-4 sm:w-2/5 sm:flex-col">
-                {/* Left Side */}
+        <div className="flex w-full max-w-3xl flex-col justify-center gap-6 rounded-2xl bg-accent p-4 text-black shadow-custom">
+            {/* Top: images side by side, scaled to equal height */}
+            <div className="flex w-full flex-row items-stretch justify-center gap-4">
                 <Image
                     width={200}
                     height={200}
                     src={imageSrc}
                     alt={title}
-                    className="h-200 w-auto self-center rounded-3xl object-contain shadow-lg sm:h-auto sm:w-full"
+                    className={`h-48 object-contain ${imageSrc2 ? 'w-1/2' : 'w-full'}`}
                 />
                 {imageSrc2 && (
                     <Image
@@ -39,14 +39,14 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({
                         height={200}
                         src={imageSrc2}
                         alt={title}
-                        className="hidden h-auto w-1/3 self-center rounded-3xl object-contain shadow-lg sm:block sm:w-full"
+                        className="h-48 w-1/2 object-contain"
                     />
                 )}
             </div>
 
-            {/* Right Side */}
+            {/* Content below images */}
             <div className="flex w-full flex-col items-start">
-                <h2 className="mb-4 self-center text-2xl font-semibold tracking-tight text-foreground sm:self-start sm:text-3xl">
+                <h2 className="mb-4 self-center text-2xl font-semibold tracking-tight text-foreground">
                     {title}
                 </h2>
                 <ul className="list-none space-y-4 pl-0">

@@ -8,6 +8,13 @@ import Tag from './components/Tag';
 import LinkButton from './components/LinkButton';
 import Timeline from './components/Timeline';
 import TechnologyDisplay from './components/TechnologyDisplay';
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselPrevious,
+    CarouselNext,
+} from './components/ui/carousel';
 
 //Icons
 import {
@@ -25,6 +32,7 @@ import {
     SiNeo4J,
     SiGitlab,
     SiJest,
+    SiStrapi,
 } from 'react-icons/si';
 import {
     FaReact,
@@ -369,123 +377,181 @@ export default function Home() {
                 <h1 className="text-3xl font-bold text-accentColor">
                     {t('Featured_Projects')}
                 </h1>
-                <FeaturedProject
-                    title={t('Featured_Project1_title')}
-                    imageSrc="/images/heatingApp.png"
-                    description={[
-                        t('Featured_Project1_desc1'),
-                        t('Featured_Project1_desc2'),
-                        t('Featured_Project1_desc3'),
-                        t('Featured_Project1_desc4'),
-                        t('Featured_Project1_desc5'),
-                    ]}
-                    links={[
-                        {
-                            url: 'https://www.secai-energy.de/',
-                            label: 'SECAI',
-                            icon: '/images/secai_icon.webp',
-                        },
-                        {
-                            url: 'https://www.bmwk.de/Redaktion/DE/Schlaglichter-der-Wirtschaftspolitik/2023/06/09-neues-technologieprogramm-edge-datenwirtschaft.html',
-                            label: 'BMWE',
-                        },
-                    ]}
-                    tags={[
-                        <Tag
-                            key="nestjs"
-                            text="Nest.js"
-                            icon={<SiNestjs />}
-                            color="#dd3f58"
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="Docker"
-                            key="docker"
-                            icon={<SiDocker />}
-                            color="#4888eb"
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="K8s"
-                            key="kubernetes"
-                            icon={<SiKubernetes />}
-                            color="#538de3"
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="PostgreSQL"
-                            key="postgresql"
-                            icon={<SiPostgresql />}
-                            color="#3d648f"
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="InfluxDB"
-                            key="influxdb"
-                            icon={<SiInfluxdb />}
-                            color="#5e00a9"
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="IoT-Hub"
-                            key="iothub"
-                            icon={<VscAzure />}
-                            color="#759d22"
-                            variant="minimal"
-                        />,
-                    ]}
-                />
 
-                <FeaturedProject
-                    title={t('Featured_Project2_title')}
-                    imageSrc="/images/readingTandemMain.png"
-                    imageSrc2="/images/readingTandemCropped.png"
-                    description={[
-                        t('Featured_Project2_desc1'),
-                        t('Featured_Project2_desc2'),
-                        t('Featured_Project2_desc3'),
-                        t('Featured_Project2_desc4'),
-                        t('Featured_Project2_desc5'),
-                        t('Featured_Project2_desc6'),
-                    ]}
-                    tags={[
-                        <Tag
-                            text="Unity"
-                            key="unity"
-                            color="#000000"
-                            icon={<SiUnity />}
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="Blender"
-                            key="blender"
-                            color="#f4792b"
-                            icon={<SiBlender />}
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="Python"
-                            key="python"
-                            color="#3776AB"
-                            icon={<FaPython />}
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="GCloud"
-                            key="googlecloud"
-                            color="#4285F4"
-                            icon={<SiGooglecloud />}
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="MetaQuest"
-                            key="metaquest"
-                            color="#4267B2"
-                            icon={<BsHeadsetVr />}
-                            variant="minimal"
-                        />,
-                    ]}
-                />
+                <Carousel
+                    opts={{ align: 'center', loop: true }}
+                    className="w-full max-w-5xl"
+                >
+                    <CarouselContent className="-ml-4">
+                        <CarouselItem className="basis-[85%] pl-4 sm:basis-3/4 md:basis-2/3">
+                            <FeaturedProject
+                                title={t('Featured_Project1_title')}
+                                imageSrc="/images/heatingApp.png"
+                                description={[
+                                    t('Featured_Project1_desc1'),
+                                    t('Featured_Project1_desc2'),
+                                    t('Featured_Project1_desc3'),
+                                    t('Featured_Project1_desc4'),
+                                    t('Featured_Project1_desc5'),
+                                ]}
+                                links={[
+                                    {
+                                        url: 'https://www.secai-energy.de/',
+                                        label: 'SECAI',
+                                        icon: '/images/secai_icon.webp',
+                                    },
+                                    {
+                                        url: 'https://www.bmwk.de/Redaktion/DE/Schlaglichter-der-Wirtschaftspolitik/2023/06/09-neues-technologieprogramm-edge-datenwirtschaft.html',
+                                        label: 'BMWE',
+                                    },
+                                ]}
+                                tags={[
+                                    <Tag
+                                        key="nestjs"
+                                        text="Nest.js"
+                                        icon={<SiNestjs />}
+                                        color="#dd3f58"
+                                        variant="minimal"
+                                    />,
+                                    <Tag
+                                        text="Docker"
+                                        key="docker"
+                                        icon={<SiDocker />}
+                                        color="#4888eb"
+                                        variant="minimal"
+                                    />,
+                                    <Tag
+                                        text="K8s"
+                                        key="kubernetes"
+                                        icon={<SiKubernetes />}
+                                        color="#538de3"
+                                        variant="minimal"
+                                    />,
+                                    <Tag
+                                        text="PostgreSQL"
+                                        key="postgresql"
+                                        icon={<SiPostgresql />}
+                                        color="#3d648f"
+                                        variant="minimal"
+                                    />,
+                                    <Tag
+                                        text="InfluxDB"
+                                        key="influxdb"
+                                        icon={<SiInfluxdb />}
+                                        color="#5e00a9"
+                                        variant="minimal"
+                                    />,
+                                    <Tag
+                                        text="IoT-Hub"
+                                        key="iothub"
+                                        icon={<VscAzure />}
+                                        color="#759d22"
+                                        variant="minimal"
+                                    />,
+                                ]}
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="basis-[85%] pl-4 sm:basis-3/4 md:basis-2/3">
+                            <FeaturedProject
+                                title={t('Featured_Project2_title')}
+                                imageSrc="/images/readingTandemMain.png"
+                                imageSrc2="/images/readingTandemCropped.png"
+                                description={[
+                                    t('Featured_Project2_desc1'),
+                                    t('Featured_Project2_desc2'),
+                                    t('Featured_Project2_desc3'),
+                                    t('Featured_Project2_desc4'),
+                                    t('Featured_Project2_desc5'),
+                                    t('Featured_Project2_desc6'),
+                                ]}
+                                tags={[
+                                    <Tag
+                                        text="Unity"
+                                        key="unity"
+                                        color="#000000"
+                                        icon={<SiUnity />}
+                                        variant="minimal"
+                                    />,
+                                    <Tag
+                                        text="Blender"
+                                        key="blender"
+                                        color="#f4792b"
+                                        icon={<SiBlender />}
+                                        variant="minimal"
+                                    />,
+                                    <Tag
+                                        text="Python"
+                                        key="python"
+                                        color="#3776AB"
+                                        icon={<FaPython />}
+                                        variant="minimal"
+                                    />,
+                                    <Tag
+                                        text="GCloud"
+                                        key="googlecloud"
+                                        color="#4285F4"
+                                        icon={<SiGooglecloud />}
+                                        variant="minimal"
+                                    />,
+                                    <Tag
+                                        text="MetaQuest"
+                                        key="metaquest"
+                                        color="#4267B2"
+                                        icon={<BsHeadsetVr />}
+                                        variant="minimal"
+                                    />,
+                                ]}
+                            />
+                        </CarouselItem>
+                        <CarouselItem className="basis-[85%] pl-4 sm:basis-3/4 md:basis-2/3">
+                            <FeaturedProject
+                                title={t('Featured_Project3_title')}
+                                imageSrc="/images/crai-logo-blau-pink.svg"
+                                description={[
+                                    t('Featured_Project3_desc1'),
+                                    t('Featured_Project3_desc2'),
+                                    t('Featured_Project3_desc3'),
+                                    t('Featured_Project3_desc4'),
+                                    t('Featured_Project3_desc5'),
+                                ]}
+                                tags={[
+                                    <Tag
+                                        key="nextjs"
+                                        text="Next.js"
+                                        icon="/images/nextjs-icon.png"
+                                        color="#fcfcfc"
+                                        borderColor="#000"
+                                        variant="minimal"
+                                    />,
+                                    <Tag
+                                        text="Docker"
+                                        key="docker"
+                                        icon={<SiDocker />}
+                                        color="#4888eb"
+                                        variant="minimal"
+                                    />,
+                                    <Tag
+                                        text="Strapi"
+                                        key="strapi"
+                                        icon={<SiStrapi />}
+                                        color="#4945ff"
+                                        variant="minimal"
+                                    />,
+                                    <Tag
+                                        text="PostgreSQL"
+                                        key="postgresql"
+                                        icon={<SiPostgresql />}
+                                        color="#3d648f"
+                                        variant="minimal"
+                                    />,
+                                ]}
+                            />
+                        </CarouselItem>
+                    </CarouselContent>
+
+                    <CarouselPrevious />
+                    <CarouselNext />
+                </Carousel>
             </div>
 
             <h2 className="mt-12 text-center text-lg font-bold text-emphasis">

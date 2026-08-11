@@ -38,6 +38,12 @@
         "Featured_Project2_desc4": "Integration von Google Cloud APIs für Übersetzungs- und Text-to-Speech-Dienste.",
         "Featured_Project2_desc5": "Durchführung mehrerer Tests mit Experten und der Zielgruppe, um die Anwendung zu verfeinern.",
         "Featured_Project2_desc6": "Veröffentlichung der Ergebnisse in einem Forschungspapier.",
+        "Featured_Project3_title": "Crai Plattform",
+        "Featured_Project3_desc1": "Entwicklung einer Plattform, die Unternehmen dabei unterstützt, ihre KI-Anwendungsfälle im Hinblick auf die Anforderungen und Pflichten des EU AI Acts zu bewerten.",
+        "Featured_Project3_desc2": "Konzeption der Systemarchitektur und Gestaltung der Plattformstruktur in enger Zusammenarbeit mit dem Kunden, um dessen spezifische Arbeitsabläufe abzubilden.",
+        "Featured_Project3_desc3": "Aufbau auf einem vollständig CMS-gesteuerten Content-Modell (Strapi) für langfristige Erweiterbarkeit und Wartbarkeit ohne Code-Änderungen.",
+        "Featured_Project3_desc4": "Anbindung des Frontends an KI-Dienste über ein eigenes Backend zur Automatisierung der Bewertungslogik.",
+        "Featured_Project3_desc5": "Implementierung von Benutzerverwaltung und rollenbasierter Zugriffskontrolle für das Anwendungsfall-Verzeichnis zur Sicherstellung eines sicheren Mandantenzugriffs.",
         "curious": "Habe ich Ihre Neugier geweckt?",
         "text1": "Während meines Studiums und meiner Berufserfahrung hatte ich die Möglichkeit, mit verschiedenen Technologien, Datenbanken und Tools zu arbeiten. Außerdem habe ich an einer Vielzahl von Projekten teilgenommen, sowohl in meiner Freizeit als auch im beruflichen Umfeld, was mir ermöglichte, meine technischen Fähigkeiten zu vertiefen und vielfältige praktische Erfahrungen zu sammeln.",
         "universities": "Universitäten",
@@ -66,6 +72,8 @@
         "project4-description": "Eine Web-App, die Unternehmen dabei hilft, nachhaltiger zu werden. Die Website ermöglicht es Unternehmen, sich über das Thema Kreislaufwirtschaft und Design zu informieren und ermöglicht es ihnen, zentrale Designprinzipien für ihre Produkte auszuwählen und zu exportieren.",
         "project5-title": "BPMN Website und App",
         "project5-description": "Web-App, mit der Benutzer ein bpmn-Diagramm erstellen können. Das bpmn-Diagramm wird dann konvertiert und in einer Neo4j-Datenbank gespeichert. Die einzelnen Schritte können dann mit einer Flutter-App ausgeführt werden, die den Nutzer durch den Prozess führt.",
+        "project6-title": "Crai Plattform",
+        "project6-description": "Entwicklung einer Plattform, die Unternehmen dabei unterstützt, ihre KI-Anwendungsfälle im Hinblick auf die Anforderungen und Pflichten des EU AI Acts zu bewerten.",
         "more": "und viele mehr"
     },
 
