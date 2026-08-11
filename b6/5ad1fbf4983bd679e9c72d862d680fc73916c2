@@ -1,0 +1,24 @@
+messages/de.json
+  h_3747119e8eb777 41-46,75-76
+messages/en.json
+  h_3747119e8eb777 42-48
+messages/es.json
+  h_3747119e8eb777 42-48
+src/app/components/FeaturedProject.tsx
+  h_3747119e8eb777 26-28,34,42,47,49
+src/app/components/ui/carousel.tsx
+  h_3747119e8eb777 1,3,5-6,8-10,12-15,18-22,25-31,33,36,38-40,42,46-133,136-154,157-172,176-179,181-202,206-209,211-232,236-243
+src/app/page.tsx
+  h_3747119e8eb777 11-17,35,381-554
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "b65ad1fbf4983bd679e9c72d862d680fc73916c2",
+  "prompts": {},
+  "humans": {
+    "h_3747119e8eb777": {
+      "author": "Marlon Werth <marlon.werth@dfki.de>"
+    }
+  }
+}
