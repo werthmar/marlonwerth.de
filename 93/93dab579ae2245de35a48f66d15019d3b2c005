@@ -1,0 +1,18 @@
+src/app/components/TechnologyDisplay.tsx
+  h_3747119e8eb777 2,4-8,25,36,39-41,43-52,54-72
+src/app/components/ui/accordion.tsx
+  h_3747119e8eb777 1-65
+src/app/page.tsx
+  h_3747119e8eb777 18,371,639-640,642-646,648
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "9393dab579ae2245de35a48f66d15019d3b2c005",
+  "prompts": {},
+  "humans": {
+    "h_3747119e8eb777": {
+      "author": "Marlon Werth <marlon.werth@dfki.de>"
+    }
+  }
+}
