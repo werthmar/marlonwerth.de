@@ -1,0 +1,14 @@
+src/app/components/Navbar.tsx
+  h_3747119e8eb777 18-20,24-43,64-66,77
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "31fec7bc7df68ac4eca785e11044f2a335632677",
+  "prompts": {},
+  "humans": {
+    "h_3747119e8eb777": {
+      "author": "Marlon Werth <marlon.werth@dfki.de>"
+    }
+  }
+}
