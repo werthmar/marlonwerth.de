@@ -363,13 +363,14 @@ export default function Home() {
                     }}
                 />
 
-                <h1 className="mb-8 text-center text-5xl font-bold">
+                <h1 className="mb-12 text-center text-5xl font-bold">
                     {t('hi-text')}
                 </h1>
 
-                <p className="mb-8 max-w-xl text-center text-xl font-bold">
-                    {t('personal-description')}
-                </p>
+                <div className="text-block mb-8 flex max-w-xl flex-col gap-8 text-xl font-bold">
+                    <p>{t('personal-description')}</p>
+                    <p>{t('personal-description2')}</p>
+                </div>
             </div>
 
             {/** Featured Projects */}

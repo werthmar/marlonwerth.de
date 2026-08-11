@@ -21,7 +21,8 @@
 
     "HomePage": {
         "hi-text": "Hallo, ich bin Marlon",
-        "personal-description": "Ich bin ein Full-Stack-Webentwickler, der es liebt, nutzerorientierte Lösungen mit moderner Technologie zu entwickeln und dabei Forschungserkenntnisse mit Kreativität in XR und 3D-Kunst zu verbinden.",
+        "personal-description": "Ich bin ein Full-Stack-Webentwickler, der technisches Know-how mit Kreativität in XR und 3D-Kunst verbindet und dabei flexibel bleibt, um für jedes Problem die passende Technologie und Systemarchitektur zu finden. Jedes Projekt beginnt mit Recherche und sorgfältiger Planung, unterstützt durch solide Projektmanagement-Methoden.",
+        "personal-description2": "Während des gesamten Prozesses kommuniziere und stimme ich mich eng mit Kunden ab, entwickle die komplette Anwendung im Full-Stack-Ansatz und hoste sie eigenständig, inklusive Kubernetes-Setups, während ich alles ausführlich dokumentiere. Mein Fokus liegt stets auf Qualität, Wartbarkeit und Erweiterbarkeit, orientiert an der optimalen Lösung für die jeweilige Zielgruppe und den Anwendungsfall.",
         "Featured_Projects": "Ausgewählte Projekte",
 
         "Featured_Project1_title": "SECAI KI-Heizungs-App",
