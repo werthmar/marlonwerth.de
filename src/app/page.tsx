@@ -374,7 +374,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="flex w-full flex-col items-center gap-16">
+            <div className="flex w-full flex-col items-center gap-20">
                 {/** Featured Projects */}
                 <div className="flex flex-col items-center justify-center gap-8 p-4">
                     <h1 className="text-3xl font-bold text-accentColor">
@@ -557,7 +557,7 @@ export default function Home() {
                 </div>
 
                 {/* Universities & Work */}
-                <div className="flex w-full max-w-4xl flex-col gap-8 lg:flex-row lg:gap-6">
+                <div className="flex w-full max-w-6xl flex-col gap-8 lg:flex-row lg:gap-6">
                     <div className="flex flex-1 flex-col">
                         <h1 className="mb-3 text-2xl font-bold">
                             {t('universities')}
@@ -634,24 +634,33 @@ export default function Home() {
                     </div>
                 </div>
 
-                <h1 className="mb-8 text-3xl font-bold">{t('technologies')}</h1>
+                <div className="flex w-full max-w-6xl flex-col gap-12 lg:flex-row lg:items-start lg:gap-20">
+                    {/* Projects Timeline */}
+                    <div className="flex flex-1 flex-col">
+                        <h1 className="mb-8 text-3xl font-bold">
+                            {t('projects')}
+                        </h1>
+                        <div className="max-w-prose pl-6 pr-6">
+                            <Timeline items={timelineItems} />
+                            <p className="text-gray-400">... {t('more')}</p>
+                        </div>
+                    </div>
 
-                {/* Technologies Accordion */}
-                <Accordion className="flex w-full max-w-4xl flex-col gap-4">
-                    {technologySections.map((section, index) => (
-                        <TechnologyDisplay
-                            key={index}
-                            value={index}
-                            {...section}
-                        />
-                    ))}
-                </Accordion>
-
-                <h1 className="mb-8 text-3xl font-bold">{t('projects')}</h1>
-                {/* Timeline */}
-                <div className="max-w-prose pl-6 pr-6">
-                    <Timeline items={timelineItems} />
-                    <p className="text-gray-400">... {t('more')}</p>
+                    {/* Technologies Accordion */}
+                    <div className="flex flex-1 flex-col">
+                        <h1 className="mb-8 text-3xl font-bold">
+                            {t('technologies')}
+                        </h1>
+                        <Accordion className="flex w-full flex-col gap-4">
+                            {technologySections.map((section, index) => (
+                                <TechnologyDisplay
+                                    key={index}
+                                    value={index}
+                                    {...section}
+                                />
+                            ))}
+                        </Accordion>
+                    </div>
                 </div>
 
                 <h2 className="mt-12 text-center text-lg font-bold text-emphasis">
