@@ -15,8 +15,31 @@ interface LanguageSwitcherProps {
     initialLocale?: string;
 }
 
+const CV_PDF_PATH = '/marlon-werth-cv.pdf';
+const CV_PDF_FILENAME = 'Marlon_Werth_CV.pdf';
+
 const Navbar: React.FC<LanguageSwitcherProps> = ({ initialLocale }) => {
     const t = useTranslations('Navbar');
+
+    // Fetches the PDF as a blob so the browser always downloads it instead of opening a viewer
+    const handleDownloadCV = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        try {
+            const response = await fetch(CV_PDF_PATH);
+            const blob = await response.blob();
+            const blobUrl = URL.createObjectURL(blob);
+
+            const link = document.createElement('a');
+            link.href = blobUrl;
+            link.download = CV_PDF_FILENAME;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(blobUrl);
+        } catch (error) {
+            console.error('Failed to download CV:', error);
+        }
+    };
 
     return (
         <>
@@ -38,8 +61,9 @@ const Navbar: React.FC<LanguageSwitcherProps> = ({ initialLocale }) => {
                             </Link>
                         </li>
                         <li>
-                            <Link
-                                href="/cv"
+                            <a
+                                href={CV_PDF_PATH}
+                                onClick={handleDownloadCV}
                                 className="flex flex-col items-center hover:text-gray-400 lg:flex-row"
                             >
                                 <FaFileAlt
@@ -50,7 +74,7 @@ const Navbar: React.FC<LanguageSwitcherProps> = ({ initialLocale }) => {
                                     {t('cv')}
                                 </span>
                                 <span className="block lg:hidden">CV</span>
-                            </Link>
+                            </a>
                         </li>
                         <li>
                             <Link
