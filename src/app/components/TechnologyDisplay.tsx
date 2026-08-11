@@ -1,5 +1,11 @@
 import React from 'react';
+import { ChevronDownIcon } from 'lucide-react';
 import Tag from './Tag';
+import {
+    AccordionItem,
+    AccordionTrigger,
+    AccordionContent,
+} from './ui/accordion';
 
 interface TechnologyItem {
     text: string;
@@ -16,6 +22,7 @@ interface TechnologyDisplayProps {
     iconGradientFrom: string;
     iconGradientTo: string;
     technologies: TechnologyItem[];
+    value: string | number;
 }
 
 export default function TechnologyDisplay({
@@ -26,31 +33,42 @@ export default function TechnologyDisplay({
     iconGradientFrom,
     iconGradientTo,
     technologies,
+    value,
 }: TechnologyDisplayProps) {
     return (
-        <div
-            className={`rounded-xl border-2 bg-accent p-8 shadow-custom transition-all duration-300 hover:shadow-xl ${borderColor} hover:${borderColor.replace('border-', 'border-').replace('-500', '-600')}`}
+        <AccordionItem
+            value={value}
+            className={`rounded-xl border-2 bg-accent p-8 shadow-custom transition-all duration-300 hover:shadow-xl ${borderColor}`}
         >
-            <div className="mb-6 flex items-center">
-                <div
-                    className={`bg-gradient-to-br ${iconGradientFrom} ${iconGradientTo} mr-4 rounded-xl p-3 shadow-lg`}
-                >
-                    <span className="text-2xl text-white">{icon}</span>
+            <AccordionTrigger>
+                <div className="flex items-center">
+                    <div
+                        className={`bg-gradient-to-br ${iconGradientFrom} ${iconGradientTo} mr-4 rounded-xl p-3 shadow-lg`}
+                    >
+                        <span className="text-2xl text-white">{icon}</span>
+                    </div>
+                    <h2 className={`text-2xl font-bold ${titleColor}`}>
+                        {title}
+                    </h2>
                 </div>
-                <h2 className={`text-2xl font-bold ${titleColor}`}>{title}</h2>
-            </div>
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                {technologies.map((tech, index) => (
-                    <Tag
-                        key={index}
-                        text={tech.text}
-                        color={tech.color}
-                        borderColor={tech.borderColor}
-                        icon={tech.icon}
-                        variant="professional"
-                    />
-                ))}
-            </div>
-        </div>
+                <ChevronDownIcon
+                    className={`size-6 shrink-0 transition-transform duration-200 group-data-[panel-open]:rotate-180 ${titleColor}`}
+                />
+            </AccordionTrigger>
+            <AccordionContent>
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    {technologies.map((tech, index) => (
+                        <Tag
+                            key={index}
+                            text={tech.text}
+                            color={tech.color}
+                            borderColor={tech.borderColor}
+                            icon={tech.icon}
+                            variant="professional"
+                        />
+                    ))}
+                </div>
+            </AccordionContent>
+        </AccordionItem>
     );
 }

@@ -15,6 +15,7 @@ import {
     CarouselPrevious,
     CarouselNext,
 } from './components/ui/carousel';
+import { Accordion } from './components/ui/accordion';
 
 //Icons
 import {
@@ -367,7 +368,7 @@ export default function Home() {
                     {t('hi-text')}
                 </h1>
 
-                <div className="text-block mb-8 flex max-w-xl flex-col gap-8 text-xl font-bold">
+                <div className="text-block mb-8 flex max-w-2xl flex-col gap-8 text-xl font-bold">
                     <p>{t('personal-description')}</p>
                     <p>{t('personal-description2')}</p>
                 </div>
@@ -635,12 +636,16 @@ export default function Home() {
 
                 <h1 className="mb-8 text-3xl font-bold">{t('technologies')}</h1>
 
-                {/* Technologies Grid */}
-                <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
+                {/* Technologies Accordion */}
+                <Accordion className="flex w-full max-w-4xl flex-col gap-4">
                     {technologySections.map((section, index) => (
-                        <TechnologyDisplay key={index} {...section} />
+                        <TechnologyDisplay
+                            key={index}
+                            value={index}
+                            {...section}
+                        />
                     ))}
-                </div>
+                </Accordion>
 
                 <h1 className="mb-8 text-3xl font-bold">{t('projects')}</h1>
                 {/* Timeline */}
