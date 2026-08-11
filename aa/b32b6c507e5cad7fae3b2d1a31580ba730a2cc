@@ -1,0 +1,22 @@
+src/app/components/ContactDialog.tsx
+  h_3747119e8eb777 3,5,7-12,28,39,58-64,72,82,91,101,110,120,129,139,149-151,159,165,168-171
+src/app/components/Footer.tsx
+  h_3747119e8eb777 1,16
+src/app/components/Navbar.tsx
+  h_3747119e8eb777 13,81
+src/app/components/SocialLinks.tsx
+  h_3747119e8eb777 1-32
+src/app/components/ui/dialog.tsx
+  h_3747119e8eb777 1-157
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "aab32b6c507e5cad7fae3b2d1a31580ba730a2cc",
+  "prompts": {},
+  "humans": {
+    "h_3747119e8eb777": {
+      "author": "Marlon Werth <marlon.werth@dfki.de>"
+    }
+  }
+}
