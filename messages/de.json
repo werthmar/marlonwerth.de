@@ -29,7 +29,7 @@
         "Featured_Project1_desc2": "Entwicklung eines Nest.js-Backends zur Verwaltung der Kommunikation mit mehreren Datenbanken, einer Client-Anwendung sowie zur Handhabung von Authentifizierung und Kontoverwaltung.",
         "Featured_Project1_desc3": "Konfiguration von Kubernetes auf einem virtuellen privaten Server, Containerisierung aller Anwendungen und Datenbanken mit Docker für effiziente Bereitstellung und Skalierung.",
         "Featured_Project1_desc4": "Einrichtung einer CI/CD-Pipeline mit GitLab zur Automatisierung der Bereitstellung und Verwaltung der Anwendung vom Repository bis zum VPS und zur Client-Auslieferung.",
-        "Featured_Project1_desc5": "Integration mit Gerä connue von externen Partnern, die Steuerung und Kommunikation über den Backend-Server mit Azure IoT Hub ermöglicht.",
+        "Featured_Project1_desc5": "Integration mit Geräten von externen Partnern, die Steuerung und Kommunikation über den Backend-Server mit Azure IoT Hub ermöglicht.",
 
         "Featured_Project2_title": "VR-Lesetandem",
         "Featured_Project2_desc1": "Entwicklung einer VR-Anwendung, um Kindern beim Erlernen der deutschen Sprache zu helfen, nativ auf MetaQuest mit Hand-Tracking-Funktion, erstellt mit Unity und Blender.",
