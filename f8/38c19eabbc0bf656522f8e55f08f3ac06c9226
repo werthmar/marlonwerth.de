@@ -1,0 +1,14 @@
+src/app/page.tsx
+  h_3747119e8eb777 377,560,637-647,649-663
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "f838c19eabbc0bf656522f8e55f08f3ac06c9226",
+  "prompts": {},
+  "humans": {
+    "h_3747119e8eb777": {
+      "author": "Marlon Werth <marlon.werth@dfki.de>"
+    }
+  }
+}
