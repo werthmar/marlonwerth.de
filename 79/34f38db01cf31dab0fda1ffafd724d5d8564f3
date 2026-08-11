@@ -1,0 +1,14 @@
+messages/de.json
+  h_3747119e8eb777 32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "7934f38db01cf31dab0fda1ffafd724d5d8564f3",
+  "prompts": {},
+  "humans": {
+    "h_3747119e8eb777": {
+      "author": "Marlon Werth <marlon.werth@dfki.de>"
+    }
+  }
+}
