@@ -1,0 +1,22 @@
+messages/de.json
+  h_3747119e8eb777 23
+messages/en.json
+  h_3747119e8eb777 23
+messages/es.json
+  h_3747119e8eb777 23
+src/app/components/ContactDialog.tsx
+  h_3747119e8eb777 10-18,67-81
+src/app/page.tsx
+  h_3747119e8eb777 18,40,667-670,672-683
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "0f5e526dc2bdcb9e23c07a26db301aed1d05e4b2",
+  "prompts": {},
+  "humans": {
+    "h_3747119e8eb777": {
+      "author": "Marlon Werth <marlon.werth@dfki.de>"
+    }
+  }
+}
