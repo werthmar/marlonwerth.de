@@ -2,7 +2,6 @@
 import { useTranslations } from 'next-intl';
 
 // Components
-import NextPageButton from './components/NextPageButton';
 import FeaturedProject from './components/FeaturedProject';
 import Tag from './components/Tag';
 import LinkButton from './components/LinkButton';
@@ -16,6 +15,7 @@ import {
     CarouselNext,
 } from './components/ui/carousel';
 import { Accordion } from './components/ui/accordion';
+import ContactDialog from './components/ContactDialog';
 
 //Icons
 import {
@@ -37,6 +37,7 @@ import {
 } from 'react-icons/si';
 import {
     FaReact,
+    FaArrowRight,
     FaNodeJs,
     FaPython,
     FaJava,
@@ -663,14 +664,23 @@ export default function Home() {
                     </div>
                 </div>
 
-                <h2 className="mt-12 text-center text-lg font-bold text-emphasis">
-                    {t('curious')}
-                </h2>
+                <div>
+                    <h2 className="mt-12 text-center text-lg font-bold text-emphasis">
+                        {t('curious')}
+                    </h2>
 
-                <NextPageButton
-                    link="/portfolio"
-                    text="nextPageButtonText-Portfolio"
-                />
+                    <div className="m-4 flex items-center justify-center">
+                        <ContactDialog
+                            triggerClassName="group flex items-center rounded-full border-2 border-solid border-foreground bg-background pb-2 pl-8 pr-8 pt-2 text-lg font-bold text-foreground shadow transition duration-300 hover:bg-foreground hover:text-background md:border-[0.2rem] md:text-2xl"
+                            trigger={
+                                <>
+                                    {t('contactMe')}
+                                    <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                                </>
+                            }
+                        />
+                    </div>
+                </div>
             </div>
         </>
     );

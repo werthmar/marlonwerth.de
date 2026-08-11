@@ -20,6 +20,7 @@
     },
 
     "HomePage": {
+        "contactMe": "Contact Me",
         "hi-text": "Hi, I'm Marlon",
         "personal-description": "I'm a full-stack web developer who blends technical expertise with creativity in XR and 3D art, staying flexible to find the best-fit technology and system architecture for each individual problem. Every project starts with research and careful planning, backed by solid project management practices.",
         "personal-description2": "Throughout the project I communicate and collaborate closely with clients, build the full application stack, and self-host it end to end, including Kubernetes setups, while documenting everything in detail. My focus is always on quality, maintainability and extensibility, guided by the optimal solution for each target audience and use case.",

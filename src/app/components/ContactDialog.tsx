@@ -7,7 +7,15 @@ import { FaArrowRight, FaEnvelope } from 'react-icons/fa';
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from './ui/dialog';
 import SocialLinks from './SocialLinks';
 
-export default function ContactDialog() {
+interface ContactDialogProps {
+    trigger?: React.ReactNode; // custom trigger content, defaults to the navbar envelope+label
+    triggerClassName?: string; // custom trigger styling, defaults to navbar styling
+}
+
+export default function ContactDialog({
+    trigger,
+    triggerClassName,
+}: ContactDialogProps) {
     const tNav = useTranslations('Navbar');
     const tContact = useTranslations('contact');
 
@@ -56,9 +64,21 @@ export default function ContactDialog() {
 
     return (
         <Dialog>
-            <DialogTrigger className="flex flex-col items-center hover:text-gray-400 lg:flex-row">
-                <FaEnvelope className="text-foreground lg:mr-2" size={25} />
-                <span className="lg:inline">{tNav('contact')}</span>
+            <DialogTrigger
+                className={
+                    triggerClassName ??
+                    'flex flex-col items-center hover:text-gray-400 lg:flex-row'
+                }
+            >
+                {trigger ?? (
+                    <>
+                        <FaEnvelope
+                            className="text-foreground lg:mr-2"
+                            size={25}
+                        />
+                        <span className="lg:inline">{tNav('contact')}</span>
+                    </>
+                )}
             </DialogTrigger>
             <DialogContent className="bg-accent">
                 <DialogTitle>{tContact('title')}</DialogTitle>
