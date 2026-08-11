@@ -373,310 +373,291 @@ export default function Home() {
                 </div>
             </div>
 
-            {/** Featured Projects */}
-            <div className="flex flex-col items-center justify-center gap-8 p-4">
-                <h1 className="text-3xl font-bold text-accentColor">
-                    {t('Featured_Projects')}
-                </h1>
+            <div className="flex w-full flex-col items-center gap-16">
+                {/** Featured Projects */}
+                <div className="flex flex-col items-center justify-center gap-8 p-4">
+                    <h1 className="text-3xl font-bold text-accentColor">
+                        {t('Featured_Projects')}
+                    </h1>
+                    <Carousel
+                        opts={{ align: 'center', loop: true }}
+                        className="w-full max-w-5xl"
+                    >
+                        <CarouselContent className="-ml-4">
+                            <CarouselItem className="basis-[85%] pl-4 sm:basis-3/4 md:basis-2/3">
+                                <FeaturedProject
+                                    title={t('Featured_Project1_title')}
+                                    imageSrc="/images/heatingApp.png"
+                                    description={[
+                                        t('Featured_Project1_desc1'),
+                                        t('Featured_Project1_desc2'),
+                                        t('Featured_Project1_desc3'),
+                                        t('Featured_Project1_desc4'),
+                                        t('Featured_Project1_desc5'),
+                                    ]}
+                                    links={[
+                                        {
+                                            url: 'https://www.secai-energy.de/',
+                                            label: 'SECAI',
+                                            icon: '/images/secai_icon.webp',
+                                        },
+                                        {
+                                            url: 'https://www.bmwk.de/Redaktion/DE/Schlaglichter-der-Wirtschaftspolitik/2023/06/09-neues-technologieprogramm-edge-datenwirtschaft.html',
+                                            label: 'BMWE',
+                                        },
+                                    ]}
+                                    tags={[
+                                        <Tag
+                                            key="nestjs"
+                                            text="Nest.js"
+                                            icon={<SiNestjs />}
+                                            color="#dd3f58"
+                                            variant="minimal"
+                                        />,
+                                        <Tag
+                                            text="Docker"
+                                            key="docker"
+                                            icon={<SiDocker />}
+                                            color="#4888eb"
+                                            variant="minimal"
+                                        />,
+                                        <Tag
+                                            text="K8s"
+                                            key="kubernetes"
+                                            icon={<SiKubernetes />}
+                                            color="#538de3"
+                                            variant="minimal"
+                                        />,
+                                        <Tag
+                                            text="PostgreSQL"
+                                            key="postgresql"
+                                            icon={<SiPostgresql />}
+                                            color="#3d648f"
+                                            variant="minimal"
+                                        />,
+                                        <Tag
+                                            text="InfluxDB"
+                                            key="influxdb"
+                                            icon={<SiInfluxdb />}
+                                            color="#5e00a9"
+                                            variant="minimal"
+                                        />,
+                                        <Tag
+                                            text="IoT-Hub"
+                                            key="iothub"
+                                            icon={<VscAzure />}
+                                            color="#759d22"
+                                            variant="minimal"
+                                        />,
+                                    ]}
+                                />
+                            </CarouselItem>
+                            <CarouselItem className="basis-[85%] pl-4 sm:basis-3/4 md:basis-2/3">
+                                <FeaturedProject
+                                    title={t('Featured_Project2_title')}
+                                    imageSrc="/images/readingTandemMain.png"
+                                    imageSrc2="/images/readingTandemCropped.png"
+                                    description={[
+                                        t('Featured_Project2_desc1'),
+                                        t('Featured_Project2_desc2'),
+                                        t('Featured_Project2_desc3'),
+                                        t('Featured_Project2_desc4'),
+                                        t('Featured_Project2_desc5'),
+                                        t('Featured_Project2_desc6'),
+                                    ]}
+                                    tags={[
+                                        <Tag
+                                            text="Unity"
+                                            key="unity"
+                                            color="#000000"
+                                            icon={<SiUnity />}
+                                            variant="minimal"
+                                        />,
+                                        <Tag
+                                            text="Blender"
+                                            key="blender"
+                                            color="#f4792b"
+                                            icon={<SiBlender />}
+                                            variant="minimal"
+                                        />,
+                                        <Tag
+                                            text="Python"
+                                            key="python"
+                                            color="#3776AB"
+                                            icon={<FaPython />}
+                                            variant="minimal"
+                                        />,
+                                        <Tag
+                                            text="GCloud"
+                                            key="googlecloud"
+                                            color="#4285F4"
+                                            icon={<SiGooglecloud />}
+                                            variant="minimal"
+                                        />,
+                                        <Tag
+                                            text="MetaQuest"
+                                            key="metaquest"
+                                            color="#4267B2"
+                                            icon={<BsHeadsetVr />}
+                                            variant="minimal"
+                                        />,
+                                    ]}
+                                />
+                            </CarouselItem>
+                            <CarouselItem className="basis-[85%] pl-4 sm:basis-3/4 md:basis-2/3">
+                                <FeaturedProject
+                                    title={t('Featured_Project3_title')}
+                                    imageSrc="/images/crai-logo-blau-pink.svg"
+                                    description={[
+                                        t('Featured_Project3_desc1'),
+                                        t('Featured_Project3_desc2'),
+                                        t('Featured_Project3_desc3'),
+                                        t('Featured_Project3_desc4'),
+                                        t('Featured_Project3_desc5'),
+                                    ]}
+                                    tags={[
+                                        <Tag
+                                            key="nextjs"
+                                            text="Next.js"
+                                            icon="/images/nextjs-icon.png"
+                                            color="#fcfcfc"
+                                            borderColor="#000"
+                                            variant="minimal"
+                                        />,
+                                        <Tag
+                                            text="Docker"
+                                            key="docker"
+                                            icon={<SiDocker />}
+                                            color="#4888eb"
+                                            variant="minimal"
+                                        />,
+                                        <Tag
+                                            text="Strapi"
+                                            key="strapi"
+                                            icon={<SiStrapi />}
+                                            color="#4945ff"
+                                            variant="minimal"
+                                        />,
+                                        <Tag
+                                            text="PostgreSQL"
+                                            key="postgresql"
+                                            icon={<SiPostgresql />}
+                                            color="#3d648f"
+                                            variant="minimal"
+                                        />,
+                                    ]}
+                                />
+                            </CarouselItem>
+                        </CarouselContent>
 
-                <Carousel
-                    opts={{ align: 'center', loop: true }}
-                    className="w-full max-w-5xl"
-                >
-                    <CarouselContent className="-ml-4">
-                        <CarouselItem className="basis-[85%] pl-4 sm:basis-3/4 md:basis-2/3">
-                            <FeaturedProject
-                                title={t('Featured_Project1_title')}
-                                imageSrc="/images/heatingApp.png"
-                                description={[
-                                    t('Featured_Project1_desc1'),
-                                    t('Featured_Project1_desc2'),
-                                    t('Featured_Project1_desc3'),
-                                    t('Featured_Project1_desc4'),
-                                    t('Featured_Project1_desc5'),
-                                ]}
-                                links={[
-                                    {
-                                        url: 'https://www.secai-energy.de/',
-                                        label: 'SECAI',
-                                        icon: '/images/secai_icon.webp',
-                                    },
-                                    {
-                                        url: 'https://www.bmwk.de/Redaktion/DE/Schlaglichter-der-Wirtschaftspolitik/2023/06/09-neues-technologieprogramm-edge-datenwirtschaft.html',
-                                        label: 'BMWE',
-                                    },
-                                ]}
-                                tags={[
-                                    <Tag
-                                        key="nestjs"
-                                        text="Nest.js"
-                                        icon={<SiNestjs />}
-                                        color="#dd3f58"
-                                        variant="minimal"
-                                    />,
-                                    <Tag
-                                        text="Docker"
-                                        key="docker"
-                                        icon={<SiDocker />}
-                                        color="#4888eb"
-                                        variant="minimal"
-                                    />,
-                                    <Tag
-                                        text="K8s"
-                                        key="kubernetes"
-                                        icon={<SiKubernetes />}
-                                        color="#538de3"
-                                        variant="minimal"
-                                    />,
-                                    <Tag
-                                        text="PostgreSQL"
-                                        key="postgresql"
-                                        icon={<SiPostgresql />}
-                                        color="#3d648f"
-                                        variant="minimal"
-                                    />,
-                                    <Tag
-                                        text="InfluxDB"
-                                        key="influxdb"
-                                        icon={<SiInfluxdb />}
-                                        color="#5e00a9"
-                                        variant="minimal"
-                                    />,
-                                    <Tag
-                                        text="IoT-Hub"
-                                        key="iothub"
-                                        icon={<VscAzure />}
-                                        color="#759d22"
-                                        variant="minimal"
-                                    />,
-                                ]}
-                            />
-                        </CarouselItem>
-                        <CarouselItem className="basis-[85%] pl-4 sm:basis-3/4 md:basis-2/3">
-                            <FeaturedProject
-                                title={t('Featured_Project2_title')}
-                                imageSrc="/images/readingTandemMain.png"
-                                imageSrc2="/images/readingTandemCropped.png"
-                                description={[
-                                    t('Featured_Project2_desc1'),
-                                    t('Featured_Project2_desc2'),
-                                    t('Featured_Project2_desc3'),
-                                    t('Featured_Project2_desc4'),
-                                    t('Featured_Project2_desc5'),
-                                    t('Featured_Project2_desc6'),
-                                ]}
-                                tags={[
-                                    <Tag
-                                        text="Unity"
-                                        key="unity"
-                                        color="#000000"
-                                        icon={<SiUnity />}
-                                        variant="minimal"
-                                    />,
-                                    <Tag
-                                        text="Blender"
-                                        key="blender"
-                                        color="#f4792b"
-                                        icon={<SiBlender />}
-                                        variant="minimal"
-                                    />,
-                                    <Tag
-                                        text="Python"
-                                        key="python"
-                                        color="#3776AB"
-                                        icon={<FaPython />}
-                                        variant="minimal"
-                                    />,
-                                    <Tag
-                                        text="GCloud"
-                                        key="googlecloud"
-                                        color="#4285F4"
-                                        icon={<SiGooglecloud />}
-                                        variant="minimal"
-                                    />,
-                                    <Tag
-                                        text="MetaQuest"
-                                        key="metaquest"
-                                        color="#4267B2"
-                                        icon={<BsHeadsetVr />}
-                                        variant="minimal"
-                                    />,
-                                ]}
-                            />
-                        </CarouselItem>
-                        <CarouselItem className="basis-[85%] pl-4 sm:basis-3/4 md:basis-2/3">
-                            <FeaturedProject
-                                title={t('Featured_Project3_title')}
-                                imageSrc="/images/crai-logo-blau-pink.svg"
-                                description={[
-                                    t('Featured_Project3_desc1'),
-                                    t('Featured_Project3_desc2'),
-                                    t('Featured_Project3_desc3'),
-                                    t('Featured_Project3_desc4'),
-                                    t('Featured_Project3_desc5'),
-                                ]}
-                                tags={[
-                                    <Tag
-                                        key="nextjs"
-                                        text="Next.js"
-                                        icon="/images/nextjs-icon.png"
-                                        color="#fcfcfc"
-                                        borderColor="#000"
-                                        variant="minimal"
-                                    />,
-                                    <Tag
-                                        text="Docker"
-                                        key="docker"
-                                        icon={<SiDocker />}
-                                        color="#4888eb"
-                                        variant="minimal"
-                                    />,
-                                    <Tag
-                                        text="Strapi"
-                                        key="strapi"
-                                        icon={<SiStrapi />}
-                                        color="#4945ff"
-                                        variant="minimal"
-                                    />,
-                                    <Tag
-                                        text="PostgreSQL"
-                                        key="postgresql"
-                                        icon={<SiPostgresql />}
-                                        color="#3d648f"
-                                        variant="minimal"
-                                    />,
-                                ]}
-                            />
-                        </CarouselItem>
-                    </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                    </Carousel>
+                </div>
 
-                    <CarouselPrevious />
-                    <CarouselNext />
-                </Carousel>
-            </div>
-
-            <h2 className="mt-12 text-center text-lg font-bold text-emphasis">
-                {t('curious')}
-            </h2>
-
-            {/* Universities */}
-            <h1 className="mb-4 text-3xl font-bold">{t('universities')}</h1>
-            <div className="mb-16 flex w-full max-w-4xl flex-col gap-6">
-                <div className="flex flex-col gap-4 rounded-lg border bg-accent p-4 shadow-sm lg:flex-row lg:items-center">
-                    <div className="lg:w-1/3">
-                        <LinkButton
-                            text="DHBW-Stuttgart"
-                            color="gray"
-                            icon="/images/dhbw.png"
-                            link="https://www.dhbw-stuttgart.de"
-                        />
+                {/* Universities & Work */}
+                <div className="flex w-full max-w-4xl flex-col gap-8 lg:flex-row lg:gap-6">
+                    <div className="flex flex-1 flex-col">
+                        <h1 className="mb-3 text-2xl font-bold">
+                            {t('universities')}
+                        </h1>
+                        <div className="flex flex-col gap-3">
+                            <div className="flex flex-col gap-3 rounded-lg border bg-accent p-3 shadow-sm">
+                                <LinkButton
+                                    text="Universität Osnabrück"
+                                    color="white"
+                                    icon="/images/uni-osna.png"
+                                    textColor="darkRed"
+                                    link="https://www.uni-osnabrueck.de/startseite/"
+                                />
+                                <p className="text-sm font-medium text-foreground">
+                                    2021-2024: Master Business Information
+                                    Systems
+                                </p>
+                            </div>
+                            <div className="flex flex-col gap-3 rounded-lg border bg-accent p-3 shadow-sm">
+                                <LinkButton
+                                    text="Universidad Valladolid"
+                                    color="rgb(181, 39, 84)"
+                                    icon="/images/uva.png"
+                                    link="https://www.uva.es/export/sites/uva/"
+                                />
+                                <p className="text-sm font-medium text-foreground">
+                                    2023: Semester abroad international commerce
+                                </p>
+                            </div>
+                            <div className="flex flex-col gap-3 rounded-lg border bg-accent p-3 shadow-sm">
+                                <LinkButton
+                                    text="DHBW-Stuttgart"
+                                    color="gray"
+                                    icon="/images/dhbw.png"
+                                    link="https://www.dhbw-stuttgart.de"
+                                />
+                                <p className="text-sm font-medium text-foreground">
+                                    2018-2021: Bachelor Business Information
+                                    Systems
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div className="lg:w-2/3 lg:pl-6">
-                        <p className="font-medium text-foreground">
-                            2018-2021: Bachelor Business Information Systems
-                        </p>
+
+                    <div className="flex flex-1 flex-col">
+                        <h1 className="mb-3 text-2xl font-bold">{t('work')}</h1>
+                        <div className="flex flex-col gap-3">
+                            <div className="flex flex-col gap-3 rounded-lg border bg-accent p-3 shadow-sm">
+                                <LinkButton
+                                    text="DFKI Osnabrück"
+                                    color="white"
+                                    textColor="darkBlue"
+                                    icon="/images/dfki.jpeg"
+                                    link="https://www.dfki.de/web"
+                                />
+                                <p className="text-sm font-medium text-foreground">
+                                    2022-2024: Research assistant, since 2025:
+                                    Researcher
+                                </p>
+                            </div>
+                            <div className="flex flex-col gap-3 rounded-lg border bg-accent p-3 shadow-sm">
+                                <LinkButton
+                                    text="Nolte Küchen"
+                                    color="white"
+                                    textColor="black"
+                                    icon="/images/nolte.png"
+                                    link="https://www.nolte-kuechen.com/de-de/"
+                                />
+                                <p className="text-sm font-medium text-foreground">
+                                    2018-2021: Dual Studies
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className="flex flex-col gap-4 rounded-lg border bg-accent p-4 shadow-sm lg:flex-row lg:items-center">
-                    <div className="lg:w-1/3">
-                        <LinkButton
-                            text="Universität Osnabrück"
-                            color="white"
-                            icon="/images/uni-osna.png"
-                            textColor="darkRed"
-                            link="https://www.uni-osnabrueck.de/startseite/"
-                        />
-                    </div>
-                    <div className="lg:w-2/3 lg:pl-6">
-                        <p className="font-medium text-foreground">
-                            2021-2024: Master Business Information Systems
-                        </p>
-                    </div>
+
+                <h1 className="mb-8 text-3xl font-bold">{t('technologies')}</h1>
+
+                {/* Technologies Grid */}
+                <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
+                    {technologySections.map((section, index) => (
+                        <TechnologyDisplay key={index} {...section} />
+                    ))}
                 </div>
-                <div className="flex flex-col gap-4 rounded-lg border bg-accent p-4 shadow-sm lg:flex-row lg:items-center">
-                    <div className="lg:w-1/3">
-                        <LinkButton
-                            text="Universidad Valladolid"
-                            color="rgb(181, 39, 84)"
-                            icon="/images/uva.png"
-                            link="https://www.uva.es/export/sites/uva/"
-                        />
-                    </div>
-                    <div className="lg:w-2/3 lg:pl-6">
-                        <p className="font-medium text-foreground">
-                            2023: Semester abroad international commerce
-                        </p>
-                    </div>
+
+                <h1 className="mb-8 text-3xl font-bold">{t('projects')}</h1>
+                {/* Timeline */}
+                <div className="max-w-prose pl-6 pr-6">
+                    <Timeline items={timelineItems} />
+                    <p className="text-gray-400">... {t('more')}</p>
                 </div>
+
+                <h2 className="mt-12 text-center text-lg font-bold text-emphasis">
+                    {t('curious')}
+                </h2>
+
+                <NextPageButton
+                    link="/portfolio"
+                    text="nextPageButtonText-Portfolio"
+                />
             </div>
-
-            {/* Work */}
-            <h1 className="mb-4 text-3xl font-bold">{t('work')}</h1>
-            <div className="mb-16 flex w-full max-w-4xl flex-col gap-6">
-                <div className="flex flex-col gap-4 rounded-lg border bg-accent p-4 shadow-sm lg:flex-row lg:items-center">
-                    <div className="lg:w-1/3">
-                        <LinkButton
-                            text="Nolte Küchen"
-                            color="white"
-                            textColor="black"
-                            icon="/images/nolte.png"
-                            link="https://www.nolte-kuechen.com/de-de/"
-                        />
-                    </div>
-                    <div className="lg:w-2/3 lg:pl-6">
-                        <p className="font-medium text-foreground">
-                            2018-2021: Dual Studies
-                        </p>
-                    </div>
-                </div>
-                <div className="flex flex-col gap-4 rounded-lg border bg-accent p-4 shadow-sm lg:flex-row lg:items-center">
-                    <div className="lg:w-1/3">
-                        <LinkButton
-                            text="DFKI Osnabrück"
-                            color="white"
-                            textColor="darkBlue"
-                            icon="/images/dfki.jpeg"
-                            link="https://www.dfki.de/web"
-                        />
-                    </div>
-                    <div className="lg:w-2/3 lg:pl-6">
-                        <p className="font-medium text-foreground">
-                            2022-2024: Research assistant, since 2025:
-                            Researcher
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <h1 className="mb-8 text-3xl font-bold">{t('technologies')}</h1>
-
-            {/* Technologies Grid */}
-            <div className="mb-16 grid w-full max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
-                {technologySections.map((section, index) => (
-                    <TechnologyDisplay
-                        key={index}
-                        title={section.title}
-                        icon={section.icon}
-                        borderColor={section.borderColor}
-                        titleColor={section.titleColor}
-                        iconGradientFrom={section.iconGradientFrom}
-                        iconGradientTo={section.iconGradientTo}
-                        technologies={section.technologies}
-                    />
-                ))}
-            </div>
-
-            <h1 className="mb-8 text-3xl font-bold">{t('projects')}</h1>
-            {/* Timeline */}
-            <div className="max-w-prose pl-6 pr-6">
-                <Timeline items={timelineItems} />
-                <p className="text-gray-400">... {t('more')}</p>
-            </div>
-
-            <NextPageButton
-                link="/portfolio"
-                text="nextPageButtonText-Portfolio"
-            />
         </>
     );
 }
