@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FaHome, FaBriefcase, FaFileAlt, FaEnvelope } from 'react-icons/fa';
+import { FaBriefcase, FaFileAlt, FaEnvelope } from 'react-icons/fa';
 
 // Localization
 import { useTranslations } from 'next-intl';
@@ -26,18 +26,6 @@ const Navbar: React.FC<LanguageSwitcherProps> = ({ initialLocale }) => {
                         <li>
                             <Link
                                 href="/"
-                                className="flex flex-col items-center hover:text-gray-400 lg:flex-row"
-                            >
-                                <FaHome
-                                    className="text-foreground lg:mr-2"
-                                    size={25}
-                                />
-                                <span className="lg:inline">{t('home')}</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/portfolio"
                                 className="flex flex-col items-center hover:text-gray-400 lg:flex-row"
                             >
                                 <FaBriefcase
