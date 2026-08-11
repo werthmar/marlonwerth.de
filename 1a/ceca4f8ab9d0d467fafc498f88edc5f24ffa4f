@@ -1,0 +1,20 @@
+components.json
+  h_3747119e8eb777 16,18
+package-lock.json
+  h_3747119e8eb777 17,3650-3677
+package.json
+  h_3747119e8eb777 19
+src/app/components/ui/carousel.tsx
+  h_3747119e8eb777 1-242
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "1aceca4f8ab9d0d467fafc498f88edc5f24ffa4f",
+  "prompts": {},
+  "humans": {
+    "h_3747119e8eb777": {
+      "author": "Marlon Werth <marlon.werth@dfki.de>"
+    }
+  }
+}
