@@ -10,6 +10,7 @@ import { useTranslations } from 'next-intl';
 import ThemeToggle from './ThemeToggle';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileSettings from './MobileSettings';
+import ContactDialog from './ContactDialog';
 
 interface LanguageSwitcherProps {
     initialLocale?: string;
@@ -77,18 +78,7 @@ const Navbar: React.FC<LanguageSwitcherProps> = ({ initialLocale }) => {
                             </a>
                         </li>
                         <li>
-                            <Link
-                                href="/contact"
-                                className="flex flex-col items-center hover:text-gray-400 lg:flex-row"
-                            >
-                                <FaEnvelope
-                                    className="text-foreground lg:mr-2"
-                                    size={25}
-                                />
-                                <span className="lg:inline">
-                                    {t('contact')}
-                                </span>
-                            </Link>
+                            <ContactDialog />
                         </li>
                     </ul>
                     <div className="hidden items-center space-x-4 md:flex">

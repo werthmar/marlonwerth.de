@@ -1,12 +1,16 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-
 import { useState } from 'react';
-import { FaArrowRight } from 'react-icons/fa';
+import { useTranslations } from 'next-intl';
+import { FaArrowRight, FaEnvelope } from 'react-icons/fa';
 
-export default function Contact() {
-    const t = useTranslations('contact');
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from './ui/dialog';
+import SocialLinks from './SocialLinks';
+
+export default function ContactDialog() {
+    const tNav = useTranslations('Navbar');
+    const tContact = useTranslations('contact');
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -21,10 +25,7 @@ export default function Contact() {
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-        });
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -35,9 +36,7 @@ export default function Contact() {
         try {
             const response = await fetch('/api/contact', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
             });
 
@@ -56,11 +55,13 @@ export default function Contact() {
     };
 
     return (
-        <div className="bg-background px-4 py-12 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-md rounded-lg bg-accent p-8 shadow-custom">
-                <h1 className="mb-8 text-center text-3xl font-bold text-foreground">
-                    {t('title')}
-                </h1>
+        <Dialog>
+            <DialogTrigger className="flex flex-col items-center hover:text-gray-400 lg:flex-row">
+                <FaEnvelope className="text-foreground lg:mr-2" size={25} />
+                <span className="lg:inline">{tNav('contact')}</span>
+            </DialogTrigger>
+            <DialogContent className="bg-accent">
+                <DialogTitle>{tContact('title')}</DialogTitle>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
@@ -68,7 +69,7 @@ export default function Contact() {
                             htmlFor="name"
                             className="mb-2 block text-sm font-medium text-gray-700"
                         >
-                            {t('fullName')}
+                            {tContact('fullName')}
                         </label>
                         <input
                             type="text"
@@ -78,7 +79,7 @@ export default function Contact() {
                             value={formData.name}
                             onChange={handleChange}
                             className="w-full rounded-full border border-gray-300 bg-background px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-accentColor"
-                            placeholder={t('fullNamePlaceholder')}
+                            placeholder={tContact('fullNamePlaceholder')}
                         />
                     </div>
 
@@ -87,7 +88,7 @@ export default function Contact() {
                             htmlFor="email"
                             className="mb-2 block text-sm font-medium text-gray-700"
                         >
-                            {t('emailAddress')}
+                            {tContact('emailAddress')}
                         </label>
                         <input
                             type="email"
@@ -97,7 +98,7 @@ export default function Contact() {
                             value={formData.email}
                             onChange={handleChange}
                             className="w-full rounded-full border border-gray-300 bg-background px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-accentColor"
-                            placeholder={t('emailPlaceholder')}
+                            placeholder={tContact('emailPlaceholder')}
                         />
                     </div>
 
@@ -106,7 +107,7 @@ export default function Contact() {
                             htmlFor="subject"
                             className="mb-2 block text-sm font-medium text-gray-700"
                         >
-                            {t('subject')}
+                            {tContact('subject')}
                         </label>
                         <input
                             type="text"
@@ -116,7 +117,7 @@ export default function Contact() {
                             value={formData.subject}
                             onChange={handleChange}
                             className="w-full rounded-full border border-gray-300 bg-background px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-accentColor"
-                            placeholder={t('subjectPlaceholder')}
+                            placeholder={tContact('subjectPlaceholder')}
                         />
                     </div>
 
@@ -125,7 +126,7 @@ export default function Contact() {
                             htmlFor="message"
                             className="mb-2 block text-sm font-medium text-gray-700"
                         >
-                            {t('message')}
+                            {tContact('message')}
                         </label>
                         <textarea
                             id="message"
@@ -135,7 +136,7 @@ export default function Contact() {
                             value={formData.message}
                             onChange={handleChange}
                             className="w-full resize-none rounded-lg border border-gray-300 bg-background px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-accentColor"
-                            placeholder={t('messagePlaceholder')}
+                            placeholder={tContact('messagePlaceholder')}
                         />
                     </div>
 
@@ -145,7 +146,9 @@ export default function Contact() {
                             disabled={isSubmitting}
                             className="group flex items-center rounded-full border-2 border-solid border-foreground bg-background pb-2 pl-8 pr-8 pt-2 text-lg font-bold text-foreground shadow transition duration-300 hover:bg-foreground hover:text-background md:border-[0.2rem] md:text-2xl"
                         >
-                            {isSubmitting ? t('sending') : t('sendMessage')}
+                            {isSubmitting
+                                ? tContact('sending')
+                                : tContact('sendMessage')}
                             <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                         </button>
                     </div>
@@ -153,16 +156,18 @@ export default function Contact() {
 
                 {submitStatus === 'success' && (
                     <div className="mt-4 rounded border border-green-400 bg-green-100 p-4 text-green-700">
-                        {t('successMessage')}
+                        {tContact('successMessage')}
                     </div>
                 )}
 
                 {submitStatus === 'error' && (
                     <div className="mt-4 rounded border border-red-400 bg-red-100 p-4 text-red-700">
-                        {t('errorMessage')}
+                        {tContact('errorMessage')}
                     </div>
                 )}
-            </div>
-        </div>
+
+                <SocialLinks />
+            </DialogContent>
+        </Dialog>
     );
 }
