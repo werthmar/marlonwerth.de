@@ -1,0 +1,14 @@
+public/images/crai-logo-blau-pink.svg
+  h_3747119e8eb777 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "da0395f24db3b89b71eecd10723f89d7e0e593e1",
+  "prompts": {},
+  "humans": {
+    "h_3747119e8eb777": {
+      "author": "Marlon Werth <marlon.werth@dfki.de>"
+    }
+  }
+}
