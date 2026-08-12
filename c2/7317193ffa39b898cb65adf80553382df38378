@@ -1,0 +1,14 @@
+src/app/components/ui/carousel.tsx
+  h_3747119e8eb777 142
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "c27317193ffa39b898cb65adf80553382df38378",
+  "prompts": {},
+  "humans": {
+    "h_3747119e8eb777": {
+      "author": "Marlon Werth <marlon.werth@dfki.de>"
+    }
+  }
+}
