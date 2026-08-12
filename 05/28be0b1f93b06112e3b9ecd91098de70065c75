@@ -1,0 +1,20 @@
+src/app/components/MobileSettings.tsx
+  h_3747119e8eb777 3,6,16-17,21,42-46,52,56-76,83,88,92,94,112,144,146-148,150-159
+src/app/components/NavSettings.tsx
+  h_3747119e8eb777 1-170
+src/app/components/Navbar.tsx
+  h_3747119e8eb777 4,83-85
+src/app/page.tsx
+  h_3747119e8eb777 574,651
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "0528be0b1f93b06112e3b9ecd91098de70065c75",
+  "prompts": {},
+  "humans": {
+    "h_3747119e8eb777": {
+      "author": "Marlon Werth <marlon.werth@dfki.de>"
+    }
+  }
+}
