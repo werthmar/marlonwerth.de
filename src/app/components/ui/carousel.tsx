@@ -139,7 +139,7 @@ function CarouselContent({ className, ...props }: React.ComponentProps<'div'>) {
     return (
         <div
             ref={carouselRef}
-            className="overflow-hidden py-4" // padding prevents card shadows from being clipped
+            className="overflow-hidden py-4 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]" // padding prevents card shadows from being clipped
             data-slot="carousel-content"
         >
             <div
