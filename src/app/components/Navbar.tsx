@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FaBriefcase, FaFileAlt, FaEnvelope } from 'react-icons/fa';
+import { FaBriefcase, FaFileAlt } from 'react-icons/fa';
 
 // Localization
 import { useTranslations } from 'next-intl';
@@ -80,6 +80,9 @@ const Navbar: React.FC<LanguageSwitcherProps> = ({ initialLocale }) => {
                         <li>
                             <ContactDialog />
                         </li>
+                        <li className="md:hidden">
+                            <MobileSettings />
+                        </li>
                     </ul>
                     <div className="hidden items-center space-x-4 md:flex">
                         <LanguageSwitcher initialLocale={initialLocale} />
@@ -87,7 +90,6 @@ const Navbar: React.FC<LanguageSwitcherProps> = ({ initialLocale }) => {
                     </div>
                 </div>
             </nav>
-            <MobileSettings initialLocale={initialLocale} />
         </>
     );
 };

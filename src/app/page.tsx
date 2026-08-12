@@ -571,7 +571,7 @@ export default function Home() {
                 </div>
 
                 {/* Universities & Work */}
-                <div className="flex w-full max-w-6xl flex-col gap-8 lg:flex-row lg:gap-6">
+                <div className="flex w-full max-w-6xl flex-col gap-8 px-4 lg:flex-row lg:gap-6 lg:px-0">
                     <div className="flex flex-1 flex-col">
                         <h1 className="mb-3 text-2xl font-bold">
                             {t('universities')}
@@ -648,7 +648,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="flex w-full max-w-6xl flex-col gap-12 lg:flex-row lg:items-start lg:gap-20">
+                <div className="flex w-full max-w-6xl flex-col gap-12 px-4 lg:flex-row lg:items-start lg:gap-20 lg:px-0">
                     {/* Projects Timeline */}
                     <div className="flex flex-1 flex-col">
                         <h1 className="mb-8 text-3xl font-bold">
