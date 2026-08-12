@@ -22,7 +22,6 @@ interface MobileSettingsProps {
 const MobileSettings: React.FC<MobileSettingsProps> = ({
     isDarkMode,
     onToggleTheme,
-    currentLocale,
     onSelectLocale,
 }) => {
     const t = useTranslations('Navbar');

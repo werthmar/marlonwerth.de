@@ -39,7 +39,7 @@ export default async function RootLayout({
         <html lang={locale} className={cn('font-sans', inter.variable)}>
             <body className={`antialiased`}>
                 <NextIntlClientProvider messages={messages}>
-                    <Navbar initialLocale={locale} />
+                    <Navbar initialLocale={locale as 'en' | 'de' | 'es'} />
                     <Template>{children}</Template>
                     {/* Custom Wrapper to prevent use client on root layout*/}
                     <ClientOnly>
