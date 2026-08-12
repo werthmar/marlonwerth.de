@@ -1,0 +1,20 @@
+src/app/components/LanguageSwitcher.tsx
+  h_3747119e8eb777 16-17,21-22,27,37,66
+src/app/components/MobileSettings.tsx
+  h_3747119e8eb777 15-27,72,77
+src/app/components/Navbar.tsx
+  h_3747119e8eb777 4,9-10,18-19,25,27-51,112-117,121-128
+src/app/components/ThemeToggle.tsx
+  h_3747119e8eb777 4,10,58-61,63,75
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "2ceb27ca756301ab84040b6b8bf1b634616a18b5",
+  "prompts": {},
+  "humans": {
+    "h_3747119e8eb777": {
+      "author": "Marlon Werth <marlon.werth@dfki.de>"
+    }
+  }
+}
