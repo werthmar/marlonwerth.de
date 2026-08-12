@@ -1,10 +1,13 @@
 'use client';
 
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { FaBriefcase, FaFileAlt } from 'react-icons/fa';
 
 // Localization
 import { useTranslations } from 'next-intl';
+import { setUserLocale } from '@/services/locale';
+import { Locale, defaultLocale } from '@/i18n/config';
 
 // Components
 import ThemeToggle from './ThemeToggle';
@@ -12,15 +15,40 @@ import LanguageSwitcher from './LanguageSwitcher';
 import MobileSettings from './MobileSettings';
 import ContactDialog from './ContactDialog';
 
-interface LanguageSwitcherProps {
-    initialLocale?: string;
+interface NavbarProps {
+    initialLocale?: Locale;
 }
 
 const CV_PDF_PATH = '/marlon-werth-cv.pdf';
 const CV_PDF_FILENAME = 'Marlon_Werth_CV.pdf';
 
-const Navbar: React.FC<LanguageSwitcherProps> = ({ initialLocale }) => {
+const Navbar: React.FC<NavbarProps> = ({ initialLocale }) => {
     const t = useTranslations('Navbar');
+    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [currentLocale, setCurrentLocale] = useState<Locale>(
+        initialLocale ?? defaultLocale
+    );
+
+    // Corrects the SSR default once localStorage/OS preference is known client-side
+    useEffect(() => {
+        const storedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+        ).matches;
+        setIsDarkMode(storedTheme ? storedTheme === 'dark' : prefersDark);
+    }, []);
+
+    useEffect(() => {
+        document.documentElement.classList.toggle('dark', isDarkMode);
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    }, [isDarkMode]);
+
+    const handleToggleTheme = () => setIsDarkMode((prev) => !prev);
+
+    const handleSelectLocale = (locale: Locale) => {
+        setUserLocale(locale);
+        setCurrentLocale(locale);
+    };
 
     // Fetches the PDF as a blob so the browser always downloads it instead of opening a viewer
     const handleDownloadCV = async (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -81,12 +109,23 @@ const Navbar: React.FC<LanguageSwitcherProps> = ({ initialLocale }) => {
                             <ContactDialog />
                         </li>
                         <li className="md:hidden">
-                            <MobileSettings />
+                            <MobileSettings
+                                isDarkMode={isDarkMode}
+                                onToggleTheme={handleToggleTheme}
+                                currentLocale={currentLocale}
+                                onSelectLocale={handleSelectLocale}
+                            />
                         </li>
                     </ul>
                     <div className="hidden items-center space-x-4 md:flex">
-                        <LanguageSwitcher initialLocale={initialLocale} />
-                        <ThemeToggle />
+                        <LanguageSwitcher
+                            currentLocale={currentLocale}
+                            onSelectLocale={handleSelectLocale}
+                        />
+                        <ThemeToggle
+                            isDarkMode={isDarkMode}
+                            onToggle={handleToggleTheme}
+                        />
                     </div>
                 </div>
             </nav>

@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { FaCog, FaSun, FaMoon } from 'react-icons/fa';
 import ReactCountryFlag from 'react-country-flag';
 import { useTranslations } from 'next-intl';
-import { setUserLocale } from '@/services/locale';
 import { Locale } from '@/i18n/config';
 
 const languages: { code: Locale; label: string; flag: string }[] = [
@@ -13,31 +12,23 @@ const languages: { code: Locale; label: string; flag: string }[] = [
     { code: 'de', label: 'Deutsch', flag: 'DE' },
 ];
 
-const MobileSettings: React.FC = () => {
+interface MobileSettingsProps {
+    isDarkMode: boolean;
+    onToggleTheme: () => void;
+    currentLocale: Locale;
+    onSelectLocale: (locale: Locale) => void;
+}
+
+const MobileSettings: React.FC<MobileSettingsProps> = ({
+    isDarkMode,
+    onToggleTheme,
+    currentLocale,
+    onSelectLocale,
+}) => {
     const t = useTranslations('Navbar');
     const [isExpanded, setIsExpanded] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(false);
     const [animateButtons, setAnimateButtons] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const storedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia(
-                '(prefers-color-scheme: dark)'
-            ).matches;
-            const initialTheme = storedTheme
-                ? storedTheme === 'dark'
-                : prefersDark;
-            setIsDarkMode(initialTheme);
-            document.documentElement.classList.toggle('dark', initialTheme);
-        }
-    }, []);
-
-    useEffect(() => {
-        document.documentElement.classList.toggle('dark', isDarkMode);
-        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-    }, [isDarkMode]);
 
     const closeMenu = () => {
         setAnimateButtons(false);
@@ -53,7 +44,6 @@ const MobileSettings: React.FC = () => {
         }
     };
 
-    // Popup now lives inline in the navbar, so close it on outside click / Escape
     useEffect(() => {
         if (!isExpanded) return;
 
@@ -79,12 +69,12 @@ const MobileSettings: React.FC = () => {
         label: string;
         flag: string;
     }) => {
-        setUserLocale(lang.code);
+        onSelectLocale(lang.code);
         closeMenu();
     };
 
     const toggleTheme = () => {
-        setIsDarkMode((prev) => !prev);
+        onToggleTheme();
         closeMenu();
     };
 

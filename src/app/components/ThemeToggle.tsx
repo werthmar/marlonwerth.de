@@ -1,15 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
-import { FaMoon } from 'react-icons/fa'; // Import sun and moon icons
+import { FaMoon } from 'react-icons/fa';
 import { IoSunny } from 'react-icons/io5';
 
-// Styled components
 const ToggleContainer = styled.div`
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between the icon and the toggle */
+    gap: 10px;
 `;
 
 const ToggleSwitch = styled.label`
@@ -57,45 +55,12 @@ const Slider = styled.span`
     }
 `;
 
-const ThemeToggle = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+interface ThemeToggleProps {
+    isDarkMode: boolean;
+    onToggle: () => void;
+}
 
-    // ensure it is using the client side to use localStorage
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const storedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia(
-                '(prefers-color-scheme: dark)'
-            ).matches;
-
-            const initialTheme = storedTheme
-                ? storedTheme === 'dark'
-                : prefersDark;
-            setIsDarkMode(initialTheme);
-            document.documentElement.classList.toggle('dark', initialTheme);
-        }
-    }, []);
-
-    useEffect(() => {
-        const storedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia(
-            '(prefers-color-scheme: dark)'
-        ).matches;
-
-        const initialTheme = storedTheme ? storedTheme === 'dark' : prefersDark;
-        setIsDarkMode(initialTheme);
-        document.documentElement.classList.toggle('dark', initialTheme);
-    }, []);
-
-    useEffect(() => {
-        document.documentElement.classList.toggle('dark', isDarkMode);
-        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-    }, [isDarkMode]);
-
-    const handleToggle = () => {
-        setIsDarkMode((prev) => !prev);
-    };
-
+const ThemeToggle: React.FC<ThemeToggleProps> = ({ isDarkMode, onToggle }) => {
     return (
         <ToggleContainer>
             {isDarkMode ? (
@@ -107,7 +72,7 @@ const ThemeToggle = () => {
                 <Checkbox
                     type="checkbox"
                     checked={isDarkMode}
-                    onChange={handleToggle}
+                    onChange={onToggle}
                 />
                 <Slider />
             </ToggleSwitch>
