@@ -1,5 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-.github
+.github/agents
+.github/copilot-instructions.md
 
 # Video Files
 public/videos/*
