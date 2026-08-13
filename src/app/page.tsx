@@ -2,9 +2,20 @@
 import { useTranslations } from 'next-intl';
 
 // Components
-import NextPageButton from './components/NextPageButton';
 import FeaturedProject from './components/FeaturedProject';
 import Tag from './components/Tag';
+import LinkButton from './components/LinkButton';
+import Timeline from './components/Timeline';
+import TechnologyDisplay from './components/TechnologyDisplay';
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselPrevious,
+    CarouselNext,
+} from './components/ui/carousel';
+import { Accordion } from './components/ui/accordion';
+import ContactDialog from './components/ContactDialog';
 
 //Icons
 import {
@@ -16,13 +27,494 @@ import {
     SiUnity,
     SiBlender,
     SiGooglecloud,
+    SiFlutter,
+    SiMysql,
+    SiMongodb,
+    SiNeo4J,
+    SiGitlab,
+    SiJest,
+    SiStrapi,
 } from 'react-icons/si';
+import {
+    FaReact,
+    FaArrowRight,
+    FaNodeJs,
+    FaPython,
+    FaJava,
+    FaWindows,
+    FaApple,
+    FaLinux,
+    FaServer,
+    FaDatabase,
+    FaCode,
+    FaCogs,
+    FaDesktop,
+    FaTools,
+    FaDocker,
+    FaCube,
+    FaBrain,
+    FaVrCardboard,
+} from 'react-icons/fa';
+import { FaGitAlt } from 'react-icons/fa6';
 import { VscAzure } from 'react-icons/vsc';
-import { FaPython } from 'react-icons/fa';
 import { BsHeadsetVr } from 'react-icons/bs';
 
 export default function Home() {
     const t = useTranslations('HomePage');
+
+    // Content
+    const timelineItems = [
+        {
+            title: t('project1-title'),
+            date: '2024',
+            description: t('project1-description'),
+            tag: 'VR',
+            tagColor: 'bg-red-200',
+            tag2: 'AI',
+            tag2Color: 'bg-blue-200',
+            iconColor: 'bg-red-200',
+        },
+        {
+            title: t('project2-title'),
+            date: '2024',
+            description: t('project2-description'),
+            tag: 'Python',
+            tagColor: 'bg-yellow-200',
+            tag2: 'AI',
+            tag2Color: 'bg-blue-200',
+            iconColor: 'bg-yellow-200',
+        },
+        {
+            title: t('project3-title'),
+            date: '2024',
+            description: t('project3-description'),
+            tag: 'React',
+            tagColor: 'bg-green-200',
+            tag2: 'AI',
+            tag2Color: 'bg-blue-200',
+            iconColor: 'bg-green-200',
+        },
+        {
+            title: t('project4-title'),
+            date: '2023-2024',
+            description: t('project4-description'),
+            tag: 'React',
+            tagColor: 'bg-green-200',
+            iconColor: 'bg-green-200',
+        },
+        {
+            title: t('project5-title'),
+            date: '2022-2023',
+            description: t('project5-description'),
+            tag: 'Node.js',
+            tagColor: 'bg-orange-200',
+            tag2: 'Flutter',
+            tag2Color: 'bg-purple-200',
+            iconColor: 'bg-orange-200',
+        },
+    ];
+
+    const technologySections = [
+        {
+            title: 'Frontend',
+            icon: <FaCode />,
+            borderColor: 'border-blue-500',
+            titleColor: 'text-blue-500',
+            iconGradientFrom: 'from-blue-500',
+            iconGradientTo: 'to-blue-600',
+            technologies: [
+                {
+                    text: 'React',
+                    color: '#61DAFB',
+                    icon: <FaReact />,
+                    borderColor: '#3B82F6',
+                },
+                {
+                    text: 'Next.js',
+                    color: '#fff',
+                    icon: '/images/nextjs-icon.png',
+                    borderColor: '#3B82F6',
+                },
+                {
+                    text: 'Flutter',
+                    color: '#02569B',
+                    icon: <SiFlutter />,
+                    borderColor: '#3B82F6',
+                },
+                {
+                    text: 'Unity',
+                    color: '#000000',
+                    icon: <SiUnity />,
+                    borderColor: '#3B82F6',
+                },
+            ],
+        },
+        {
+            title: 'Backend',
+            icon: <FaServer />,
+            borderColor: 'border-green-500',
+            titleColor: 'text-green-500',
+            iconGradientFrom: 'from-green-500',
+            iconGradientTo: 'to-green-600',
+            technologies: [
+                {
+                    text: 'Node.js',
+                    color: '#339933',
+                    icon: <FaNodeJs />,
+                    borderColor: '#10B981',
+                },
+                {
+                    text: 'Nest.js',
+                    color: '#E0234E',
+                    icon: <SiNestjs />,
+                    borderColor: '#10B981',
+                },
+                {
+                    text: 'Python',
+                    color: '#3776AB',
+                    icon: <FaPython />,
+                    borderColor: '#10B981',
+                },
+                {
+                    text: 'Java',
+                    color: '#007396',
+                    icon: <FaJava />,
+                    borderColor: '#10B981',
+                },
+                {
+                    text: 'C#',
+                    color: '#239120',
+                    icon: '/images/c-sharp-icon.png',
+                    borderColor: '#10B981',
+                },
+            ],
+        },
+        {
+            title: t('databases'),
+            icon: <FaDatabase />,
+            borderColor: 'border-orange-500',
+            titleColor: 'text-orange-500',
+            iconGradientFrom: 'from-orange-500',
+            iconGradientTo: 'to-orange-600',
+            technologies: [
+                {
+                    text: 'MySQL',
+                    color: '#4479A1',
+                    icon: <SiMysql />,
+                    borderColor: '#F97316',
+                },
+                {
+                    text: 'PostgreSQL',
+                    color: '#336791',
+                    icon: <SiPostgresql />,
+                    borderColor: '#F97316',
+                },
+                {
+                    text: 'MongoDB',
+                    color: '#47A248',
+                    icon: <SiMongodb />,
+                    borderColor: '#F97316',
+                },
+                {
+                    text: 'InfluxDB',
+                    color: '#22ADF6',
+                    icon: <SiInfluxdb />,
+                    borderColor: '#F97316',
+                },
+                {
+                    text: 'Neo4j',
+                    color: '#008CC1',
+                    icon: <SiNeo4J />,
+                    borderColor: '#F97316',
+                },
+            ],
+        },
+        {
+            title: 'DevOps',
+            icon: <FaCogs />,
+            borderColor: 'border-purple-500',
+            titleColor: 'text-purple-500',
+            iconGradientFrom: 'from-purple-500',
+            iconGradientTo: 'to-purple-600',
+            technologies: [
+                {
+                    text: 'Git',
+                    color: '#F05032',
+                    icon: <FaGitAlt />,
+                    borderColor: '#8B5CF6',
+                },
+                {
+                    text: 'Docker',
+                    color: '#2496ED',
+                    icon: <FaDocker />,
+                    borderColor: '#8B5CF6',
+                },
+                {
+                    text: 'Docker Compose',
+                    color: '#2496ED',
+                    icon: <FaDocker />,
+                    borderColor: '#8B5CF6',
+                },
+                {
+                    text: 'Kubernetes',
+                    color: '#326CE5',
+                    icon: <SiKubernetes />,
+                    borderColor: '#8B5CF6',
+                },
+                {
+                    text: 'GitLab CI/CD',
+                    color: '#FCA326',
+                    icon: <SiGitlab />,
+                    borderColor: '#8B5CF6',
+                },
+                {
+                    text: 'Jest',
+                    color: '#C21325',
+                    icon: <SiJest />,
+                    borderColor: '#8B5CF6',
+                },
+            ],
+        },
+        {
+            title: t('os'),
+            icon: <FaDesktop />,
+            borderColor: 'border-gray-500',
+            titleColor: 'text-gray-500',
+            iconGradientFrom: 'from-gray-500',
+            iconGradientTo: 'to-gray-600',
+            technologies: [
+                {
+                    text: 'Windows',
+                    color: '#0078D6',
+                    icon: <FaWindows />,
+                    borderColor: '#6B7280',
+                },
+                {
+                    text: 'macOS',
+                    color: '#000000',
+                    icon: <FaApple />,
+                    borderColor: '#6B7280',
+                },
+                {
+                    text: 'Linux',
+                    color: '#FCC624',
+                    icon: <FaLinux />,
+                    borderColor: '#6B7280',
+                },
+            ],
+        },
+        {
+            title: t('other'),
+            icon: <FaTools />,
+            borderColor: 'border-cyan-500',
+            titleColor: 'text-cyan-500',
+            iconGradientFrom: 'from-cyan-500',
+            iconGradientTo: 'to-cyan-600',
+            technologies: [
+                {
+                    text: t('blender'),
+                    color: '#F5792A',
+                    icon: <FaCube />,
+                    borderColor: '#06B6D4',
+                },
+                {
+                    text: t('ProcessModeling'),
+                    color: '#4285F4',
+                    icon: <FaCogs />,
+                    borderColor: '#06B6D4',
+                },
+                {
+                    text: t('nginx'),
+                    color: '#009639',
+                    icon: <FaServer />,
+                    borderColor: '#06B6D4',
+                },
+                {
+                    text: t('rpa'),
+                    color: '#FF6B35',
+                    icon: <FaCogs />,
+                    borderColor: '#06B6D4',
+                },
+                {
+                    text: t('vr'),
+                    color: '#FF4081',
+                    icon: <FaVrCardboard />,
+                    borderColor: '#06B6D4',
+                },
+                {
+                    text: t('ai'),
+                    color: '#9C27B0',
+                    icon: <FaBrain />,
+                    borderColor: '#06B6D4',
+                },
+            ],
+        },
+    ];
+
+    const featuredProjects = [
+        <FeaturedProject
+            key="project1"
+            title={t('Featured_Project1_title')}
+            imageSrc="/images/heatingApp.png"
+            description={[
+                t('Featured_Project1_desc1'),
+                t('Featured_Project1_desc2'),
+                t('Featured_Project1_desc3'),
+                t('Featured_Project1_desc4'),
+                t('Featured_Project1_desc5'),
+            ]}
+            links={[
+                {
+                    url: 'https://www.secai-energy.de/',
+                    label: 'SECAI',
+                    icon: '/images/secai_icon.webp',
+                },
+                {
+                    url: 'https://www.bmwk.de/Redaktion/DE/Schlaglichter-der-Wirtschaftspolitik/2023/06/09-neues-technologieprogramm-edge-datenwirtschaft.html',
+                    label: 'BMWE',
+                },
+            ]}
+            tags={[
+                <Tag
+                    key="nestjs"
+                    text="Nest.js"
+                    icon={<SiNestjs />}
+                    color="#dd3f58"
+                    variant="minimal"
+                />,
+                <Tag
+                    key="docker"
+                    text="Docker"
+                    icon={<SiDocker />}
+                    color="#4888eb"
+                    variant="minimal"
+                />,
+                <Tag
+                    key="kubernetes"
+                    text="K8s"
+                    icon={<SiKubernetes />}
+                    color="#538de3"
+                    variant="minimal"
+                />,
+                <Tag
+                    key="postgresql"
+                    text="PostgreSQL"
+                    icon={<SiPostgresql />}
+                    color="#3d648f"
+                    variant="minimal"
+                />,
+                <Tag
+                    key="influxdb"
+                    text="InfluxDB"
+                    icon={<SiInfluxdb />}
+                    color="#5e00a9"
+                    variant="minimal"
+                />,
+                <Tag
+                    key="iothub"
+                    text="IoT-Hub"
+                    icon={<VscAzure />}
+                    color="#759d22"
+                    variant="minimal"
+                />,
+            ]}
+        />,
+        <FeaturedProject
+            key="project2"
+            title={t('Featured_Project2_title')}
+            imageSrc="/images/readingTandemMain.png"
+            imageSrc2="/images/readingTandemCropped.png"
+            description={[
+                t('Featured_Project2_desc1'),
+                t('Featured_Project2_desc2'),
+                t('Featured_Project2_desc3'),
+                t('Featured_Project2_desc4'),
+                t('Featured_Project2_desc5'),
+                t('Featured_Project2_desc6'),
+            ]}
+            tags={[
+                <Tag
+                    key="unity"
+                    text="Unity"
+                    color="#000000"
+                    icon={<SiUnity />}
+                    variant="minimal"
+                />,
+                <Tag
+                    key="blender"
+                    text="Blender"
+                    color="#f4792b"
+                    icon={<SiBlender />}
+                    variant="minimal"
+                />,
+                <Tag
+                    key="python"
+                    text="Python"
+                    color="#3776AB"
+                    icon={<FaPython />}
+                    variant="minimal"
+                />,
+                <Tag
+                    key="googlecloud"
+                    text="GCloud"
+                    color="#4285F4"
+                    icon={<SiGooglecloud />}
+                    variant="minimal"
+                />,
+                <Tag
+                    key="metaquest"
+                    text="MetaQuest"
+                    color="#4267B2"
+                    icon={<BsHeadsetVr />}
+                    variant="minimal"
+                />,
+            ]}
+        />,
+        <FeaturedProject
+            key="project3"
+            title={t('Featured_Project3_title')}
+            imageSrc="/images/crai-logo-blau-pink.svg"
+            description={[
+                t('Featured_Project3_desc1'),
+                t('Featured_Project3_desc2'),
+                t('Featured_Project3_desc3'),
+                t('Featured_Project3_desc4'),
+                t('Featured_Project3_desc5'),
+            ]}
+            tags={[
+                <Tag
+                    key="nextjs"
+                    text="Next.js"
+                    icon="/images/nextjs-icon.png"
+                    color="#fcfcfc"
+                    borderColor="#000"
+                    variant="minimal"
+                />,
+                <Tag
+                    key="docker"
+                    text="Docker"
+                    icon={<SiDocker />}
+                    color="#4888eb"
+                    variant="minimal"
+                />,
+                <Tag
+                    key="strapi"
+                    text="Strapi"
+                    icon={<SiStrapi />}
+                    color="#4945ff"
+                    variant="minimal"
+                />,
+                <Tag
+                    key="postgresql"
+                    text="PostgreSQL"
+                    icon={<SiPostgresql />}
+                    color="#3d648f"
+                    variant="minimal"
+                />,
+            ]}
+        />,
+    ];
+
     return (
         <>
             <div className="flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center p-4">
@@ -37,147 +529,172 @@ export default function Home() {
                     }}
                 />
 
-                <h1 className="mb-8 text-center text-5xl font-bold">
+                <h1 className="mb-12 text-center text-5xl font-bold">
                     {t('hi-text')}
                 </h1>
 
-                <p className="mb-8 max-w-xl text-center text-xl font-bold">
-                    {t('personal-description')}
-                </p>
+                <div className="text-block mb-8 flex max-w-2xl flex-col gap-8 text-xl font-bold">
+                    <p>{t('personal-description')}</p>
+                    <p>{t('personal-description2')}</p>
+                </div>
             </div>
 
-            {/** Featured Projects */}
-            <div className="flex flex-col items-center justify-center gap-8 p-4">
-                <h1 className="text-3xl font-bold text-accentColor">
-                    {t('Featured_Projects')}
-                </h1>
-                <FeaturedProject
-                    title={t('Featured_Project1_title')}
-                    imageSrc="/images/heatingApp.png"
-                    description={[
-                        t('Featured_Project1_desc1'),
-                        t('Featured_Project1_desc2'),
-                        t('Featured_Project1_desc3'),
-                        t('Featured_Project1_desc4'),
-                        t('Featured_Project1_desc5'),
-                    ]}
-                    links={[
-                        {
-                            url: 'https://www.secai-energy.de/',
-                            label: 'SECAI',
-                            icon: '/images/secai_icon.webp',
-                        },
-                        {
-                            url: 'https://www.bmwk.de/Redaktion/DE/Schlaglichter-der-Wirtschaftspolitik/2023/06/09-neues-technologieprogramm-edge-datenwirtschaft.html',
-                            label: 'BMWE',
-                        },
-                    ]}
-                    tags={[
-                        <Tag
-                            key="nestjs"
-                            text="Nest.js"
-                            icon={<SiNestjs />}
-                            color="#dd3f58"
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="Docker"
-                            key="docker"
-                            icon={<SiDocker />}
-                            color="#4888eb"
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="K8s"
-                            key="kubernetes"
-                            icon={<SiKubernetes />}
-                            color="#538de3"
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="PostgreSQL"
-                            key="postgresql"
-                            icon={<SiPostgresql />}
-                            color="#3d648f"
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="InfluxDB"
-                            key="influxdb"
-                            icon={<SiInfluxdb />}
-                            color="#5e00a9"
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="IoT-Hub"
-                            key="iothub"
-                            icon={<VscAzure />}
-                            color="#759d22"
-                            variant="minimal"
-                        />,
-                    ]}
-                />
+            <div className="flex w-full flex-col items-center gap-20">
+                {/** Featured Projects */}
+                <div className="flex flex-col items-center justify-center gap-8 p-4">
+                    <h1 className="text-3xl font-bold text-accentColor">
+                        {t('Featured_Projects')}
+                    </h1>
 
-                <FeaturedProject
-                    title={t('Featured_Project2_title')}
-                    imageSrc="/images/readingTandemMain.png"
-                    imageSrc2="/images/readingTandemCropped.png"
-                    description={[
-                        t('Featured_Project2_desc1'),
-                        t('Featured_Project2_desc2'),
-                        t('Featured_Project2_desc3'),
-                        t('Featured_Project2_desc4'),
-                        t('Featured_Project2_desc5'),
-                        t('Featured_Project2_desc6'),
-                    ]}
-                    tags={[
-                        <Tag
-                            text="Unity"
-                            key="unity"
-                            color="#000000"
-                            icon={<SiUnity />}
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="Blender"
-                            key="blender"
-                            color="#f4792b"
-                            icon={<SiBlender />}
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="Python"
-                            key="python"
-                            color="#3776AB"
-                            icon={<FaPython />}
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="GCloud"
-                            key="googlecloud"
-                            color="#4285F4"
-                            icon={<SiGooglecloud />}
-                            variant="minimal"
-                        />,
-                        <Tag
-                            text="MetaQuest"
-                            key="metaquest"
-                            color="#4267B2"
-                            icon={<BsHeadsetVr />}
-                            variant="minimal"
-                        />,
-                    ]}
-                />
+                    <div className="flex flex-col items-center gap-8 md:hidden">
+                        {featuredProjects}
+                    </div>
+
+                    <Carousel
+                        opts={{ align: 'center', loop: true }}
+                        className="hidden w-full max-w-5xl md:block"
+                    >
+                        <CarouselContent className="-ml-4">
+                            {featuredProjects.map((project, index) => (
+                                <CarouselItem
+                                    key={index}
+                                    className="basis-[85%] pl-4 sm:basis-3/4 md:basis-2/3"
+                                >
+                                    {project}
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+
+                        <CarouselPrevious />
+                        <CarouselNext />
+                    </Carousel>
+                </div>
+
+                {/* Universities & Work */}
+                <div className="flex w-full max-w-6xl flex-col gap-8 px-4 lg:flex-row lg:gap-6 lg:px-0">
+                    <div className="flex flex-1 flex-col">
+                        <h1 className="mb-3 text-2xl font-bold">
+                            {t('universities')}
+                        </h1>
+                        <div className="flex flex-col gap-3">
+                            <div className="flex flex-col gap-3 rounded-lg border bg-accent p-3 shadow-sm">
+                                <LinkButton
+                                    text="Universität Osnabrück"
+                                    color="white"
+                                    icon="/images/uni-osna.png"
+                                    textColor="darkRed"
+                                    link="https://www.uni-osnabrueck.de/startseite/"
+                                />
+                                <p className="text-sm font-medium text-foreground">
+                                    2021-2024: Master Business Information
+                                    Systems
+                                </p>
+                            </div>
+                            <div className="flex flex-col gap-3 rounded-lg border bg-accent p-3 shadow-sm">
+                                <LinkButton
+                                    text="Universidad Valladolid"
+                                    color="rgb(181, 39, 84)"
+                                    icon="/images/uva.png"
+                                    link="https://www.uva.es/export/sites/uva/"
+                                />
+                                <p className="text-sm font-medium text-foreground">
+                                    2023: Semester abroad international commerce
+                                </p>
+                            </div>
+                            <div className="flex flex-col gap-3 rounded-lg border bg-accent p-3 shadow-sm">
+                                <LinkButton
+                                    text="DHBW-Stuttgart"
+                                    color="gray"
+                                    icon="/images/dhbw.png"
+                                    link="https://www.dhbw-stuttgart.de"
+                                />
+                                <p className="text-sm font-medium text-foreground">
+                                    2018-2021: Bachelor Business Information
+                                    Systems
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-1 flex-col">
+                        <h1 className="mb-3 text-2xl font-bold">{t('work')}</h1>
+                        <div className="flex flex-col gap-3">
+                            <div className="flex flex-col gap-3 rounded-lg border bg-accent p-3 shadow-sm">
+                                <LinkButton
+                                    text="DFKI Osnabrück"
+                                    color="white"
+                                    textColor="darkBlue"
+                                    icon="/images/dfki.jpeg"
+                                    link="https://www.dfki.de/web"
+                                />
+                                <p className="text-sm font-medium text-foreground">
+                                    2022-2024: Research assistant, since 2025:
+                                    Researcher
+                                </p>
+                            </div>
+                            <div className="flex flex-col gap-3 rounded-lg border bg-accent p-3 shadow-sm">
+                                <LinkButton
+                                    text="Nolte Küchen"
+                                    color="white"
+                                    textColor="black"
+                                    icon="/images/nolte.png"
+                                    link="https://www.nolte-kuechen.com/de-de/"
+                                />
+                                <p className="text-sm font-medium text-foreground">
+                                    2018-2021: Dual Studies
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex w-full max-w-6xl flex-col gap-12 px-4 lg:flex-row lg:items-start lg:gap-20 lg:px-0">
+                    {/* Projects Timeline */}
+                    <div className="flex flex-1 flex-col">
+                        <h1 className="mb-8 text-3xl font-bold">
+                            {t('projects')}
+                        </h1>
+                        <div className="max-w-prose pl-6 pr-6">
+                            <Timeline items={timelineItems} />
+                            <p className="text-gray-400">... {t('more')}</p>
+                        </div>
+                    </div>
+
+                    {/* Technologies Accordion */}
+                    <div className="flex flex-1 flex-col">
+                        <h1 className="mb-8 text-3xl font-bold">
+                            {t('technologies')}
+                        </h1>
+                        <Accordion className="flex w-full flex-col gap-4">
+                            {technologySections.map((section, index) => (
+                                <TechnologyDisplay
+                                    key={index}
+                                    value={index}
+                                    {...section}
+                                />
+                            ))}
+                        </Accordion>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 className="mt-12 text-center text-lg font-bold text-emphasis">
+                        {t('curious')}
+                    </h2>
+
+                    <div className="m-4 flex items-center justify-center">
+                        <ContactDialog
+                            triggerClassName="group flex items-center rounded-full border-2 border-solid border-foreground bg-background pb-2 pl-8 pr-8 pt-2 text-lg font-bold text-foreground shadow transition duration-300 hover:bg-foreground hover:text-background md:border-[0.2rem] md:text-2xl"
+                            trigger={
+                                <>
+                                    {t('contactMe')}
+                                    <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                                </>
+                            }
+                        />
+                    </div>
+                </div>
             </div>
-
-            <h2 className="mt-12 text-center text-lg font-bold text-emphasis">
-                {t('curious')}
-            </h2>
-
-            <NextPageButton
-                link="/portfolio"
-                text="nextPageButtonText-Portfolio"
-            />
         </>
     );
 }

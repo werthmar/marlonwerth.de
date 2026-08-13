@@ -20,8 +20,10 @@
     },
 
     "HomePage": {
+        "contactMe": "Contact Me",
         "hi-text": "Hi, I'm Marlon",
-        "personal-description": "I’m a full-stack web developer who loves building user-focused solutions with modern tech, blending research insights with creativity in XR and 3D art.",
+        "personal-description": "I'm a full-stack web developer who blends technical expertise with creativity in XR and 3D art, staying flexible to find the best-fit technology and system architecture for each individual problem. Every project starts with research and careful planning, backed by solid project management practices.",
+        "personal-description2": "Throughout the project I communicate and collaborate closely with clients, build the full application stack, and self-host it end to end, including Kubernetes setups, while documenting everything in detail. My focus is always on quality, maintainability and extensibility, guided by the optimal solution for each target audience and use case.",
         "Featured_Projects": "Featured Projects",
 
         "Featured_Project1_title": "SECAI Smart Heating App",
@@ -39,10 +41,14 @@
         "Featured_Project2_desc5": "Conducted multiple tests with experts and the target audience to refine the application.",
         "Featured_Project2_desc6": "Published findings in a research paper.",
 
-        "curious": "Have I sparked your curiosity?"
-    },
+        "Featured_Project3_title": "Crai Platform",
+        "Featured_Project3_desc1": "Developed a platform that helps organizations evaluate their AI use cases against EU AI Act requirements and compliance obligations.",
+        "Featured_Project3_desc2": "Proposed the system architecture and designed the platform structure in close collaboration with the customer to match their specific workflows.",
+        "Featured_Project3_desc3": "Built on a fully CMS-driven content model (Strapi) for long-term expandability and maintainability without requiring code changes.",
+        "Featured_Project3_desc4": "Connected the frontend to AI services through a custom backend to automate the evaluation logic.",
+        "Featured_Project3_desc5": "Implemented user management and role-based access control for the use case directory, ensuring secure multi-tenant access.",
 
-    "PortfolioPage": {
+        "curious": "Have I sparked your curiosity?",
         "text1": "During my studies and professional experience, I had the opportunity to work with various technologies, databases, and tools. I also participated in a wide range of projects, both in my free time and within professional settings, which allowed me to deepen my technical skills and gain diverse practical experience.",
         "universities": "Universities",
         "work": "Work",

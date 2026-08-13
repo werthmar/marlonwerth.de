@@ -14,6 +14,10 @@ import ClientOnly from './components/ClientOnly';
 
 // Style
 import './globals.css';
+import { Inter } from 'next/font/google';
+import { cn } from '@/lib/utils';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
     title: 'Marlon Werth',
@@ -32,10 +36,10 @@ export default async function RootLayout({
     const messages = await getMessages();
 
     return (
-        <html lang={locale}>
+        <html lang={locale} className={cn('font-sans', inter.variable)}>
             <body className={`antialiased`}>
                 <NextIntlClientProvider messages={messages}>
-                    <Navbar initialLocale={locale} />
+                    <Navbar initialLocale={locale as 'en' | 'de' | 'es'} />
                     <Template>{children}</Template>
                     {/* Custom Wrapper to prevent use client on root layout*/}
                     <ClientOnly>

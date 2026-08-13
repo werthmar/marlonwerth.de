@@ -20,8 +20,10 @@
     },
 
     "HomePage": {
+        "contactMe": "Contáctame",
         "hi-text": "Hola, soy Marlon",
-        "personal-description": "Soy un desarrollador web full-stack que ama crear soluciones centradas en el usuario con tecnología moderna, combinando conocimientos de investigación con creatividad en XR y arte 3D.",
+        "personal-description": "Soy un desarrollador web full-stack que combina la experiencia técnica con la creatividad en XR y arte 3D, manteniéndome flexible para encontrar la tecnología y arquitectura de sistema más adecuada para cada problema. Cada proyecto comienza con investigación y una planificación cuidadosa, respaldada por buenas prácticas de gestión de proyectos.",
+        "personal-description2": "A lo largo de todo el proceso, me comunico y coordino estrechamente con los clientes, desarrollo la aplicación completa (full-stack) y la alojo yo mismo, incluyendo configuraciones de Kubernetes, documentando todo en detalle. Mi enfoque está siempre en la calidad, mantenibilidad y escalabilidad, guiado por la solución óptima según el público objetivo y el caso de uso.",
         "Featured_Projects": "Proyectos Destacados",
 
         "Featured_Project1_title": "SECAI Aplicación de Calefacción AI",
@@ -39,19 +41,23 @@
         "Featured_Project2_desc5": "Realicé múltiples pruebas con expertos y la audiencia objetivo para perfeccionar la aplicación.",
         "Featured_Project2_desc6": "Publiqué los hallazgos en un artículo de investigación.",
 
-        "curious": "¿He despertado tu curiosidad?"
-    },
+        "Featured_Project3_title": "Plataforma Crai",
+        "Featured_Project3_desc1": "Desarrollo de una plataforma que ayuda a las organizaciones a evaluar sus casos de uso de IA conforme a los requisitos y obligaciones de la Ley de IA de la UE.",
+        "Featured_Project3_desc2": "Propuesta de la arquitectura del sistema y diseño de la estructura de la plataforma en estrecha colaboración con el cliente para adaptarse a sus flujos de trabajo específicos.",
+        "Featured_Project3_desc3": "Construida sobre un modelo de contenido totalmente gestionado por CMS (Strapi) para una expansión y mantenimiento a largo plazo sin cambios de código.",
+        "Featured_Project3_desc4": "Conexión del frontend con servicios de IA a través de un backend personalizado para automatizar la lógica de evaluación.",
+        "Featured_Project3_desc5": "Implementación de gestión de usuarios y control de acceso basado en roles para el directorio de casos de uso, garantizando un acceso multiinquilino seguro.",
 
-    "PortfolioPage": {
+        "curious": "¿He despertado tu curiosidad?",
         "text1": "Durante mis estudios y mi experiencia profesional, tuve la oportunidad de trabajar con diversas tecnologías, bases de datos y herramientas. También participé en una amplia gama de proyectos, tanto en mi tiempo libre como en entornos profesionales, que me permitieron profundizar en mis conocimientos técnicos y adquirir experiencia práctica diversa.",
-        "universities": "Universidaded",
+        "universities": "Universidades",
         "work": "Trabajo",
         "technologies": "Tecnologías",
-        "development": "Desarollo",
+        "development": "Desarrollo",
         "databases": "Base de datos",
         "os": "Sistema de operación",
         "ProcessModeling": "Modelado de procesos con BPMN y eEPK, Realicé talleres en el lugar de trabajo y en universidades sobre estos temas",
-        "other": "Otros Herramientas",
+        "other": "Otras Herramientas",
         "nginx": "Webhosting con Nginx en un Linux servidor",
         "blender": "Modelado 3D, texturización, rigging y animación en Blender",
         "rpa": "Robotic Process Automation",
