@@ -1,0 +1,16 @@
+src/app/components/ui/skeleton.tsx
+  h_3747119e8eb777 1-13
+src/app/loading.tsx
+  h_3747119e8eb777 1-61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "547a2c2ffade9ca6dd3f8c88349d54343d47d827",
+  "prompts": {},
+  "humans": {
+    "h_3747119e8eb777": {
+      "author": "Marlon Werth <marlon.werth@dfki.de>"
+    }
+  }
+}
