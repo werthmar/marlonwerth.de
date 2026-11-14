@@ -17,9 +17,9 @@ export default {
                 ink: 'var(--ink)',
                 muted: 'var(--muted)',
                 line: 'var(--line)',
-                mint: 'var(--mint)',
-                'mint-ink': 'var(--mint-ink)',
-                'on-mint': 'var(--on-mint)',
+                ice: 'var(--ice)',
+                'ice-ink': 'var(--ice-ink)',
+                'on-ice': 'var(--on-ice)',
                 // shadcn primitives
                 background: 'var(--background)',
                 foreground: 'var(--foreground)',
