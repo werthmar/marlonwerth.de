@@ -40,7 +40,8 @@ CI (`.github/workflows/ci.yml`) runs on pushes to `main` and on PRs: lint, typec
 ## Architecture
 
 - **Single page.** Almost all content is in `src/app/page.tsx` (`Home`), built from components in `src/app/components/`. Other routes: `src/app/impressum/page.tsx` (legal notice) and `src/app/api/contact/route.ts` (POST endpoint for the contact form).
-- `src/app/layout.tsx` wraps every page in `ThemeProvider` (next-themes, `class` on `<html>`, storage key `theme`), `NextIntlClientProvider`, `Navbar`, `ScrollDownButton` and `Footer`. `src/app/template.tsx` fades/slides each page in with framer-motion; Next applies it automatically, so don't also render it in the layout.
+- `src/app/layout.tsx` wraps every page in `ThemeProvider` (next-themes, `class` on `<html>`, storage key `theme`), `NextIntlClientProvider`, `Navbar` (sticky header with language and theme controls) and `Footer`.
+- Visual system: tokens in `src/app/globals.css` and `tailwind.config.ts`, documented in `DESIGN.md`; product context in `PRODUCT.md`. Motion respects `prefers-reduced-motion`.
 - Dark mode: Tailwind `darkMode: 'class'`. Read the theme with `useTheme()` and only after hydration (see `Navbar.tsx`), otherwise the first client render disagrees with the server HTML and React keeps the stale attributes.
 - Path alias: `@/*` → `src/*`.
 
