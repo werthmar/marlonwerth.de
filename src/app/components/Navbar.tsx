@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState, useSyncExternalStore } from 'react';
+import { useTheme } from 'next-themes';
 import { FaBriefcase, FaFileAlt } from 'react-icons/fa';
 
 // Localization
@@ -21,29 +22,24 @@ interface NavbarProps {
 
 const CV_PDF_PATH = '/marlon-werth-cv.pdf';
 const CV_PDF_FILENAME = 'Marlon_Werth_CV.pdf';
+const noopSubscribe = () => () => {};
 
 const Navbar: React.FC<NavbarProps> = ({ initialLocale }) => {
     const t = useTranslations('Navbar');
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const { resolvedTheme, setTheme } = useTheme();
+    // The server can't know the theme. Render as light until hydrated so the
+    // first client render matches the server HTML, then switch.
+    const hydrated = useSyncExternalStore(
+        noopSubscribe,
+        () => true,
+        () => false
+    );
+    const isDarkMode = hydrated && resolvedTheme === 'dark';
     const [currentLocale, setCurrentLocale] = useState<Locale>(
         initialLocale ?? defaultLocale
     );
 
-    // Corrects the SSR default once localStorage/OS preference is known client-side
-    useEffect(() => {
-        const storedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia(
-            '(prefers-color-scheme: dark)'
-        ).matches;
-        setIsDarkMode(storedTheme ? storedTheme === 'dark' : prefersDark);
-    }, []);
-
-    useEffect(() => {
-        document.documentElement.classList.toggle('dark', isDarkMode);
-        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-    }, [isDarkMode]);
-
-    const handleToggleTheme = () => setIsDarkMode((prev) => !prev);
+    const handleToggleTheme = () => setTheme(isDarkMode ? 'light' : 'dark');
 
     const handleSelectLocale = (locale: Locale) => {
         setUserLocale(locale);
@@ -112,7 +108,6 @@ const Navbar: React.FC<NavbarProps> = ({ initialLocale }) => {
                             <MobileSettings
                                 isDarkMode={isDarkMode}
                                 onToggleTheme={handleToggleTheme}
-                                currentLocale={currentLocale}
                                 onSelectLocale={handleSelectLocale}
                             />
                         </li>

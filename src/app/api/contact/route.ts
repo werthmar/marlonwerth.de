@@ -14,9 +14,15 @@ function escapeHtml(value: string) {
         .replace(/'/g, '&#39;');
 }
 
-async function readForm(request: NextRequest): Promise<ContactForm | null> {
+// Hidden "website" field in ContactDialog. People never see it, bots fill it.
+const HONEYPOT_FIELD = 'website';
+
+async function readForm(
+    request: NextRequest
+): Promise<ContactForm | 'bot' | null> {
     const body = await request.json().catch(() => null);
     if (typeof body !== 'object' || body === null) return null;
+    if (body[HONEYPOT_FIELD]) return 'bot';
     const valid = FIELDS.every(
         (field) => typeof body[field] === 'string' && body[field].trim() !== ''
     );
@@ -30,6 +36,10 @@ export async function POST(request: NextRequest) {
             { error: 'All fields are required' },
             { status: 400 }
         );
+    }
+    // Answer bots like a success so they don't retry, but send nothing
+    if (form === 'bot') {
+        return NextResponse.json({ message: 'Email sent successfully' });
     }
     const { name, email, subject, message } = form;
     const html = Object.fromEntries(
@@ -52,6 +62,7 @@ export async function POST(request: NextRequest) {
         const mailOptions = {
             from: process.env.SMTP_FROM || process.env.SMTP_USER,
             to: process.env.CONTACT_EMAIL,
+            replyTo: email,
             subject: `Contact Form: ${subject}`,
             html: `
                 <h2>New Contact Form Submission</h2>

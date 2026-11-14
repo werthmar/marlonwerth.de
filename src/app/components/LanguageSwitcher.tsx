@@ -4,13 +4,7 @@ import React, { useState } from 'react';
 import ReactCountryFlag from 'react-country-flag';
 import { FaCaretDown } from 'react-icons/fa';
 
-import { Locale } from '@/i18n/config';
-
-const languages: { code: Locale; label: string; flag: string }[] = [
-    { code: 'en', label: 'English', flag: 'GB' },
-    { code: 'es', label: 'Español', flag: 'ES' },
-    { code: 'de', label: 'Deutsch', flag: 'DE' },
-];
+import { Locale, languages } from '@/i18n/config';
 
 interface LanguageSwitcherProps {
     currentLocale: Locale;
@@ -28,11 +22,7 @@ export default function LanguageSwitcher({
 
     const toggleDropdown = () => setIsOpen(!isOpen);
 
-    const selectLanguage = (lang: {
-        code: Locale;
-        label: string;
-        flag: string;
-    }) => {
+    const selectLanguage = (lang: (typeof languages)[number]) => {
         setIsOpen(false);
         onSelectLocale(lang.code);
     };

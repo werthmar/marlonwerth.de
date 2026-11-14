@@ -74,6 +74,15 @@ describe('POST /api/contact', () => {
         expect(sendMail).not.toHaveBeenCalled();
     });
 
+    it('pretends success but sends nothing when the honeypot is filled', async () => {
+        const response = await POST(
+            buildRequest({ ...validPayload, website: 'https://spam.test' })
+        );
+
+        expect(response.status).toBe(200);
+        expect(sendMail).not.toHaveBeenCalled();
+    });
+
     it('escapes HTML from the form in the HTML email', async () => {
         await POST(
             buildRequest({
@@ -104,6 +113,7 @@ describe('POST /api/contact', () => {
         expect(sendMail).toHaveBeenCalledWith(
             expect.objectContaining({
                 subject: `Contact Form: ${validPayload.subject}`,
+                replyTo: validPayload.email,
                 html: expect.stringContaining(validPayload.name),
                 text: expect.stringContaining(validPayload.email),
             })
