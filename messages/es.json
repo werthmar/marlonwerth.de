@@ -1,95 +1,160 @@
 {
-    "Global": {
-        "nextPageButtonText": "Continuar",
-        "nextPageButtonText-Portfolio": "Explora mi portafolio",
-        "nextPageButtonText-CV": "Lee mi currículum",
-        "nextPageButtonText-Contact": "Ponte en contacto"
+    "Meta": {
+        "title": "Marlon Werth: diseño de software, desarrollo e integración de IA",
+        "description": "Marlon Werth diseña y construye software desde el primer boceto hasta un sistema en funcionamiento: desarrollo web y de apps, 3D y VR, integración de IA, hosting y documentación."
     },
-
     "Navbar": {
-        "home": "Inicio",
-        "portfolio": "Portafolio",
-        "cv": "Currículum Vítae",
-        "settings": "Ajustes",
-        "contact": "Contacto"
+        "skip": "Ir al contenido",
+        "home": "Marlon Werth, volver arriba",
+        "services": "Servicios",
+        "work": "Proyectos",
+        "background": "Trayectoria",
+        "contact": "Contactar",
+        "language": "Idioma",
+        "themeToLight": "Cambiar a modo claro",
+        "themeToDark": "Cambiar a modo oscuro"
     },
-
     "Footer": {
-        "tagline": "Construyendo soluciones amigables para el usuario con investigación, creatividad y código.",
-        "imprint": "Impronta"
+        "tagline": "Software desde el primer boceto hasta un sistema en funcionamiento.",
+        "cv": "Descargar CV",
+        "imprint": "Aviso legal"
     },
-
     "HomePage": {
-        "contactMe": "Contáctame",
-        "hi-text": "Hola, soy Marlon",
-        "personal-description": "Soy un desarrollador web full-stack que combina la experiencia técnica con la creatividad en XR y arte 3D, manteniéndome flexible para encontrar la tecnología y arquitectura de sistema más adecuada para cada problema. Cada proyecto comienza con investigación y una planificación cuidadosa, respaldada por buenas prácticas de gestión de proyectos.",
-        "personal-description2": "A lo largo de todo el proceso, me comunico y coordino estrechamente con los clientes, desarrollo la aplicación completa (full-stack) y la alojo yo mismo, incluyendo configuraciones de Kubernetes, documentando todo en detalle. Mi enfoque está siempre en la calidad, mantenibilidad y escalabilidad, guiado por la solución óptima según el público objetivo y el caso de uso.",
-        "Featured_Projects": "Proyectos Destacados",
-
-        "Featured_Project1_title": "SECAI Aplicación de Calefacción AI",
-        "Featured_Project1_desc1": "Colaboré con un equipo en un proyecto financiado por BMWE para desarrollar una aplicación de servicio de calefacción inteligente, aprovechando servicios de IA para mejorar la eficiencia energética y reducir costos de calefacción.",
-        "Featured_Project1_desc2": "Desarrollé un backend en Nest.js para gestionar la comunicación con múltiples bases de datos, una aplicación cliente, y manejar la autenticación y la gestión de cuentas.",
-        "Featured_Project1_desc3": "Configuré Kubernetes en un servidor privado virtual, contenedorizando todas las aplicaciones y bases de datos con Docker para un despliegue y escalado eficiente.",
-        "Featured_Project1_desc4": "Establecí una pipeline CI/CD con GitLab para automatizar el despliegue y la gestión de la aplicación desde el repositorio hasta el VPS y la entrega al cliente.",
-        "Featured_Project1_desc5": "Integré dispositivos de socios externos, permitiendo el control y la comunicación a través del servidor backend utilizando Azure IoT Hub.",
-
-        "Featured_Project2_title": "Tándem de Lectura en VR",
-        "Featured_Project2_desc1": "Desarrollé una aplicación de VR para ayudar a los niños a aprender alemán, funcionando de forma nativa en MetaQuest con funcionalidad de seguimiento de manos, creada con Unity y Blender.",
-        "Featured_Project2_desc2": "Creé y validé el diseño mediante un enfoque de investigación en ciencia del diseño.",
-        "Featured_Project2_desc3": "Integré servicios de IA para reconocimiento de voz y validación de habilidades de lectura.",
-        "Featured_Project2_desc4": "Integré APIs de Google Cloud para servicios de traducción y texto a voz.",
-        "Featured_Project2_desc5": "Realicé múltiples pruebas con expertos y la audiencia objetivo para perfeccionar la aplicación.",
-        "Featured_Project2_desc6": "Publiqué los hallazgos en un artículo de investigación.",
-
-        "Featured_Project3_title": "Plataforma Crai",
-        "Featured_Project3_desc1": "Desarrollo de una plataforma que ayuda a las organizaciones a evaluar sus casos de uso de IA conforme a los requisitos y obligaciones de la Ley de IA de la UE.",
-        "Featured_Project3_desc2": "Propuesta de la arquitectura del sistema y diseño de la estructura de la plataforma en estrecha colaboración con el cliente para adaptarse a sus flujos de trabajo específicos.",
-        "Featured_Project3_desc3": "Construida sobre un modelo de contenido totalmente gestionado por CMS (Strapi) para una expansión y mantenimiento a largo plazo sin cambios de código.",
-        "Featured_Project3_desc4": "Conexión del frontend con servicios de IA a través de un backend personalizado para automatizar la lógica de evaluación.",
-        "Featured_Project3_desc5": "Implementación de gestión de usuarios y control de acceso basado en roles para el directorio de casos de uso, garantizando un acceso multiinquilino seguro.",
-
-        "curious": "¿He despertado tu curiosidad?",
-        "text1": "Durante mis estudios y mi experiencia profesional, tuve la oportunidad de trabajar con diversas tecnologías, bases de datos y herramientas. También participé en una amplia gama de proyectos, tanto en mi tiempo libre como en entornos profesionales, que me permitieron profundizar en mis conocimientos técnicos y adquirir experiencia práctica diversa.",
-        "universities": "Universidades",
-        "work": "Trabajo",
-        "technologies": "Tecnologías",
-        "development": "Desarrollo",
-        "databases": "Base de datos",
-        "os": "Sistema de operación",
-        "ProcessModeling": "Modelado de procesos con BPMN y eEPK, Realicé talleres en el lugar de trabajo y en universidades sobre estos temas",
-        "other": "Otras Herramientas",
-        "nginx": "Webhosting con Nginx en un Linux servidor",
-        "blender": "Modelado 3D, texturización, rigging y animación en Blender",
-        "rpa": "Robotic Process Automation",
-        "bpmn": "Habilidades de BPMN y eEPK",
-        "vr": "proyectos vr y ar con unity y unreal engine",
-        "ai": "Proyectos IA con python y scikit-learn",
-        "websockets": "Utilizando websockets para comunicación en tiempo real en aplicaciones web",
-        "projects": "Proyectos",
-        "project1-title": "Tándem de lectura VR",
-        "project1-description": "Un entrenador de lectura para niños en RV. Los niños se sitúan en un entorno inmersivo en el bosque del cuento «Caperucita Roja». Los niños tienen que leer el texto para continuar la historia. La IA comprueba la pronunciación correcta.",
-        "project2-title": "Generador de video",
-        "project2-description": "Una herramienta para generar vídeos automáticamente usando python y Google Gemini. La herramienta genera automáticamente una historia, texto a voz a partir de esa historia, así como subtítulos con la sincronización del texto a voz. A continuación, lo fusiona todo en un vídeo que elige al azar entre una serie de plantillas y lo sube a la red sin necesidad de que lo introduzca el usuario.",
-        "project3-title": "IA-Web-Dashboard",
-        "project3-description": "Un panel web para visualizar los resultados de un modelo de IA en relación con un establo inteligente. El panel utiliza un websocket para mostrar los resultados del modelo de IA en tiempo real. Además, proporciona imágenes en directo y datos en tiempo real como la temperatura y la humedad.",
-        "project4-title": "Circularity Navigator",
-        "project4-description": "Una Web-App para ayudar a las empresas a ser más sostenibles. La web permite a las empresas informarse sobre el tema de la economía circular y el diseño, así como seleccionar los principios básicos de diseño para sus productos y exportarlos.",
-        "project5-title": "BPMN Website y App",
-        "project5-description": "Web-App que permite a los usuarios crear un diagrama bpmn. El diagrama bpmn se convierte y se guarda en una base de datos Neo4j. A continuación, los pasos individuales pueden ejecutarse mediante una aplicación Flutter, que guía a los usuarios a lo largo del proceso.",
-        "more": "y mucho más"
+        "hero": {
+            "title": "Diseño y construyo software, de principio a fin.",
+            "lead": "Soy Marlon Werth, ingeniero de software e investigador en el DFKI de Osnabrück. Planifico el sistema con las personas que lo van a usar, diseño la interfaz, escribo el código, lo pongo en producción y lo documento. Donde la IA ayuda, la integro.",
+            "contact": "Contactar",
+            "cv": "Descargar CV",
+            "imageAlt": "Marlon Werth, retrato de cuerpo entero",
+            "nowLabel": "Actualmente",
+            "nowValue": "Investigador en el DFKI Osnabrück"
+        },
+        "services": {
+            "title": "Del primer boceto a un sistema en funcionamiento",
+            "intro": "La mayoría de mis proyectos necesitan varias disciplinas a la vez. Puedo encargarme del proyecto entero o unirme a tu equipo en la parte donde necesitas ayuda.",
+            "design": {
+                "title": "Diseño de software",
+                "body": "Requisitos, arquitectura del sistema y modelos de procesos en BPMN. Los defino con las personas que usarán el software antes de escribir código, y he impartido talleres sobre modelado de procesos en empresas y universidades."
+            },
+            "build": {
+                "title": "Desarrollo web y de apps",
+                "body": "Aplicaciones web full-stack con React, Next.js y Nest.js, apps móviles en Flutter y las bases de datos SQL, documentales, de series temporales y de grafos que hay detrás."
+            },
+            "xr": {
+                "title": "3D y VR",
+                "body": "Aplicaciones de VR en Unity para Meta Quest con seguimiento de manos. Modelo, rigueo y animo yo mismo los recursos 3D en Blender."
+            },
+            "ai": {
+                "title": "Integración de IA",
+                "body": "Reconocimiento de voz, modelos de lenguaje y resultados de modelos integrados en productos y en el trabajo diario, además de datos de entrenamiento sintéticos: en Godot genero vídeo térmico etiquetado para modelos de detección de caídas. En mi propio desarrollo orquesto agentes de programación de IA en la planificación, la implementación y la revisión, con tests y revisiones de código como control de calidad."
+            },
+            "ops": {
+                "title": "Hosting y operación",
+                "body": "Docker, Kubernetes en un VPS, GitLab CI/CD, GitHub Actions, Vercel y Nginx en Linux. Alojo y mantengo lo que construyo, así que el despliegue forma parte del plan desde el principio."
+            },
+            "docs": {
+                "title": "Documentación",
+                "body": "Notas de arquitectura, guías de instalación y documentos de traspaso con los que otra persona puede retomar el proyecto. Si el proyecto es un estudio, incluye un artículo de investigación."
+            }
+        },
+        "featured": {
+            "title": "Proyectos destacados",
+            "role": "Mi parte",
+            "secai": {
+                "title": "App de calefacción inteligente SECAI",
+                "summary": "Una app de servicio de calefacción de un proyecto de investigación financiado por el Ministerio Federal de Economía y Energía de Alemania (BMWE). Usa servicios de IA para reducir el consumo de energía y el coste de la calefacción. Trabajé en ella dentro de un equipo.",
+                "points": [
+                    "Construí el backend en Nest.js: autenticación, gestión de cuentas y la conexión entre varias bases de datos y la app cliente.",
+                    "Configuré Kubernetes en un servidor privado virtual y contenedoricé todos los servicios y bases de datos con Docker.",
+                    "Escribí el pipeline de GitLab CI/CD que lleva el código del repositorio al servidor y a la app.",
+                    "Conecté dispositivos de socios a través de Azure IoT Hub para que el backend pueda leerlos y controlarlos."
+                ],
+                "imageAlt": "Pantalla de resumen de la app de calefacción SECAI en un móvil Android, con el consumo de hoy y la temperatura de las habitaciones"
+            },
+            "tandem": {
+                "title": "Tándem de lectura en VR",
+                "summary": "Una app de VR que ayuda a niños y niñas a aprender a leer en alemán. Funciona de forma nativa en Meta Quest y se controla con seguimiento de manos.",
+                "points": [
+                    "Construida en Unity, con recursos 3D que hice en Blender.",
+                    "El reconocimiento de voz comprueba cómo lee cada pasaje. Las APIs de Google Cloud se encargan de la traducción y la síntesis de voz.",
+                    "Diseñada con el método Design Science Research y probada varias veces con expertos y con niños.",
+                    "Los resultados están publicados en un artículo de investigación."
+                ],
+                "imageAlt": "Menú del tándem de lectura en VR: un libro de cuentos abierto flota delante de las manos del jugador"
+            },
+            "crai": {
+                "title": "Plataforma Crai",
+                "summary": "Una plataforma en la que las organizaciones evalúan sus casos de uso de IA frente a los requisitos de la Ley de IA de la UE.",
+                "points": [
+                    "Propuse la arquitectura del sistema y di forma a la plataforma junto con el cliente según sus flujos de trabajo.",
+                    "Todo el contenido vive en Strapi, así que el cliente puede ampliar la plataforma sin cambiar código.",
+                    "Un backend propio conecta el frontend con servicios de IA que automatizan la evaluación.",
+                    "La gestión de usuarios con permisos por roles mantiene separados los casos de uso de cada organización."
+                ],
+                "imageAlt": "Logotipo de Crai"
+            }
+        },
+        "projects": {
+            "title": "Más proyectos",
+            "more": "Más en GitHub",
+            "godot": {
+                "title": "CITAH: datos térmicos sintéticos para detectar caídas",
+                "description": "Un proyecto en Godot que genera vídeos sintéticos de cámara térmica para entrenar modelos de detección de caídas. Una persona animada recorre una habitación en 3D y se cae o sigue andando, y un pipeline de shaders propio renderiza la escena como valores de calor. La salida reproduce el sensor real: dos cámaras de 60×40 unidas lado a lado, 165° de campo de visión, unos 25 fps. Cada clip incluye etiquetas que marcan cuándo empieza y termina la caída. Un paso en Python termina las imágenes y las compara con grabaciones reales de referencia, y una pequeña interfaz gráfica configura escenarios y genera clips por lotes."
+            },
+            "tandem": {
+                "title": "Tándem de lectura en VR",
+                "description": "Un entrenador de lectura para niños ambientado en el bosque de Caperucita Roja. Los niños leen la historia en voz alta para avanzar, y el reconocimiento de voz comprueba su pronunciación."
+            },
+            "video": {
+                "title": "Generador de vídeos",
+                "description": "Una herramienta en Python que escribe una historia corta con Google Gemini, la convierte en voz, sincroniza los subtítulos con el audio, lo monta todo sobre una plantilla de vídeo aleatoria y sube el resultado sin ningún paso manual."
+            },
+            "dashboard": {
+                "title": "Panel web de IA",
+                "description": "Un panel para un modelo de IA que vigila un establo inteligente. Los resultados llegan en tiempo real por websocket, junto a imágenes de cámara en directo, temperatura y humedad."
+            },
+            "circularity": {
+                "title": "Circularity Navigator",
+                "description": "Una app web con la que las empresas aprenden sobre economía circular y diseño circular. Eligen principios de diseño para sus productos y los exportan."
+            },
+            "bpmn": {
+                "title": "Web y app de BPMN",
+                "description": "Una app web para dibujar diagramas BPMN, que se guardan como grafos en Neo4j. Después, una app en Flutter guía al usuario por el proceso paso a paso."
+            }
+        },
+        "background": {
+            "title": "Trayectoria",
+            "work": "Trabajo",
+            "education": "Estudios",
+            "dfki": "Investigador desde 2025, asistente de investigación de 2022 a 2024",
+            "nolte": "Estudios duales, de 2018 a 2021",
+            "osna": "Máster en Sistemas de Información Empresarial, de 2021 a 2024",
+            "uva": "Semestre en el extranjero en comercio internacional, 2023",
+            "dhbw": "Grado en Sistemas de Información Empresarial, de 2018 a 2021"
+        },
+        "tools": {
+            "title": "Con qué trabajo",
+            "frontend": "Frontend y apps",
+            "backend": "Backend",
+            "data": "Bases de datos",
+            "ops": "DevOps y hosting",
+            "xr": "3D, VR y juegos",
+            "ai": "IA",
+            "process": "Procesos y método",
+            "bpmn": "Modelado con BPMN y EPC",
+            "workshops": "Talleres y docencia",
+            "rpa": "Automatización robótica de procesos",
+            "dsr": "Design Science Research",
+            "llm": "Modelos de lenguaje",
+            "speech": "Reconocimiento de voz",
+            "agents": "Orquestación de agentes de programación de IA"
+        },
+        "close": {
+            "title": "¿Tienes un proyecto en mente?",
+            "body": "Cuéntame qué estás construyendo y dónde necesitas ayuda.",
+            "button": "Escríbeme"
+        }
     },
-
-    "cv": {
-        "title": "Currículum Vítae",
-        "subtitle": "Experiencia Profesional y Calificaciones",
-        "document": "CV - Portafolio",
-        "download": "Descargar PDF",
-        "viewerNotSupported": "Visor de PDF no compatible en este navegador",
-        "openInNewTab": "Abrir en Nueva Pestaña",
-        "openFullscreen": "Ver en Pantalla Completa",
-        "print": "Imprimir"
-    },
-
     "Imprint": {
         "title": "Impronta",
         "section1": "Información según § 5 DDG",
@@ -110,22 +175,24 @@
         "copyright": "El contenido y las obras creadas por los operadores del sitio en estas páginas están sujetos a la ley de derechos de autor alemana. La duplicación, procesamiento, distribución y cualquier tipo de explotación fuera de los límites de la ley de derechos de autor requieren el consentimiento por escrito del respectivo autor o creador. Las descargas y copias de este sitio solo están permitidas para uso privado y no comercial. En la medida en que el contenido de este sitio no fue creado por el operador, se respetan los derechos de autor de terceros. En particular, el contenido de terceros está marcado como tal. Si, no obstante, se da cuenta de una infracción de derechos de autor, le pedimos un aviso correspondiente. Al tener conocimiento de violaciones legales, eliminaremos dicho contenido de inmediato.",
         "privacyTitle": "Privacidad",
         "privacy": "El uso de nuestro sitio web generalmente es posible sin proporcionar datos personales. En la medida en que se recopilen datos personales (por ejemplo, nombre, dirección o direcciones de correo electrónico) en nuestras páginas, esto siempre se hace de forma voluntaria, en la medida de lo posible. Estos datos no se transmitirán a terceros sin su consentimiento expreso. Señalamos que la transmisión de datos en Internet (por ejemplo, al comunicarse por correo electrónico) puede tener brechas de seguridad. No es posible una protección completa de los datos contra el acceso de terceros. El uso de los datos de contacto publicados en el marco de la obligación de impronta por parte de terceros para enviar publicidad no solicitada y materiales de información está expresamente prohibido. Los operadores de las páginas se reservan expresamente el derecho de emprender acciones legales en caso de envío no solicitado de información publicitaria, como correos electrónicos no deseados.",
-        "impressumGenerator": "Impronta del sitio web por"
+        "impressumGenerator": "Impronta del sitio web por",
+        "back": "Volver al portafolio"
     },
-
     "contact": {
-        "title": "Contáctame",
-        "fullName": "Nombre completo *",
-        "fullNamePlaceholder": "Su nombre completo",
-        "emailAddress": "Dirección de correo electrónico *",
-        "emailPlaceholder": "su.email@ejemplo.com",
-        "subject": "Asunto *",
+        "title": "Contactar",
+        "intro": "Cuéntame un poco sobre tu proyecto o el puesto. Te responderé por correo.",
+        "fullName": "Nombre",
+        "fullNamePlaceholder": "Tu nombre",
+        "emailAddress": "Correo electrónico",
+        "emailPlaceholder": "tu@empresa.com",
+        "subject": "Asunto",
         "subjectPlaceholder": "¿De qué se trata?",
-        "message": "Mensaje *",
-        "messagePlaceholder": "Su mensaje aquí...",
+        "message": "Mensaje",
+        "messagePlaceholder": "Con unas líneas basta",
         "sendMessage": "Enviar mensaje",
-        "sending": "Enviando...",
-        "successMessage": "¡Gracias! Su mensaje ha sido enviado exitosamente.",
-        "errorMessage": "Lo siento, hubo un error al enviar su mensaje. Por favor, inténtelo de nuevo."
+        "sending": "Enviando…",
+        "successMessage": "Gracias, tu mensaje está en camino. Te responderé por correo.",
+        "errorMessage": "No se pudo enviar el mensaje. Vuelve a intentarlo o escríbeme por LinkedIn.",
+        "close": "Cerrar"
     }
 }

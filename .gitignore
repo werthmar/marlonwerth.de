@@ -44,3 +44,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+server.log
+
+# design skill working files
+.taste-skill/
+.impeccable/

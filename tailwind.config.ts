@@ -1,6 +1,8 @@
+import forms from '@tailwindcss/forms';
 import type { Config } from 'tailwindcss';
 
 export default {
+    darkMode: 'class',
     content: [
         './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
         './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,20 +11,31 @@ export default {
     theme: {
         extend: {
             colors: {
+                bg: 'var(--bg)',
+                surface: 'var(--surface)',
+                'surface-2': 'var(--surface-2)',
+                ink: 'var(--ink)',
+                muted: 'var(--muted)',
+                line: 'var(--line)',
+                ice: 'var(--ice)',
+                'ice-ink': 'var(--ice-ink)',
+                'on-ice': 'var(--on-ice)',
+                // shadcn primitives
                 background: 'var(--background)',
                 foreground: 'var(--foreground)',
-                navbar: 'var(--navbar)',
-                accent: 'var(--accent)',
-                emphasis: 'var(--emphasis)',
-                accentColor: 'var(--accentColor)',
+                'muted-foreground': 'var(--muted-foreground)',
+                border: 'var(--border)',
             },
-            screens: {
-                xs: '375px', // Define the xs breakpoint
+            borderRadius: {
+                panel: '1.25rem',
             },
             boxShadow: {
-                custom: '2px 2px 10px rgba(0, 0, 0, 0.25)', // horizontal, vertical, blur, color
+                float: 'var(--shadow-float)',
+            },
+            screens: {
+                xs: '375px',
             },
         },
     },
-    plugins: [require('@tailwindcss/forms')],
+    plugins: [forms({ strategy: 'class' })],
 } satisfies Config;

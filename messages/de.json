@@ -1,95 +1,160 @@
 {
-    "Global": {
-        "nextPageButtonText": "Weiter",
-        "nextPageButtonText-Portfolio": "Besuche mein Portfolio",
-        "nextPageButtonText-CV": "Lese meinen Lebenslauf",
-        "nextPageButtonText-Contact": "Kontaktiere mich"
+    "Meta": {
+        "title": "Marlon Werth: Softwaredesign, Entwicklung und KI-Integration",
+        "description": "Marlon Werth entwirft und baut Software von der ersten Skizze bis zum laufenden System: Web- und App-Entwicklung, 3D und VR, KI-Integration, Hosting und Dokumentation."
     },
-
     "Navbar": {
-        "home": "Startseite",
-        "portfolio": "Portfolio",
-        "cv": "Lebenslauf",
-        "settings": "Einstellungen",
-        "contact": "Kontakt"
+        "skip": "Zum Inhalt springen",
+        "home": "Marlon Werth, nach oben",
+        "services": "Leistungen",
+        "work": "Projekte",
+        "background": "Werdegang",
+        "contact": "Kontakt aufnehmen",
+        "language": "Sprache",
+        "themeToLight": "Helles Design einschalten",
+        "themeToDark": "Dunkles Design einschalten"
     },
-
     "Footer": {
-        "tagline": "Entwicklung nutzerfreundlicher Lösungen mit Forschung, Kreativität und Code.",
+        "tagline": "Software von der ersten Skizze bis zum laufenden System.",
+        "cv": "Lebenslauf herunterladen",
         "imprint": "Impressum"
     },
-
     "HomePage": {
-        "contactMe": "Kontaktiere mich",
-        "hi-text": "Hallo, ich bin Marlon",
-        "personal-description": "Ich bin ein Full-Stack-Webentwickler, der technisches Know-how mit Kreativität in XR und 3D-Kunst verbindet und dabei flexibel bleibt, um für jedes Problem die passende Technologie und Systemarchitektur zu finden. Jedes Projekt beginnt mit Recherche und sorgfältiger Planung, unterstützt durch solide Projektmanagement-Methoden.",
-        "personal-description2": "Während des gesamten Prozesses kommuniziere und stimme ich mich eng mit Kunden ab, entwickle die komplette Anwendung im Full-Stack-Ansatz und hoste sie eigenständig, inklusive Kubernetes-Setups, während ich alles ausführlich dokumentiere. Mein Fokus liegt stets auf Qualität, Wartbarkeit und Erweiterbarkeit, orientiert an der optimalen Lösung für die jeweilige Zielgruppe und den Anwendungsfall.",
-        "Featured_Projects": "Ausgewählte Projekte",
-
-        "Featured_Project1_title": "SECAI KI-Heizungs-App",
-        "Featured_Project1_desc1": "Zusammenarbeit mit einem Team an einem vom BMWE geförderten Projekt zur Entwicklung einer intelligenten Heizungsdienstanwendung, die KI-Dienste nutzt, um die Energieeffizienz zu verbessern und Heizkosten zu senken.",
-        "Featured_Project1_desc2": "Entwicklung eines Nest.js-Backends zur Verwaltung der Kommunikation mit mehreren Datenbanken, einer Client-Anwendung sowie zur Handhabung von Authentifizierung und Kontoverwaltung.",
-        "Featured_Project1_desc3": "Konfiguration von Kubernetes auf einem virtuellen privaten Server, Containerisierung aller Anwendungen und Datenbanken mit Docker für effiziente Bereitstellung und Skalierung.",
-        "Featured_Project1_desc4": "Einrichtung einer CI/CD-Pipeline mit GitLab zur Automatisierung der Bereitstellung und Verwaltung der Anwendung vom Repository bis zum VPS und zur Client-Auslieferung.",
-        "Featured_Project1_desc5": "Integration mit Geräten von externen Partnern, die Steuerung und Kommunikation über den Backend-Server mit Azure IoT Hub ermöglicht.",
-
-        "Featured_Project2_title": "VR-Lesetandem",
-        "Featured_Project2_desc1": "Entwicklung einer VR-Anwendung, um Kindern beim Erlernen der deutschen Sprache zu helfen, nativ auf MetaQuest mit Hand-Tracking-Funktion, erstellt mit Unity und Blender.",
-        "Featured_Project2_desc2": "Erstellung und Validierung des Designs durch einen Design-Science-Research-Ansatz.",
-        "Featured_Project2_desc3": "Integration von KI-Diensten für Spracherkennung und Validierung von Lesefertigkeiten.",
-        "Featured_Project2_desc4": "Integration von Google Cloud APIs für Übersetzungs- und Text-to-Speech-Dienste.",
-        "Featured_Project2_desc5": "Durchführung mehrerer Tests mit Experten und der Zielgruppe, um die Anwendung zu verfeinern.",
-        "Featured_Project2_desc6": "Veröffentlichung der Ergebnisse in einem Forschungspapier.",
-        "Featured_Project3_title": "Crai Plattform",
-        "Featured_Project3_desc1": "Entwicklung einer Plattform, die Unternehmen dabei unterstützt, ihre KI-Anwendungsfälle im Hinblick auf die Anforderungen und Pflichten des EU AI Acts zu bewerten.",
-        "Featured_Project3_desc2": "Konzeption der Systemarchitektur und Gestaltung der Plattformstruktur in enger Zusammenarbeit mit dem Kunden, um dessen spezifische Arbeitsabläufe abzubilden.",
-        "Featured_Project3_desc3": "Aufbau auf einem vollständig CMS-gesteuerten Content-Modell (Strapi) für langfristige Erweiterbarkeit und Wartbarkeit ohne Code-Änderungen.",
-        "Featured_Project3_desc4": "Anbindung des Frontends an KI-Dienste über ein eigenes Backend zur Automatisierung der Bewertungslogik.",
-        "Featured_Project3_desc5": "Implementierung von Benutzerverwaltung und rollenbasierter Zugriffskontrolle für das Anwendungsfall-Verzeichnis zur Sicherstellung eines sicheren Mandantenzugriffs.",
-        "curious": "Habe ich Ihre Neugier geweckt?",
-        "text1": "Während meines Studiums und meiner Berufserfahrung hatte ich die Möglichkeit, mit verschiedenen Technologien, Datenbanken und Tools zu arbeiten. Außerdem habe ich an einer Vielzahl von Projekten teilgenommen, sowohl in meiner Freizeit als auch im beruflichen Umfeld, was mir ermöglichte, meine technischen Fähigkeiten zu vertiefen und vielfältige praktische Erfahrungen zu sammeln.",
-        "universities": "Universitäten",
-        "work": "Arbeit",
-        "technologies": "Technologien",
-        "development": "Entwicklung",
-        "databases": "Datenbanken",
-        "os": "Betriebssysteme",
-        "ProcessModeling": "Prozessmodellierung mit BPMN und eEPK, Durchführung von Workshops am Arbeitsplatz und an Universitäten zu diesen Themen",
-        "other": "Andere Tools",
-        "nginx": "Webhosting mit Nginx auf Linux-Servern",
-        "blender": "3D-Modellierung, Texturierung, Rigging und Animation in Blender",
-        "rpa": "Robotic Process Automation",
-        "bpmn": "BPMN und eEPK Fähigkeiten",
-        "vr": "VR und AR Projekte mit Unity und Unreal Engine",
-        "ai": "KI Projekte mit Python und scikit-learn",
-        "websockets": "Einsatz von Websockets für Echtzeitkommunikation in Webanwendungen",
-        "projects": "Projekte",
-        "project1-title": "VR Lesetandem",
-        "project1-description": "Ein VR-Lesetrainer für Kinder. Die Kinder befinden sich in einer immersiven Umgebung im Wald des Märchens „Rotkäppchen“. Die Kinder müssen den Text lesen, um die Geschichte fortzusetzen. Die KI überprüft die korrekte Aussprache.",
-        "project2-title": "Video Generator",
-        "project2-description": "Ein Tool zur automatischen Erstellung von Videos mit Python und Google Gemini. Das Tool generiert automatisch eine Geschichte, Text in Sprache aus dieser Geschichte sowie Untertitel mit Timing aus dem Text in Sprache. Anschließend fügt es alles zu einem Video zusammen, das es nach dem Zufallsprinzip aus einer Reihe von Vorlagen auswählt, und lädt es hoch, ohne dass eine Benutzereingabe erforderlich ist.",
-        "project3-title": "KI-Web-Dashboard",
-        "project3-description": "Ein Web-Dashboard zur Visualisierung der Ergebnisse eines KI-Modells in Bezug auf einen intelligenten Kuhstall. Das Dashboard nutzt einen Websocket, um die Ergebnisse des KI-Modells in Echtzeit anzuzeigen. Darüber hinaus bietet es Live-Bilder sowie Echtzeitdaten wie Temperatur und Luftfeuchtigkeit.",
-        "project4-title": "Circularity Navigator",
-        "project4-description": "Eine Web-App, die Unternehmen dabei hilft, nachhaltiger zu werden. Die Website ermöglicht es Unternehmen, sich über das Thema Kreislaufwirtschaft und Design zu informieren und ermöglicht es ihnen, zentrale Designprinzipien für ihre Produkte auszuwählen und zu exportieren.",
-        "project5-title": "BPMN Website und App",
-        "project5-description": "Web-App, mit der Benutzer ein bpmn-Diagramm erstellen können. Das bpmn-Diagramm wird dann konvertiert und in einer Neo4j-Datenbank gespeichert. Die einzelnen Schritte können dann mit einer Flutter-App ausgeführt werden, die den Nutzer durch den Prozess führt.",
-        "project6-title": "Crai Plattform",
-        "project6-description": "Entwicklung einer Plattform, die Unternehmen dabei unterstützt, ihre KI-Anwendungsfälle im Hinblick auf die Anforderungen und Pflichten des EU AI Acts zu bewerten.",
-        "more": "und viele mehr"
+        "hero": {
+            "title": "Ich entwerfe und baue Software, von Anfang bis Ende.",
+            "lead": "Ich bin Marlon Werth, Softwareentwickler und Forscher am DFKI in Osnabrück. Ich plane das System mit den Menschen, die es später nutzen, gestalte die Oberfläche, schreibe den Code, betreibe die Anwendung und dokumentiere sie. Wo KI hilft, baue ich sie ein.",
+            "contact": "Kontakt aufnehmen",
+            "cv": "Lebenslauf herunterladen",
+            "imageAlt": "Marlon Werth, Ganzkörperporträt",
+            "nowLabel": "Aktuell",
+            "nowValue": "Forscher am DFKI Osnabrück"
+        },
+        "services": {
+            "title": "Von der ersten Skizze bis zum laufenden System",
+            "intro": "Die meisten meiner Projekte brauchen mehrere Disziplinen gleichzeitig. Ich übernehme das ganze Projekt oder steige in Ihr Team dort ein, wo Unterstützung fehlt.",
+            "design": {
+                "title": "Softwaredesign",
+                "body": "Anforderungen, Systemarchitektur und Prozessmodelle in BPMN. Ich erarbeite sie mit den späteren Nutzerinnen und Nutzern, bevor die erste Zeile Code entsteht, und habe dazu Workshops im Unternehmen und an Hochschulen gegeben."
+            },
+            "build": {
+                "title": "Web- und App-Entwicklung",
+                "body": "Full-Stack-Webanwendungen mit React, Next.js und Nest.js, mobile Apps mit Flutter und die SQL-, Dokument-, Zeitreihen- und Graphdatenbanken dahinter."
+            },
+            "xr": {
+                "title": "3D und VR",
+                "body": "VR-Anwendungen in Unity für Meta Quest mit Handtracking. Die 3D-Modelle modelliere, rigge und animiere ich selbst in Blender."
+            },
+            "ai": {
+                "title": "KI-Integration",
+                "body": "Spracherkennung, Sprachmodelle und Modellergebnisse, eingebaut in Produkte und alltägliche Arbeitsabläufe, dazu synthetische Trainingsdaten: In Godot erzeuge ich gelabelte Wärmebildaufnahmen für Modelle zur Sturzerkennung. In meiner eigenen Entwicklung orchestriere ich KI-Coding-Agenten über Planung, Umsetzung und Review hinweg, mit Tests und Code-Reviews als Qualitätssicherung."
+            },
+            "ops": {
+                "title": "Hosting und Betrieb",
+                "body": "Docker, Kubernetes auf einem VPS, GitLab CI/CD, GitHub Actions, Vercel und Nginx unter Linux. Ich betreibe und warte, was ich baue, deshalb ist das Deployment von Anfang an Teil der Planung."
+            },
+            "docs": {
+                "title": "Dokumentation",
+                "body": "Architekturnotizen, Installationsanleitungen und Übergabedokumente, mit denen jemand anderes das Projekt übernehmen kann. Ist das Projekt eine Studie, gehört ein Forschungsartikel dazu."
+            }
+        },
+        "featured": {
+            "title": "Ausgewählte Projekte",
+            "role": "Mein Anteil",
+            "secai": {
+                "title": "SECAI Smart-Heating-App",
+                "summary": "Eine App für einen Heizungsdienst aus einem vom Bundesministerium für Wirtschaft und Energie (BMWE) geförderten Forschungsprojekt. Sie nutzt KI-Dienste, um Energieverbrauch und Heizkosten zu senken. Ich war Teil des Entwicklungsteams.",
+                "points": [
+                    "Nest.js-Backend gebaut: Authentifizierung, Kontoverwaltung und die Verbindung zwischen mehreren Datenbanken und der Client-App.",
+                    "Kubernetes auf einem virtuellen privaten Server eingerichtet und alle Dienste und Datenbanken mit Docker containerisiert.",
+                    "Die GitLab-CI/CD-Pipeline geschrieben, die den Code vom Repository auf den Server und in die App bringt.",
+                    "Geräte von Partnern über Azure IoT Hub angebunden, sodass das Backend sie auslesen und steuern kann."
+                ],
+                "imageAlt": "Übersichtsseite der SECAI-Heizungs-App auf einem Android-Smartphone mit heutigem Verbrauch und Raumtemperaturen"
+            },
+            "tandem": {
+                "title": "VR-Lesetandem",
+                "summary": "Eine VR-App, mit der Kinder Deutsch lesen lernen. Sie läuft nativ auf der Meta Quest und wird per Handtracking gesteuert.",
+                "points": [
+                    "In Unity gebaut, mit 3D-Assets, die ich in Blender erstellt habe.",
+                    "Spracherkennung prüft, wie gut ein Kind jeden Abschnitt vorliest. Google-Cloud-APIs übernehmen Übersetzung und Sprachausgabe.",
+                    "Nach der Design-Science-Research-Methode entworfen und mehrfach mit Fachleuten und Kindern getestet.",
+                    "Die Ergebnisse sind in einem Forschungsartikel veröffentlicht."
+                ],
+                "imageAlt": "Menü des VR-Lesetandems: ein aufgeschlagenes Märchenbuch schwebt vor den Händen der spielenden Person"
+            },
+            "crai": {
+                "title": "Crai-Plattform",
+                "summary": "Eine Plattform, auf der Organisationen ihre KI-Anwendungsfälle anhand der Anforderungen des EU AI Acts bewerten.",
+                "points": [
+                    "Die Systemarchitektur vorgeschlagen und die Plattform gemeinsam mit dem Kunden an seinen Arbeitsabläufen ausgerichtet.",
+                    "Alle Inhalte liegen in Strapi, sodass der Kunde die Plattform ohne Codeänderungen erweitern kann.",
+                    "Ein eigenes Backend verbindet das Frontend mit KI-Diensten, die die Bewertung automatisieren.",
+                    "Eine Benutzerverwaltung mit rollenbasierten Rechten hält die Anwendungsfälle der einzelnen Organisationen getrennt."
+                ],
+                "imageAlt": "Crai-Logo"
+            }
+        },
+        "projects": {
+            "title": "Weitere Projekte",
+            "more": "Mehr auf GitHub",
+            "godot": {
+                "title": "CITAH: synthetische Wärmebilddaten für Sturzerkennung",
+                "description": "Ein Godot-Projekt, das synthetische Wärmebildvideos zum Training von Modellen für Sturzerkennung erzeugt. Eine animierte Person läuft durch einen 3D-Raum und stürzt oder geht weiter, und eine eigene Shader-Pipeline rendert die Szene als Wärmewerte. Die Ausgabe entspricht dem echten Sensor: zwei nebeneinander zusammengesetzte 60×40-Kameras, 165° Sichtfeld, etwa 25 fps. Zu jedem Clip gehören Labels, die Beginn und Ende des Sturzes markieren. Ein Python-Schritt bereitet die Bilder nach und vergleicht sie mit echten Referenzaufnahmen, und eine kleine GUI konfiguriert Szenarien und erzeugt Clips in Serie."
+            },
+            "tandem": {
+                "title": "VR-Lesetandem",
+                "description": "Ein Lesetrainer für Kinder im Wald aus Rotkäppchen. Die Kinder lesen die Geschichte laut vor, um sie weiterzubringen, und eine Spracherkennung prüft ihre Aussprache."
+            },
+            "video": {
+                "title": "Videogenerator",
+                "description": "Ein Python-Tool, das mit Google Gemini eine kurze Geschichte schreibt, sie vertont, Untertitel passend zum Ton setzt, alles über eine zufällige Videovorlage legt und das Ergebnis ohne manuellen Schritt hochlädt."
+            },
+            "dashboard": {
+                "title": "KI-Web-Dashboard",
+                "description": "Ein Dashboard für ein KI-Modell, das einen smarten Kuhstall überwacht. Die Ergebnisse kommen per Websocket in Echtzeit an, neben Live-Kamerabildern, Temperatur und Luftfeuchtigkeit."
+            },
+            "circularity": {
+                "title": "Circularity Navigator",
+                "description": "Eine Web-App, mit der sich Unternehmen über Kreislaufwirtschaft und zirkuläres Design informieren. Sie wählen Designprinzipien für ihre Produkte aus und exportieren sie."
+            },
+            "bpmn": {
+                "title": "BPMN-Website und App",
+                "description": "Eine Web-App zum Zeichnen von BPMN-Diagrammen, die als Graph in Neo4j gespeichert werden. Eine Flutter-App führt Nutzer anschließend Schritt für Schritt durch den Prozess."
+            }
+        },
+        "background": {
+            "title": "Werdegang",
+            "work": "Beruf",
+            "education": "Studium",
+            "dfki": "Forscher seit 2025, wissenschaftliche Hilfskraft 2022 bis 2024",
+            "nolte": "Duales Studium, 2018 bis 2021",
+            "osna": "M.Sc. Wirtschaftsinformatik, 2021 bis 2024",
+            "uva": "Auslandssemester International Commerce, 2023",
+            "dhbw": "B.Sc. Wirtschaftsinformatik, 2018 bis 2021"
+        },
+        "tools": {
+            "title": "Womit ich arbeite",
+            "frontend": "Frontend und Apps",
+            "backend": "Backend",
+            "data": "Datenbanken",
+            "ops": "DevOps und Hosting",
+            "xr": "3D, VR und Games",
+            "ai": "KI",
+            "process": "Prozesse und Methoden",
+            "bpmn": "Modellierung mit BPMN und EPK",
+            "workshops": "Workshops und Lehre",
+            "rpa": "Robotic Process Automation",
+            "dsr": "Design Science Research",
+            "llm": "Sprachmodelle",
+            "speech": "Spracherkennung",
+            "agents": "Orchestrierung von KI-Coding-Agenten"
+        },
+        "close": {
+            "title": "Sie haben ein Projekt im Kopf?",
+            "body": "Erzählen Sie mir, was Sie bauen und wo Sie Unterstützung brauchen.",
+            "button": "Schreiben Sie mir"
+        }
     },
-
-    "cv": {
-        "title": "Lebenslauf",
-        "subtitle": "Berufserfahrung & Qualifikationen",
-        "document": "CV - Portfolio",
-        "download": "PDF herunterladen",
-        "viewerNotSupported": "PDF-Viewer wird in diesem Browser nicht unterstützt",
-        "openInNewTab": "In neuem Tab öffnen",
-        "openFullscreen": "Vollbild anzeigen",
-        "print": "Drucken"
-    },
-
     "Imprint": {
         "title": "Impressum",
         "section1": "Angaben gemäß § 5 DDG",
@@ -110,22 +175,24 @@
         "copyright": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.",
         "privacyTitle": "Datenschutz",
         "privacy": "Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.",
-        "impressumGenerator": "Website Impressum von"
+        "impressumGenerator": "Website Impressum von",
+        "back": "Zurück zum Portfolio"
     },
-
     "contact": {
-        "title": "Kontaktiere mich",
-        "fullName": "Vollständiger Name *",
-        "fullNamePlaceholder": "Ihr vollständiger Name",
-        "emailAddress": "E-Mail-Adresse *",
-        "emailPlaceholder": "ihre.email@beispiel.com",
-        "subject": "Betreff *",
+        "title": "Kontakt aufnehmen",
+        "intro": "Erzählen Sie mir kurz von Ihrem Projekt oder der Stelle. Ich antworte per E-Mail.",
+        "fullName": "Name",
+        "fullNamePlaceholder": "Ihr Name",
+        "emailAddress": "E-Mail",
+        "emailPlaceholder": "sie@firma.de",
+        "subject": "Betreff",
         "subjectPlaceholder": "Worum geht es?",
-        "message": "Nachricht *",
-        "messagePlaceholder": "Ihre Nachricht hier...",
+        "message": "Nachricht",
+        "messagePlaceholder": "Ein paar Zeilen reichen",
         "sendMessage": "Nachricht senden",
-        "sending": "Wird gesendet...",
-        "successMessage": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.",
-        "errorMessage": "Entschuldigung, beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+        "sending": "Wird gesendet…",
+        "successMessage": "Danke, Ihre Nachricht ist unterwegs. Ich melde mich per E-Mail.",
+        "errorMessage": "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie mir auf LinkedIn.",
+        "close": "Schließen"
     }
 }
