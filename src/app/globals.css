@@ -86,13 +86,23 @@
         text-wrap: pretty;
     }
 
-    /* Phones: running text is set justified, with hyphenation to avoid gaps. */
+    /*
+     * Phones: running text is set justified. Hyphenation (from <html lang>)
+     * breaks long words so lines don't open up wide gaps; a slightly smaller
+     * size fits more words per line, and overflow-wrap catches anything the
+     * dictionary can't split (URLs, tool names).
+     */
     @media (max-width: 639px) {
-        p,
-        li p {
+        p {
+            font-size: 1rem;
             text-align: justify;
-            hyphens: auto;
+            text-wrap: wrap;
+            overflow-wrap: break-word;
             -webkit-hyphens: auto;
+            hyphens: auto;
+            -webkit-hyphenate-limit-before: 2;
+            -webkit-hyphenate-limit-after: 3;
+            hyphenate-limit-chars: 6 2 3;
         }
     }
 
