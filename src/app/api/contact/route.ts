@@ -1,18 +1,42 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+const FIELDS = ['name', 'email', 'subject', 'message'] as const;
+type ContactForm = Record<(typeof FIELDS)[number], string>;
+
+// Form input goes into an HTML email, so it must not be able to add markup.
+function escapeHtml(value: string) {
+    return value
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+async function readForm(request: NextRequest): Promise<ContactForm | null> {
+    const body = await request.json().catch(() => null);
+    if (typeof body !== 'object' || body === null) return null;
+    const valid = FIELDS.every(
+        (field) => typeof body[field] === 'string' && body[field].trim() !== ''
+    );
+    return valid ? (body as ContactForm) : null;
+}
+
 export async function POST(request: NextRequest) {
+    const form = await readForm(request);
+    if (!form) {
+        return NextResponse.json(
+            { error: 'All fields are required' },
+            { status: 400 }
+        );
+    }
+    const { name, email, subject, message } = form;
+    const html = Object.fromEntries(
+        FIELDS.map((field) => [field, escapeHtml(form[field])])
+    ) as ContactForm;
+
     try {
-        const { name, email, subject, message } = await request.json();
-
-        // Validate required fields
-        if (!name || !email || !subject || !message) {
-            return NextResponse.json(
-                { error: 'All fields are required' },
-                { status: 400 }
-            );
-        }
-
         // Create transporter (you'll need to configure this with your email provider)
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
@@ -31,11 +55,11 @@ export async function POST(request: NextRequest) {
             subject: `Contact Form: ${subject}`,
             html: `
                 <h2>New Contact Form Submission</h2>
-                <p><strong>Name:</strong> ${name}</p>
-                <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Subject:</strong> ${subject}</p>
+                <p><strong>Name:</strong> ${html.name}</p>
+                <p><strong>Email:</strong> ${html.email}</p>
+                <p><strong>Subject:</strong> ${html.subject}</p>
                 <p><strong>Message:</strong></p>
-                <p>${message.replace(/\n/g, '<br>')}</p>
+                <p>${html.message.replace(/\n/g, '<br>')}</p>
                 <hr>
                 <p><small>Sent from your website (www.hire-marlon.de) contact form</small></p>
             `,

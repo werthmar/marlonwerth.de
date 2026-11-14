@@ -30,6 +30,16 @@ describe('locale service', () => {
         expect(await getUserLocale()).toBe(defaultLocale);
     });
 
+    it.each(['fr', '../../package', ''])(
+        'falls back to the default locale for an unknown cookie value %p',
+        async (value) => {
+            const get = jest.fn().mockReturnValue({ value });
+            mockedCookies.mockResolvedValue({ get, set: jest.fn() });
+
+            expect(await getUserLocale()).toBe(defaultLocale);
+        }
+    );
+
     it('sets the NEXT_LOCALE cookie', async () => {
         const set = jest.fn();
         mockedCookies.mockResolvedValue({ get: jest.fn(), set });

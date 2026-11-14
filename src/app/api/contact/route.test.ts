@@ -51,6 +51,47 @@ describe('POST /api/contact', () => {
         }
     );
 
+    it.each([
+        ['the body is not JSON', 'not json'],
+        ['the body is JSON null', 'null'],
+        [
+            'a field is not a string',
+            JSON.stringify({ ...validPayload, message: 5 }),
+        ],
+        [
+            'a field is only whitespace',
+            JSON.stringify({ ...validPayload, name: '   ' }),
+        ],
+    ])('returns 400 when %s', async (_, body) => {
+        const response = await POST(
+            new NextRequest('http://localhost/api/contact', {
+                method: 'POST',
+                body,
+            })
+        );
+
+        expect(response.status).toBe(400);
+        expect(sendMail).not.toHaveBeenCalled();
+    });
+
+    it('escapes HTML from the form in the HTML email', async () => {
+        await POST(
+            buildRequest({
+                ...validPayload,
+                name: '<img src=x onerror=alert(1)>',
+                message: '<a href="https://evil.test">click</a>\nbye',
+            })
+        );
+
+        const { html, text } = sendMail.mock.calls[0][0];
+        expect(html).not.toContain('<img');
+        expect(html).not.toContain('<a href');
+        expect(html).toContain('&lt;img src=x onerror=alert(1)&gt;');
+        expect(html).toContain('&lt;/a&gt;<br>bye');
+        // The plain-text part stays readable as typed
+        expect(text).toContain('<img src=x onerror=alert(1)>');
+    });
+
     it('sends the email and returns 200 on valid input', async () => {
         const response = await POST(buildRequest(validPayload));
 

@@ -1,0 +1,58 @@
+name: CI
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+
+permissions:
+    contents: read
+
+concurrency:
+    group: ci-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    check:
+        name: ${{ matrix.task }}
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                task: [lint, typecheck, test]
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  cache: npm
+            - run: npm ci
+            - run: npm run ${{ matrix.task }}
+
+    build:
+        name: build + smoke test
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  cache: npm
+            - run: npm ci
+            - run: npm run build
+            - name: Smoke test the production server
+              run: |
+                  npm start -- -p 3000 > server.log 2>&1 &
+                  curl -sf --retry 30 --retry-connrefused --retry-delay 1 -o /dev/null localhost:3000/
+                  set -x
+                  lang() { curl -sf -b "NEXT_LOCALE=$1" localhost:3000/ | grep -o '<html lang="[a-z]*"'; }
+                  # Every locale renders; an unknown cookie falls back to English
+                  for locale in en de es; do
+                      test "$(lang $locale)" = "<html lang=\"$locale\""
+                  done
+                  test "$(lang xx)" = '<html lang="en"'
+                  curl -sf -o /dev/null localhost:3000/impressum
+                  # The contact API rejects bad input before trying to send mail
+                  test "$(curl -s -o /dev/null -w '%{http_code}' -X POST -d 'not json' localhost:3000/api/contact)" = 400
+            - if: failure()
+              run: cat server.log
