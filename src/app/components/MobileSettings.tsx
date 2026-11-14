@@ -4,18 +4,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { FaCog, FaSun, FaMoon } from 'react-icons/fa';
 import ReactCountryFlag from 'react-country-flag';
 import { useTranslations } from 'next-intl';
-import { Locale } from '@/i18n/config';
-
-const languages: { code: Locale; label: string; flag: string }[] = [
-    { code: 'en', label: 'English', flag: 'GB' },
-    { code: 'es', label: 'Español', flag: 'ES' },
-    { code: 'de', label: 'Deutsch', flag: 'DE' },
-];
+import { Locale, languages } from '@/i18n/config';
 
 interface MobileSettingsProps {
     isDarkMode: boolean;
     onToggleTheme: () => void;
-    currentLocale: Locale;
     onSelectLocale: (locale: Locale) => void;
 }
 
@@ -63,11 +56,7 @@ const MobileSettings: React.FC<MobileSettingsProps> = ({
         };
     }, [isExpanded]);
 
-    const switchLanguage = (lang: {
-        code: Locale;
-        label: string;
-        flag: string;
-    }) => {
+    const switchLanguage = (lang: (typeof languages)[number]) => {
         onSelectLocale(lang.code);
         closeMenu();
     };

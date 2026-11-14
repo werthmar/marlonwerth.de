@@ -74,8 +74,6 @@
         "project4-description": "Eine Web-App, die Unternehmen dabei hilft, nachhaltiger zu werden. Die Website ermöglicht es Unternehmen, sich über das Thema Kreislaufwirtschaft und Design zu informieren und ermöglicht es ihnen, zentrale Designprinzipien für ihre Produkte auszuwählen und zu exportieren.",
         "project5-title": "BPMN Website und App",
         "project5-description": "Web-App, mit der Benutzer ein bpmn-Diagramm erstellen können. Das bpmn-Diagramm wird dann konvertiert und in einer Neo4j-Datenbank gespeichert. Die einzelnen Schritte können dann mit einer Flutter-App ausgeführt werden, die den Nutzer durch den Prozess führt.",
-        "project6-title": "Crai Plattform",
-        "project6-description": "Entwicklung einer Plattform, die Unternehmen dabei unterstützt, ihre KI-Anwendungsfälle im Hinblick auf die Anforderungen und Pflichten des EU AI Acts zu bewerten.",
         "more": "und viele mehr"
     },
 

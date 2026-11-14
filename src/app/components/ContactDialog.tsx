@@ -24,6 +24,7 @@ export default function ContactDialog({
         email: '',
         subject: '',
         message: '',
+        website: '', // honeypot, see /api/contact
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<
@@ -50,7 +51,13 @@ export default function ContactDialog({
 
             if (response.ok) {
                 setSubmitStatus('success');
-                setFormData({ name: '', email: '', subject: '', message: '' });
+                setFormData({
+                    name: '',
+                    email: '',
+                    subject: '',
+                    message: '',
+                    website: '',
+                });
             } else {
                 setSubmitStatus('error');
             }
@@ -84,6 +91,17 @@ export default function ContactDialog({
                 <DialogTitle>{tContact('title')}</DialogTitle>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
+                    {/* Honeypot: hidden from people and screen readers, bots fill it */}
+                    <input
+                        type="text"
+                        name="website"
+                        value={formData.website}
+                        onChange={handleChange}
+                        tabIndex={-1}
+                        autoComplete="off"
+                        aria-hidden="true"
+                        className="hidden"
+                    />
                     <div>
                         <label
                             htmlFor="name"
