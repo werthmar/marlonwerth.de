@@ -13,9 +13,9 @@
     --ink: #232323;
     --muted: #5c5f5d;
     --line: #e2e3e2;
-    --mint: #a1ffcb;
-    --mint-ink: #0b6b3f;
-    --on-mint: #10251a;
+    --ice: #cbe8ff;
+    --ice-ink: #0b5b94;
+    --on-ice: #0b2236;
     --header: rgb(255 255 255 / 0.72);
     --shadow-float:
         0 1px 2px rgb(0 0 0 / 0.05), 0 16px 40px -16px rgb(0 0 0 / 0.22);
@@ -40,9 +40,9 @@
     --ink: #ececec;
     --muted: #a3a8a5;
     --line: #2a2e2b;
-    --mint: #a1ffcb;
-    --mint-ink: #a1ffcb;
-    --on-mint: #10251a;
+    --ice: #bfe2ff;
+    --ice-ink: #9fd4ff;
+    --on-ice: #0b2236;
     --header: rgb(15 17 16 / 0.72);
     --shadow-float:
         0 1px 2px rgb(0 0 0 / 0.4), 0 16px 40px -16px rgb(0 0 0 / 0.7);
@@ -86,20 +86,30 @@
         text-wrap: pretty;
     }
 
+    /* Phones: running text is set justified, with hyphenation to avoid gaps. */
+    @media (max-width: 639px) {
+        p,
+        li p {
+            text-align: justify;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+        }
+    }
+
     ::selection {
-        background: var(--mint);
-        color: var(--on-mint);
+        background: var(--ice);
+        color: var(--on-ice);
     }
 
     :focus-visible {
-        outline: 2px solid var(--mint-ink);
+        outline: 2px solid var(--ice-ink);
         outline-offset: 3px;
         border-radius: 6px;
     }
 
     input,
     textarea {
-        caret-color: var(--mint-ink);
+        caret-color: var(--ice-ink);
     }
 
     * {
@@ -190,7 +200,7 @@
 
     @media (hover: hover) and (pointer: fine) {
         .btn-primary:hover {
-            background: color-mix(in srgb, var(--ink) 86%, var(--mint));
+            background: color-mix(in srgb, var(--ink) 86%, var(--ice));
         }
 
         .btn-secondary:hover {
@@ -268,7 +278,7 @@
     @keyframes breathe {
         50% {
             box-shadow: 0 0 0 6px
-                color-mix(in srgb, var(--mint) 45%, transparent);
+                color-mix(in srgb, var(--ice) 45%, transparent);
         }
     }
 
@@ -350,8 +360,8 @@
 
     .field:focus {
         outline: none;
-        border-color: var(--mint-ink);
-        box-shadow: 0 0 0 3px color-mix(in srgb, var(--mint) 55%, transparent);
+        border-color: var(--ice-ink);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--ice) 55%, transparent);
     }
 }
 

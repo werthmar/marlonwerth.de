@@ -15,7 +15,6 @@ import { Mail, Moon, Sun } from 'lucide-react';
 import { setUserLocale } from '@/services/locale';
 import { Locale, defaultLocale, locales } from '@/i18n/config';
 import ContactDialog from './ContactDialog';
-import Mark from './Mark';
 
 const noopSubscribe = () => () => {};
 
@@ -67,11 +66,9 @@ export default function Navbar({ initialLocale }: NavbarProps) {
             <div className="wrap flex h-16 items-center justify-between gap-3">
                 <Link
                     href="/"
-                    aria-label={t('home')}
-                    className="flex items-center gap-2.5 rounded-full"
+                    className="flex min-h-11 items-center rounded-md"
                 >
-                    <Mark />
-                    <span className="hidden text-[1.0625rem] font-semibold tracking-[-0.01em] sm:inline">
+                    <span className="text-[1.0625rem] font-semibold tracking-[-0.01em]">
                         Marlon Werth
                     </span>
                 </Link>

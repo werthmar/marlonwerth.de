@@ -328,7 +328,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="enter-panel relative h-[min(72vw,420px)] overflow-hidden rounded-panel bg-mint sm:h-[460px] lg:col-span-6 lg:col-start-7 lg:h-[min(716px,calc(100svh-7rem))]">
+                <div className="enter-panel relative h-[min(72vw,420px)] overflow-hidden rounded-panel bg-ice sm:h-[460px] lg:col-span-6 lg:col-start-7 lg:h-[min(716px,calc(100svh-7rem))]">
                     <Image
                         src="/images/Marlon.png"
                         alt={t('hero.imageAlt')}
@@ -341,7 +341,7 @@ export default function Home() {
                     <div className="absolute bottom-4 left-4 flex max-w-[calc(100%-2rem)] items-center gap-3 rounded-2xl bg-bg px-4 py-3 ring-1 ring-line sm:bottom-6 sm:left-6">
                         <span
                             aria-hidden
-                            className="breathe size-2.5 shrink-0 rounded-full bg-mint-ink"
+                            className="breathe size-2.5 shrink-0 rounded-full bg-ice-ink"
                         />
                         <span className="text-sm leading-tight">
                             <span className="block text-muted">
@@ -458,7 +458,7 @@ export default function Home() {
                                             >
                                                 <span
                                                     aria-hidden
-                                                    className="absolute left-0 top-[0.6em] size-1.5 rounded-full bg-mint-ink"
+                                                    className="absolute left-0 top-[0.6em] size-1.5 rounded-full bg-ice-ink"
                                                 />
                                                 {point}
                                             </li>
@@ -598,27 +598,30 @@ export default function Home() {
             >
                 <div className="wrap">
                     <h2 className="h2">{t('tools.title')}</h2>
-                    <div className="mt-10 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="mt-10 divide-y divide-line border-y border-line">
                         {toolGroups.map(({ key, tools }) => (
-                            <div key={key}>
-                                <h3 className="text-sm font-semibold text-muted">
+                            <div
+                                key={key}
+                                className="grid gap-4 py-6 md:grid-cols-12 md:gap-6"
+                            >
+                                <h3 className="pt-2.5 text-sm font-semibold text-muted md:col-span-3">
                                     {t(`tools.${key}`)}
                                 </h3>
-                                <ul className="mt-3 space-y-2.5">
+                                <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:col-span-9 lg:grid-cols-4">
                                     {tools.map((tool) => (
                                         <li
                                             key={tool.name}
-                                            className="flex items-center gap-2.5"
+                                            className="flex min-h-11 items-center gap-2.5 rounded-xl bg-bg px-3 py-2 text-[0.9375rem] leading-snug ring-1 ring-line"
                                         >
                                             {tool.icon ? (
                                                 <ToolIcon
                                                     tool={tool}
-                                                    size={17}
+                                                    size={18}
                                                 />
                                             ) : (
                                                 <span
                                                     aria-hidden
-                                                    className="mx-[5px] size-[7px] shrink-0 rounded-full bg-mint-ink"
+                                                    className="mx-[5px] size-2 shrink-0 rounded-full bg-ice-ink"
                                                 />
                                             )}
                                             {tool.name}
@@ -633,7 +636,7 @@ export default function Home() {
 
             {/* Close */}
             <section className="px-3 py-3 sm:px-4 sm:py-4">
-                <div className="rounded-panel bg-mint text-on-mint">
+                <div className="rounded-panel bg-ice text-on-ice">
                     <div className="wrap py-20 md:py-28">
                         <h2 className="max-w-[16ch] text-[clamp(2.75rem,6vw+0.5rem,6rem)] font-[450] leading-[0.98] tracking-[-0.04em]">
                             {t('close.title')}
@@ -643,7 +646,7 @@ export default function Home() {
                         </p>
                         <div className="mt-9">
                             <ContactDialog
-                                triggerClassName="btn bg-on-mint text-mint hover:bg-[#1d3a2a]"
+                                triggerClassName="btn bg-on-ice text-ice hover:bg-[#16344f]"
                                 trigger={
                                     <>
                                         {t('close.button')}

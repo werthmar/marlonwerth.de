@@ -88,7 +88,7 @@ export default function ContactDialog({
                     {status === 'success' ? (
                         <p
                             role="status"
-                            className="rounded-xl bg-mint px-4 py-3.5 text-on-mint"
+                            className="rounded-xl bg-ice px-4 py-3.5 text-on-ice"
                         >
                             {t('successMessage')}
                         </p>

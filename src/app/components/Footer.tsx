@@ -2,8 +2,6 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { SiGithub, SiLinkedin, SiOrcid } from 'react-icons/si';
 
-import Mark from './Mark';
-
 export const SOCIAL = [
     {
         label: 'LinkedIn',
@@ -24,12 +22,9 @@ export default function Footer() {
         <footer className="border-t border-line">
             <div className="wrap grid gap-10 py-14 md:grid-cols-12 md:py-16">
                 <div className="md:col-span-6">
-                    <div className="flex items-center gap-3">
-                        <Mark />
-                        <span className="text-lg font-semibold tracking-[-0.01em]">
-                            Marlon Werth
-                        </span>
-                    </div>
+                    <span className="text-lg font-semibold tracking-[-0.01em]">
+                        Marlon Werth
+                    </span>
                     <p className="mt-4 max-w-sm text-muted">{t('tagline')}</p>
                 </div>
 
