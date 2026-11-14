@@ -2,210 +2,168 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { FaArrowRight, FaEnvelope } from 'react-icons/fa';
-
-import { Dialog, DialogContent, DialogTitle, DialogTrigger } from './ui/dialog';
-import SocialLinks from './SocialLinks';
+import { Dialog } from '@base-ui/react/dialog';
+import { ArrowRight, X } from 'lucide-react';
 
 interface ContactDialogProps {
-    trigger?: React.ReactNode; // custom trigger content, defaults to the navbar envelope+label
-    triggerClassName?: string; // custom trigger styling, defaults to navbar styling
+    trigger: React.ReactNode;
+    triggerClassName?: string;
 }
+
+type Status = 'idle' | 'sending' | 'success' | 'error';
+
+// `website` is a honeypot, see /api/contact
+const EMPTY = { name: '', email: '', subject: '', message: '', website: '' };
 
 export default function ContactDialog({
     trigger,
     triggerClassName,
 }: ContactDialogProps) {
-    const tNav = useTranslations('Navbar');
-    const tContact = useTranslations('contact');
-
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-        website: '', // honeypot, see /api/contact
-    });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState<
-        'idle' | 'success' | 'error'
-    >('idle');
+    const t = useTranslations('contact');
+    const [form, setForm] = useState(EMPTY);
+    const [status, setStatus] = useState<Status>('idle');
 
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
+    ) => setForm({ ...form, [e.target.name]: e.target.value });
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setIsSubmitting(true);
-        setSubmitStatus('idle');
-
+        setStatus('sending');
         try {
             const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(form),
             });
-
-            if (response.ok) {
-                setSubmitStatus('success');
-                setFormData({
-                    name: '',
-                    email: '',
-                    subject: '',
-                    message: '',
-                    website: '',
-                });
-            } else {
-                setSubmitStatus('error');
-            }
+            if (!response.ok) throw new Error(String(response.status));
+            setStatus('success');
+            setForm(EMPTY);
         } catch (error) {
             console.error('Error submitting form:', error);
-            setSubmitStatus('error');
-        } finally {
-            setIsSubmitting(false);
+            setStatus('error');
         }
     };
 
+    const fields = [
+        { name: 'name', type: 'text', autoComplete: 'name' },
+        { name: 'email', type: 'email', autoComplete: 'email' },
+        { name: 'subject', type: 'text', autoComplete: 'off' },
+    ] as const;
+    const labels = {
+        name: [t('fullName'), t('fullNamePlaceholder')],
+        email: [t('emailAddress'), t('emailPlaceholder')],
+        subject: [t('subject'), t('subjectPlaceholder')],
+    };
+
     return (
-        <Dialog>
-            <DialogTrigger
-                className={
-                    triggerClassName ??
-                    'flex flex-col items-center hover:text-gray-400 lg:flex-row'
-                }
-            >
-                {trigger ?? (
-                    <>
-                        <FaEnvelope
-                            className="text-foreground lg:mr-2"
-                            size={25}
-                        />
-                        <span className="lg:inline">{tNav('contact')}</span>
-                    </>
-                )}
-            </DialogTrigger>
-            <DialogContent className="bg-accent">
-                <DialogTitle>{tContact('title')}</DialogTitle>
-
-                <form onSubmit={handleSubmit} className="space-y-6">
-                    {/* Honeypot: hidden from people and screen readers, bots fill it */}
-                    <input
-                        type="text"
-                        name="website"
-                        value={formData.website}
-                        onChange={handleChange}
-                        tabIndex={-1}
-                        autoComplete="off"
-                        aria-hidden="true"
-                        className="hidden"
-                    />
-                    <div>
-                        <label
-                            htmlFor="name"
-                            className="mb-2 block text-sm font-medium text-gray-700"
+        <Dialog.Root
+            onOpenChange={(open) => {
+                if (open && status !== 'sending') setStatus('idle');
+            }}
+        >
+            <Dialog.Trigger className={triggerClassName}>
+                {trigger}
+            </Dialog.Trigger>
+            <Dialog.Portal>
+                <Dialog.Backdrop className="dialog-backdrop fixed inset-0 z-50" />
+                <Dialog.Popup className="dialog-popup fixed left-1/2 top-1/2 z-50 max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-panel bg-bg p-6 text-ink shadow-float outline-none ring-1 ring-line sm:p-8">
+                    <div className="mb-6 flex items-start justify-between gap-4">
+                        <div>
+                            <Dialog.Title className="h3 !text-[1.625rem] !font-[500] !tracking-[-0.02em]">
+                                {t('title')}
+                            </Dialog.Title>
+                            <Dialog.Description className="mt-1.5 text-[0.9375rem] text-muted">
+                                {t('intro')}
+                            </Dialog.Description>
+                        </div>
+                        <Dialog.Close
+                            aria-label={t('close')}
+                            className="-mr-2 -mt-1 grid size-11 shrink-0 place-items-center rounded-full text-muted transition-colors hover:bg-surface hover:text-ink"
                         >
-                            {tContact('fullName')}
-                        </label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                            value={formData.name}
-                            onChange={handleChange}
-                            className="w-full rounded-full border border-gray-300 bg-background px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-accentColor"
-                            placeholder={tContact('fullNamePlaceholder')}
-                        />
+                            <X size={20} strokeWidth={1.75} />
+                        </Dialog.Close>
                     </div>
 
-                    <div>
-                        <label
-                            htmlFor="email"
-                            className="mb-2 block text-sm font-medium text-gray-700"
+                    {status === 'success' ? (
+                        <p
+                            role="status"
+                            className="rounded-xl bg-mint px-4 py-3.5 text-on-mint"
                         >
-                            {tContact('emailAddress')}
-                        </label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required
-                            value={formData.email}
-                            onChange={handleChange}
-                            className="w-full rounded-full border border-gray-300 bg-background px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-accentColor"
-                            placeholder={tContact('emailPlaceholder')}
-                        />
-                    </div>
+                            {t('successMessage')}
+                        </p>
+                    ) : (
+                        <form onSubmit={handleSubmit} className="grid gap-4">
+                            {/* Honeypot: hidden from people and screen readers, bots fill it */}
+                            <input
+                                type="text"
+                                name="website"
+                                value={form.website}
+                                onChange={handleChange}
+                                tabIndex={-1}
+                                autoComplete="off"
+                                aria-hidden="true"
+                                className="hidden"
+                            />
+                            {fields.map((f) => (
+                                <label key={f.name} className="grid gap-1.5">
+                                    <span className="text-sm font-medium">
+                                        {labels[f.name][0]}
+                                    </span>
+                                    <input
+                                        className="field"
+                                        type={f.type}
+                                        name={f.name}
+                                        autoComplete={f.autoComplete}
+                                        required
+                                        value={form[f.name]}
+                                        onChange={handleChange}
+                                        placeholder={labels[f.name][1]}
+                                    />
+                                </label>
+                            ))}
+                            <label className="grid gap-1.5">
+                                <span className="text-sm font-medium">
+                                    {t('message')}
+                                </span>
+                                <textarea
+                                    className="field resize-y"
+                                    name="message"
+                                    required
+                                    rows={5}
+                                    value={form.message}
+                                    onChange={handleChange}
+                                    placeholder={t('messagePlaceholder')}
+                                />
+                            </label>
 
-                    <div>
-                        <label
-                            htmlFor="subject"
-                            className="mb-2 block text-sm font-medium text-gray-700"
-                        >
-                            {tContact('subject')}
-                        </label>
-                        <input
-                            type="text"
-                            id="subject"
-                            name="subject"
-                            required
-                            value={formData.subject}
-                            onChange={handleChange}
-                            className="w-full rounded-full border border-gray-300 bg-background px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-accentColor"
-                            placeholder={tContact('subjectPlaceholder')}
-                        />
-                    </div>
+                            {status === 'error' && (
+                                <p
+                                    role="alert"
+                                    className="rounded-xl bg-[#fde8e6] px-4 py-3 text-[0.9375rem] text-[#8a1c12] dark:bg-[#3a1714] dark:text-[#ffb4aa]"
+                                >
+                                    {t('errorMessage')}
+                                </p>
+                            )}
 
-                    <div>
-                        <label
-                            htmlFor="message"
-                            className="mb-2 block text-sm font-medium text-gray-700"
-                        >
-                            {tContact('message')}
-                        </label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            required
-                            rows={5}
-                            value={formData.message}
-                            onChange={handleChange}
-                            className="w-full resize-none rounded-lg border border-gray-300 bg-background px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-accentColor"
-                            placeholder={tContact('messagePlaceholder')}
-                        />
-                    </div>
-
-                    <div className="flex justify-center">
-                        <button
-                            type="submit"
-                            disabled={isSubmitting}
-                            className="group flex items-center rounded-full border-2 border-solid border-foreground bg-background pb-2 pl-8 pr-8 pt-2 text-lg font-bold text-foreground shadow transition duration-300 hover:bg-foreground hover:text-background md:border-[0.2rem] md:text-2xl"
-                        >
-                            {isSubmitting
-                                ? tContact('sending')
-                                : tContact('sendMessage')}
-                            <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-                        </button>
-                    </div>
-                </form>
-
-                {submitStatus === 'success' && (
-                    <div className="mt-4 rounded border border-green-400 bg-green-100 p-4 text-green-700">
-                        {tContact('successMessage')}
-                    </div>
-                )}
-
-                {submitStatus === 'error' && (
-                    <div className="mt-4 rounded border border-red-400 bg-red-100 p-4 text-red-700">
-                        {tContact('errorMessage')}
-                    </div>
-                )}
-
-                <SocialLinks />
-            </DialogContent>
-        </Dialog>
+                            <button
+                                type="submit"
+                                disabled={status === 'sending'}
+                                className="btn btn-primary mt-2 w-full disabled:cursor-progress disabled:opacity-70 sm:w-auto sm:justify-self-start"
+                            >
+                                {status === 'sending'
+                                    ? t('sending')
+                                    : t('sendMessage')}
+                                <ArrowRight
+                                    size={18}
+                                    className="btn-arrow"
+                                    aria-hidden
+                                />
+                            </button>
+                        </form>
+                    )}
+                </Dialog.Popup>
+            </Dialog.Portal>
+        </Dialog.Root>
     );
 }

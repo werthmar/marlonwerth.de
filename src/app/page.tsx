@@ -1,700 +1,664 @@
-// Localization
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-
-// Components
-import FeaturedProject from './components/FeaturedProject';
-import Tag from './components/Tag';
-import LinkButton from './components/LinkButton';
-import Timeline from './components/Timeline';
-import TechnologyDisplay from './components/TechnologyDisplay';
+import { ArrowRight, ArrowUpRight, Download } from 'lucide-react';
+import type { IconType } from 'react-icons';
 import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselPrevious,
-    CarouselNext,
-} from './components/ui/carousel';
-import { Accordion } from './components/ui/accordion';
-import ContactDialog from './components/ContactDialog';
-
-//Icons
-import {
-    SiNestjs,
-    SiDocker,
-    SiKubernetes,
-    SiPostgresql,
-    SiInfluxdb,
-    SiUnity,
     SiBlender,
-    SiGooglecloud,
+    SiDocker,
     SiFlutter,
-    SiMysql,
-    SiMongodb,
-    SiNeo4J,
+    SiGit,
+    SiGithub,
+    SiVercel,
     SiGitlab,
+    SiGodotengine,
+    SiGooglecloud,
+    SiGooglegemini,
+    SiInfluxdb,
     SiJest,
+    SiKubernetes,
+    SiLinux,
+    SiMeta,
+    SiMongodb,
+    SiMysql,
+    SiNeo4J,
+    SiNestjs,
+    SiNextdotjs,
+    SiNginx,
+    SiNodedotjs,
+    SiOpenjdk,
+    SiPostgresql,
+    SiPython,
+    SiReact,
+    SiScikitlearn,
     SiStrapi,
+    SiTypescript,
+    SiUnity,
+    SiDotnet,
+    SiCamunda,
 } from 'react-icons/si';
-import {
-    FaReact,
-    FaArrowRight,
-    FaNodeJs,
-    FaPython,
-    FaJava,
-    FaWindows,
-    FaApple,
-    FaLinux,
-    FaServer,
-    FaDatabase,
-    FaCode,
-    FaCogs,
-    FaDesktop,
-    FaTools,
-    FaDocker,
-    FaCube,
-    FaBrain,
-    FaVrCardboard,
-} from 'react-icons/fa';
-import { FaGitAlt } from 'react-icons/fa6';
 import { VscAzure } from 'react-icons/vsc';
-import { BsHeadsetVr } from 'react-icons/bs';
+
+import ContactDialog from './components/ContactDialog';
+import Develop from './components/Develop';
+
+// A tool shown with its real icon. `color` is the brand colour; omit it for
+// brands whose mark is black so it follows the text colour in both themes.
+type Tool = { name: string; icon?: IconType; color?: string };
+
+const T = {
+    react: { name: 'React', icon: SiReact, color: '#149eca' },
+    next: { name: 'Next.js', icon: SiNextdotjs },
+    ts: { name: 'TypeScript', icon: SiTypescript, color: '#3178c6' },
+    flutter: { name: 'Flutter', icon: SiFlutter, color: '#0468d7' },
+    node: { name: 'Node.js', icon: SiNodedotjs, color: '#5fa04e' },
+    nest: { name: 'Nest.js', icon: SiNestjs, color: '#e0234e' },
+    python: { name: 'Python', icon: SiPython, color: '#3776ab' },
+    java: { name: 'Java', icon: SiOpenjdk },
+    csharp: { name: 'C#', icon: SiDotnet, color: '#512bd4' },
+    strapi: { name: 'Strapi', icon: SiStrapi, color: '#4945ff' },
+    mysql: { name: 'MySQL', icon: SiMysql, color: '#4479a1' },
+    postgres: { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169e1' },
+    mongo: { name: 'MongoDB', icon: SiMongodb, color: '#47a248' },
+    influx: { name: 'InfluxDB', icon: SiInfluxdb, color: '#22adf6' },
+    neo4j: { name: 'Neo4j', icon: SiNeo4J, color: '#4581c3' },
+    git: { name: 'Git', icon: SiGit, color: '#f05032' },
+    docker: { name: 'Docker', icon: SiDocker, color: '#2496ed' },
+    k8s: { name: 'Kubernetes', icon: SiKubernetes, color: '#326ce5' },
+    gitlab: { name: 'GitLab CI/CD', icon: SiGitlab, color: '#fc6d26' },
+    github: { name: 'GitHub', icon: SiGithub },
+    vercel: { name: 'Vercel', icon: SiVercel },
+    nginx: { name: 'Nginx', icon: SiNginx, color: '#009639' },
+    linux: { name: 'Linux', icon: SiLinux },
+    jest: { name: 'Jest', icon: SiJest, color: '#c21325' },
+    azure: { name: 'Azure IoT Hub', icon: VscAzure, color: '#0078d4' },
+    unity: { name: 'Unity', icon: SiUnity },
+    blender: { name: 'Blender', icon: SiBlender, color: '#e87d0d' },
+    godot: { name: 'Godot', icon: SiGodotengine, color: '#478cbf' },
+    quest: { name: 'Meta Quest', icon: SiMeta, color: '#0467df' },
+    gcloud: { name: 'Google Cloud', icon: SiGooglecloud, color: '#4285f4' },
+    gemini: { name: 'Gemini', icon: SiGooglegemini, color: '#8e75b2' },
+    sklearn: { name: 'scikit-learn', icon: SiScikitlearn, color: '#f7931e' },
+    bpmn: { name: 'BPMN', icon: SiCamunda, color: '#fc5d0d' },
+} satisfies Record<string, Tool>;
+
+function ToolIcon({ tool, size = 16 }: { tool: Tool; size?: number }) {
+    if (!tool.icon) return null;
+    const Icon = tool.icon;
+    return (
+        <Icon
+            size={size}
+            aria-hidden
+            style={tool.color ? { color: tool.color } : undefined}
+            className="shrink-0"
+        />
+    );
+}
+
+function ToolChips({ tools }: { tools: Tool[] }) {
+    return (
+        <ul className="flex flex-wrap gap-1.5">
+            {tools.map((tool) => (
+                <li
+                    key={tool.name}
+                    className="inline-flex items-center gap-1.5 rounded-full bg-bg px-2.5 py-1 text-[0.8125rem] font-medium ring-1 ring-line"
+                >
+                    <ToolIcon tool={tool} size={14} />
+                    {tool.name}
+                </li>
+            ))}
+        </ul>
+    );
+}
 
 export default function Home() {
     const t = useTranslations('HomePage');
 
-    // Content
-    const timelineItems = [
+    const services: { key: string; tools: Tool[] }[] = [
+        { key: 'design', tools: [T.bpmn, T.git] },
+        { key: 'build', tools: [T.react, T.next, T.nest, T.flutter] },
+        { key: 'xr', tools: [T.unity, T.blender, T.quest] },
+        { key: 'ai', tools: [T.python, T.gemini, T.godot, T.gcloud] },
         {
-            title: t('project1-title'),
-            date: '2024',
-            description: t('project1-description'),
-            tag: 'VR',
-            tagColor: 'bg-red-200',
-            tag2: 'AI',
-            tag2Color: 'bg-blue-200',
-            iconColor: 'bg-red-200',
+            key: 'ops',
+            tools: [T.docker, T.k8s, T.gitlab, T.github, T.vercel, T.nginx],
         },
-        {
-            title: t('project2-title'),
-            date: '2024',
-            description: t('project2-description'),
-            tag: 'Python',
-            tagColor: 'bg-yellow-200',
-            tag2: 'AI',
-            tag2Color: 'bg-blue-200',
-            iconColor: 'bg-yellow-200',
-        },
-        {
-            title: t('project3-title'),
-            date: '2024',
-            description: t('project3-description'),
-            tag: 'React',
-            tagColor: 'bg-green-200',
-            tag2: 'AI',
-            tag2Color: 'bg-blue-200',
-            iconColor: 'bg-green-200',
-        },
-        {
-            title: t('project4-title'),
-            date: '2023-2024',
-            description: t('project4-description'),
-            tag: 'React',
-            tagColor: 'bg-green-200',
-            iconColor: 'bg-green-200',
-        },
-        {
-            title: t('project5-title'),
-            date: '2022-2023',
-            description: t('project5-description'),
-            tag: 'Node.js',
-            tagColor: 'bg-orange-200',
-            tag2: 'Flutter',
-            tag2Color: 'bg-purple-200',
-            iconColor: 'bg-orange-200',
-        },
+        { key: 'docs', tools: [] },
     ];
 
-    const technologySections = [
+    const featured: {
+        key: 'secai' | 'tandem' | 'crai';
+        tools: Tool[];
+        links?: { label: string; href: string }[];
+        visual: React.ReactNode;
+    }[] = [
         {
-            title: 'Frontend',
-            icon: <FaCode />,
-            borderColor: 'border-blue-500',
-            titleColor: 'text-blue-500',
-            iconGradientFrom: 'from-blue-500',
-            iconGradientTo: 'to-blue-600',
-            technologies: [
+            key: 'secai',
+            tools: [T.nest, T.docker, T.k8s, T.postgres, T.influx, T.azure],
+            links: [
+                { label: 'SECAI', href: 'https://www.secai-energy.de/' },
                 {
-                    text: 'React',
-                    color: '#61DAFB',
-                    icon: <FaReact />,
-                    borderColor: '#3B82F6',
-                },
-                {
-                    text: 'Next.js',
-                    color: '#fff',
-                    icon: '/images/nextjs-icon.png',
-                    borderColor: '#3B82F6',
-                },
-                {
-                    text: 'Flutter',
-                    color: '#02569B',
-                    icon: <SiFlutter />,
-                    borderColor: '#3B82F6',
-                },
-                {
-                    text: 'Unity',
-                    color: '#000000',
-                    icon: <SiUnity />,
-                    borderColor: '#3B82F6',
-                },
-            ],
-        },
-        {
-            title: 'Backend',
-            icon: <FaServer />,
-            borderColor: 'border-green-500',
-            titleColor: 'text-green-500',
-            iconGradientFrom: 'from-green-500',
-            iconGradientTo: 'to-green-600',
-            technologies: [
-                {
-                    text: 'Node.js',
-                    color: '#339933',
-                    icon: <FaNodeJs />,
-                    borderColor: '#10B981',
-                },
-                {
-                    text: 'Nest.js',
-                    color: '#E0234E',
-                    icon: <SiNestjs />,
-                    borderColor: '#10B981',
-                },
-                {
-                    text: 'Python',
-                    color: '#3776AB',
-                    icon: <FaPython />,
-                    borderColor: '#10B981',
-                },
-                {
-                    text: 'Java',
-                    color: '#007396',
-                    icon: <FaJava />,
-                    borderColor: '#10B981',
-                },
-                {
-                    text: 'C#',
-                    color: '#239120',
-                    icon: '/images/c-sharp-icon.png',
-                    borderColor: '#10B981',
-                },
-            ],
-        },
-        {
-            title: t('databases'),
-            icon: <FaDatabase />,
-            borderColor: 'border-orange-500',
-            titleColor: 'text-orange-500',
-            iconGradientFrom: 'from-orange-500',
-            iconGradientTo: 'to-orange-600',
-            technologies: [
-                {
-                    text: 'MySQL',
-                    color: '#4479A1',
-                    icon: <SiMysql />,
-                    borderColor: '#F97316',
-                },
-                {
-                    text: 'PostgreSQL',
-                    color: '#336791',
-                    icon: <SiPostgresql />,
-                    borderColor: '#F97316',
-                },
-                {
-                    text: 'MongoDB',
-                    color: '#47A248',
-                    icon: <SiMongodb />,
-                    borderColor: '#F97316',
-                },
-                {
-                    text: 'InfluxDB',
-                    color: '#22ADF6',
-                    icon: <SiInfluxdb />,
-                    borderColor: '#F97316',
-                },
-                {
-                    text: 'Neo4j',
-                    color: '#008CC1',
-                    icon: <SiNeo4J />,
-                    borderColor: '#F97316',
-                },
-            ],
-        },
-        {
-            title: 'DevOps',
-            icon: <FaCogs />,
-            borderColor: 'border-purple-500',
-            titleColor: 'text-purple-500',
-            iconGradientFrom: 'from-purple-500',
-            iconGradientTo: 'to-purple-600',
-            technologies: [
-                {
-                    text: 'Git',
-                    color: '#F05032',
-                    icon: <FaGitAlt />,
-                    borderColor: '#8B5CF6',
-                },
-                {
-                    text: 'Docker',
-                    color: '#2496ED',
-                    icon: <FaDocker />,
-                    borderColor: '#8B5CF6',
-                },
-                {
-                    text: 'Docker Compose',
-                    color: '#2496ED',
-                    icon: <FaDocker />,
-                    borderColor: '#8B5CF6',
-                },
-                {
-                    text: 'Kubernetes',
-                    color: '#326CE5',
-                    icon: <SiKubernetes />,
-                    borderColor: '#8B5CF6',
-                },
-                {
-                    text: 'GitLab CI/CD',
-                    color: '#FCA326',
-                    icon: <SiGitlab />,
-                    borderColor: '#8B5CF6',
-                },
-                {
-                    text: 'Jest',
-                    color: '#C21325',
-                    icon: <SiJest />,
-                    borderColor: '#8B5CF6',
-                },
-            ],
-        },
-        {
-            title: t('os'),
-            icon: <FaDesktop />,
-            borderColor: 'border-gray-500',
-            titleColor: 'text-gray-500',
-            iconGradientFrom: 'from-gray-500',
-            iconGradientTo: 'to-gray-600',
-            technologies: [
-                {
-                    text: 'Windows',
-                    color: '#0078D6',
-                    icon: <FaWindows />,
-                    borderColor: '#6B7280',
-                },
-                {
-                    text: 'macOS',
-                    color: '#000000',
-                    icon: <FaApple />,
-                    borderColor: '#6B7280',
-                },
-                {
-                    text: 'Linux',
-                    color: '#FCC624',
-                    icon: <FaLinux />,
-                    borderColor: '#6B7280',
-                },
-            ],
-        },
-        {
-            title: t('other'),
-            icon: <FaTools />,
-            borderColor: 'border-cyan-500',
-            titleColor: 'text-cyan-500',
-            iconGradientFrom: 'from-cyan-500',
-            iconGradientTo: 'to-cyan-600',
-            technologies: [
-                {
-                    text: t('blender'),
-                    color: '#F5792A',
-                    icon: <FaCube />,
-                    borderColor: '#06B6D4',
-                },
-                {
-                    text: t('ProcessModeling'),
-                    color: '#4285F4',
-                    icon: <FaCogs />,
-                    borderColor: '#06B6D4',
-                },
-                {
-                    text: t('nginx'),
-                    color: '#009639',
-                    icon: <FaServer />,
-                    borderColor: '#06B6D4',
-                },
-                {
-                    text: t('rpa'),
-                    color: '#FF6B35',
-                    icon: <FaCogs />,
-                    borderColor: '#06B6D4',
-                },
-                {
-                    text: t('vr'),
-                    color: '#FF4081',
-                    icon: <FaVrCardboard />,
-                    borderColor: '#06B6D4',
-                },
-                {
-                    text: t('ai'),
-                    color: '#9C27B0',
-                    icon: <FaBrain />,
-                    borderColor: '#06B6D4',
-                },
-            ],
-        },
-    ];
-
-    const featuredProjects = [
-        <FeaturedProject
-            key="project1"
-            title={t('Featured_Project1_title')}
-            imageSrc="/images/heatingApp.png"
-            description={[
-                t('Featured_Project1_desc1'),
-                t('Featured_Project1_desc2'),
-                t('Featured_Project1_desc3'),
-                t('Featured_Project1_desc4'),
-                t('Featured_Project1_desc5'),
-            ]}
-            links={[
-                {
-                    url: 'https://www.secai-energy.de/',
-                    label: 'SECAI',
-                    icon: '/images/secai_icon.webp',
-                },
-                {
-                    url: 'https://www.bmwk.de/Redaktion/DE/Schlaglichter-der-Wirtschaftspolitik/2023/06/09-neues-technologieprogramm-edge-datenwirtschaft.html',
                     label: 'BMWE',
+                    href: 'https://www.bmwk.de/Redaktion/DE/Schlaglichter-der-Wirtschaftspolitik/2023/06/09-neues-technologieprogramm-edge-datenwirtschaft.html',
                 },
-            ]}
-            tags={[
-                <Tag
-                    key="nestjs"
-                    text="Nest.js"
-                    icon={<SiNestjs />}
-                    color="#dd3f58"
-                    variant="minimal"
-                />,
-                <Tag
-                    key="docker"
-                    text="Docker"
-                    icon={<SiDocker />}
-                    color="#4888eb"
-                    variant="minimal"
-                />,
-                <Tag
-                    key="kubernetes"
-                    text="K8s"
-                    icon={<SiKubernetes />}
-                    color="#538de3"
-                    variant="minimal"
-                />,
-                <Tag
-                    key="postgresql"
-                    text="PostgreSQL"
-                    icon={<SiPostgresql />}
-                    color="#3d648f"
-                    variant="minimal"
-                />,
-                <Tag
-                    key="influxdb"
-                    text="InfluxDB"
-                    icon={<SiInfluxdb />}
-                    color="#5e00a9"
-                    variant="minimal"
-                />,
-                <Tag
-                    key="iothub"
-                    text="IoT-Hub"
-                    icon={<VscAzure />}
-                    color="#759d22"
-                    variant="minimal"
-                />,
-            ]}
-        />,
-        <FeaturedProject
-            key="project2"
-            title={t('Featured_Project2_title')}
-            imageSrc="/images/readingTandemMain.png"
-            imageSrc2="/images/readingTandemCropped.png"
-            description={[
-                t('Featured_Project2_desc1'),
-                t('Featured_Project2_desc2'),
-                t('Featured_Project2_desc3'),
-                t('Featured_Project2_desc4'),
-                t('Featured_Project2_desc5'),
-                t('Featured_Project2_desc6'),
-            ]}
-            tags={[
-                <Tag
-                    key="unity"
-                    text="Unity"
-                    color="#000000"
-                    icon={<SiUnity />}
-                    variant="minimal"
-                />,
-                <Tag
-                    key="blender"
-                    text="Blender"
-                    color="#f4792b"
-                    icon={<SiBlender />}
-                    variant="minimal"
-                />,
-                <Tag
-                    key="python"
-                    text="Python"
-                    color="#3776AB"
-                    icon={<FaPython />}
-                    variant="minimal"
-                />,
-                <Tag
-                    key="googlecloud"
-                    text="GCloud"
-                    color="#4285F4"
-                    icon={<SiGooglecloud />}
-                    variant="minimal"
-                />,
-                <Tag
-                    key="metaquest"
-                    text="MetaQuest"
-                    color="#4267B2"
-                    icon={<BsHeadsetVr />}
-                    variant="minimal"
-                />,
-            ]}
-        />,
-        <FeaturedProject
-            key="project3"
-            title={t('Featured_Project3_title')}
-            imageSrc="/images/crai-logo-blau-pink.svg"
-            description={[
-                t('Featured_Project3_desc1'),
-                t('Featured_Project3_desc2'),
-                t('Featured_Project3_desc3'),
-                t('Featured_Project3_desc4'),
-                t('Featured_Project3_desc5'),
-            ]}
-            tags={[
-                <Tag
-                    key="nextjs"
-                    text="Next.js"
-                    icon="/images/nextjs-icon.png"
-                    color="#fcfcfc"
-                    borderColor="#000"
-                    variant="minimal"
-                />,
-                <Tag
-                    key="docker"
-                    text="Docker"
-                    icon={<SiDocker />}
-                    color="#4888eb"
-                    variant="minimal"
-                />,
-                <Tag
-                    key="strapi"
-                    text="Strapi"
-                    icon={<SiStrapi />}
-                    color="#4945ff"
-                    variant="minimal"
-                />,
-                <Tag
-                    key="postgresql"
-                    text="PostgreSQL"
-                    icon={<SiPostgresql />}
-                    color="#3d648f"
-                    variant="minimal"
-                />,
-            ]}
-        />,
+            ],
+            visual: (
+                <div className="relative flex h-full items-end justify-center pt-10">
+                    <Image
+                        src="/images/heatingApp.png"
+                        alt={t('featured.secai.imageAlt')}
+                        width={451}
+                        height={945}
+                        sizes="(min-width: 1024px) 300px, 60vw"
+                        className="h-auto w-[56%] max-w-[300px] translate-y-[18%] drop-shadow-[0_24px_40px_rgb(0_0_0/0.25)]"
+                    />
+                </div>
+            ),
+        },
+        {
+            key: 'tandem',
+            tools: [T.unity, T.blender, T.python, T.gcloud, T.quest],
+            visual: (
+                <Image
+                    src="/images/readingTandemMain.png"
+                    alt={t('featured.tandem.imageAlt')}
+                    fill
+                    sizes="(min-width: 1024px) 640px, 100vw"
+                    className="object-cover object-[50%_40%]"
+                />
+            ),
+        },
+        {
+            key: 'crai',
+            tools: [T.next, T.strapi, T.docker, T.postgres],
+            visual: (
+                <div className="flex h-full items-center justify-center bg-white p-12 ring-1 ring-inset ring-line">
+                    <Image
+                        src="/images/crai-logo-blau-pink.svg"
+                        alt={t('featured.crai.imageAlt')}
+                        width={320}
+                        height={160}
+                        className="h-auto w-[62%] max-w-[340px]"
+                    />
+                </div>
+            ),
+        },
+    ];
+
+    const projects: { key: string; year?: string; tools: Tool[] }[] = [
+        { key: 'godot', year: '2026', tools: [T.godot, T.python] },
+        { key: 'tandem', year: '2024', tools: [T.unity, T.quest] },
+        { key: 'video', year: '2024', tools: [T.python, T.gemini] },
+        { key: 'dashboard', year: '2024', tools: [T.react] },
+        { key: 'circularity', year: '2023–24', tools: [T.react] },
+        { key: 'bpmn', year: '2022–23', tools: [T.node, T.flutter, T.neo4j] },
+    ];
+
+    const background = [
+        {
+            group: 'work',
+            items: [
+                {
+                    name: 'DFKI Osnabrück',
+                    href: 'https://www.dfki.de/web',
+                    logo: '/images/dfki.jpeg',
+                    detail: t('background.dfki'),
+                },
+                {
+                    name: 'Nolte Küchen',
+                    href: 'https://www.nolte-kuechen.com/de-de/',
+                    logo: '/images/nolte.png',
+                    detail: t('background.nolte'),
+                },
+            ],
+        },
+        {
+            group: 'education',
+            items: [
+                {
+                    name: 'Universität Osnabrück',
+                    href: 'https://www.uni-osnabrueck.de/startseite/',
+                    logo: '/images/uni-osna.png',
+                    detail: t('background.osna'),
+                },
+                {
+                    name: 'Universidad de Valladolid',
+                    href: 'https://www.uva.es/',
+                    logo: '/images/uva.png',
+                    detail: t('background.uva'),
+                },
+                {
+                    name: 'DHBW Stuttgart',
+                    href: 'https://www.dhbw-stuttgart.de',
+                    logo: '/images/dhbw.png',
+                    detail: t('background.dhbw'),
+                },
+            ],
+        },
+    ] as const;
+
+    const toolGroups: { key: string; tools: Tool[] }[] = [
+        { key: 'frontend', tools: [T.react, T.next, T.ts, T.flutter] },
+        {
+            key: 'backend',
+            tools: [T.node, T.nest, T.python, T.java, T.csharp, T.strapi],
+        },
+        {
+            key: 'data',
+            tools: [T.postgres, T.mysql, T.mongo, T.influx, T.neo4j],
+        },
+        {
+            key: 'ops',
+            tools: [
+                T.git,
+                T.github,
+                T.gitlab,
+                T.docker,
+                T.k8s,
+                T.vercel,
+                T.nginx,
+                T.linux,
+                T.jest,
+            ],
+        },
+        { key: 'xr', tools: [T.unity, T.blender, T.godot, T.quest] },
+        {
+            key: 'ai',
+            tools: [
+                T.python,
+                T.sklearn,
+                T.gemini,
+                { name: t('tools.llm') },
+                { name: t('tools.speech') },
+                { name: t('tools.agents') },
+            ],
+        },
+        {
+            key: 'process',
+            tools: [
+                { name: t('tools.bpmn'), icon: SiCamunda, color: '#fc5d0d' },
+                { name: t('tools.dsr') },
+                { name: t('tools.workshops') },
+                { name: t('tools.rpa') },
+            ],
+        },
     ];
 
     return (
         <>
-            <div className="flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center p-4">
-                {/* Profile Picture */}
-                <div
-                    className="marlonImage mb-6 flex h-48 w-48 justify-center rounded-full border-foreground bg-accent md:h-60 md:w-60 lg:justify-end"
-                    style={{
-                        backgroundSize: 'cover',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'center',
-                        transform: 'rotate(2deg)', // Rotate the picture by 15 degrees
-                    }}
-                />
-
-                <h1 className="mb-12 text-center text-5xl font-bold">
-                    {t('hi-text')}
-                </h1>
-
-                <div className="text-block mb-8 flex max-w-2xl flex-col gap-8 text-xl font-bold">
-                    <p>{t('personal-description')}</p>
-                    <p>{t('personal-description2')}</p>
-                </div>
-            </div>
-
-            <div className="flex w-full flex-col items-center gap-20">
-                {/** Featured Projects */}
-                <div className="flex flex-col items-center justify-center gap-8 p-4">
-                    <h1 className="text-3xl font-bold text-accentColor">
-                        {t('Featured_Projects')}
-                    </h1>
-
-                    <div className="flex flex-col items-center gap-8 md:hidden">
-                        {featuredProjects}
-                    </div>
-
-                    <Carousel
-                        opts={{ align: 'center', loop: true }}
-                        className="hidden w-full max-w-5xl md:block"
+            {/* Hero */}
+            <section className="wrap grid min-h-[calc(100svh-4rem)] grid-cols-1 content-center gap-10 py-10 lg:grid-cols-12 lg:gap-6 lg:py-12">
+                <div className="flex flex-col justify-center lg:col-span-5 lg:pr-4">
+                    <h1
+                        className="display enter"
+                        style={{ '--i': 0 } as React.CSSProperties}
                     >
-                        <CarouselContent className="-ml-4">
-                            {featuredProjects.map((project, index) => (
-                                <CarouselItem
-                                    key={index}
-                                    className="basis-[85%] pl-4 sm:basis-3/4 md:basis-2/3"
-                                >
-                                    {project}
-                                </CarouselItem>
-                            ))}
-                        </CarouselContent>
-
-                        <CarouselPrevious />
-                        <CarouselNext />
-                    </Carousel>
-                </div>
-
-                {/* Universities & Work */}
-                <div className="flex w-full max-w-6xl flex-col gap-8 px-4 lg:flex-row lg:gap-6 lg:px-0">
-                    <div className="flex flex-1 flex-col">
-                        <h1 className="mb-3 text-2xl font-bold">
-                            {t('universities')}
-                        </h1>
-                        <div className="flex flex-col gap-3">
-                            <div className="flex flex-col gap-3 rounded-lg border bg-accent p-3 shadow-sm">
-                                <LinkButton
-                                    text="Universität Osnabrück"
-                                    color="white"
-                                    icon="/images/uni-osna.png"
-                                    textColor="darkRed"
-                                    link="https://www.uni-osnabrueck.de/startseite/"
-                                />
-                                <p className="text-sm font-medium text-foreground">
-                                    2021-2024: Master Business Information
-                                    Systems
-                                </p>
-                            </div>
-                            <div className="flex flex-col gap-3 rounded-lg border bg-accent p-3 shadow-sm">
-                                <LinkButton
-                                    text="Universidad Valladolid"
-                                    color="rgb(181, 39, 84)"
-                                    icon="/images/uva.png"
-                                    link="https://www.uva.es/export/sites/uva/"
-                                />
-                                <p className="text-sm font-medium text-foreground">
-                                    2023: Semester abroad international commerce
-                                </p>
-                            </div>
-                            <div className="flex flex-col gap-3 rounded-lg border bg-accent p-3 shadow-sm">
-                                <LinkButton
-                                    text="DHBW-Stuttgart"
-                                    color="gray"
-                                    icon="/images/dhbw.png"
-                                    link="https://www.dhbw-stuttgart.de"
-                                />
-                                <p className="text-sm font-medium text-foreground">
-                                    2018-2021: Bachelor Business Information
-                                    Systems
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-1 flex-col">
-                        <h1 className="mb-3 text-2xl font-bold">{t('work')}</h1>
-                        <div className="flex flex-col gap-3">
-                            <div className="flex flex-col gap-3 rounded-lg border bg-accent p-3 shadow-sm">
-                                <LinkButton
-                                    text="DFKI Osnabrück"
-                                    color="white"
-                                    textColor="darkBlue"
-                                    icon="/images/dfki.jpeg"
-                                    link="https://www.dfki.de/web"
-                                />
-                                <p className="text-sm font-medium text-foreground">
-                                    2022-2024: Research assistant, since 2025:
-                                    Researcher
-                                </p>
-                            </div>
-                            <div className="flex flex-col gap-3 rounded-lg border bg-accent p-3 shadow-sm">
-                                <LinkButton
-                                    text="Nolte Küchen"
-                                    color="white"
-                                    textColor="black"
-                                    icon="/images/nolte.png"
-                                    link="https://www.nolte-kuechen.com/de-de/"
-                                />
-                                <p className="text-sm font-medium text-foreground">
-                                    2018-2021: Dual Studies
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="flex w-full max-w-6xl flex-col gap-12 px-4 lg:flex-row lg:items-start lg:gap-20 lg:px-0">
-                    {/* Projects Timeline */}
-                    <div className="flex flex-1 flex-col">
-                        <h1 className="mb-8 text-3xl font-bold">
-                            {t('projects')}
-                        </h1>
-                        <div className="max-w-prose pl-6 pr-6">
-                            <Timeline items={timelineItems} />
-                            <p className="text-gray-400">... {t('more')}</p>
-                        </div>
-                    </div>
-
-                    {/* Technologies Accordion */}
-                    <div className="flex flex-1 flex-col">
-                        <h1 className="mb-8 text-3xl font-bold">
-                            {t('technologies')}
-                        </h1>
-                        <Accordion className="flex w-full flex-col gap-4">
-                            {technologySections.map((section, index) => (
-                                <TechnologyDisplay
-                                    key={index}
-                                    value={index}
-                                    {...section}
-                                />
-                            ))}
-                        </Accordion>
-                    </div>
-                </div>
-
-                <div>
-                    <h2 className="mt-12 text-center text-lg font-bold text-emphasis">
-                        {t('curious')}
-                    </h2>
-
-                    <div className="m-4 flex items-center justify-center">
+                        {t('hero.title')}
+                    </h1>
+                    <p
+                        className="lead enter mt-6 max-w-[42ch]"
+                        style={{ '--i': 1 } as React.CSSProperties}
+                    >
+                        {t('hero.lead')}
+                    </p>
+                    <div
+                        className="enter mt-8 flex flex-col gap-3 xs:flex-row"
+                        style={{ '--i': 2 } as React.CSSProperties}
+                    >
                         <ContactDialog
-                            triggerClassName="group flex items-center rounded-full border-2 border-solid border-foreground bg-background pb-2 pl-8 pr-8 pt-2 text-lg font-bold text-foreground shadow transition duration-300 hover:bg-foreground hover:text-background md:border-[0.2rem] md:text-2xl"
+                            triggerClassName="btn btn-primary"
                             trigger={
                                 <>
-                                    {t('contactMe')}
-                                    <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                                    {t('hero.contact')}
+                                    <ArrowRight
+                                        size={18}
+                                        className="btn-arrow"
+                                        aria-hidden
+                                    />
                                 </>
                             }
                         />
+                        <a
+                            href="/marlon-werth-cv.pdf"
+                            download="Marlon_Werth_CV.pdf"
+                            className="btn btn-secondary"
+                        >
+                            <Download size={17} aria-hidden />
+                            {t('hero.cv')}
+                        </a>
                     </div>
                 </div>
-            </div>
+
+                <div className="enter-panel relative h-[min(72vw,420px)] overflow-hidden rounded-panel bg-mint sm:h-[460px] lg:col-span-6 lg:col-start-7 lg:h-[min(716px,calc(100svh-7rem))]">
+                    <Image
+                        src="/images/Marlon.png"
+                        alt={t('hero.imageAlt')}
+                        width={562}
+                        height={1720}
+                        priority
+                        sizes="(min-width: 1024px) 360px, 60vw"
+                        className="absolute left-1/2 top-[7%] h-[230%] w-auto max-w-none -translate-x-1/2 lg:left-[58%] lg:h-[160%]"
+                    />
+                    <div className="absolute bottom-4 left-4 flex max-w-[calc(100%-2rem)] items-center gap-3 rounded-2xl bg-bg px-4 py-3 ring-1 ring-line sm:bottom-6 sm:left-6">
+                        <span
+                            aria-hidden
+                            className="breathe size-2.5 shrink-0 rounded-full bg-mint-ink"
+                        />
+                        <span className="text-sm leading-tight">
+                            <span className="block text-muted">
+                                {t('hero.nowLabel')}
+                            </span>
+                            <span className="font-semibold">
+                                {t('hero.nowValue')}
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            {/* Services */}
+            <section
+                id="services"
+                className="border-t border-line bg-surface py-20 md:py-28"
+            >
+                <div className="wrap grid gap-12 lg:grid-cols-12 lg:gap-6">
+                    <div className="lg:col-span-4">
+                        <div className="lg:sticky lg:top-28">
+                            <h2 className="h2">{t('services.title')}</h2>
+                            <p className="lead mt-5 max-w-[38ch]">
+                                {t('services.intro')}
+                            </p>
+                        </div>
+                    </div>
+                    <ol className="lg:col-span-7 lg:col-start-6">
+                        {services.map(({ key, tools }) => (
+                            <li
+                                key={key}
+                                className="grid gap-3 border-t border-line py-7 first:border-t-0 first:pt-0 sm:grid-cols-[minmax(0,14rem)_1fr] sm:gap-8"
+                            >
+                                <h3 className="h3">
+                                    {t(`services.${key}.title`)}
+                                </h3>
+                                <div>
+                                    <p className="max-w-[60ch] text-muted">
+                                        {t(`services.${key}.body`)}
+                                    </p>
+                                    {tools.length > 0 && (
+                                        <ul
+                                            className="mt-4 flex gap-3"
+                                            aria-label="Tools"
+                                        >
+                                            {tools.map((tool) => (
+                                                <li
+                                                    key={tool.name}
+                                                    title={tool.name}
+                                                    className="grid size-9 place-items-center rounded-full bg-bg ring-1 ring-line"
+                                                >
+                                                    <ToolIcon
+                                                        tool={tool}
+                                                        size={17}
+                                                    />
+                                                    <span className="sr-only">
+                                                        {tool.name}
+                                                    </span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
+                            </li>
+                        ))}
+                    </ol>
+                </div>
+            </section>
+
+            {/* Featured work */}
+            <section id="work" className="py-20 md:py-28">
+                <div className="wrap">
+                    <h2 className="h2">{t('featured.title')}</h2>
+                    <div className="mt-12 flex flex-col gap-20 md:mt-16 md:gap-28">
+                        {featured.map(({ key, tools, links, visual }, i) => (
+                            <article
+                                key={key}
+                                className="grid items-center gap-8 lg:grid-cols-12 lg:gap-6"
+                            >
+                                <div
+                                    className={`zoom-frame relative aspect-[4/3] overflow-hidden rounded-panel bg-surface lg:col-span-7 ${
+                                        i % 2 ? 'lg:order-2 lg:col-start-6' : ''
+                                    }`}
+                                >
+                                    <Develop className="absolute inset-0">
+                                        {visual}
+                                    </Develop>
+                                </div>
+                                <div
+                                    className={`lg:col-span-5 ${
+                                        i % 2
+                                            ? 'lg:order-1 lg:col-start-1 lg:pr-6'
+                                            : 'lg:pl-8'
+                                    }`}
+                                >
+                                    <h3 className="text-[1.75rem] font-[500] leading-tight tracking-[-0.022em]">
+                                        {t(`featured.${key}.title`)}
+                                    </h3>
+                                    <p className="mt-3 text-muted">
+                                        {t(`featured.${key}.summary`)}
+                                    </p>
+                                    <h4 className="mt-6 text-sm font-semibold">
+                                        {t('featured.role')}
+                                    </h4>
+                                    <ul className="mt-2 space-y-2">
+                                        {(
+                                            t.raw(
+                                                `featured.${key}.points`
+                                            ) as string[]
+                                        ).map((point) => (
+                                            <li
+                                                key={point}
+                                                className="relative pl-5 text-[0.9375rem] leading-relaxed"
+                                            >
+                                                <span
+                                                    aria-hidden
+                                                    className="absolute left-0 top-[0.6em] size-1.5 rounded-full bg-mint-ink"
+                                                />
+                                                {point}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <div className="mt-6">
+                                        <ToolChips tools={tools} />
+                                    </div>
+                                    {links && (
+                                        <div className="mt-5 flex flex-wrap gap-x-5 gap-y-1">
+                                            {links.map((link) => (
+                                                <a
+                                                    key={link.href}
+                                                    href={link.href}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="link inline-flex min-h-11 items-center gap-1 font-medium"
+                                                >
+                                                    {link.label}
+                                                    <ArrowUpRight
+                                                        size={16}
+                                                        aria-hidden
+                                                    />
+                                                </a>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            </article>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* More projects */}
+            <section
+                id="projects"
+                className="border-t border-line bg-surface py-20 md:py-28"
+            >
+                <div className="wrap grid gap-10 lg:grid-cols-12 lg:gap-6">
+                    <div className="lg:col-span-4">
+                        <h2 className="h2">{t('projects.title')}</h2>
+                        <a
+                            href="https://github.com/werthmar"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="link mt-5 inline-flex min-h-11 items-center gap-1 font-medium"
+                        >
+                            {t('projects.more')}
+                            <ArrowUpRight size={16} aria-hidden />
+                        </a>
+                    </div>
+                    <ul className="lg:col-span-8">
+                        {projects.map(({ key, year, tools }) => (
+                            <li
+                                key={key}
+                                className="grid gap-2 border-t border-line py-6 first:border-t-0 first:pt-0 sm:grid-cols-[5.5rem_1fr] sm:gap-6"
+                            >
+                                <span className="pt-1 text-sm tabular-nums text-muted">
+                                    {year}
+                                </span>
+                                <div>
+                                    <h3 className="text-lg font-semibold tracking-[-0.01em]">
+                                        {t(`projects.${key}.title`)}
+                                    </h3>
+                                    <p className="mt-1.5 max-w-[65ch] text-muted">
+                                        {t(`projects.${key}.description`)}
+                                    </p>
+                                    <div className="mt-3">
+                                        <ToolChips tools={tools} />
+                                    </div>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </section>
+
+            {/* Background */}
+            <section id="background" className="py-20 md:py-28">
+                <div className="wrap">
+                    <h2 className="h2">{t('background.title')}</h2>
+                    <div className="mt-10 grid gap-12 md:grid-cols-2 md:gap-6">
+                        {background.map(({ group, items }) => (
+                            <div key={group}>
+                                <h3 className="text-sm font-semibold text-muted">
+                                    {t(`background.${group}`)}
+                                </h3>
+                                <ul className="mt-3">
+                                    {items.map((item) => (
+                                        <li
+                                            key={item.name}
+                                            className="border-t border-line first:border-t-0"
+                                        >
+                                            <a
+                                                href={item.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="group flex items-center gap-4 py-4"
+                                            >
+                                                <span className="grid size-12 shrink-0 place-items-center overflow-hidden rounded-xl bg-white ring-1 ring-line">
+                                                    <Image
+                                                        src={item.logo}
+                                                        alt=""
+                                                        width={40}
+                                                        height={40}
+                                                        className="size-9 object-contain"
+                                                    />
+                                                </span>
+                                                <span className="min-w-0">
+                                                    <span className="flex items-center gap-1 font-semibold">
+                                                        {item.name}
+                                                        <ArrowUpRight
+                                                            size={15}
+                                                            aria-hidden
+                                                            className="text-muted transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                                                        />
+                                                    </span>
+                                                    <span className="block text-[0.9375rem] text-muted">
+                                                        {item.detail}
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Tools */}
+            <section
+                id="tools"
+                className="border-t border-line bg-surface py-20 md:py-28"
+            >
+                <div className="wrap">
+                    <h2 className="h2">{t('tools.title')}</h2>
+                    <div className="mt-10 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+                        {toolGroups.map(({ key, tools }) => (
+                            <div key={key}>
+                                <h3 className="text-sm font-semibold text-muted">
+                                    {t(`tools.${key}`)}
+                                </h3>
+                                <ul className="mt-3 space-y-2.5">
+                                    {tools.map((tool) => (
+                                        <li
+                                            key={tool.name}
+                                            className="flex items-center gap-2.5"
+                                        >
+                                            {tool.icon ? (
+                                                <ToolIcon
+                                                    tool={tool}
+                                                    size={17}
+                                                />
+                                            ) : (
+                                                <span
+                                                    aria-hidden
+                                                    className="mx-[5px] size-[7px] shrink-0 rounded-full bg-mint-ink"
+                                                />
+                                            )}
+                                            {tool.name}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Close */}
+            <section className="px-3 py-3 sm:px-4 sm:py-4">
+                <div className="rounded-panel bg-mint text-on-mint">
+                    <div className="wrap py-20 md:py-28">
+                        <h2 className="max-w-[16ch] text-[clamp(2.75rem,6vw+0.5rem,6rem)] font-[450] leading-[0.98] tracking-[-0.04em]">
+                            {t('close.title')}
+                        </h2>
+                        <p className="mt-6 max-w-[40ch] text-lg opacity-80">
+                            {t('close.body')}
+                        </p>
+                        <div className="mt-9">
+                            <ContactDialog
+                                triggerClassName="btn bg-on-mint text-mint hover:bg-[#1d3a2a]"
+                                trigger={
+                                    <>
+                                        {t('close.button')}
+                                        <ArrowRight
+                                            size={18}
+                                            className="btn-arrow"
+                                            aria-hidden
+                                        />
+                                    </>
+                                }
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     );
 }
