@@ -301,7 +301,7 @@ export default function Home() {
                         {t('hero.lead')}
                     </p>
                     <div
-                        className="enter mt-8 flex flex-col gap-3 xs:flex-row"
+                        className="enter mt-8 flex flex-col gap-3 xs:flex-row xs:flex-wrap"
                         style={{ '--i': 2 } as React.CSSProperties}
                     >
                         <ContactDialog

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import {
+    type MouseEvent,
     useEffect,
     useState,
     useSyncExternalStore,
@@ -58,6 +59,18 @@ export default function Navbar({ initialLocale }: NavbarProps) {
 
     const anchor = (id: string) => (onHome ? `#${id}` : `/#${id}`);
 
+    // On the home page the name scrolls back to the top. A plain link to "/"
+    // would be a same-page navigation that keeps the scroll position.
+    const toTop = (event: MouseEvent<HTMLAnchorElement>) => {
+        if (!onHome) return;
+        event.preventDefault();
+        if (window.location.hash) {
+            history.replaceState(null, '', window.location.pathname);
+        }
+        window.scrollTo({ top: 0 });
+        document.getElementById('main')?.focus({ preventScroll: true });
+    };
+
     return (
         <header
             className="site-header sticky top-0 z-40"
@@ -66,6 +79,7 @@ export default function Navbar({ initialLocale }: NavbarProps) {
             <div className="wrap flex h-16 items-center justify-between gap-3">
                 <Link
                     href="/"
+                    onClick={toTop}
                     className="flex min-h-11 items-center rounded-md"
                 >
                     <span className="text-[1.0625rem] font-semibold tracking-[-0.01em]">

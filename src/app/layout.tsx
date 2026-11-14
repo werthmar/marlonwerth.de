@@ -67,7 +67,9 @@ export default async function RootLayout({
                 <ThemeProvider attribute="class">
                     <NextIntlClientProvider messages={messages}>
                         <Navbar initialLocale={locale as Locale} />
-                        <main id="main">{children}</main>
+                        <main id="main" tabIndex={-1} className="outline-none">
+                            {children}
+                        </main>
                         <Footer />
                     </NextIntlClientProvider>
                 </ThemeProvider>
